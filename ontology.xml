@@ -221,8 +221,9 @@
                 <owl:hasValue rdf:resource="http://becks.org/ontology#Schinken"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Enthält die Pizza namens &quot;Pizza FCC&quot;, die bei der Pizzeria &quot;Mekan&quot; angeboten wird.</rdfs:comment>
+        <rdfs:comment>Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza FCC&quot; erfüllen.</rdfs:comment>
         <rdfs:label>Pizza FCC</rdfs:label>
+        <rdfs:label>Pizza Fußballclub Carl Zeis Jena</rdfs:label>
     </owl:Class>
     
 
@@ -265,6 +266,12 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Pizza_bei_Mekan">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://becks.org/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://becks.org/ontology#Käse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Enthält Pizzen, die in der Pizzeria &quot;Mekan&quot; verkauft werden.</rdfs:comment>
         <rdfs:label>Pizza bei Mekan</rdfs:label>
     </owl:Class>
