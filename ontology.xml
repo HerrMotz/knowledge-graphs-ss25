@@ -14,51 +14,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://becks.org/ontology#bewertungAufGoogle -->
-
-    <owl:AnnotationProperty rdf:about="http://becks.org/ontology#bewertungAufGoogle"/>
-    
-
-
-    <!-- http://becks.org/ontology#enthaeltZutat -->
-
-    <owl:AnnotationProperty rdf:about="http://becks.org/ontology#enthaeltZutat">
-        <rdfs:range rdf:resource="http://becks.org/ontology#Zutat"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://becks.org/ontology#gehörtZuPizzeria -->
-
-    <owl:AnnotationProperty rdf:about="http://becks.org/ontology#gehörtZuPizzeria">
-        <rdfs:range rdf:resource="http://becks.org/ontology#Pizzeria"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://becks.org/ontology#groesse -->
-
-    <owl:AnnotationProperty rdf:about="http://becks.org/ontology#groesse"/>
-    
-
-
-    <!-- http://becks.org/ontology#preis -->
-
-    <owl:AnnotationProperty rdf:about="http://becks.org/ontology#preis"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -73,6 +28,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://becks.org/ontology#Pizza"/>
+        <rdfs:range rdf:resource="http://becks.org/ontology#Zutat"/>
     </owl:ObjectProperty>
     
 
@@ -81,6 +37,7 @@
 
     <owl:ObjectProperty rdf:about="http://becks.org/ontology#gehörtZuPizzeria">
         <rdfs:domain rdf:resource="http://becks.org/ontology#Pizza"/>
+        <rdfs:range rdf:resource="http://becks.org/ontology#Pizzeria"/>
     </owl:ObjectProperty>
     
 
@@ -93,6 +50,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://becks.org/ontology#adresse -->
+
+    <owl:DatatypeProperty rdf:about="http://becks.org/ontology#adresse">
+        <rdfs:domain rdf:resource="http://becks.org/ontology#Pizzeria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -277,6 +243,34 @@
     </owl:Class>
     
 
+    <!-- http://becks.org/ontology#VegetarischePizza -->
+
+    <owl:Class rdf:about="http://becks.org/ontology#VegetarischePizza">
+        <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Pizza"/>
+
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://becks.org/ontology#enthaeltZutat"/>
+                <owl:allValuesFrom rdf:resource="http://becks.org/ontology#Vegetarische"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- http://becks.org/ontology#VegetarischePizza_Hawaii -->
+
+    <owl:Class rdf:about="http://becks.org/ontology#VegetarischePizza_Hawaii">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://becks.org/ontology#VegetarischePizza"/>
+                    <rdf:Description rdf:about="http://becks.org/ontology#Pizza_Hawaii"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
 
     <!-- http://becks.org/ontology#Zutat -->
 
@@ -398,6 +392,7 @@
 
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Teig">
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
+        <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
     </owl:NamedIndividual>
     
 
@@ -408,7 +403,6 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Laktosefreie"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Sauce"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
-        <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
     </owl:NamedIndividual>
     
 
@@ -421,6 +415,25 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://becks.org/ontology#Käse"/>
+            <rdf:Description rdf:about="http://becks.org/ontology#Sauce"/>
+            <rdf:Description rdf:about="http://becks.org/ontology#Teig"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
