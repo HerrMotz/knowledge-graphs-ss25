@@ -21,6 +21,7 @@
 
     
 
+
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
@@ -145,6 +146,8 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Glutenfreie">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Enthält alle möglichen glutenfreien Zutaten einer Pizza als Instanzen, damit inferiert werden kann, ob eine Pizza glutenfrei ist.</rdfs:comment>
+        <rdfs:label>Glutenfreie Zutaten</rdfs:label>
     </owl:Class>
     
 
@@ -153,6 +156,8 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Käse">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
+        <rdfs:label>Käse</rdfs:label>
     </owl:Class>
     
 
@@ -161,6 +166,8 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Laktosefreie">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Enthält alle laktosefreien Zutaten, damit inferiert werden kann, ob eine Pizza laktosefrei ist.</rdfs:comment>
+        <rdfs:label>Laktosefreie Zutaten</rdfs:label>
     </owl:Class>
     
 
@@ -180,6 +187,8 @@
                 <owl:someValuesFrom rdf:resource="http://becks.org/ontology#Teig"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Enthält konkrete Pizzen als Instanzen. Eine Pizza ist eine italienische Spezialität aus gebackenem, mit verschiedenen Zutaten belegtem Teig.</rdfs:comment>
+        <rdfs:label>pizza</rdfs:label>
     </owl:Class>
     
 
@@ -212,6 +221,8 @@
                 <owl:hasValue rdf:resource="http://becks.org/ontology#Schinken"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Enthält die Pizza namens &quot;Pizza FCC&quot;, die bei der Pizzeria &quot;Mekan&quot; angeboten wird.</rdfs:comment>
+        <rdfs:label>Pizza FCC</rdfs:label>
     </owl:Class>
     
 
@@ -244,6 +255,8 @@
                 <owl:hasValue rdf:resource="http://becks.org/ontology#Tomatensauce"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza Hawaii&quot; erfüllen.</rdfs:comment>
+        <rdfs:label>Pizza Hawaii</rdfs:label>
     </owl:Class>
     
 
@@ -252,13 +265,18 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Pizza_bei_Mekan">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Pizza"/>
+        <rdfs:comment>Enthält Pizzen, die in der Pizzeria &quot;Mekan&quot; verkauft werden.</rdfs:comment>
+        <rdfs:label>Pizza bei Mekan</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://becks.org/ontology#Pizzeria -->
 
-    <owl:Class rdf:about="http://becks.org/ontology#Pizzeria"/>
+    <owl:Class rdf:about="http://becks.org/ontology#Pizzeria">
+        <rdfs:comment>Enthält konkrete Pizzerien als Instanzen. Eine Pizzeria ist eine Lokalität, welche Pizzen zum Verkauf anbietet.</rdfs:comment>
+        <rdfs:label>Pizzeria</rdfs:label>
+    </owl:Class>
     
 
 
@@ -266,6 +284,8 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Sauce">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Enthält alle Saucen, die als Zutat Teil einer Pizza sein können.</rdfs:comment>
+        <rdfs:label>Sauce</rdfs:label>
     </owl:Class>
     
 
@@ -283,6 +303,8 @@
     <owl:Class rdf:about="http://becks.org/ontology#Vegane">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Laktosefreie"/>
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Vegetarische"/>
+        <rdfs:comment>Enthält alle veganen Zutaten, um eine Aussage darüber treffen zu können, ob eine konkrete Pizza vegan ist.</rdfs:comment>
+        <rdfs:label>Vegane Zutaten</rdfs:label>
     </owl:Class>
     
 
@@ -291,6 +313,8 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Vegetarische">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Enthält alle vegetarischen Zutaten, die Teil einer Pizza sein können.</rdfs:comment>
+        <rdfs:label>Vegetarische Zutaten</rdfs:label>
     </owl:Class>
     
 
@@ -305,6 +329,8 @@
                 <owl:allValuesFrom rdf:resource="http://becks.org/ontology#Vegetarische"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Enthält vegetarische Pizzen, also Pizzen mit Zutaten, die allesamt vegetarisch sind.</rdfs:comment>
+        <rdfs:label>Vegetarische Pizza</rdfs:label>
     </owl:Class>
     
 
@@ -320,13 +346,18 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Enthält alle Pizzen Hawaii, die vegetarisch sind. Diese Schnittmenge ist leer.</rdfs:comment>
+        <rdfs:label>Vegetarische Pizza Hawaii</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://becks.org/ontology#Zutat -->
 
-    <owl:Class rdf:about="http://becks.org/ontology#Zutat"/>
+    <owl:Class rdf:about="http://becks.org/ontology#Zutat">
+        <rdfs:comment>Enthält alle möglichen Zutaten einer Pizza als Instanzen.</rdfs:comment>
+        <rdfs:label>Zutat</rdfs:label>
+    </owl:Class>
     
 
 
@@ -347,6 +378,8 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Glutenfreie"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Tropische Obstsorte. Die Ananaspflanze stammt aus der Familie der Bromeliengewächse.</rdfs:comment>
+        <rdfs:label>Ananas</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -356,6 +389,8 @@
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Brokkoli">
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Gemüsepflanze aus der Familie der Kreuzblütengewächse.</rdfs:comment>
+        <rdfs:label>Brokkoli</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -367,6 +402,8 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Teig"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Teig aus Maismehl, Wasser und Salz.</rdfs:comment>
+        <rdfs:label>Maismehlteig</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -377,6 +414,8 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Pizzeria"/>
         <adresse>Mekan, Johannisstraße 12, 07743 Jena, Deutschland (neben TTTTT)</adresse>
         <bewertungAufGoogle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</bewertungAufGoogle>
+        <rdfs:comment>Beliebtes Restaurant in der jenaer Innenstadt, welches unter anderem Pizza anbietet.</rdfs:comment>
+        <rdfs:label>Mekan</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -386,6 +425,8 @@
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Mozzarella">
         <rdf:type rdf:resource="http://becks.org/ontology#Käse"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegetarische"/>
+        <rdfs:comment>Ein ursprünglich italienischer Filata-Käse, der aber auch außerhalb Italiens hergestellt wird.</rdfs:comment>
+        <rdfs:label>Mozzarella</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -394,6 +435,8 @@
 
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Pepperoniwurst">
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Scharf gewürzte Rohwurst aus Schweine- und/oder Rindfleisch.</rdfs:comment>
+        <rdfs:label>Pepperoniwurst</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -412,6 +455,8 @@
         <gehörtZuPizzeria rdf:resource="http://becks.org/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.9</preis>
+        <rdfs:comment>Eine besondere Pizza-Kreation des Hauses, welche zu Ehren des glorreichen FC Carl Zeiss Jena erschaffen wurde.</rdfs:comment>
+        <rdfs:label>Pizza FCC bei Mekan</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -429,6 +474,8 @@
         <gehörtZuPizzeria rdf:resource="http://becks.org/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.9</preis>
+        <rdfs:comment>Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
+        <rdfs:label>Pizza Hawaii bei Mekan</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -440,6 +487,8 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Teig"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Teig aus Reismehl, Wasser und Salz.</rdfs:comment>
+        <rdfs:label>Reismehlteig</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -448,6 +497,8 @@
 
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Salami">
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Eine Rohwurstsorte aus Schweinefleisch und anderen Fleischsorten, die in Italien erfunden wurde.</rdfs:comment>
+        <rdfs:label>Salami</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -456,6 +507,8 @@
 
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Schinken">
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>(Meist) Schweinefleisch aus der Keule, das durch Pökeln konserviert wurde.</rdfs:comment>
+        <rdfs:label>Schinken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -475,6 +528,8 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Laktosefreie"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Sauce"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
+        <rdfs:comment>Sauce aus Tomaten und optional weiteren Zutaten wie Knoblauch, Zwiebeln und Olivenöl, sowie verschiedenen Gewürzen und Kräutern.</rdfs:comment>
+        <rdfs:label>Tomatensauce</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -486,9 +541,26 @@
         <rdf:type rdf:resource="http://becks.org/ontology#Teig"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Vegane"/>
         <rdf:type rdf:resource="http://becks.org/ontology#Zutat"/>
+        <rdfs:comment>Teig aus Weizenmehl, Wasser und Salz. Optional können Öl und Hefe enthalten sein.</rdfs:comment>
+        <rdfs:label>Weizenmehlteig</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:qualifiedCardinality>1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://becks.org/ontology#Teig">
+        <rdfs:comment>Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
+        <rdfs:label>Teig</rdfs:label>
     </rdf:Description>
     
 
