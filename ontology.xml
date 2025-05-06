@@ -156,8 +156,6 @@
 
     <owl:Class rdf:about="http://becks.org/ontology#Käse">
         <rdfs:subClassOf rdf:resource="http://becks.org/ontology#Zutat"/>
-        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
-        <rdfs:label>Käse</rdfs:label>
     </owl:Class>
     
 
@@ -188,7 +186,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Enthält konkrete Pizzen als Instanzen. Eine Pizza ist eine italienische Spezialität aus gebackenem, mit verschiedenen Zutaten belegtem Teig.</rdfs:comment>
-        <rdfs:label>pizza</rdfs:label>
+        <rdfs:label>Pizza</rdfs:label>
     </owl:Class>
     
 
@@ -223,7 +221,7 @@
         </rdfs:subClassOf>
         <rdfs:comment>Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza FCC&quot; erfüllen.</rdfs:comment>
         <rdfs:label>Pizza FCC</rdfs:label>
-        <rdfs:label>Pizza Fußballclub Carl Zeis Jena</rdfs:label>
+        <rdfs:label>Pizza Fußballclub Carl Zeiss Jena</rdfs:label>
     </owl:Class>
     
 
@@ -402,6 +400,12 @@
     
 
 
+    <!-- http://becks.org/ontology#Käse -->
+
+    <owl:NamedIndividual rdf:about="http://becks.org/ontology#Käse"/>
+    
+
+
     <!-- http://becks.org/ontology#Maismehlteig -->
 
     <owl:NamedIndividual rdf:about="http://becks.org/ontology#Maismehlteig">
@@ -565,6 +569,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://becks.org/ontology#Käse">
+        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
+        <rdfs:label>Käse</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://becks.org/ontology#Teig">
         <rdfs:comment>Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
         <rdfs:label>Teig</rdfs:label>
