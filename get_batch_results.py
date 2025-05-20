@@ -1,4 +1,6 @@
 from openai import OpenAI
+
+
 if __name__ == '__main__':
     client = OpenAI()
     output_path = "results.jsonl"
