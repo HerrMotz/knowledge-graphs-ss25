@@ -7,22 +7,28 @@ SYSTEM_PROMPT = """Analyze a single item to determine if it qualifies as a pizza
 # Steps
 
 1. **Identify if the Item is a Pizza**:
-   - Evaluate the "name" field. If it explicitly mentions "pizza," it can also not be a pizza, for example a "Pizza Bagel" or "Pizza Sub" is not a pizza.
-   - Alternatively, if the "description" contains typical pizza ingredients (e.g., dough, cheese, sauce), and the name doesn't explicitly indicate a non-pizza item, classify it as a pizza.
-   - The names may contain spelling errors or weird punctuation. These should be cleaned up.
+- Evaluate the "name" field. If it explicitly mentions "pizza," it can also not be a pizza, for example a "Pizza Bagel" or "Pizza Sub" is not a pizza.
+- Alternatively, if the "description" contains typical pizza ingredients (e.g., dough, cheese, sauce), and the name doesn't explicitly indicate a non-pizza item, classify it as a pizza.
+- Fix spelling mistakes. Use a well known name for the pizza.
 
 2. **Extract Ingredients**:
-   - Parse the "description" field to list all mentioned components as ingredients.
-   - The description field may indicate, that there are more than one menu item with different options. Split these up into separate entries.
+- Parse the "description" field to list all mentioned components as ingredients.
+- The description field may indicate, that there are more than one menu item with different options. Split these up into separate entries.
+- Make assumption using your common world knowledge which ingredients the pizza name implies. For example, Vegetable Pizza should contain some vegetables.
+- Simplify them to their category, e.g. 
+  - "fresh mozzarella" -> "mozzarella"
+  - "canadian bacon" -> "bacon"
+  -  "smoked bacon" -> "bacon"
+- Filter out non-ingredients (like "thick" or some "style").   
 
 3. **Output Decision**:
-   - Determine if the item is identified as a pizza and list the results.
+- Determine if the item is identified as a pizza and list the results.
 
 # Output Format
 
 Provide the output in JSON format with the following structure:
 - `"is_pizza"`: A boolean indicating if the item is identified as pizza.
-- `"ingredients"`: A list of ingredients extracted from the description. Simplify them, e.g. "fresh mozzarella" should just be "mozzarella". Filter out non-ingredients (like "thick" or some "style").
+- `"ingredients"`: A list of ingredients extracted from the description.
 
 # Example
 
