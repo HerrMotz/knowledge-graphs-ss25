@@ -12,7 +12,7 @@ def load_csv_data(csv_path):
             menu_item = row["menu item"]
             description = row["item description"] or ""
             restaurant = row["name"]
-            # Match exact custom_id format
+            # Match an exact custom_id format
             custom_id = f"{lol}_{restaurant}_{menu_item}".replace(" ", "_").replace(",", "")
             items[custom_id] = {
                 "restaurant": restaurant,
@@ -73,10 +73,10 @@ def display_comparison(input_data, output_data):
 
 if __name__ == "__main__":
     csv_path = "data.csv"
-    result_path = "results.jsonl"
+    result_path = "results_2.jsonl"
 
     if not os.path.exists(csv_path) or not os.path.exists(result_path):
-        print("❌ Missing 'data.csv' or 'results.jsonl'. Please make sure both files exist.")
+        print(f"❌ Missing '{csv_path}' or '{result_path}'. Please make sure both files exist.")
         exit(1)
 
     input_data = load_csv_data(csv_path)
