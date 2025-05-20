@@ -1,1 +1,2 @@
-openai_batch_input.jsonl
+*.jsonl
+!results.jsonl
