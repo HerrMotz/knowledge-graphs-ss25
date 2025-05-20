@@ -38,7 +38,7 @@ name: "Hawaiin Pizza" description: "Pineapple, Ham."
 **Output:**
 ```json
 {
-  "name": "Pizza Hawaii",
+  "name": "Pizza Hawaii", // only output if the name has been changed!
   "is_pizza": true,
   "ingredients": ["Pineapple", "Ham"]
 }
