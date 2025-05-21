@@ -2,35 +2,15 @@ import csv
 import json
 
 MODEL = "gpt-4.1-nano"
-SYSTEM_PROMPT = """Analyze a single item to determine if it qualifies as a pizza based on its name and description.
+SYSTEM_PROMPT = """Analyze an item to determine if it qualifies as a pizza based on its name and description.
 
-# Steps
+Evaluate the "name" field and "description" for typical pizza ingredients. Simplify ingredient names and separate multiple items in descriptions. Use real world knowledge to fill in assumed typical ingredients to a pizza based on its name. Do not include non-ingredients in the ingredient list, e.g. "thick pan" is not an ingredit.
 
-1. **Identify if the Item is a Pizza**:
-- Evaluate the "name" field. If it explicitly mentions "pizza," it can also not be a pizza, for example a "Pizza Bagel" or "Pizza Sub" is not a pizza.
-- Alternatively, if the "description" contains typical pizza ingredients (e.g., dough, cheese, sauce), and the name doesn't explicitly indicate a non-pizza item, classify it as a pizza.
-- Fix spelling mistakes. Use a well known name for the pizza.
+Output in JSON:
+- `"is_pizza"`: Boolean indicating if the item is a pizza.
+- `"ingredients"`: List of simplified ingredients.
 
-2. **Extract Ingredients**:
-- Parse the "description" field to list all mentioned components as ingredients.
-- The description field may indicate, that there are more than one menu item with different options. Split these up into separate entries.
-- Make assumption using your common world knowledge which ingredients the pizza name implies. For example, Vegetable Pizza should contain some vegetables.
-- Simplify them to their category, e.g. 
-  - "fresh mozzarella" -> "mozzarella"
-  - "canadian bacon" -> "bacon"
-  -  "smoked bacon" -> "bacon"
-- Filter out non-ingredients (like "thick" or some "style").   
-
-3. **Output Decision**:
-- Determine if the item is identified as a pizza and list the results.
-
-# Output Format
-
-Provide the output in JSON format with the following structure:
-- `"is_pizza"`: A boolean indicating if the item is identified as pizza.
-- `"ingredients"`: A list of ingredients extracted from the description.
-
-# Example
+# Examples
 
 **Input:**
 name: "Hawaiin Pizza" description: "Pineapple, Ham."
@@ -38,34 +18,48 @@ name: "Hawaiin Pizza" description: "Pineapple, Ham."
 **Output:**
 ```json
 {
-  "name": "Pizza Hawaii", // only output if the name has been changed!
+  "name": "Pizza Hawaii",
   "is_pizza": true,
   "ingredients": ["Pineapple", "Ham"]
 }
+```
+
+**Input:**
+name: "Pizza, Margherita" description: ""
+
+**Output:**
+```json
+{
+  "name": "Pizza Margherita",
+  "is_pizza": true,
+  "ingredients": ["basil", "mozzarella", "tomato", "olive oil"]
+}
 ```"""
 
-def read_csv(file_path):
+included_lines = [20, 10, 24, 11, 5, 42, 44, 45, 46, 55, 60, 59, 40, 83, 102, 103, 172, 179, 189]  # Example line numbers
+
+def read_csv(file_path, included_lines):
     items = []
     with open(file_path, mode="r", encoding="utf-8") as f:
-        lol = 0
         reader = csv.DictReader(f)
-        for row in reader:
-            lol+=1
-            name = row["menu item"]
-            description = row["item description"] or ""
-            items.append({
-                "custom_id": f"{lol}_{row['name']}_{name}".replace(" ", "_").replace(",", ""),  # unique ID for batch
-                "method": "POST",
-                "url": "/v1/chat/completions",
-                "body": {
-                    "model": MODEL,
-                    "messages": [
-                        {"role": "system", "content": SYSTEM_PROMPT},
-                        {"role": "user", "content": f"name: \"{name}\" description: \"{description}\""}
-                    ],
-                    "temperature": 1,
-                }
-            })
+        for index, row in enumerate(reader):
+            if index-1 in included_lines:
+                name = row["menu item"]
+                description = row["item description"] or ""
+                items.append({
+                    "custom_id": f"{index}",
+                    "method": "POST",
+                    "url": "/v1/chat/completions",
+                    "body": {
+                        "model": MODEL,
+                        "messages": [
+                            {"role": "system", "content": SYSTEM_PROMPT},
+                            {"role": "user", "content": f"name: \"{name}\" description: \"{description}\""}
+                        ],
+                        "temperature": 1,
+                        "max_tokens": 1000,
+                    }
+                })
     return items
 
 def write_jsonl(items, output_path="openai_batch_input.jsonl"):
@@ -77,5 +71,5 @@ def write_jsonl(items, output_path="openai_batch_input.jsonl"):
 
 if __name__ == "__main__":
     csv_file_path = "data.csv"
-    batch_items = read_csv(csv_file_path)
+    batch_items = read_csv(csv_file_path, included_lines)
     write_jsonl(batch_items)
