@@ -1,2 +1,4 @@
 *.jsonl
 !results*.jsonl
+.venv
+__pycache__/
