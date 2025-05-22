@@ -2,7 +2,7 @@ import json
 import requests
 import time
 
-filename = "results.jsonl"
+filename = "results_13.jsonl"
 
 #set of all ingredients
 all_ingredients = set()
@@ -12,7 +12,9 @@ with open(filename, 'r', encoding='utf-8') as f:
     for line in f:
         data = json.loads(line)
         try:
-            ingredients = json.loads(data['response']['body']['choices'][0]['message']['content']).get('ingredients', [])
+            _x = data['response']['body']['choices'][0]['message']['content']
+            _x = _x.replace("```json", "").replace("```", "")
+            ingredients = json.loads(_x).get('ingredients', [])
             all_ingredients.update(ingredients)
         except Exception as e:
             print(f"Fehler beim Verarbeiten: {e}")
@@ -21,8 +23,9 @@ with open(filename, 'r', encoding='utf-8') as f:
 def get_wikidata_qid(ingredient):
     query = f"""
     SELECT ?item ?itemLabel WHERE {{
-      ?item ?label "{ingredient}"@en.
+      ?item rdfs:label "{ingredient}"@en.
       FILTER(STRSTARTS(STR(?item), "http://www.wikidata.org/entity/Q"))
+      #?item (wdt:P31|wdt:P279)* wd:Q19861951.
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}
     }}
     LIMIT 1
@@ -35,7 +38,7 @@ def get_wikidata_qid(ingredient):
     if response.status_code == 200:
         results = response.json()["results"]["bindings"]
         if results:
-            return results[0]["item"]["value"].split("/")[-1]  # Q-Nummer extrahieren
+            return results[0]["item"]["value"].split("/")[-1]  #extract QID
     return None
 
 #SPARQL query for fuzzy search -- not used right now
@@ -64,15 +67,49 @@ def get_wikidata_qid_fuzzy(ingredient):
             return results[0]["item"]["value"].split("/")[-1]
     return None
 
+#checks if QID is a food item by checking if there is a path from QID to Q19861951 (food item) in Wikidata -- not used right now
+def is_food_item(qid):
+    query = f"""
+    ASK {{
+      wd:{qid} wdt:P31/wdt:P279* wd:Q19861951.
+    }}
+    """
+    url = "https://query.wikidata.org/sparql"
+    headers = {"Accept": "application/sparql-results+json"}
+    params = {"query": query}
+
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        return response.json().get("boolean", False)
+    return False
+
+
 
 #create mapping of ingredients to QIDs
 ingredient_qid_map = {}
 for ingredient in sorted(all_ingredients):
+    if ingredient in ingredient_qid_map and ingredient_qid_map[ingredient]:
+        continue  #skip already mapped ingredients
+
     qid = get_wikidata_qid(ingredient)
+
     #if qid is None:
     #    qid = get_wikidata_qid_fuzzy(ingredient)
+
     ingredient_qid_map[ingredient] = qid
-    print(f"{ingredient}: {qid}")
+    if not qid:
+        print(f"{ingredient}: ❌ not found")
+    else:
+        print(f"{ingredient}: http://www.wikidata.org/entity/{qid}")
+
+    """ #check if QID is a food item
+    if qid and is_food_item(qid):
+        ingredient_qid_map[ingredient] = qid
+        print(f"{ingredient}: ✅ {qid}")
+    else:
+        ingredient_qid_map[ingredient] = None
+        print(f"{ingredient}: ❌ not valid") """
+
     time.sleep(1)  #for rate limit
 
 #save mapping to JSON
