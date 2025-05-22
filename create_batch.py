@@ -13,8 +13,11 @@ Use the following guidelines to determine whether an item can be classified as a
 4. Assumption: Assume typical ingredients based on the item name when description is incomplete.
 
 # Output Format
+- `"name"`: The name of the menu item. Use simplified canonical names for known pizzas, e.g. Veggie Lovers Pizza -> Vegetarian Pizza.
 - `"is_pizza"`: Boolean indicating if the item is a pizza.
 - `"ingredients"`: List of simplified ingredients.
+
+If the input suggests that they could be multiple menu items, then output an array of menu items, e.g. Chesse or Pepperoni pizza should give an array if menu items.
 
 # Examples
 
@@ -44,7 +47,8 @@ name: "Pizza, Margherita" description: ""
 
 # Notes
 - Ensure the analysis is based on known pizza ingredients and doesn't solely depend on the presence of the word "pizza" in the name.
-- Consider edge cases where names may suggest pizza-style but are misleading (e.g., "Bagel Pizza")."""
+- Consider edge cases where names may suggest pizza-style but are misleading (e.g., "Pizza Bagel" is not a pizza).
+- Simplify the ingredients. E.g. canadian bacon should be bacon, green pepper should be pepper, and so on."""
 
 included_lines = [20, 10, 24, 11, 5, 42, 44, 45, 46, 55, 60, 59, 40, 83, 102, 103, 172, 179, 189]  # Example line numbers
 
