@@ -23,9 +23,16 @@ with open(filename, 'r', encoding='utf-8') as f:
 def get_wikidata_qid(ingredient):
     query = f"""
     SELECT ?item ?itemLabel WHERE {{
-      ?item rdfs:label "{ingredient}"@en.
-      FILTER(STRSTARTS(STR(?item), "http://www.wikidata.org/entity/Q"))
-      #?item (wdt:P31|wdt:P279)* wd:Q19861951.
+      # Use the built-in MediaWiki EntitySearch service (wbsearchentities)
+      SERVICE wikibase:mwapi {{
+        bd:serviceParam wikibase:endpoint "www.wikidata.org";
+                        wikibase:api       "EntitySearch";
+                        mwapi:search       "{ingredient}";   # prefix you’re looking for
+                        mwapi:language     "en";             # or "de", etc.
+                        mwapi:limit        "1".              # internal limit is faster than SPARQL LIMIT
+        ?item wikibase:apiOutputItem mwapi:item .
+      }}
+    
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}
     }}
     LIMIT 1
