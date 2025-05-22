@@ -1,7 +1,7 @@
 import csv
 import json
 
-MODEL = "gpt-4.1-nano"
+MODEL = "gpt-4.1-mini"
 SYSTEM_PROMPT = """Analyze an item to determine if it qualifies as a pizza based on its name and description.
 
 Use the following guidelines to determine whether an item can be classified as a pizza. Assess both the "name" and "description" fields to identify typical pizza ingredients. Simplify ingredient names, and separate multiple items found in descriptions. Leverage real-world knowledge to infer assumed typical ingredients based on the name of the item. Exclude non-ingredients like "thick pan" from the ingredient list.
@@ -18,11 +18,11 @@ Use the following guidelines to determine whether an item can be classified as a
 - `"ingredients"`: List of simplified ingredients.
 
 # Ingredient Simplification
+- Use categories for ingredients. For example:
 - "Canadian Bacon" should be simplified to "bacon".
-- "Green Pepper" should be simplified to "pepper".
+- "Green Pepper" should be simplified to "bell pepper".
 - "Italian Sausage" should be simplified to "sausage".
 - "Thick Pan" should be excluded from the ingredient list.
-- and so on...
 
 If the input suggests that they could be multiple menu items, then output an array of menu items, e.g. Chesse or Pepperoni pizza should give an array if menu items.
 
@@ -58,7 +58,7 @@ name: "Pizza, Margherita" description: ""
 - Simplify the ingredients. E.g. canadian bacon should be bacon, green pepper should be pepper, and so on."""
 
 included_lines = [20, 10, 24, 11, 5, 42, 44, 45, 46, 55, 60, 59, 40, 83, 102, 103, 172, 179, 189]  # Example line numbers
-UPLOAD_FULL_BATCH = True
+UPLOAD_FULL_BATCH = False
 
 def read_csv(file_path, included_lines):
     items = []
