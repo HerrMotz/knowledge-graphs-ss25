@@ -1,6 +1,14 @@
 import json
 import requests
 import time
+import os
+
+ingredient_qid_map = {}
+
+#load existing mapping if available
+if os.path.exists("ingredient_qid_map.json"):
+    with open("ingredient_qid_map.json", "r", encoding="utf-8") as f:
+        ingredient_qid_map = json.load(f)
 
 filename = "results_13.jsonl"
 
@@ -94,28 +102,31 @@ def is_food_item(qid):
 
 #create mapping of ingredients to QIDs
 ingredient_qid_map = {}
+
+locked_qid_map = {}
+
+with open("locked_qid_map.json", "r", encoding="utf-8") as f:
+    locked_qid_map = json.load(f)
 for ingredient in sorted(all_ingredients):
-    if ingredient in ingredient_qid_map and ingredient_qid_map[ingredient]:
-        continue  #skip already mapped ingredients
+    entry = locked_qid_map.get(ingredient)
 
+    #skip locked entries
+    if entry and isinstance(entry, dict) and entry.get("locked"):
+        print(f"{ingredient}: 🔒 locked ({entry['qid']})")
+        continue
+
+    #get QID from Wikidata
     qid = get_wikidata_qid(ingredient)
-
-    #if qid is None:
-    #    qid = get_wikidata_qid_fuzzy(ingredient)
-
-    ingredient_qid_map[ingredient] = qid
     if not qid:
         print(f"{ingredient}: ❌ not found")
     else:
-        print(f"{ingredient}: http://www.wikidata.org/entity/{qid}")
+        print(f"{ingredient}: ✅ http://www.wikidata.org/entity/{qid}")
 
-    """ #check if QID is a food item
-    if qid and is_food_item(qid):
-        ingredient_qid_map[ingredient] = qid
-        print(f"{ingredient}: ✅ {qid}")
-    else:
-        ingredient_qid_map[ingredient] = None
-        print(f"{ingredient}: ❌ not valid") """
+    #save QID to mapping
+    ingredient_qid_map[ingredient] = {
+        "qid": qid,
+        "locked": False
+    }
 
     time.sleep(1)  #for rate limit
 
