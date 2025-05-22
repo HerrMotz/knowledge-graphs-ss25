@@ -4,9 +4,15 @@ import json
 MODEL = "gpt-4.1-nano"
 SYSTEM_PROMPT = """Analyze an item to determine if it qualifies as a pizza based on its name and description.
 
-Evaluate the "name" field and "description" for typical pizza ingredients. Simplify ingredient names and separate multiple items in descriptions. Use real world knowledge to fill in assumed typical ingredients to a pizza based on its name. Do not include non-ingredients in the ingredient list, e.g. "thick pan" is not an ingredit.
+Use the following guidelines to determine whether an item can be classified as a pizza. Assess both the "name" and "description" fields to identify typical pizza ingredients. Simplify ingredient names, and separate multiple items found in descriptions. Leverage real-world knowledge to infer assumed typical ingredients based on the name of the item. Exclude non-ingredients like "thick pan" from the ingredient list.
 
-Output in JSON:
+# Steps
+1. Ingredient Evaluation: Look for typical pizza ingredients in both the "name" and "description" fields.
+2. Simplification: Simplify and unify the ingredient names.
+3. Exclusion: Do not include non-ingredients in the list.
+4. Assumption: Assume typical ingredients based on the item name when description is incomplete.
+
+# Output Format
 - `"is_pizza"`: Boolean indicating if the item is a pizza.
 - `"ingredients"`: List of simplified ingredients.
 
@@ -34,7 +40,11 @@ name: "Pizza, Margherita" description: ""
   "is_pizza": true,
   "ingredients": ["basil", "mozzarella", "tomato", "olive oil"]
 }
-```"""
+```
+
+# Notes
+- Ensure the analysis is based on known pizza ingredients and doesn't solely depend on the presence of the word "pizza" in the name.
+- Consider edge cases where names may suggest pizza-style but are misleading (e.g., "Bagel Pizza")."""
 
 included_lines = [20, 10, 24, 11, 5, 42, 44, 45, 46, 55, 60, 59, 40, 83, 102, 103, 172, 179, 189]  # Example line numbers
 
