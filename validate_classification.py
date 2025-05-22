@@ -71,7 +71,7 @@ def display_comparison(input_data, output_data):
 
 if __name__ == "__main__":
     csv_path = "data.csv"
-    result_path = "results_8.jsonl"
+    result_path = "results_10.jsonl"
 
     if not os.path.exists(csv_path) or not os.path.exists(result_path):
         print(f"❌ Missing '{csv_path}' or '{result_path}'. Please make sure both files exist.")

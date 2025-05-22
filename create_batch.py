@@ -17,6 +17,13 @@ Use the following guidelines to determine whether an item can be classified as a
 - `"is_pizza"`: Boolean indicating if the item is a pizza.
 - `"ingredients"`: List of simplified ingredients.
 
+# Ingredient Simplification
+- "Canadian Bacon" should be simplified to "bacon".
+- "Green Pepper" should be simplified to "pepper".
+- "Italian Sausage" should be simplified to "sausage".
+- "Thick Pan" should be excluded from the ingredient list.
+- and so on...
+
 If the input suggests that they could be multiple menu items, then output an array of menu items, e.g. Chesse or Pepperoni pizza should give an array if menu items.
 
 # Examples
@@ -51,13 +58,14 @@ name: "Pizza, Margherita" description: ""
 - Simplify the ingredients. E.g. canadian bacon should be bacon, green pepper should be pepper, and so on."""
 
 included_lines = [20, 10, 24, 11, 5, 42, 44, 45, 46, 55, 60, 59, 40, 83, 102, 103, 172, 179, 189]  # Example line numbers
+UPLOAD_FULL_BATCH = True
 
 def read_csv(file_path, included_lines):
     items = []
     with open(file_path, mode="r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for index, row in enumerate(reader):
-            if index-1 in included_lines:
+            if UPLOAD_FULL_BATCH or index-1 in included_lines:
                 name = row["menu item"]
                 description = row["item description"] or ""
                 items.append({
