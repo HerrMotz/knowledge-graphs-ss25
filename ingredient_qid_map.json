@@ -1,18 +1,10 @@
 {
-  "anchovy": {
-    "qid": "Q192662",
-    "locked": false
-  },
   "artichoke": {
     "qid": "Q23041430",
     "locked": false
   },
   "bacon": {
-    "qid": "Q6951606",
-    "locked": false
-  },
-  "basil": {
-    "qid": "Q4926514",
+    "qid": "Q13923748",
     "locked": false
   },
   "beef": {
@@ -20,27 +12,23 @@
     "locked": false
   },
   "bell pepper": {
-    "qid": "Q201959",
+    "qid": "Q1548030",
     "locked": false
   },
   "broccoli": {
-    "qid": "Q47722",
+    "qid": "Q2229726",
     "locked": false
   },
   "cheddar cheese": {
     "qid": "Q217525",
     "locked": false
   },
-  "cheese": {
-    "qid": "Q10943",
-    "locked": false
-  },
   "chicken": {
-    "qid": "Q780",
+    "qid": "Q191655",
     "locked": false
   },
   "eggplant": {
-    "qid": "Q7540",
+    "qid": "Q12533094",
     "locked": false
   },
   "feta cheese": {
@@ -52,23 +40,11 @@
     "locked": false
   },
   "garlic": {
-    "qid": "Q23400",
-    "locked": false
-  },
-  "gorgonzola cheese": {
-    "qid": null,
+    "qid": "Q2900348",
     "locked": false
   },
   "ground beef": {
-    "qid": "Q3408258",
-    "locked": false
-  },
-  "ham": {
-    "qid": "Q1055",
-    "locked": false
-  },
-  "jalapeno": {
-    "qid": "Q504133",
+    "qid": "Q191655",
     "locked": false
   },
   "lettuce": {
@@ -80,30 +56,18 @@
     "locked": false
   },
   "mozzarella": {
-    "qid": "Q14088",
+    "qid": "Q941068",
     "locked": false
   },
   "mushroom": {
-    "qid": "Q654236",
-    "locked": false
-  },
-  "olive": {
-    "qid": "Q18648740",
+    "qid": "Q227690",
     "locked": false
   },
   "olive oil": {
     "qid": "Q93165",
     "locked": false
   },
-  "onion": {
-    "qid": "Q49391",
-    "locked": false
-  },
   "parmesan": {
-    "qid": "Q9348",
-    "locked": false
-  },
-  "parmesan cheese": {
     "qid": "Q155922",
     "locked": false
   },
@@ -111,16 +75,8 @@
     "qid": "Q855131",
     "locked": false
   },
-  "pineapple": {
-    "qid": "Q1493",
-    "locked": false
-  },
   "red pepper": {
-    "qid": "Q6598",
-    "locked": false
-  },
-  "ricotta": {
-    "qid": "Q37278499",
+    "qid": "Q5190222",
     "locked": false
   },
   "sausage": {
@@ -128,7 +84,7 @@
     "locked": false
   },
   "spinach": {
-    "qid": "Q81464",
+    "qid": "Q36814998",
     "locked": false
   },
   "sun dried tomato": {
@@ -140,27 +96,19 @@
     "locked": false
   },
   "tomato": {
-    "qid": "Q23501",
+    "qid": "Q178143",
     "locked": false
   },
   "tomato sauce": {
-    "qid": "Q3596097",
+    "qid": "Q178143",
     "locked": false
   },
   "tortilla chips": {
     "qid": "Q175641",
     "locked": false
   },
-  "tuna": {
-    "qid": "Q6066235",
-    "locked": false
-  },
   "vegan cheese": {
     "qid": "Q21384881",
-    "locked": false
-  },
-  "white truffle": {
-    "qid": null,
     "locked": false
   }
 }

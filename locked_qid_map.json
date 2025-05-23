@@ -50,5 +50,17 @@
   "pineapple": {
     "qid": "Q10817602",
     "locked": true
+  },
+  "jalapeno": {
+    "qid": "Q504133",
+    "locked": true
+  },
+  "chicken": {
+    "qid": "Q864693",
+    "locked": true
+  },
+  "ground beef": {
+    "qid": "Q3408258",
+    "locked": true
   }
 }
