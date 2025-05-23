@@ -42,5 +42,9 @@
   "white truffle": {
     "qid": "Q2690965",
     "locked": true
+  },
+  "cheese": {
+    "qid": "Q10943",
+    "locked": true
   }
 }
