@@ -48,6 +48,7 @@ def get_wikidata_qid(ingredient):
         # the above classes should be enough
         # as the classes listed below are all
         # subclasses of food ingredient or additive
+        wd:Q25403900    # also food ingredient (found via wd:Q504133[Jalapeño])
         wd:Q11004       # vegetable
         wd:Q9323487     # edible plant (plant as food)
         wd:Q207123      # herb
