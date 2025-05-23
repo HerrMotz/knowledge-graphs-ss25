@@ -2,5 +2,45 @@
   "egg": {
     "qid": "Q93189",
     "locked": true
+  },
+  "basil": {
+    "qid": "Q38859",
+    "locked": true
+  },
+  "gorgonzola cheese": {
+    "qid": "Q209044",
+    "locked": true
+  },
+  "anchovy": {
+    "qid": "Q4589261",
+    "locked": true
+  },
+  "ham": {
+    "qid": "Q170486",
+    "locked": true
+  },
+  "olive": {
+    "qid": "Q1621080",
+    "locked": true
+  },
+  "onion": {
+      "qid": "Q3406628",
+      "locked": true
+  },
+  "parmesan cheese": {
+    "qid": "Q155922",
+    "locked": true
+  },
+  "ricotta": {
+    "qid": "Q216781",
+    "locked": true
+  },
+  "tuna": {
+    "qid": "Q17504707",
+    "locked": true
+  },
+  "white truffle": {
+    "qid": "Q2690965",
+    "locked": true
   }
 }
