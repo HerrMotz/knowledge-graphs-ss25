@@ -1,0 +1,25 @@
+PREFIX wd:  <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+SELECT DISTINCT ?item ?itemLabel WHERE {
+  ?item rdfs:label ?itemLabel .
+  FILTER (LANG(?itemLabel)="en" && STRSTARTS(LCASE(?itemLabel), "anchovy"))
+
+  VALUES ?foodType {
+    wd:Q2095       # food
+    wd:Q2197369    # food product
+    wd:Q41226      # condiment
+    wd:Q1057891    # fish paste
+    wd:Q746549     # food ingredient
+    wd:Q25403900   # food additive
+  }
+  ?item (wdt:P31|wdt:P279)+ ?foodType .
+}
+ORDER BY ?itemLabel
+LIMIT 1
+
+## NOTE:
+# This query works but does not make use of the
+# full index, which is sad. We did not get it to run.
