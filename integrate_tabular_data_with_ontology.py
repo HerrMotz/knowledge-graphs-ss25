@@ -39,7 +39,7 @@ pizza_count = 0
 with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_file:
     csv_reader = csv.DictReader(csv_file)
     for i, row in enumerate(csv_reader):
-        # Read JSONL line - could be object or array
+        # Read JSONL line - could be an object or array
         json_line = jsonl_file.readline().strip()
         if not json_line:
             continue
