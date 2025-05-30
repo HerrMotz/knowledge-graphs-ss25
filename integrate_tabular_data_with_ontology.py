@@ -1,6 +1,6 @@
 import csv
 import json
-from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode
 
 # Known ontology ingredients mapping
 KNOWN_INGREDIENTS = {
@@ -39,7 +39,7 @@ pizza_count = 0
 with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_file:
     csv_reader = csv.DictReader(csv_file)
     for i, row in enumerate(csv_reader):
-        # Read JSONL line - could be an object or array
+        # Read JSONL line - could be object or array
         json_line = jsonl_file.readline().strip()
         if not json_line:
             continue
@@ -64,6 +64,8 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
 
                 # Add pizzeria details
                 g.add((pizz_uri, RDF.type, ONT.Pizzeria))
+                g.add((pizz_uri, SCHEMA.name, Literal(row['name'])))
+                g.add((pizz_uri, RDF.type, SCHEMA.FoodEstablishment))
 
                 # Create schema.org address structure
                 address_node = BNode()
@@ -85,45 +87,47 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                 # Link address to pizzeria
                 g.add((pizz_uri, SCHEMA.address, address_node))
 
-            # Create Pizza individual
+            # Create MenuItem individual
             pizza_name = pizza.get('name', row['menu item'])
             pizza_slug = pizza_name.replace(' ', '_').replace('"', '').replace("'", "")
-            pizza_uri = ONT[f"{pizza_slug}_{pizza_count}"]
-            pizza_description = row["item description"]
+            menu_item_uri = ONT[f"MenuItem_{pizza_slug}_{pizza_count}"]
             pizza_count += 1
 
-            g.add((pizza_uri, RDF.type, ONT.Pizza))
-            g.add((pizza_uri, RDFS.label, Literal(pizza_name)))
-            if pizza_description:
-                g.add((pizza_uri, RDFS.comment, Literal()))
-            g.add((pizza_uri, ONT.gehörtZuPizzeria, pizzerias[pizz_key]))
-            try:
-                price = float(row['item value'])
-            except ValueError:
-                price = float("nan")
-            g.add((pizza_uri, ONT.preis, Literal(price, datatype=XSD.decimal)))
+            # Add menu item properties
+            g.add((menu_item_uri, RDF.type, SCHEMA.MenuItem))
+            g.add((menu_item_uri, RDF.type, ONT.Pizza))  # Also type as ontology Pizza
+            g.add((menu_item_uri, SCHEMA.name, Literal(pizza_name)))
+
+            # Add price information
+            price = Literal(float(row['item value']), datatype=XSD.decimal)
+            g.add((menu_item_uri, SCHEMA.price, price))
+            g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row['currency'])))
+
+            # Link to pizzeria
+            g.add((menu_item_uri, ONT.gehörtZuPizzeria, pizzerias[pizz_key]))
+
+            # Add description if available
+            if row['item description']:
+                g.add((menu_item_uri, SCHEMA.description, Literal(row['item description'])))
 
             # Add ingredients
             for ing_name in pizza.get('ingredients', []):
                 norm_name = ing_name.strip().lower()
+                slug = norm_name.replace(' ', '_').replace('"', '').replace("'", "")
 
                 # Use existing ontology ingredient if available
                 if norm_name in KNOWN_INGREDIENTS:
                     ing_uri = ONT[KNOWN_INGREDIENTS[norm_name]]
                 else:
-                    # Create new ingredient with Wikidata link
+                    # Create new ingredient
+                    qid = ing_qid_map[norm_name]['qid']
+                    ing_uri = ONT[slug]
+                    g.add((ing_uri, RDF.type, ONT.Zutat))
+                    g.add((menu_item_uri, ONT.enthaeltZutat, ing_uri))
+
+                    # with Wikidata link if it exists
                     if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
-                        qid = ing_qid_map[norm_name]['qid']
-                        ing_uri = ONT[f"Ingredient_wd_{qid}"]
                         g.add((ing_uri, OWL.sameAs, WD[qid]))
-                    else:
-                        # Fallback: create new ingredient
-                        slug = norm_name.replace(' ', '_').replace('"', '').replace("'", "")
-                        ing_uri = ONT[f"Ingredient_{slug}"]
-
-                        g.add((ing_uri, RDF.type, ONT.Zutat))
-
-                    g.add((pizza_uri, ONT.enthaeltZutat, ing_uri))
 
     # Save to Turtle
     g.serialize('pizza_data.ttl', format='turtle')
