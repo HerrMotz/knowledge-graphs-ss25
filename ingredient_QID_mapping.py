@@ -3,13 +3,6 @@ import requests
 import time
 import os
 
-ingredient_qid_map = {}
-
-# load existing mapping if available
-if os.path.exists("ingredient_qid_map.json"):
-    with open("ingredient_qid_map.json", "r", encoding="utf-8") as f:
-        ingredient_qid_map = json.load(f)
-
 filename = "results_13.jsonl"
 
 # set of all ingredients
@@ -117,36 +110,40 @@ def is_food_item(qid):
     return False
 
 
-# create mapping of ingredients to QIDs
-ingredient_qid_map = {}
+if __name__ == "__main__":
+    # create mapping of ingredients to QIDs
+    ingredient_qid_map = {}
 
-locked_qid_map = {}
+    with open("locked_qid_map.json", "r", encoding="utf-8") as f:
+        locked_qid_map = json.load(f)
 
-with open("locked_qid_map.json", "r", encoding="utf-8") as f:
-    locked_qid_map = json.load(f)
-for ingredient in sorted(all_ingredients):
-    entry = locked_qid_map.get(ingredient)
+    for ingredient in sorted(all_ingredients):
+        entry = locked_qid_map.get(ingredient)
 
-    # skip locked entries
-    if entry and isinstance(entry, dict) and entry.get("locked"):
-        print(f"{ingredient}: 🔒 locked ({entry['qid']})")
-        continue
+        # override for locked entries
+        if entry and isinstance(entry, dict):
+            print(f"{ingredient}: 🔒 locked ({entry['qid']})")
+            ingredient_qid_map[ingredient] = {
+                "qid": entry["qid"],
+                "locked": True
+            }
+            continue
 
-    # get QID from Wikidata
-    qid = get_wikidata_qid(ingredient)
-    if not qid:
-        print(f"{ingredient}: ❌ not found")
-    else:
-        print(f"{ingredient}: ✅ http://www.wikidata.org/entity/{qid}")
+        # get QID from Wikidata
+        qid = get_wikidata_qid(ingredient)
+        if not qid:
+            print(f"{ingredient}: ❌ not found")
+        else:
+            print(f"{ingredient}: ✅ http://www.wikidata.org/entity/{qid}")
 
-    # save QID to mapping
-    ingredient_qid_map[ingredient] = {
-        "qid": qid,
-        "locked": False
-    }
+        # save QID to mapping
+        ingredient_qid_map[ingredient] = {
+            "qid": qid,
+            "locked": False
+        }
 
-    time.sleep(1)  # for rate limit
+        time.sleep(1)  # for rate limit
 
-# save mapping to JSON
-with open("ingredient_qid_map.json", "w", encoding="utf-8") as f:
-    json.dump(ingredient_qid_map, f, ensure_ascii=False, indent=2)
+    # save mapping to JSON
+    with open("ingredient_qid_map.json", "w", encoding="utf-8") as f:
+        json.dump(ingredient_qid_map, f, ensure_ascii=False, indent=2)

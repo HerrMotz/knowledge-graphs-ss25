@@ -1,66 +1,50 @@
 {
   "egg": {
-    "qid": "Q93189",
-    "locked": true
+    "qid": "Q93189"
   },
   "basil": {
-    "qid": "Q38859",
-    "locked": true
+    "qid": "Q38859"
   },
   "gorgonzola cheese": {
-    "qid": "Q209044",
-    "locked": true
+    "qid": "Q209044"
   },
   "anchovy": {
-    "qid": "Q4589261",
-    "locked": true
+    "qid": "Q4589261"
   },
   "ham": {
-    "qid": "Q170486",
-    "locked": true
+    "qid": "Q170486"
   },
   "olive": {
-    "qid": "Q1621080",
-    "locked": true
+    "qid": "Q1621080"
   },
   "onion": {
-      "qid": "Q3406628",
-      "locked": true
+      "qid": "Q3406628"
   },
   "parmesan cheese": {
-    "qid": "Q155922",
-    "locked": true
+    "qid": "Q155922"
   },
   "ricotta": {
-    "qid": "Q216781",
-    "locked": true
+    "qid": "Q216781"
   },
   "tuna": {
-    "qid": "Q17504707",
-    "locked": true
+    "qid": "Q17504707"
   },
   "white truffle": {
-    "qid": "Q2690965",
-    "locked": true
+    "qid": "Q2690965"
   },
   "cheese": {
-    "qid": "Q10943",
-    "locked": true
+    "qid": "Q10943"
   },
   "pineapple": {
-    "qid": "Q10817602",
-    "locked": true
+    "qid": "Q10817602"
   },
   "jalapeno": {
-    "qid": "Q504133",
-    "locked": true
+    "qid": "Q504133"
   },
   "chicken": {
-    "qid": "Q864693",
-    "locked": true
+    "qid": "Q864693"
   },
   "ground beef": {
-    "qid": "Q3408258",
-    "locked": true
+    "qid": "Q3408258"
   }
 }
