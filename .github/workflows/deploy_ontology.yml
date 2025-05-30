@@ -24,4 +24,4 @@ jobs:
 
     - name: Copy ontology.xml to server
       run: |
-        scp ontology.xml ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/web/ontology.daniel-motz.de/public_html/becks/
+        scp ontology.xml ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/web/ontology.daniel-motz.de/public_html/
