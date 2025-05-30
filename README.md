@@ -8,9 +8,10 @@ The pipeline works as follows:
 
 1. Extract ingredients from the dataset (tabular data) using a large language model `create_batch.py`, `upload_batch.py`
 2. Download the results using `get_batch_results.py`
-3. Map the ingredients to WikiData items using elastic search and a SPARQL query `ingredient_QID_mapping.py`
-4. Extract cities from the dataset and map them to WikiData items `city_QID_mapping.py`
-5. Use `rdflib` to integrate the three data sources into statements within the ontology `integrate_tabular_data_with_ontology.py`
+3. Clean the LLMs results by manually removing/mapping some common mistakes to the correct category, e.g. "banana pepper" to "bell pepper"
+4. Map the ingredients to WikiData items using elastic search and a SPARQL query `ingredient_QID_mapping.py`
+5. Extract cities from the dataset and map them to WikiData items `city_QID_mapping.py`
+6. Use `rdflib` to integrate the three data sources into statements within the ontology `integrate_tabular_data_with_ontology.py`
    1. Add the pizza places with schema.org-addresses
    2. Create the pizzas
       1. The ontology has existing ingredients. Again override the mapping to the entities from within the ontology using
