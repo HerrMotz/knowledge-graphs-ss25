@@ -20,6 +20,10 @@ The pipeline works as follows:
    3. Write the results to `pizza_data.ttl`
 
 ### Possible improvements
++ It is obvious that the ontology is in German and the data is English, and it would be nice to unify them
+    We made an informed decision to keep them different, to show that they can be integrated, even though different
+    languages were used. Furthermore, we could use this for other cases, were different, but equivalently legitimate 
+    terminology was used.
 + Add place categories to Pizzeria, like "Burger Place", "University", ...
 + The list of KNOWN_INGREDIENTS should only contain ingredients which are not present in WikiData. 
     Furthermore, it would be even better to add the missing ingredients to WikiData, instead of
