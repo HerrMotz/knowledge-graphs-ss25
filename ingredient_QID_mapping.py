@@ -1,9 +1,8 @@
 import json
 import requests
 import time
-import os
 
-filename = "results_13.jsonl"
+filename = "results_15_complete.jsonl"
 
 # set of all ingredients
 all_ingredients = set()
