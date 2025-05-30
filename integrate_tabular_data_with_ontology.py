@@ -10,41 +10,50 @@ KNOWN_INGREDIENTS = {
     "pepperoni": "Pepperoniwurst",
     "salami": "Salami",
     "ham": "Schinken",
-    "tomato sauce": "Tomatensauce"
+    "tomato sauce": "Tomatensauce",
 }
 
+# Initialize RDF Graph
+g = Graph()
 BASE_URI = "http://ontology.daniel-motz.de/ontology#"
+g.bind("", BASE_URI)
+g.bind("owl", OWL)
+g.bind("rdfs", RDFS)
+g.bind("schema", "http://schema.org/")
+
 # Define Namespaces
 ONT = Namespace(BASE_URI)
 SCHEMA = Namespace("http://schema.org/")
 WD = Namespace("http://www.wikidata.org/entity/")
 
-def main():
-    # Initialize RDF Graph
-    g = Graph()
-    g.bind("", BASE_URI)
-    g.bind("owl", OWL)
-    g.bind("rdfs", RDFS)
-    g.bind("schema", "http://schema.org/")
+# Load mappings
+with open('city_qid_map.json') as f:
+    cities_map = json.load(f)
+with open('ingredient_qid_map.json') as f:
+    ing_qid_map = json.load(f)
 
-    # Load mappings
-    with open('city_qid_map.json') as f:
-        cities_map = json.load(f)
-    with open('ingredient_qid_map.json') as f:
-        ing_qid_map = json.load(f)
+# Process data.csv and ingredients.jsonl
+pizzerias = {}
+pizza_count = 0
 
+with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_file:
+    csv_reader = csv.DictReader(csv_file)
+    for i, row in enumerate(csv_reader):
+        # Read JSONL line - could be an object or array
+        json_line = jsonl_file.readline().strip()
+        if not json_line:
+            continue
 
+        try:
+            pizza_data = json.loads(json_line)
+        except json.JSONDecodeError:
+            continue
 
-    # Process data.csv and ingredients.jsonl
-    pizzerias = {}
-    pizza_count = 0
+        # Normalize to list of pizzas
+        pizzas = pizza_data if isinstance(pizza_data, list) else [pizza_data]
 
-    with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_file:
-        csv_reader = csv.DictReader(csv_file)
-        for i, row in enumerate(csv_reader):
-            # Read ingredients data
-            ing_data = json.loads(jsonl_file.readline())
-            if not ing_data.get('is_pizza', False):
+        for pizza in pizzas:
+            if not pizza.get('is_pizza', False):
                 continue  # Skip non-pizza items
 
             # Create or get Pizzeria
@@ -77,36 +86,44 @@ def main():
                 g.add((pizz_uri, SCHEMA.address, address_node))
 
             # Create Pizza individual
-            pizza_uri = ONT[f"Pizza_{pizza_count}"]
+            pizza_name = pizza.get('name', row['menu item'])
+            pizza_slug = pizza_name.replace(' ', '_').replace('"', '').replace("'", "")
+            pizza_uri = ONT[f"{pizza_slug}_{pizza_count}"]
+            pizza_description = row["item description"]
             pizza_count += 1
+
             g.add((pizza_uri, RDF.type, ONT.Pizza))
+            g.add((pizza_uri, RDFS.label, Literal(pizza_name)))
+            if pizza_description:
+                g.add((pizza_uri, RDFS.comment, Literal()))
             g.add((pizza_uri, ONT.gehörtZuPizzeria, pizzerias[pizz_key]))
-            g.add((pizza_uri, ONT.preis, Literal(float(row['item value']), datatype=XSD.decimal)))
+            try:
+                price = float(row['item value'])
+            except ValueError:
+                price = float("nan")
+            g.add((pizza_uri, ONT.preis, Literal(price, datatype=XSD.decimal)))
 
             # Add ingredients
-            for ing_name in ing_data['ingredients']:
+            for ing_name in pizza.get('ingredients', []):
                 norm_name = ing_name.strip().lower()
 
-            # Use existing ontology ingredient if available
-            if norm_name in KNOWN_INGREDIENTS:
-                ing_uri = ONT[KNOWN_INGREDIENTS[norm_name]]
-            else:
-            # Create new ingredient with Wikidata link
-                if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
-                    qid = ing_qid_map[norm_name]['qid']
-                    ing_uri = ONT[f"Ingredient_wd_{qid}"]
-                    g.add((ing_uri, OWL.sameAs, WD[qid]))
+                # Use existing ontology ingredient if available
+                if norm_name in KNOWN_INGREDIENTS:
+                    ing_uri = ONT[KNOWN_INGREDIENTS[norm_name]]
                 else:
-                    # Fallback: create new ingredient
-                    slug = norm_name.replace(' ', '_')
-                    ing_uri = ONT[f"Ingredient_{slug}"]
+                    # Create new ingredient with Wikidata link
+                    if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
+                        qid = ing_qid_map[norm_name]['qid']
+                        ing_uri = ONT[f"Ingredient_wd_{qid}"]
+                        g.add((ing_uri, OWL.sameAs, WD[qid]))
+                    else:
+                        # Fallback: create new ingredient
+                        slug = norm_name.replace(' ', '_').replace('"', '').replace("'", "")
+                        ing_uri = ONT[f"Ingredient_{slug}"]
 
-            g.add((ing_uri, RDF.type, ONT.Zutat))
+                        g.add((ing_uri, RDF.type, ONT.Zutat))
 
-            g.add((pizza_uri, ONT.enthaeltZutat, ing_uri))
+                    g.add((pizza_uri, ONT.enthaeltZutat, ing_uri))
 
-            # Save to Turtle
-            g.serialize('pizza_data.ttl', format='turtle')
-
-if __name__ == "__main__":
-    main()
+    # Save to Turtle
+    g.serialize('pizza_data.ttl', format='turtle')
