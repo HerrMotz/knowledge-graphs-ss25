@@ -113,7 +113,7 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
             g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row['currency'])))
 
             # Link to pizzeria
-            g.add((menu_item_uri, ONT.gehörtZuPizzeria, pizzerias[pizz_key]))
+            g.add((menu_item_uri, ONT.gehoertZuPizzeria, pizzerias[pizz_key]))
 
             # Add description if available
             if row['item description']:

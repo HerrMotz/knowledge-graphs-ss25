@@ -41,9 +41,9 @@
     </owl:ObjectProperty>
 
 
-    <!-- http://ontology.daniel-motz.de/ontology#gehörtZuPizzeria -->
+    <!-- http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#gehörtZuPizzeria">
+    <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria">
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria"/>
     </owl:ObjectProperty>
@@ -421,7 +421,7 @@
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Salami"/>
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Schinken"/>
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
-        <gehörtZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
+        <gehoertZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
         <rdfs:comment>Eine besondere Pizza-Kreation des Hauses, welche zu Ehren des glorreichen FC Carl Zeiss Jena
             erschaffen wurde.
@@ -440,7 +440,7 @@
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Mozzarella"/>
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Schinken"/>
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
-        <gehörtZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
+        <gehoertZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
         <rdfs:comment>Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
         <rdfs:label>Pizza Hawaii bei Mekan</rdfs:label>
