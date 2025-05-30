@@ -101,22 +101,6 @@
     </owl:DatatypeProperty>
 
 
-    <!-- http://ontology.daniel-motz.de/ontology#preis -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.daniel-motz.de/ontology#preis">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-                <owl:withRestrictions rdf:parseType="Collection">
-                    <rdf:Description>
-                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</xsd:minInclusive>
-                    </rdf:Description>
-                </owl:withRestrictions>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-
-
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -439,7 +423,6 @@
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
         <gehörtZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
-        <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.9</preis>
         <rdfs:comment>Eine besondere Pizza-Kreation des Hauses, welche zu Ehren des glorreichen FC Carl Zeiss Jena
             erschaffen wurde.
         </rdfs:comment>
@@ -459,7 +442,6 @@
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
         <gehörtZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Mekan"/>
         <groesse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</groesse>
-        <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.9</preis>
         <rdfs:comment>Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
         <rdfs:label>Pizza Hawaii bei Mekan</rdfs:label>
     </owl:NamedIndividual>
