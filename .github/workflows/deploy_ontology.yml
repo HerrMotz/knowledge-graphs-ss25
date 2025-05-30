@@ -1,0 +1,27 @@
+name: Deploy Ontology
+
+on:
+  push:
+    paths:
+      - 'ontology.xml'
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Copy ontology.xml to server
+      run: |
+        scp ontology.xml ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/web/ontology.daniel-motz.de/public_html/becks/
