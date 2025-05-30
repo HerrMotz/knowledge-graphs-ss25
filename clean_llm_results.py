@@ -21,8 +21,16 @@ from typing import Any, Iterable
 # --------------------------------------------------------------------------------------
 RENAMES: dict[str, str] = {
     "banana pepper": "bell pepper",
+    "1000 island dressing": "island dressing",
+    "brazil nut parmesan": "parmesan",
+    "Italian bread": "bread",
 }
-REMOVE: set[str] = {"dough"}
+REMOVE: set[str] = {
+    "dough",
+    "1 topping",
+    "2 toppings",
+    "2 topping",
+}
 # --------------------------------------------------------------------------------------
 
 
@@ -126,4 +134,4 @@ if __name__ == "__main__":
     #if len(sys.argv) != 2:
     #    sys.exit("Usage: python clean_pizza_json.py <batch.json>")
     #main(sys.argv[1])
-    main("results_13.jsonl")
+    main("results_15_complete.jsonl")
