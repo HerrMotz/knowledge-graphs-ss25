@@ -1,6 +1,6 @@
 import csv
 import json
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode
+from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode
 
 # Known ontology ingredients mapping
 KNOWN_INGREDIENTS = {
@@ -91,7 +91,12 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
             pizza_name = pizza.get('name', row['menu item'])
             pizza_slug = pizza_name.replace(' ', '_').replace('"', '').replace("'", "")
             menu_item_uri = ONT[f"MenuItem_{pizza_slug}_{pizza_count}"]
+            menu_item_description = row["item description"]
             pizza_count += 1
+
+            g.add((menu_item_uri, RDFS.label, Literal(pizza_name)))
+            if menu_item_description:
+                g.add((menu_item_uri, RDFS.comment, Literal(menu_item_description)))
 
             # Add menu item properties
             g.add((menu_item_uri, RDF.type, SCHEMA.MenuItem))
@@ -99,7 +104,11 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
             g.add((menu_item_uri, SCHEMA.name, Literal(pizza_name)))
 
             # Add price information
-            price = Literal(float(row['item value']), datatype=XSD.decimal)
+            try:
+                _p = float(row['item value'])
+            except ValueError:
+                _p = float("nan")
+            price = Literal(_p, datatype=XSD.decimal)
             g.add((menu_item_uri, SCHEMA.price, price))
             g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row['currency'])))
 
@@ -120,13 +129,13 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                     ing_uri = ONT[KNOWN_INGREDIENTS[norm_name]]
                 else:
                     # Create new ingredient
-                    qid = ing_qid_map[norm_name]['qid']
                     ing_uri = ONT[slug]
                     g.add((ing_uri, RDF.type, ONT.Zutat))
                     g.add((menu_item_uri, ONT.enthaeltZutat, ing_uri))
 
                     # with Wikidata link if it exists
                     if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
+                        qid = ing_qid_map[norm_name]['qid']
                         g.add((ing_uri, OWL.sameAs, WD[qid]))
 
     # Save to Turtle
