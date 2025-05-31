@@ -30,6 +30,9 @@ The pipeline works as follows:
     Furthermore, it would be even better to add the missing ingredients to WikiData, instead of
     defining them in our ontology. But this script's purpose it to show what can be done, not the real deal.
 + We could, instead of creating our own ontology, use `schema.org` for any assertion.
++ The LLM extraction step can be improved with more prompt engineering
++ The LLM cleaning step can be improved with word stemming (and other classical NLP cleanup steps) and also the word
+   stems or singulars could be used as normalised names
 
 ```turtle
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

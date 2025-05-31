@@ -21,9 +21,18 @@ from typing import Any, Iterable
 # --------------------------------------------------------------------------------------
 RENAMES: dict[str, str] = {
     "banana pepper": "bell pepper",
+    "banana peppers": "bell pepper",
     "1000 island dressing": "island dressing",
     "brazil nut parmesan": "parmesan",
     "Italian bread": "bread",
+    "basil pesto sauce": "basil pesto",
+    "chicken meatball": "chicken",
+    "artichoke heart" : "artichoke",
+    "artichoke hearts" : "artichoke",
+    "anchovies": "anchovy",
+    "bbq chicken":  "chicken",
+    "assorted vegetables": "vegetables",
+    "black olives": "black olive",
 }
 REMOVE: set[str] = {
     "dough",
