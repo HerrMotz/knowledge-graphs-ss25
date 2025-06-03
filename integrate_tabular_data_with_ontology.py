@@ -65,6 +65,7 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                 # Add pizzeria details
                 g.add((pizz_uri, RDF.type, ONT.Pizzeria))
                 g.add((pizz_uri, SCHEMA.name, Literal(row['name'])))
+                g.add((pizz_uri, RDFS.label, Literal(row['name'])))
                 g.add((pizz_uri, RDF.type, SCHEMA.FoodEstablishment))
 
                 # Create schema.org address structure
@@ -127,6 +128,7 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                 # Use existing ontology ingredient if available
                 if norm_name in KNOWN_INGREDIENTS:
                     ing_uri = ONT[KNOWN_INGREDIENTS[norm_name]]
+                    g.add((menu_item_uri, ONT.enthaeltZutat, ing_uri))
                 else:
                     # Create new ingredient
                     ing_uri = ONT[slug]
