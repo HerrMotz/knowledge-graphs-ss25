@@ -38,15 +38,11 @@ python3 clean_llm_results.py
 4. Fill the `locked_qid_map.json` with expert knowledge
 5. Run
 ```shell
-python3 ingredient_qid_mapping.py 
+python3 ingredient_QID_mapping.py 
 ```
 6. Run
 ```shell
-python3 create_ingredients.jsonl.py 
-```
-7. Run
-```shell
-python3 integrate_tabular_data_with_ontology.py 
+python3 create_ingredients.jsonl.py
 ```
 
 ### Cities
@@ -54,6 +50,11 @@ python3 integrate_tabular_data_with_ontology.py
 2. Run
 ```shell
 python3 city_qid_mapping.py
+```
+
+### Integrate Data from CSV-file with Ontology
+```shell
+python3 integrate_tabular_data_with_ontology.py 
 ```
 
 ### File Purposes
