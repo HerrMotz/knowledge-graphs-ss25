@@ -33,6 +33,7 @@ RENAMES: dict[str, str] = {
     "bbq chicken":  "chicken",
     "assorted vegetables": "vegetables",
     "black olives": "black olive",
+    "tomato basil sauce": "tomato sauce",
     "tomatoes": "tomato",
     "sun dried tomato": "tomato",
     "sun dried tomatoes": "tomato",
