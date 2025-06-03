@@ -135,10 +135,10 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                     g.add((ing_uri, RDF.type, ONT.Zutat))
                     g.add((menu_item_uri, ONT.enthaeltZutat, ing_uri))
 
-                    # with Wikidata link if it exists
-                    if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
-                        qid = ing_qid_map[norm_name]['qid']
-                        g.add((ing_uri, OWL.sameAs, WD[qid]))
+                # with Wikidata link if it exists
+                if norm_name in ing_qid_map and ing_qid_map[norm_name].get('qid'):
+                    qid = ing_qid_map[norm_name]['qid']
+                    g.add((ing_uri, OWL.sameAs, WD[qid]))
 
     # Save to Turtle
     g.serialize('pizza_data.ttl', format='turtle')
