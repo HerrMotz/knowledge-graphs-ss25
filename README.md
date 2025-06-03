@@ -79,6 +79,9 @@ python3 city_qid_mapping.py
 + The list of KNOWN_INGREDIENTS should only contain ingredients which are not present in Wikidata. 
     Furthermore, it would be even better to add the missing ingredients to Wikidata, instead of
     defining them in our ontology. But this script's purpose it to show what can be done, not the real deal.
++ The ingredients could be further categorised, e.g. "sun-dried tomatoes", "cherry tomatoes" and "tomato basil sauce"
+    could be subsumed in a class "tomato ingredients". The same applies to "fried egg". If the goal is to keep the 
+    querying simple, one could add the class itself as an ingredient assertion. 
 + We could, instead of creating our own ontology, use `schema.org` for any assertion.
 + The LLM extraction step can be improved with more prompt engineering
 + The LLM cleaning step can be improved with classical NLP methods, e.g. the word
