@@ -74,16 +74,20 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                 g.add((address_node, SCHEMA.streetAddress, Literal(row['address'])))
 
                 # Link city to Wikidata if available
-                city = row['city']
-                if city in cities_map and cities_map[city].get('qid'):
-                    city_uri = WD[cities_map[city]['qid']]
+                city = row["city"]
+                if city:
+                    city_data = cities_map.get(city, {})
+                    city_uri = WD[city_data['qid']] if city_data.get('qid') else Literal(city)
                     g.add((address_node, SCHEMA.addressLocality, city_uri))
-                else:
-                    g.add((address_node, SCHEMA.addressLocality, Literal(city)))
 
-                g.add((address_node, SCHEMA.addressRegion, Literal(row['state'])))
-                g.add((address_node, SCHEMA.postalCode, Literal(row['postcode'])))
-                g.add((address_node, SCHEMA.addressCountry, Literal(row['country'])))
+                addr_map = [('state', SCHEMA.addressRegion),
+                            ('postcode', SCHEMA.postalCode),
+                            ('country', SCHEMA.addressCountry)]
+
+                for key, predicate in addr_map:
+                    value = row[key]
+                    if value:
+                        g.add((address_node, predicate, Literal(value)))
 
                 # Link address to pizzeria
                 g.add((pizz_uri, SCHEMA.address, address_node))

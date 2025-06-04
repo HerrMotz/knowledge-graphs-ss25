@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema1: <http://schema.org/>
+PREFIX : <http://ontology.daniel-motz.de/ontology#>
+
+SELECT ?region ?locality (COUNT(?restaurant) AS ?restaurantCount)
+WHERE {
+    ?restaurant rdf:type :Pizzeria.
+
+    OPTIONAL {
+        ?restaurant schema1:address ?a.
+        OPTIONAL { ?a schema1:addressLocality ?locality. }
+        OPTIONAL { ?a schema1:addressRegion ?region. }
+    }
+}
+GROUP BY ?region ?locality
+ORDER BY ?region DESC(?restaurantCount)

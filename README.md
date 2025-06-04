@@ -76,6 +76,9 @@ python3 integrate_tabular_data_with_ontology.py
     We made an informed decision to keep them different, to show that they can be integrated, even though different
     languages were used. Furthermore, we could use this for other cases, were different, but equivalently legitimate 
     terminology was used.
++ Based on the name of the menu item, the ontological category could be identified and an assumption about
+    the ingredients could be made, e.g. the name is "Pizza Margherita", then the ontological category "Pizza Margherita"
+    could inferred by lexicographic matching, adding the category's characteristic ingredients.
 + Add place categories to Pizzeria, like "Burger Place", "University", ...
 + The list of KNOWN_INGREDIENTS should only contain ingredients which are not present in Wikidata. 
     Furthermore, it would be even better to add the missing ingredients to Wikidata, instead of
@@ -101,3 +104,14 @@ ex:MenuItem1 a schema:MenuItem ;
   schema:price "5.99"^^xsd:decimal ;
   schema:priceCurrency "USD" .
 ```
+
+## Week 3 -- Querying
+
+| File                                       | Description                                                                                                          |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| `pizza_data.ttl`                           | The output of `integrate_tabular_data_with_ontology.py`. Does not contain the ontology.                              |
+| `statements.ttl`                           | subtask 1: The graph exported from GraphDB. It was created by importing both the `ontology.xml` and `pizza_data.ttl`. |
+| `pizza_without_tomato.sparql`              | subtask 2: The query which fetches all restaurants that do not offer Pizza with tomato toppings.                     |
+| `average_price_of_pizza_margherita.sparql` | subtask 3: The query which fetches the avg price of a Pizza Margherita                                               |
+| `restaurants_by_city.sparql`               | subtask 4                                                                                                            |
+|                                            ||

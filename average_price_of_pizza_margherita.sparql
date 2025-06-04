@@ -1,0 +1,10 @@
+PREFIX schema1: <http://schema.org/>
+PREFIX : <http://ontology.daniel-motz.de/ontology#>
+
+SELECT (AVG(?price) as ?avgPrice) WHERE {
+    ?pizza :enthaeltZutat :tomato, :Mozzarella.
+    ?pizza schema1:price ?price.
+    ?pizza schema1:priceCurrency ?currency.
+    # Filter out unknown prices
+    FILTER (str(?price) != "NaN")
+}
