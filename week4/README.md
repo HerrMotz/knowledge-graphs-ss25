@@ -12,13 +12,14 @@ of _Fruit Topping_ (subclass of _Pizza Topping_), with the only subclass being _
 ## Example usage
 > [!TIP]
 > You will first need to make some _manual_ changes to the package `deeponto` to make some fixes.
+> Look in the section below
 
 Run this command from the subfolder `week4`:
 ```shell
 python bertmap_alignment.py ..\week1\ontology.xml existing_pizza.owl -c bertmap_config.yaml --subs-config bertsubs_config.yaml --output bertmap_equivalences.ttl --subs-output bertmap_subsumptions.ttl
 ```
 
-## Hints for Running these scripts
+## Required manual changes to the `deeponto` package
 
 You want to install torch with CUDA support (if you have a CUDA gfx ofc). For CUDA 12.x use also 12.1:
 
