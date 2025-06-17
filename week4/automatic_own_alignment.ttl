@@ -1,0 +1,120 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p1: <http://www.co-ode.org/ontologies/pizza#> .
+@prefix p2: <http://ontology.daniel-motz.de/ontology#> .
+
+p1:FoodTopping owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> owl:equivalentClass p2:Pizza .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+<http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf> owl:equivalentProperty p2:enthaeltZutat,
+        p2:gehoertZuPizzeria .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
+[] owl:equivalentClass _:N7d19d6c283754e2fb6c7887427a14f5e .
+
