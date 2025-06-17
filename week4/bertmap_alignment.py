@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """
-Compute equivalence alignments between two OWL ontologies using DeepOnto's BERTMap
-and generate a Turtle file containing owl:equivalentClass / owl:equivalentProperty triples.
+Compute **equivalence alignments** (BERTMap) *and* **subsumption alignments** (BERTSubs)
+for two OWL ontologies with **DeepOnto**, exporting results in Turtle.
 
-GPU SUPPORT (CUDA):
-    The script auto-detects an available NVIDIA GPU via PyTorch **or** lets you
-    force the device with `--device`.  The selected device is injected into the
-    BERTMap config (``config.device``) and exported to the environment variable
-    ``CUDA_VISIBLE_DEVICES`` so that the whole DeepOnto stack runs on GPU.
+Key points
+~~~~~~~~~~
+* Uses **BERTMapPipeline** for ≡ relations with its shipped default YAML.
+* Uses **BERTSubsInterPipeline** for ⊑/⊒ relations - there is **no default YAML** for
+  this model, so you must either pass one via `--subs-config` or let the script fall
+  back to *built-in* hyper-parameters provided programmatically by the pipeline.
+* Fully GPU-aware via a `--device` option (`auto`, `cpu`, `cuda`, or `cuda:N`).
+* Generates two TTL files: one for equivalences, one for subsumption triples.
 
-Usage:
-    python bertmap_equivalence_script.py src.owl tgt.owl \
-        --output alignments.ttl            # optional
-        --device auto|cpu|cuda|cuda:1      # optional (default: auto)
-        --config my_bertmap.yaml           # optional custom config
-        --work-dir bertmap_work            # optional work dir
+Example call
+~~~~~~~~~~~~
+```bash
+python bertmap_alignment.py src.owl tgt.owl \
+       --output equivalences.ttl \
+       --subs-output subsumptions.ttl \
+       --device cuda:0               # optional (default: auto)
+       --config my_bertmap.yaml      # optional custom BERTMap config
+       --subs-config my_bertsubs.yaml# optional custom BERTSubs config
+       --work-dir bertmap_work       # optional work dir
+```
 """
 
 from __future__ import annotations
@@ -24,14 +32,19 @@ import csv
 import logging
 import os
 import pathlib
-from typing import Final
+from typing import Final, MutableMapping
 
 import torch
 from rdflib import Graph, URIRef
-from rdflib.namespace import RDF, OWL
+from rdflib.namespace import RDF, RDFS, OWL
 
 from deeponto.onto import Ontology
-from deeponto.align.bertmap import BERTMapPipeline, DEFAULT_CONFIG_FILE
+from deeponto.align.bertmap import BERTMapPipeline, DEFAULT_CONFIG_FILE as BM_DEFAULT_CFG
+from deeponto.align.bertsubs import BERTSubsInterPipeline, DEFAULT_CONFIG_FILE_INTER as BS_DEFAULT_CFG
+
+#######################################################################################
+# Device helpers                                                                      #
+#######################################################################################
 
 def _resolve_device(cli_choice: str) -> str:
     """Resolve requested device from CLI into a valid torch device string."""
@@ -42,8 +55,7 @@ def _resolve_device(cli_choice: str) -> str:
         if not torch.cuda.is_available():
             logging.warning("CUDA requested but no GPU visible → falling back to CPU")
             return "cpu"
-        # allow cuda, cuda:0, cuda:1 …
-        return cli_choice
+        return cli_choice  # allow cuda, cuda:0, cuda:1 …
 
     return "cpu"  # fallback / explicit "cpu"
 
@@ -62,144 +74,286 @@ def _prepare_environment(device: str) -> None:
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
         logging.info("Using CPU only (CUDA_VISIBLE_DEVICES cleared)")
 
+#######################################################################################
+# Config helpers                                                                      #
+#######################################################################################
+
+def _load_config(
+    pipeline_cls,
+    user_cfg_path: str | None,
+    default_cfg_path: str | None,
+    device: str,
+) -> MutableMapping[str, object]:
+    """Load DeepOnto YAML config or construct a reasonable default.
+
+    The priority is:
+    1. **User-supplied file** via CLI
+    2. **Library-shipped YAML** (e.g. BERTMap's `DEFAULT_CONFIG_FILE`)
+    3. **Programmatic defaults** provided by the pipeline class (if available)
+    4. Empty dict → pipeline should rely on hard-coded defaults internally
+    """
+
+    config: MutableMapping[str, object]
+
+    if user_cfg_path:
+        config = pipeline_cls.load_bertmap_config(user_cfg_path)  # type: ignore[attr-defined]
+        logging.info("Loaded %s config from %s", pipeline_cls.__name__, user_cfg_path)
+    elif default_cfg_path and pathlib.Path(default_cfg_path).exists():
+        config = pipeline_cls.load_bertmap_config(default_cfg_path)  # type: ignore[attr-defined]
+        logging.info("Loaded default %s config from %s", pipeline_cls.__name__, default_cfg_path)
+    elif hasattr(pipeline_cls, "get_default_config"):
+        # Newer DeepOnto versions expose programmatic defaults
+        config = pipeline_cls.get_default_config()  # type: ignore[attr-defined]
+        logging.info("Using built-in default config for %s", pipeline_cls.__name__)
+    else:
+        config = {}  # type: ignore[assignment]
+        logging.warning(
+            "Running %s with *minimal* defaults - consider supplying a YAML config!",
+            pipeline_cls.__name__,
+        )
+
+    # Inject/override desired device for all downstream models
+    config["device"] = device
+    return config
+
+#######################################################################################
+# Alignment pipelines                                                                 #
+#######################################################################################
 
 def run_bertmap(
     src_onto_path: str,
     tgt_onto_path: str,
-    config_path: str | None,
+    user_cfg_path: str | None,
     work_dir: str,
     device: str,
 ) -> pathlib.Path:
-    """Run BERTMap on *device* and return path to the repaired_mappings.tsv file."""
+    """Run **BERTMap** and return path to its final TSV mapping file."""
+
     work_dir_p = pathlib.Path(work_dir)
     work_dir_p.mkdir(parents=True, exist_ok=True)
 
-    # ------------------------------------------------------------------
-    # Load config & inject device and output path
-    # ------------------------------------------------------------------
-    if config_path:
-        config = BERTMapPipeline.load_bertmap_config(config_path)
-    else:
-        config = BERTMapPipeline.load_bertmap_config(DEFAULT_CONFIG_FILE)
+    # Load config & inject device
+    config = _load_config(BERTMapPipeline, user_cfg_path, BM_DEFAULT_CFG, device)
+    config["output_path"] = str(work_dir_p)
 
-    # DeepOnto config objects are often simple dicts or OmegaConf. Either way we
-    # can treat them like attribute access and dict assignment is safe.
-    config["device"] = device  # type: ignore[arg-type]
-    config.output_path = str(work_dir_p)  # type: ignore[attr-defined]
+    logging.info("Selected device for BERTMap: %s", device)
 
-    logging.info("Selected device: %s", device)
-
-    # ------------------------------------------------------------------
-    # Load ontologies & run the pipeline
-    # ------------------------------------------------------------------
-    logging.info("Loading ontologies …")
+    # Load ontologies & execute pipeline
+    logging.info("Loading ontologies for BERTMap …")
     src_onto = Ontology(src_onto_path)
     tgt_onto = Ontology(tgt_onto_path)
+    logging.info("Running BERTMap … (GPU used where available)")
+    _ = BERTMapPipeline(src_onto, tgt_onto, config)
 
-    logging.info("Running BERTMap … (this may take a while; GPU utilised where possible)")
-    bertmap = BERTMapPipeline(src_onto, tgt_onto, config)
-    # instantiation triggers matching by default
-
-    # ------------------------------------------------------------------
-    # Locate BERTMap's output mapping file
-    # ------------------------------------------------------------------
-    match_dir = work_dir_p / ("bertmap" if config.model == "bertmap" else "bertmaplt") / "match"  # type: ignore[attr-defined]
-    mapping_file = match_dir / "repaired_mappings.tsv"
-    if not mapping_file.exists():
-        # fall back to filtered mappings if repair not enabled
-        mapping_file = match_dir / "filtered_mappings.tsv"
-
-    if not mapping_file.exists():
-        raise FileNotFoundError(f"Could not locate mapping file inside {match_dir}")
-
+    # Locate output mapping file
+    match_dir = work_dir_p / "bertmap" / "match"
+    mapping_file = _pick_mapping_file(match_dir)
     return mapping_file
 
+
+def run_bertsubs(
+    src_onto_path: str,
+    tgt_onto_path: str,
+    user_cfg_path: str | None,
+    work_dir: str,
+    device: str,
+) -> pathlib.Path:
+    """Run **BERTSubsInterPipeline** and return path to its final TSV mapping file."""
+
+    work_dir_p = pathlib.Path(work_dir)
+    work_dir_p.mkdir(parents=True, exist_ok=True)
+
+    logging.info("Selected device for BERTSubs: %s", device)
+
+    # Load ontologies & execute pipeline
+    logging.info("Loading ontologies for BERTSubs …")
+    src_onto = Ontology(src_onto_path)
+    tgt_onto = Ontology(tgt_onto_path)
+    logging.info("Running BERTSubs … (GPU used where available)")
+    _ = BERTSubsInterPipeline(src_onto, tgt_onto, BS_DEFAULT_CFG)
+
+    # Locate output mapping file
+    match_dir = work_dir_p / "bertsubs" / "match"
+    mapping_file = _pick_mapping_file(match_dir)
+    return mapping_file
+
+
+#######################################################################################
+# Utility helpers                                                                     #
+#######################################################################################
+
+def _pick_mapping_file(match_dir: pathlib.Path) -> pathlib.Path:
+    """Return the best available mapping file produced by DeepOnto."""
+    f = match_dir / "logmap-repair" / "mappings_repaired_with_LogMap.tsv"
+    if f.exists():
+        return f
+
+    f = match_dir / "repaired_mappings.tsv"
+    if f.exists():
+        return f
+
+    f = match_dir / "filtered_mappings.tsv"
+    if f.exists():
+        return f
+
+    raise FileNotFoundError(f"Could not locate mapping file in {match_dir}")
+
+
+#######################################################################################
+# Conversion helpers                                                                  #
+#######################################################################################
 
 def mappings_to_ttl(
     mapping_tsv: pathlib.Path,
     src_onto_path: str,
     tgt_onto_path: str,
     ttl_out: str,
+    predicate_decider,
 ) -> None:
-    """Convert the TSV mappings into Turtle equivalence triples."""
+    """Convert a DeepOnto TSV mapping into Turtle triples using *predicate_decider*."""
+
     src_graph = Graph().parse(src_onto_path)
     tgt_graph = Graph().parse(tgt_onto_path)
-
     out_graph = Graph()
     out_graph.bind("owl", OWL)
+    out_graph.bind("rdfs", RDFS)
 
     with mapping_tsv.open(encoding="utf8") as f:
+        # Flexible reader: DeepOnto may include headers starting with SrcEntity	TgtEntity…
         reader = csv.DictReader(f, delimiter="\t")
-        # fall back to positional columns if no header
-        use_header = reader.fieldnames is not None and len(reader.fieldnames) >= 2
-        if not use_header:
+        has_header = reader.fieldnames is not None and set(reader.fieldnames) >= {"SrcEntity", "TgtEntity"}
+
+        if not has_header:
+            # Reset file pointer and treat TSV as plain 2-column without header
             f.seek(0)
-            reader = csv.reader(f, delimiter="\t")
+            reader = csv.reader(f, delimiter="\t")  # type: ignore[assignment]
 
-        for row in reader:
-            if use_header:
-                src_iri = URIRef(row["SrcEntity"])  # type: ignore[index]
-                tgt_iri = URIRef(row["TgtEntity"])  # type: ignore[index]
-            else:
-                src_iri = URIRef(row[0])  # type: ignore[index]
-                tgt_iri = URIRef(row[1])  # type: ignore[index]
+        for row in reader:  # type: ignore[arg-type]
+            src_iri, tgt_iri = (
+                (URIRef(row["SrcEntity"]), URIRef(row["TgtEntity"]))  # type: ignore[index]
+                if has_header
+                else (URIRef(row[0]), URIRef(row[1]))  # type: ignore[index]
+            )
 
-            # Decide predicate based on entity types declared in either ontology
-            if (
-                (src_iri, RDF.type, OWL.ObjectProperty) in src_graph
-                or (tgt_iri, RDF.type, OWL.ObjectProperty) in tgt_graph
-                or (src_iri, RDF.type, OWL.DatatypeProperty) in src_graph
-                or (tgt_iri, RDF.type, OWL.DatatypeProperty) in tgt_graph
-            ):
-                predicate = OWL.equivalentProperty
-            else:
-                predicate = OWL.equivalentClass
-
-            out_graph.add((src_iri, predicate, tgt_iri))
+            pred = predicate_decider(src_iri, tgt_iri, src_graph, tgt_graph)
+            out_graph.add((src_iri, pred, tgt_iri))
 
     out_graph.serialize(destination=ttl_out, format="turtle")
-    logging.info("Saved equivalence triples to %s", ttl_out)
+    logging.info("Saved %d triples to %s", len(out_graph), ttl_out)
 
+
+# ------------------------------------------------------------------
+# Predicate deciders for equivalence vs. subsumption
+# ------------------------------------------------------------------
+
+def _equiv_predicate(src, tgt, src_g, tgt_g):  # noqa: N802
+    if (
+        (src, RDF.type, OWL.ObjectProperty) in src_g
+        or (tgt, RDF.type, OWL.ObjectProperty) in tgt_g
+        or (src, RDF.type, OWL.DatatypeProperty) in src_g
+        or (tgt, RDF.type, OWL.DatatypeProperty) in tgt_g
+    ):
+        return OWL.equivalentProperty
+    return OWL.equivalentClass
+
+
+def _subs_predicate(src, tgt, src_g, tgt_g):  # noqa: N802
+    if (
+        (src, RDF.type, OWL.ObjectProperty) in src_g
+        or (tgt, RDF.type, OWL.ObjectProperty) in tgt_g
+        or (src, RDF.type, OWL.DatatypeProperty) in src_g
+        or (tgt, RDF.type, OWL.DatatypeProperty) in tgt_g
+    ):
+        return RDFS.subPropertyOf
+    return RDFS.subClassOf
+
+#######################################################################################
+# Main CLI                                                                            #
+#######################################################################################
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Compute equivalences between two ontologies with BERTMap (GPU-aware) and write a Turtle alignment.",
+        description=(
+            "Compute equivalence (BERTMap) *and* subsumption (BERTSubs) alignments "
+            "between two ontologies (GPU-aware) and export Turtle triples."
+        ),
     )
-    parser.add_argument("src_onto", help="Source ontology file (.owl/.xml/.ttl/...)")
-    parser.add_argument("tgt_onto", help="Target ontology file (.owl/.xml/.ttl/...)")
+    parser.add_argument("src_onto", help="Source ontology file (.owl/.xml/.ttl/…)")
+    parser.add_argument("tgt_onto", help="Target ontology file (.owl/.xml/.ttl/…)")
+
+    # Output files
     parser.add_argument(
         "-o",
         "--output",
-        help="Output TTL file for equivalence triples (default: ./equivalences.ttl)",
         default="equivalences.ttl",
+        help="Output TTL file for equivalence triples (default: equivalences.ttl)",
     )
-    parser.add_argument("-c", "--config", help="Optional YAML config for BERTMap", default=None)
-    parser.add_argument("-w", "--work-dir", help="Working directory for BERTMap outputs", default="bertmap_work")
+    parser.add_argument(
+        "-s",
+        "--subs-output",
+        default="subsumptions.ttl",
+        help="Output TTL file for subsumption triples (default: subsumptions.ttl)",
+    )
+
+    # Configs & work dir
+    parser.add_argument("-c", "--config", help="YAML config for BERTMap", default=None)
+    parser.add_argument("--subs-config", help="YAML config for BERTSubs", default=None)
+    parser.add_argument(
+        "-w", "--work-dir", help="Working directory to store DeepOnto outputs", default="bertmap_work"
+    )
+
+    # Device handling
     parser.add_argument(
         "-d",
         "--device",
         choices=["auto", "cpu", "cuda"] + [f"cuda:{i}" for i in range(torch.cuda.device_count() or 1)],
         default="auto",
-        help="Select computation device (default: auto - pick CUDA if available)",
+        help="Computation device (default: auto → choose CUDA if available)",
     )
 
     args = parser.parse_args()
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
 
-    # Resolve device & set environment before heavy imports start initialising CUDA context
+    # Resolve device early (before heavy imports cause CUDA initialisation)
     device: Final[str] = _resolve_device(args.device)
     _prepare_environment(device)
+    logging.info("torch sees CUDA available: %s", torch.cuda.is_available())
 
-    logging.info("torch sees CUDA: %s", torch.cuda.is_available())
-
-    mapping_file = run_bertmap(
+    # ------------------------------------------------------------------
+    # BERTMap equivalence alignment
+    # ------------------------------------------------------------------
+    bm_mapping_file = run_bertmap(
         args.src_onto,
         args.tgt_onto,
         args.config,
         args.work_dir,
         device,
     )
-    mappings_to_ttl(mapping_file, args.src_onto, args.tgt_onto, args.output)
+    mappings_to_ttl(
+        bm_mapping_file,
+        args.src_onto,
+        args.tgt_onto,
+        args.output,
+        _equiv_predicate,
+    )
+
+    # ------------------------------------------------------------------
+    # BERTSubs subsumption alignment
+    # ------------------------------------------------------------------
+    bs_mapping_file = run_bertsubs(
+        args.src_onto,
+        args.tgt_onto,
+        args.subs_config,
+        args.work_dir,
+        device,
+    )
+    mappings_to_ttl(
+        bs_mapping_file,
+        args.src_onto,
+        args.tgt_onto,
+        args.subs_output,
+        _subs_predicate,
+    )
 
 
 if __name__ == "__main__":

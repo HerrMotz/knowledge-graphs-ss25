@@ -58,16 +58,16 @@ bert:
 # Global matching knobs (bigger candidate pool, gentler filters)
 # -------------------------------------------------------
 global_matching:
-  enabled: true
+  enabled: false
   num_raw_candidates: 1000
   num_best_predictions: 20
   mapping_extension_threshold: 0.5
   mapping_filtered_threshold: 0.6
-  for_oaei: true
+  for_oaei: false
 
 # Device; script can override.
 device: auto  # auto | cpu | cuda | cuda:N
 
 # Mapping repair (disable for debugging recall)
-repair:
-  enabled: false
+reapir:
+  enabled: false        # disable full extension+repair

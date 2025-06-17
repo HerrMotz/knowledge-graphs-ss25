@@ -1,0 +1,8 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://ontology.daniel-motz.de/ontology#Laktosefreie> owl:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine> .
+
+<http://ontology.daniel-motz.de/ontology#Pizza> owl:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> .
+
+<http://ontology.daniel-motz.de/ontology#Sauce> owl:equivalentClass <http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping> .
+

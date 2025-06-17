@@ -24,3 +24,10 @@ Furthermore, there is a bug the ontodeep package for some reason. Go ahead and c
 ```py
 if not threshold or dp.Score >= threshold:
 ```
+
+Furthermore, you need to change the `__init__.py` for BertSubs located at `venv\Lib\site-packages\deeponto\align\bertsubs\__init__.py`. Replace the code line with:
+```py
+from deeponto.complete.bertsubs import BERTSubsInterPipeline, DEFAULT_CONFIG_FILE_INTER
+```
+
+so that it exports the configuration file.
