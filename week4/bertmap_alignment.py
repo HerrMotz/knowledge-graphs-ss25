@@ -6,14 +6,14 @@ for two OWL ontologies with **DeepOnto**, exporting results in Turtle.
 Key points
 ~~~~~~~~~~
 * Uses **BERTMapPipeline** for ≡ relations with its shipped default YAML.
-* Uses **BERTSubsInterPipeline** for ⊑/⊒ relations – you can supply a YAML via
-  `--subs-config`, otherwise the script falls back to the library’s
+* Uses **BERTSubsInterPipeline** for ⊑/⊒ relations  - you can supply a YAML via
+  `--subs-config`, otherwise the script falls back to the library's
   `DEFAULT_CONFIG_FILE_INTER` constant.
 * Fully GPU-aware via a `--device` option (`auto`, `cpu`, `cuda`, or `cuda:N`).
 * Generates two TTL files: one for equivalences, one for subsumption triples.
 
-This version includes a **Python 3.12 compatibility shim** for `random.sample` so that
-DeepOnto can still sample from sets (Python 3.12 now disallows that).
+This version includes a **Python 3.12 compatibility shim** for `random.sample` so that
+DeepOnto can still sample from sets (Python 3.12 now disallows that).
 
 Example call
 ~~~~~~~~~~~~
@@ -53,11 +53,11 @@ from deeponto.align.bertsubs import (
 )
 
 #######################################################################################
-# Python 3.12 compatibility shim for random.sample                                     #
+# Python 3.12 compatibility shim for random.sample                                     #
 #######################################################################################
 
-# Python 3.12 requires the population for random.sample to be a sequence. DeepOnto
-# (as of June 2025) still passes sets in a few places. We monkey-patch `random.sample`
+# Python 3.12 requires the population for random.sample to be a sequence. DeepOnto
+# (as of June 2025) still passes sets in a few places. We monkey-patch `random.sample`
 # to coerce any set population into a tuple. This is safe and avoids patching the
 # library itself.
 
@@ -130,7 +130,7 @@ def _load_config(
     else:
         config = {}
         logging.warning(
-            "Running %s with *minimal* defaults – consider supplying a YAML config!",
+            "Running %s with *minimal* defaults  - consider supplying a YAML config!",
             pipeline_cls.__name__,
         )
 
@@ -226,7 +226,7 @@ def run_bertsubs(
     _ = BERTSubsInterPipeline(src_onto, tgt_onto, config)
 
     # ------------------------------------------------------------------
-    # Locate mapping file – support both historical output folder names
+    # Locate mapping file  - support both historical output folder names
     # ------------------------------------------------------------------
     candidate_match_dirs = [
         work_dir_p / "bertsubs" / "match",        # DeepOnto ≤0.6
@@ -240,7 +240,7 @@ def run_bertsubs(
             continue
 
     raise FileNotFoundError(
-        "Could not locate mapping file after BERTSubs run – looked in: "
+        "Could not locate mapping file after BERTSubs run  - looked in: "
         + ", ".join(str(d) for d in candidate_match_dirs)
     )
 
@@ -254,6 +254,7 @@ def _pick_mapping_file(match_dir: pathlib.Path) -> pathlib.Path:
         match_dir / "logmap-repair" / "mappings_repaired_with_LogMap.tsv",
         match_dir / "repaired_mappings.tsv",
         match_dir / "filtered_mappings.tsv",
+        match_dir / "test_subsumption_scores.csv",        # NEW
     ]:
         if candidate.exists():
             return candidate
