@@ -6,11 +6,14 @@ for two OWL ontologies with **DeepOnto**, exporting results in Turtle.
 Key points
 ~~~~~~~~~~
 * Uses **BERTMapPipeline** for ≡ relations with its shipped default YAML.
-* Uses **BERTSubsInterPipeline** for ⊑/⊒ relations - there is **no default YAML** for
-  this model, so you must either pass one via `--subs-config` or let the script fall
-  back to *built-in* hyper-parameters provided programmatically by the pipeline.
+* Uses **BERTSubsInterPipeline** for ⊑/⊒ relations – you can supply a YAML via
+  `--subs-config`, otherwise the script falls back to the library’s
+  `DEFAULT_CONFIG_FILE_INTER` constant.
 * Fully GPU-aware via a `--device` option (`auto`, `cpu`, `cuda`, or `cuda:N`).
 * Generates two TTL files: one for equivalences, one for subsumption triples.
+
+This version includes a **Python 3.12 compatibility shim** for `random.sample` so that
+DeepOnto can still sample from sets (Python 3.12 now disallows that).
 
 Example call
 ~~~~~~~~~~~~
@@ -32,6 +35,7 @@ import csv
 import logging
 import os
 import pathlib
+import random
 from typing import Final, MutableMapping
 
 import torch
@@ -39,8 +43,34 @@ from rdflib import Graph, URIRef
 from rdflib.namespace import RDF, RDFS, OWL
 
 from deeponto.onto import Ontology
-from deeponto.align.bertmap import BERTMapPipeline, DEFAULT_CONFIG_FILE as BM_DEFAULT_CFG
-from deeponto.align.bertsubs import BERTSubsInterPipeline, DEFAULT_CONFIG_FILE_INTER as BS_DEFAULT_CFG
+from deeponto.align.bertmap import (
+    BERTMapPipeline,
+    DEFAULT_CONFIG_FILE as BM_DEFAULT_CFG,
+)
+from deeponto.align.bertsubs import (
+    BERTSubsInterPipeline,
+    DEFAULT_CONFIG_FILE_INTER as BS_DEFAULT_CFG,
+)
+
+#######################################################################################
+# Python 3.12 compatibility shim for random.sample                                     #
+#######################################################################################
+
+# Python 3.12 requires the population for random.sample to be a sequence. DeepOnto
+# (as of June 2025) still passes sets in a few places. We monkey-patch `random.sample`
+# to coerce any set population into a tuple. This is safe and avoids patching the
+# library itself.
+
+_original_sample = random.sample  # keep reference
+
+
+def _sample_patch(population, k, *args, **kwargs):  # type: ignore[override]
+    if isinstance(population, set):
+        population = tuple(population)
+    return _original_sample(population, k, *args, **kwargs)
+
+
+random.sample = _sample_patch  # type: ignore[assignment]
 
 #######################################################################################
 # Device helpers                                                                      #
@@ -84,14 +114,7 @@ def _load_config(
     default_cfg_path: str | None,
     device: str,
 ) -> MutableMapping[str, object]:
-    """Load DeepOnto YAML config or construct a reasonable default.
-
-    The priority is:
-    1. **User-supplied file** via CLI
-    2. **Library-shipped YAML** (e.g. BERTMap's `DEFAULT_CONFIG_FILE`)
-    3. **Programmatic defaults** provided by the pipeline class (if available)
-    4. Empty dict → pipeline should rely on hard-coded defaults internally
-    """
+    """Load DeepOnto YAML config or construct a reasonable default."""
 
     config: MutableMapping[str, object]
 
@@ -102,13 +125,12 @@ def _load_config(
         config = pipeline_cls.load_bertmap_config(default_cfg_path)  # type: ignore[attr-defined]
         logging.info("Loaded default %s config from %s", pipeline_cls.__name__, default_cfg_path)
     elif hasattr(pipeline_cls, "get_default_config"):
-        # Newer DeepOnto versions expose programmatic defaults
         config = pipeline_cls.get_default_config()  # type: ignore[attr-defined]
         logging.info("Using built-in default config for %s", pipeline_cls.__name__)
     else:
-        config = {}  # type: ignore[assignment]
+        config = {}
         logging.warning(
-            "Running %s with *minimal* defaults - consider supplying a YAML config!",
+            "Running %s with *minimal* defaults – consider supplying a YAML config!",
             pipeline_cls.__name__,
         )
 
@@ -132,20 +154,16 @@ def run_bertmap(
     work_dir_p = pathlib.Path(work_dir)
     work_dir_p.mkdir(parents=True, exist_ok=True)
 
-    # Load config & inject device
     config = _load_config(BERTMapPipeline, user_cfg_path, BM_DEFAULT_CFG, device)
     config["output_path"] = str(work_dir_p)
 
     logging.info("Selected device for BERTMap: %s", device)
 
-    # Load ontologies & execute pipeline
-    logging.info("Loading ontologies for BERTMap …")
     src_onto = Ontology(src_onto_path)
     tgt_onto = Ontology(tgt_onto_path)
     logging.info("Running BERTMap … (GPU used where available)")
     _ = BERTMapPipeline(src_onto, tgt_onto, config)
 
-    # Locate output mapping file
     match_dir = work_dir_p / "bertmap" / "match"
     mapping_file = _pick_mapping_file(match_dir)
     return mapping_file
@@ -158,25 +176,73 @@ def run_bertsubs(
     work_dir: str,
     device: str,
 ) -> pathlib.Path:
-    """Run **BERTSubsInterPipeline** and return path to its final TSV mapping file."""
+    """Run **BERTSubsInterPipeline** and return path to its final TSV mapping file.
+
+    DeepOnto has changed the folder name for the inter-sided pipeline a few times
+    (e.g. *bertsubs*, *bertsubs_inter*).  We therefore search **both** patterns so
+    the script remains forward- and backward-compatible.
+    """
 
     work_dir_p = pathlib.Path(work_dir)
     work_dir_p.mkdir(parents=True, exist_ok=True)
 
     logging.info("Selected device for BERTSubs: %s", device)
 
-    # Load ontologies & execute pipeline
-    logging.info("Loading ontologies for BERTSubs …")
+    # ------------------------------------------------------------------
+    # Prepare ontologies
+    # ------------------------------------------------------------------
     src_onto = Ontology(src_onto_path)
     tgt_onto = Ontology(tgt_onto_path)
-    logging.info("Running BERTSubs … (GPU used where available)")
-    _ = BERTSubsInterPipeline(src_onto, tgt_onto, BS_DEFAULT_CFG)
 
-    # Locate output mapping file
-    match_dir = work_dir_p / "bertsubs" / "match"
-    mapping_file = _pick_mapping_file(match_dir)
-    return mapping_file
+    # ------------------------------------------------------------------
+    # Load YAML → dict/ConfigNode (priority: CLI-supplied, else library default)
+    # ------------------------------------------------------------------
+    cfg_file = user_cfg_path if user_cfg_path else BS_DEFAULT_CFG
 
+    if not cfg_file or not pathlib.Path(cfg_file).exists():
+        raise FileNotFoundError(
+            "No BERTSubs config file found. Provide one with --subs-config or "
+            f"ensure the default file exists at {BS_DEFAULT_CFG}"
+        )
+
+    config = BERTMapPipeline.load_bertmap_config(cfg_file)
+    logging.info("Using BERTSubs config from %s", cfg_file)
+
+    # Disable optional test_subsumption_file if it's configured but absent
+    if hasattr(config, "test_subsumption_file"):
+        tst_file = getattr(config, "test_subsumption_file")
+        if tst_file and not pathlib.Path(tst_file).is_file():
+            logging.info("Disabling unavailable test_subsumption_file (%s)", tst_file)
+            config.test_subsumption_file = ""  # type: ignore[attr-defined]
+
+    # Inject/override run-time parameters
+    config.device = device  # type: ignore[attr-defined]
+    config.output_path = str(work_dir_p)  # type: ignore[attr-defined]
+
+    # ------------------------------------------------------------------
+    # Execute pipeline
+    # ------------------------------------------------------------------
+    logging.info("Running BERTSubsInterPipeline … (GPU used where available)")
+    _ = BERTSubsInterPipeline(src_onto, tgt_onto, config)
+
+    # ------------------------------------------------------------------
+    # Locate mapping file – support both historical output folder names
+    # ------------------------------------------------------------------
+    candidate_match_dirs = [
+        work_dir_p / "bertsubs" / "match",        # DeepOnto ≤0.6
+        work_dir_p / "bertsubs_inter" / "match",  # DeepOnto ≥0.7
+    ]
+
+    for match_dir in candidate_match_dirs:
+        try:
+            return _pick_mapping_file(match_dir)
+        except FileNotFoundError:
+            continue
+
+    raise FileNotFoundError(
+        "Could not locate mapping file after BERTSubs run – looked in: "
+        + ", ".join(str(d) for d in candidate_match_dirs)
+    )
 
 #######################################################################################
 # Utility helpers                                                                     #
@@ -184,20 +250,14 @@ def run_bertsubs(
 
 def _pick_mapping_file(match_dir: pathlib.Path) -> pathlib.Path:
     """Return the best available mapping file produced by DeepOnto."""
-    f = match_dir / "logmap-repair" / "mappings_repaired_with_LogMap.tsv"
-    if f.exists():
-        return f
-
-    f = match_dir / "repaired_mappings.tsv"
-    if f.exists():
-        return f
-
-    f = match_dir / "filtered_mappings.tsv"
-    if f.exists():
-        return f
-
+    for candidate in [
+        match_dir / "logmap-repair" / "mappings_repaired_with_LogMap.tsv",
+        match_dir / "repaired_mappings.tsv",
+        match_dir / "filtered_mappings.tsv",
+    ]:
+        if candidate.exists():
+            return candidate
     raise FileNotFoundError(f"Could not locate mapping file in {match_dir}")
-
 
 #######################################################################################
 # Conversion helpers                                                                  #
@@ -219,7 +279,7 @@ def mappings_to_ttl(
     out_graph.bind("rdfs", RDFS)
 
     with mapping_tsv.open(encoding="utf8") as f:
-        # Flexible reader: DeepOnto may include headers starting with SrcEntity	TgtEntity…
+        # Flexible reader: DeepOnto may include headers starting with SrcEntity TgtEntity …
         reader = csv.DictReader(f, delimiter="\t")
         has_header = reader.fieldnames is not None and set(reader.fieldnames) >= {"SrcEntity", "TgtEntity"}
 

@@ -34,8 +34,8 @@ subsumption_type: named_class # named_class or restriction
 #                                    otherwise, the output is the find-tuned model, (its validation results) and the testing results.
 # test_type: "prediction" (predict scores for candidate subsumptions given in test_submission_file
 #            or "evaluation" (calculate metrics with ground truths given in the test_subsumption_file)
-test_subsumption_file: test_subsumptions.csv
-test_type: evaluation
+test_subsumption_file: 
+test_type: prediction
 
 # not do entailment reasoning
 no_reasoning: false

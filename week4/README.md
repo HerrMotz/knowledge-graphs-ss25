@@ -9,6 +9,14 @@ because _Food Topping_ only has one subclass, namely _Pizza Topping_. More confu
 of _Fruit Topping_ (subclass of _Pizza Topping_), with the only subclass being _Sultana Topping_.
 
 
+## Example usage
+> [!TIP]
+> You will first need to make some _manual_ changes to the package `deeponto` to make some fixes.
+
+Run this command from the subfolder `week4`:
+```shell
+python bertmap_alignment.py ..\week1\ontology.xml existing_pizza.owl -c bertmap_config.yaml --subs-config bertsubs_config.yaml --output bertmap_equivalences.ttl --subs-output bertmap_subsumptions.ttl
+```
 
 ## Hints for Running these scripts
 
@@ -25,7 +33,7 @@ Furthermore, there is a bug the ontodeep package for some reason. Go ahead and c
 if not threshold or dp.Score >= threshold:
 ```
 
-Furthermore, you need to change the `__init__.py` for BertSubs located at `venv\Lib\site-packages\deeponto\align\bertsubs\__init__.py`. Replace the code line with:
+Once more, you need to change the `__init__.py` for BertSubs located at `venv\Lib\site-packages\deeponto\align\bertsubs\__init__.py`. Replace the code line with:
 ```py
 from deeponto.complete.bertsubs import BERTSubsInterPipeline, DEFAULT_CONFIG_FILE_INTER
 ```
