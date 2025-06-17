@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-bertmap_equivalence_script.py
-
 Compute equivalence alignments between two OWL ontologies using DeepOnto's BERTMap
 and generate a Turtle file containing owl:equivalentClass / owl:equivalentProperty triples.
 
@@ -26,7 +24,6 @@ import csv
 import logging
 import os
 import pathlib
-import sys
 from typing import Final
 
 import torch

@@ -1,0 +1,73 @@
+# bertmap_custom_config.yaml
+# -------------------------------------------------------
+# Custom configuration for DeepOnto BERTMap tuned for
+# higher recall on small / heterogeneous ontologies.
+# (ASCII-only file to avoid Windows code-page issues.)
+# Pass via  --config bertmap_custom_config.yaml
+# -------------------------------------------------------
+
+# Use full BERTMap with fine-tuning; change to "bertmaplt" if you
+# want a lightweight, no-training pipeline.
+model: bertmap
+
+# DeepOnto will write all checkpoints/mappings here if you leave
+# this null; our wrapper script overwrites it anyway.
+output_path: null
+
+# -------------------------------------------------------
+# Annotation properties (labels, synonyms, definitions, etc.)
+# Add every IRI that stores natural-language strings in YOUR ontologies.
+# -------------------------------------------------------
+annotation_property_iris:
+  - http://www.w3.org/2000/01/rdf-schema#label
+  - http://www.w3.org/2000/01/rdf-schema#comment
+  - http://www.w3.org/2004/02/skos/core#prefLabel
+  - http://www.w3.org/2004/02/skos/core#altLabel
+  - http://www.w3.org/2004/02/skos/core#hiddenLabel
+  - http://www.w3.org/2002/07/owl#qualifiedCardinality
+  - http://purl.org/dc/elements/1.1/description
+  - http://purl.org/dc/elements/1.1/title
+  - http://purl.org/dc/terms/contributor
+  - http://purl.org/dc/terms/license
+  - http://purl.org/dc/terms/provenance
+  - http://www.w3.org/2000/01/rdf-schema#label
+  - http://www.w3.org/2000/01/rdf-schema#comment
+  - http://www.w3.org/2000/01/rdf-schema#seeAlso
+  - http://www.w3.org/2002/07/owl#versionInfo
+  - http://www.w3.org/2004/02/skos/core#altLabel
+  - http://www.w3.org/2004/02/skos/core#definition
+  - http://www.w3.org/2004/02/skos/core#prefLabel
+# Optional: bootstrap training with known mappings or extra ontos.
+known_mappings: null
+auxiliary_ontos: []
+
+# -------------------------------------------------------
+# BERT fine-tuning hyper-parameters
+# -------------------------------------------------------
+bert:
+  pretrained_path: bert-base-uncased
+  max_length_for_input: 64
+  num_epochs_for_training: 5
+  batch_size_for_training: 16
+  batch_size_for_prediction: 128
+  resume_training: null
+  learning_rate: 1e-5
+  random_seed: 42
+
+# -------------------------------------------------------
+# Global matching knobs (bigger candidate pool, gentler filters)
+# -------------------------------------------------------
+global_matching:
+  enabled: true
+  num_raw_candidates: 1000
+  num_best_predictions: 20
+  mapping_extension_threshold: 0.5
+  mapping_filtered_threshold: 0.6
+  for_oaei: true
+
+# Device; script can override.
+device: auto  # auto | cpu | cuda | cuda:N
+
+# Mapping repair (disable for debugging recall)
+repair:
+  enabled: false
