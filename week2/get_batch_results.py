@@ -3,7 +3,7 @@ from openai import OpenAI
 
 if __name__ == '__main__':
     client = OpenAI()
-    output_path = "results.jsonl"
+    output_path = "llm_results/results.jsonl"
 
     file_response = client.files.content("file-CYcZfckDSi2bMrdqxLayqb")
     print(file_response.text)

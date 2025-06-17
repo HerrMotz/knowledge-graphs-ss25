@@ -152,4 +152,4 @@ if __name__ == "__main__":
     #if len(sys.argv) != 2:
     #    sys.exit("Usage: python clean_pizza_json.py <batch.json>")
     #main(sys.argv[1])
-    main("results_15_complete.jsonl")
+    main("llm_results/results_15_complete.jsonl")

@@ -3,7 +3,7 @@ name: Deploy Ontology
 on:
   push:
     paths:
-      - 'ontology.xml'
+      - '../../week1/ontology.xml'
     branches:
       - main
 
