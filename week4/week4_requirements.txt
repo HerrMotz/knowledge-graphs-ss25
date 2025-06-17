@@ -3,3 +3,4 @@ pandas
 rdflib
 accelerate==0.26.0
 transformers==4.38.0
+argostranslate
