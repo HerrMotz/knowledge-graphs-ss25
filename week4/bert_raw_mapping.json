@@ -1,0 +1,35 @@
+{
+    "http://ontology.daniel-motz.de/ontology#Glutenfreie": [],
+    "http://ontology.daniel-motz.de/ontology#K\u00e4se": [],
+    "http://ontology.daniel-motz.de/ontology#Laktosefreie": [
+        [
+            "http://ontology.daniel-motz.de/ontology#Laktosefreie",
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine",
+            0.9953373670578003
+        ]
+    ],
+    "http://ontology.daniel-motz.de/ontology#Pizza": [
+        [
+            "http://ontology.daniel-motz.de/ontology#Pizza",
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza",
+            1.0
+        ]
+    ],
+    "http://ontology.daniel-motz.de/ontology#Pizza_FCC": [],
+    "http://ontology.daniel-motz.de/ontology#Pizza_Hawaii": [],
+    "http://ontology.daniel-motz.de/ontology#Pizza_bei_Mekan": [],
+    "http://ontology.daniel-motz.de/ontology#Pizzeria": [],
+    "http://ontology.daniel-motz.de/ontology#Sauce": [
+        [
+            "http://ontology.daniel-motz.de/ontology#Sauce",
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping",
+            1.0
+        ]
+    ],
+    "http://ontology.daniel-motz.de/ontology#Teig": [],
+    "http://ontology.daniel-motz.de/ontology#Vegane": [],
+    "http://ontology.daniel-motz.de/ontology#Vegetarische": [],
+    "http://ontology.daniel-motz.de/ontology#VegetarischePizza": [],
+    "http://ontology.daniel-motz.de/ontology#VegetarischePizza_Hawaii": [],
+    "http://ontology.daniel-motz.de/ontology#Zutat": []
+}

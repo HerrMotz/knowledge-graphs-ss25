@@ -1,0 +1,4 @@
+SrcEntity	TgtEntity	Score
+http://ontology.daniel-motz.de/ontology#Laktosefreie	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine	0.9953373670578004
+http://ontology.daniel-motz.de/ontology#Pizza	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza	1.0
+http://ontology.daniel-motz.de/ontology#Sauce	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping	1.0
