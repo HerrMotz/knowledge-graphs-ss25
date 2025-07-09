@@ -1,3 +1,6 @@
 openai~=1.88.0
 rdflib~=7.1.4
 requests~=2.32.4
+deeponto
+torch
+pyyaml
