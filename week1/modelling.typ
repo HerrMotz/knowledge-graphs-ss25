@@ -16,10 +16,11 @@
 
 #let check = [✅]
 
-= Knowledge Graphs ÜS 1
+= Modellierung
+Entspricht Übungsserie 1
 \
 
-#grid(columns: (2fr, 1fr), column-gutter: 2em, [
+#grid(columns: (2fr, 2fr), column-gutter: 2em, [
 == Competency Questions
 
 + Welche #underline("Toppings") hat eine #underline[Pizza] Hawaii?
@@ -40,28 +41,45 @@
 + Welche #underline[Maße] hat die Pizza?
 + Welche #underline[Form] hat die Pizza?
 + Welche Pizza bei Mekan ist am #underline[billigsten]?
-+ Welche Pizzen enthalten Schinken?
++ Welche Pizzen enthalten #underline[Schinken]?
 
 + Welche #underline[laktosefreien] Pizzen gibt es?
 
 ], [
-  == Derived Terms
+  == Important Terms and their Derivates
+  *Dickgedruckte* Terme sind für die Termhierarchie relevant.
+  #v(2mm)
+  - Topping #sym.arrow *Zutat*
+
   - *Pizza*
 
-  - *Toppings* #sym.arrow *Zutaten*
+  - *Teigsorte*
 
   - *Sauce*
-  - Sorten von Pizza #sym.arrow Unterklassen von Pizza mit Constrains, also "geschützte Sorten" wie "Pizza Hawaii"
-  - *vegetarisch*
-  - *vegan*
-  - *glutenfrei*
-  - Mekan #sym.arrow *Lokalität*
-  - *Form* / *Maße*
-  - *Preis*
 
-  - Laktosefrei #sym.arrow *Milchproduktzutatsklasse*
+  - Brokkoli #sym.arrow *konkrete Zutat* die zu einer Kind von Pizza gehört
+
+  - *Pizza Hawaii* #sym.arrow Eine *Kind/Art* einer Pizza mit Einschränkungen im Wertebereich der möglichen Zutaten
+
+  - Ananas #sym.arrow *konkrete Zutat*
+
+  - *Pizza Margherita* #sym.arrow Eine *Kind*, wie Pizza Hawaii
+
+  - *Calzone* #sym.arrow Ebenfalls eine *Kind* von Pizza, allerdings ohne strikte Einschränkungen im Wertebereich der Zutaten
+
+  - *Sorte* #sym.arrow *Kinds* von Pizza
+  - *vegetarisch* #sym.arrow Ein direktes Prädikat für *Zutat* und ein Inferiertes für Pizza, sofern alle Zutaten der Pizza das Prädikat tragen.
+  - *vegan* #sym.arrow Ebenfalls Prädikat für *Zutat* und ein Inferiertes für Pizza
+  - *glutenfrei* #sym.arrow Analog zu vegan, vegetarisch
+  - *Mekan* #sym.arrow Eine *Pizzeria*
+  - *Form* / *Maße*
+  - billigsten #sym.arrow *Preis*
+  - *Schinken*
+
+  - *laktosefrei*
 
 ])
+
 
 #pagebreak()
 
@@ -85,13 +103,13 @@ Unsere Ontologie enthält ein Beispiel für eine unerfüllbare Klasse: `Vegetari
 
 #show link: it => underline(stroke: (paint: blue, thickness: 1pt, dash: "dashed"), offset: 2.5pt, it)
 
-Die Datei befindet sich im Repositorium unter #link("https://git.uni-jena.de/fusion/teaching/project/2025sose/KnowledgeGraphs/group-05/-/blob/main/terminology-hierarchy.pdf")[`terminology-hierarchy.pdf`].
+Die Datei befindet sich im Repositorium unter #link("week1/terminology-hierarchy.pdf")[`terminology-hierarchy.pdf`].
 
 == Ontologie
-Die Datei befindet sich ebenfalls im Repositorium unter #link("https://git.uni-jena.de/fusion/teaching/project/2025sose/KnowledgeGraphs/group-05/-/blob/main/ontology.xml")[`ontology.xml`].
+Die Datei befindet sich ebenfalls im Repositorium unter #link("week1/ontology.xml")[`ontology.xml`].
 
 // TODO: fix, dass das nicht überdeckt wird
-#place(bottom+left)[#v(1cm)\ "#text(1.2em, super[g])Milch"]
+#place(bottom+left)[#v(1cm)\ #text(1.2em, super[g])"Milch"]
 
 #pagebreak()
 

@@ -64,33 +64,35 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
 
                 # Add pizzeria details
                 g.add((pizz_uri, RDF.type, ONT.Pizzeria))
-                g.add((pizz_uri, SCHEMA.name, Literal(row['name'])))
-                g.add((pizz_uri, RDFS.label, Literal(row['name'])))
                 g.add((pizz_uri, RDF.type, SCHEMA.FoodEstablishment))
+                g.add((pizz_uri, RDFS.label, Literal(row['name'])))
+                g.add((pizz_uri, SCHEMA.name, Literal(row['name'])))
 
                 # Create schema.org address structure
                 address_node = BNode()
                 g.add((address_node, RDF.type, SCHEMA.PostalAddress))
                 g.add((address_node, SCHEMA.streetAddress, Literal(row['address'])))
 
-                # Link city to Wikidata if available
-                city = row["city"]
-                if city:
-                    city_data = cities_map.get(city, {})
-                    city_uri = WD[city_data['qid']] if city_data.get('qid') else Literal(city)
-                    g.add((address_node, SCHEMA.addressLocality, city_uri))
-
                 addr_map = [('state', SCHEMA.addressRegion),
                             ('postcode', SCHEMA.postalCode),
-                            ('country', SCHEMA.addressCountry)]
-
+                            ('country', SCHEMA.addressCountry),
+                            ('city', SCHEMA.city)] # add city as a literal, it will be also added as a wikidata item, but SCHEMA defines this value to be of type TEXT
                 for key, predicate in addr_map:
-                    value = row[key]
-                    if value:
-                        g.add((address_node, predicate, Literal(value)))
+                    literalValue = row[key]
+                    if literalValue:
+                        g.add((address_node, predicate, Literal(literalValue)))
 
                 # Link address to pizzeria
                 g.add((pizz_uri, SCHEMA.address, address_node))
+
+                # Additionally, to the literal value 'city' in the schema.org address, add a reference to the wikidata
+                # item, if one was found.
+                city = row["city"]
+                if city:
+                    city_data = cities_map.get(city, {})
+                    city_uri = WD[city_data['qid']] if city_data.get('qid') else None
+                    if city_uri:
+                        g.add((address_node, SCHEMA.containedInPlace, city_uri))
 
             # Create MenuItem individual
             pizza_name = pizza.get('name', row['menu item'])
