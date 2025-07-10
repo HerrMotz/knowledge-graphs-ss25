@@ -5,7 +5,7 @@
 #codly(languages: codly-languages)
 
 #set page(header: [
-  Maximilian Stock, Daniel Motz\
+  Daniel Motz\
   Gruppenname: _"BECKS"_
 ])
 
@@ -22,27 +22,27 @@
 #grid(columns: (2fr, 1fr), column-gutter: 2em, [
 == Competency Questions
 
-- Welche #underline("Toppings") hat eine #underline[Pizza] Hawaii?
++ Welche #underline("Toppings") hat eine #underline[Pizza] Hawaii?
++ Welche #underline[Teigsorten] gibt es?
++ Welche #underline[Saucen] können auf einer Pizza sein?
++ Kann ich #underline[Brokkoli] auf eine #underline[Pizza Hawaii] legen?
++ Ist eine Pizza Hawaii ohne #underline[Ananas] immer noch eine Pizza Hawaii?
++ Was gehört zu einer Pizza #underline[Margherita]?
++ Welche Zutaten hat eine #underline[Calzone]?
++ Welche #underline[Sorten von Pizza] gibt es?
++ Welche Pizzen sind #underline[vegetarisch]?
++ Welche Pizzen sind #underline[vegan]?
++ Gibt es #underline[glutenfreie] Pizzen?
++ Welche Pizzen enthalten Mozzarella?
++ Welche Pizzen gibt es bei #underline[Mekan]?
++ Wie wird die "Pizza FCC" bei Mekan gemacht?
++ Wie viel kostet eine Pizza Frutti di Mare bei Giovannis Pizzeria?
++ Welche #underline[Maße] hat die Pizza?
++ Welche #underline[Form] hat die Pizza?
++ Welche Pizza bei Mekan ist am #underline[billigsten]?
++ Welche Pizzen enthalten Schinken?
 
-- Welche #underline[Teigsorten] gibt es?
-- Welche #underline[Saucen] können auf einer Pizza sein?
-- Kann ich #underline[Brokkoli] auf eine #underline[Pizza Hawaii] legen?
-- Ist eine Pizza Hawaii ohne #underline[Ananas] immer noch eine Pizza Hawaii?
-- Was gehört zu einer Pizza #underline[Margherita]?
-- Welche Zutaten hat eine #underline[Calzone]?
-- Welche #underline[Sorten von Pizza] gibt es?
-- Welche Pizzen sind #underline[vegetarisch]?
-- Welche Pizzen sind #underline[vegan]?
-- Gibt es #underline[glutenfreie] Pizzen?
-- Welche Pizzen enthalten Mozzarella?
-- Welche Pizzen gibt es bei #underline[Mekan]?
-- Wie wird die "Pizza FCC" bei Mekan gemacht?
-- Wie viel kostet eine Pizza Frutti di Mare bei Giovannis Pizzeria?
-- Welche #underline[Maße] hat die Pizza?
-- Welche #underline[Form] hat die Pizza?
-- Welche Pizza bei Mekan ist am #underline[billigsten]?
-- Welche Pizzen enthalten Schinken?
-- Welche #underline[laktosefreien] Pizzen gibt es?
++ Welche #underline[laktosefreien] Pizzen gibt es?
 
 ], [
   == Derived Terms

@@ -2,3 +2,4 @@
 !results*.jsonl
 .venv
 __pycache__/
+.idea
