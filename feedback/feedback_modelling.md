@@ -8,7 +8,7 @@
 
 ## MOD.2
 - Bewertung auf Google: nicht in der Datenquelle gegeben und taucht nicht in den Kompetenzfragen auf → Entfernt ✅
-- Es gibt in der Modellierung keine Möglichkeit Größe und Preis mit Einheiten zu versehen → 
+- Es gibt in der Modellierung keine Möglichkeit Größe und Preis mit Einheiten zu versehen → Hinzugefügt ✅  
 - hier taucht die Adresse auf, jedoch als einfacher String. Das könnte man eventuell ausbauen (Modellierung von Straßen + Nummern, Städten und Ländern)
 - Die Modellierung, die eine Pizza mit Pizzeria und Preis verknüpft (in der Modellierung werden Constraints genannt) erscheint unnatürlich. Denken Sie noch einmal über den Tip nach, der zum Subtask MOD.1 auf moodle steht. Eventuell wäre das Erstellen einer neuen Klasse angebracht (z.B. `menu item`)
 
