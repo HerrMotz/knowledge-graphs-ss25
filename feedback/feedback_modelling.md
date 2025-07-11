@@ -9,13 +9,13 @@
 ## MOD.2
 - Bewertung auf Google: nicht in der Datenquelle gegeben und taucht nicht in den Kompetenzfragen auf → Entfernt ✅
 - Es gibt in der Modellierung keine Möglichkeit Größe und Preis mit Einheiten zu versehen → Hinzugefügt ✅  
-- hier taucht die Adresse auf, jedoch als einfacher String. Das könnte man eventuell ausbauen (Modellierung von Straßen + Nummern, Städten und Ländern)
-- Die Modellierung, die eine Pizza mit Pizzeria und Preis verknüpft (in der Modellierung werden Constraints genannt) erscheint unnatürlich. Denken Sie noch einmal über den Tip nach, der zum Subtask MOD.1 auf moodle steht. Eventuell wäre das Erstellen einer neuen Klasse angebracht (z.B. `menu item`)
+- hier taucht die Adresse auf, jedoch als einfacher String. Das könnte man eventuell ausbauen (Modellierung von Straßen + Nummern, Städten und Ländern) → Hinzugefügt ✅
+- Die Modellierung, die eine Pizza mit Pizzeria und Preis verknüpft (in der Modellierung werden Constraints genannt) erscheint unnatürlich. Denken Sie noch einmal über den Tip nach, der zum Subtask MOD.1 auf moodle steht. Eventuell wäre das Erstellen einer neuen Klasse angebracht (z.B. `menu item`) → geändert ✅
 
 
 ## OWL
-- die constraints, die für Pizzeria und Preis in der `terminology-hierarchy.pdf` beschrieben wurden, fehlen
-- Die Klase `PizzaBeiMekan` hat kein Constraint dafür, dass die Pizza bei Mekan angeboten wird
-- Subtask OWL.5: bewertungAufGoogle, groesse, preis hat keine Domain
-- Subtask OWL.6: fehlt (zB `preis` ist functional)
-- Subtask OWL.7: Label und Kommentare fehlen an den Properties
+- die constraints, die für Pizzeria und Preis in der `terminology-hierarchy.pdf` beschrieben wurden, fehlen → teilweise entfernt, wegen bspw. Pizza Bianca ist keine Sauce notwendig und Preis und Pizzeria constraint ist auch raus ✅
+- Die Klase `PizzaBeiMekan` hat kein Constraint dafür, dass die Pizza bei Mekan angeboten wird → PizzaBeiMekan wurde entfernt ✅
+- Subtask OWL.5: bewertungAufGoogle, groesse, preis hat keine Domain → Hinzugefügt ✅
+- Subtask OWL.6: fehlt (zB `preis` ist functional) → Hinzugefügt für groesse, gehoertZuPizzeria, preis ✅
+- Subtask OWL.7: Label und Kommentare fehlen an den Properties → Hinzugefügt ✅

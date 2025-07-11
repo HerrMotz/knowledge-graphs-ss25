@@ -42,21 +42,38 @@
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#enthaeltZutat">
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
+        <rdfs:comment>
+            Beschreibt, dass eine Zutat auf einer bestimmten Pizza enthalten ist. Diese Zutat ist bspw.
+            eine Sauce, ein Teig, ein Gemüse oder ein Fleisch.
+        </rdfs:comment>
+        <rdfs:label>Enthält Zutat</rdfs:label>
     </owl:ObjectProperty>
 
 
     <!-- http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria -->
 
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria"/>
+        <rdfs:comment>
+            Beschreibt, dass eine Pizza als auf der Speisekarte einer Pizzeria aufgeführt wird.
+        </rdfs:comment>
+        <rdfs:label>Wird in Pizzeria serviert</rdfs:label>
     </owl:ObjectProperty>
+
 
     <!-- http://ontology.daniel-motz.de/ontology#groesse -->
 
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#groesse">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+
+        <rdfs:comment>
+            Beschreibt die Größe einer Pizza. Diese kann in quantitativen Werten angegeben werden.
+        </rdfs:comment>
+        <rdfs:label>Größe</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -72,18 +89,30 @@
     <!-- http://ontology.daniel-motz.de/ontology#preis -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.daniel-motz.de/ontology#preis">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://schema.org/price"/>
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+
+        <rdfs:comment>
+            Beschreibt den Preis einer Pizza. Dieser kann in einem numerischen Wert angegeben werden.
+        </rdfs:comment>
+        <rdfs:label>Preis</rdfs:label>
     </owl:DatatypeProperty>
 
 
     <!-- http://ontology.daniel-motz.de/ontology#waehrung -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.daniel-motz.de/ontology#waehrung">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://schema.org/priceCurrency"/>
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
+        <rdfs:comment>
+            Beschreibt die Währung des Preises zu einer Pizza.
+        </rdfs:comment>
+        <rdfs:label>Währung</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -110,6 +139,9 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.daniel-motz.de/ontology#Teig"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">
+                    1
+                </owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
 
@@ -138,6 +170,9 @@
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Käse">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
+
+        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
+        <rdfs:label>Käse</rdfs:label>
     </owl:Class>
 
 
@@ -250,6 +285,10 @@
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Teig">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Vegetarische"/>
+
+        <rdfs:comment>Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
+        <rdfs:label>Teig</rdfs:label>
     </owl:Class>
 
 
@@ -480,14 +519,6 @@
     </owl:NamedIndividual>
 
 
-    <!-- http://ontology.daniel-motz.de/ontology#Teig -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Teig">
-        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
-        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-    </owl:NamedIndividual>
-
-
     <!-- http://ontology.daniel-motz.de/ontology#Tomatensauce -->
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Tomatensauce">
@@ -531,26 +562,6 @@
         <rdfs:label>Mekan</rdfs:label>
         <rdfs:comment>Eine der besten klassischen Pizzerien in Jena</rdfs:comment>
     </owl:NamedIndividual>
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://ontology.daniel-motz.de/ontology#Käse">
-        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
-        <rdfs:label>Käse</rdfs:label>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="http://ontology.daniel-motz.de/ontology#Teig">
-        <rdfs:comment>Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
-        <rdfs:label>Teig</rdfs:label>
-    </rdf:Description>
-
 
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
