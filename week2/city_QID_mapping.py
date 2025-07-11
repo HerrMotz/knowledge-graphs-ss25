@@ -30,7 +30,7 @@ def main():
     # File containing city names (one per line)
     input_filename = "cities.txt"
 
-    # Read all unique cities from input file
+    # Read all unique cities from an input file
     all_cities = set()
     with open(input_filename, 'r', encoding='utf-8') as f:
         for line in f:
