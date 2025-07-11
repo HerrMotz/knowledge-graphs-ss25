@@ -226,6 +226,7 @@
     <!-- http://ontology.daniel-motz.de/ontology#Pizzeria -->
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizzeria">
+        <rdfs:subClassOf rdf:resource="https://schema.org/FoodEstablishment"/>
         <rdfs:comment>
             Enthält konkrete Pizzerien als Instanzen. Eine Pizzeria ist eine Lokalität, welche Pizzen zum
             Verkauf anbietet.
