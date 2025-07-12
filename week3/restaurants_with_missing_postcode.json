@@ -1,0 +1,132 @@
+{
+  "head": {
+    "vars": [
+      "restaurant",
+      "label"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_236"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Milt's Pizza Place Llc"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_812"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Bertucci's"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_455"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Ak Diamonds"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_306"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza City"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_428"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Villa Rose Pizza"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_835"
+        },
+        "label": {
+          "type": "literal",
+          "value": "San Biagio's Pizza"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_107"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Valley Lahvosh Baking"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_200"
+        },
+        "label": {
+          "type": "literal",
+          "value": "La Hacienda Real"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_106"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Baldinelli Pizza"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_456"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_671"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Two Brothers Deli"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_77"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Sir Pizza"
+        }
+      }
+    ]
+  }
+}

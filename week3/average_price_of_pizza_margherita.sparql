@@ -1,10 +1,16 @@
 PREFIX schema1: <http://schema.org/>
 PREFIX : <http://ontology.daniel-motz.de/ontology#>
 
-SELECT (AVG(?price) as ?avgPrice) WHERE {
-    ?pizza :enthaeltZutat :tomato, :Mozzarella.
-    ?pizza schema1:price ?price.
-    ?pizza schema1:priceCurrency ?currency.
-    # Filter out unknown prices
+SELECT (AVG(?price) AS ?avgPrice) WHERE {
+    ?pizza :enthaeltZutat :tomato, :Mozzarella ;
+           schema1:price ?price ;
+           schema1:priceCurrency ?currency .
+
+    # Exclude pizzas with any other ingredient
+    FILTER NOT EXISTS {
+        ?pizza :enthaeltZutat ?otherZutat .
+        FILTER (?otherZutat != :tomato && ?otherZutat != :Mozzarella)
+    }
+
     FILTER (str(?price) != "NaN")
 }

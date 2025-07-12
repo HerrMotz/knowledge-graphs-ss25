@@ -1,0 +1,18 @@
+{
+  "head": {
+    "vars": [
+      "avgPrice"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "avgPrice": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "literal",
+          "value": "14.844860215053763440860215"
+        }
+      }
+    ]
+  }
+}

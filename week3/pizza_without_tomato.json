@@ -1,0 +1,5263 @@
+{
+  "head": {
+    "vars": [
+      "restaurant",
+      "label",
+      "country",
+      "locality",
+      "region",
+      "zip",
+      "address"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_562"
+        },
+        "label": {
+          "type": "literal",
+          "value": "U Pick 6 Beer Store"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q234061"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "16509"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7520 Peach St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_208"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Buddha Belly Deli"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3784796"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NV"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "89074"
+        },
+        "address": {
+          "type": "literal",
+          "value": "50 N Valle Verde Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_571"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bronx"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "10462"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2241 Westchester Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_497"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Fire Works - Arlington"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2025520"
+        },
+        "region": {
+          "type": "literal",
+          "value": "VA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "22201"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2350 Clarendon Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_566"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Firestone's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q165941"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MD"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "21701"
+        },
+        "address": {
+          "type": "literal",
+          "value": "105 N Market St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_329"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Jimmys Slice"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q490434"
+        },
+        "region": {
+          "type": "literal",
+          "value": "La Conchita"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "93001"
+        },
+        "address": {
+          "type": "literal",
+          "value": "586 E Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_471"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Josephine's Pizza Pastaria"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Green Bay"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Howard"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "54313"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2560 Glendale Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_10"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Uncle John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q51694"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "75052"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3480 S Carrier Pkwy"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_235"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Passero's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6558990"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60532"
+        },
+        "address": {
+          "type": "literal",
+          "value": "5328 Main Saint (rt 53)"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_303"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Centerville Pizza & Bbq"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1020984"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Washington Township"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "45458"
+        },
+        "address": {
+          "type": "literal",
+          "value": "9470 Dayton Lebanon Pike"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_515"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Avocado Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1774629"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92612"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6060 Scholarship"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_347"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Time"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1663450"
+        },
+        "region": {
+          "type": "literal",
+          "value": "ME"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "4103"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1223 Washington Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_548"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Bricco Kent"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3708897"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "44240"
+        },
+        "address": {
+          "type": "literal",
+          "value": "210 S Depeyster St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_214"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Rye Grill and Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1020800"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "10580"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1 Station Plz"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_293"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Somma Pizza & Sports Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1087483"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "15147"
+        },
+        "address": {
+          "type": "literal",
+          "value": "380 Route 909"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_309"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Masters"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122589495"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pamrapo"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7002"
+        },
+        "address": {
+          "type": "literal",
+          "value": "532 Broadway"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_706"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pappy's Place"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q486479"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MN"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "55901"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1635 Us 52 N"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_794"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Getaway Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1342"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pitt"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "15226"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3049 Sussex Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_803"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Big Daddy's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122543322"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Cushing"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "84047"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7669 S 700 E"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_416"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Draft Pick"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2872106"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "78741"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1620 E Riverside Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_510"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Eat Maine Gourmet"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q486472"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MO"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "64111"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4112 Pennsylvania Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_690"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Barona Hot Dog Cart"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q14875607"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92040"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1932 Wildcat Canyon Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_716"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Lucky Strike Lanes - Belmar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1959011"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CO"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "80226"
+        },
+        "address": {
+          "type": "literal",
+          "value": "415 S Teller"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_92"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Tilted Kilt Mission Valley"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1018781"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92108"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1640 Camino Del Rio N"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_802"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Chung Dam"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Duluth"
+        },
+        "region": {
+          "type": "literal",
+          "value": "GA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "30096"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2550 Pleasant Hill Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_784"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Fricker's Richmond"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q139694"
+        },
+        "region": {
+          "type": "literal",
+          "value": "East Haven"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "47374"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3237 Chester Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_409"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Maggiano's - Perimeter"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q4815973"
+        },
+        "region": {
+          "type": "literal",
+          "value": "GA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "30346"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4400 Ashford Dunwoody Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_556"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Dancing Marlin"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3642328"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60423"
+        },
+        "address": {
+          "type": "literal",
+          "value": "20590 S Lagrange Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_774"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Maggiano's - Springfield"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q135615"
+        },
+        "region": {
+          "type": "literal",
+          "value": "VA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "22150"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6500 Springfield Mall"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_139"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Maggiano's Little Italy"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122546685"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60077"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4999 Old Orchard Shopping Ctr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_261"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Maggiano's - Orlando"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3287523"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "32819"
+        },
+        "address": {
+          "type": "literal",
+          "value": "9101 International Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_429"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mama's Bakery Pizza & Salad Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q36091"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MN"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "55402"
+        },
+        "address": {
+          "type": "literal",
+          "value": "800 Nicollet Mall"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_199"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Dream Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q16557"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "75201"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2800 Routh St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_237"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Time"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q199797"
+        },
+        "region": {
+          "type": "literal",
+          "value": "WA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "98405"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3906 S 12th St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_691"
+        },
+        "label": {
+          "type": "literal",
+          "value": "East Coast Wings & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Wake Forest"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "27587"
+        },
+        "address": {
+          "type": "literal",
+          "value": "12646 Capital Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_131"
+        },
+        "label": {
+          "type": "literal",
+          "value": "East Coast Wings & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Kernersville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Matthewstown"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "27284"
+        },
+        "address": {
+          "type": "literal",
+          "value": "800 N Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_132"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brando's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3473025"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "14224"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1042 Union Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_476"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Fortune Cookie"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Merchantville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "8109"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7708 Maple Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_503"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Dragon Inn Chinese Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1535165"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Phila"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19151"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7710 City Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_138"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Doubledave's Pizzaworks"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q128321"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "79707"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3208 N Loop 250 W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_452"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Max Brenner Chocolate Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Paramus"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7652"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1 Garden State Plz"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_162"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Victoria's Secret Pink"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q992432"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MD"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "20895"
+        },
+        "address": {
+          "type": "literal",
+          "value": "11301 Rockville Pike"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_3"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Lucky's Pub"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2230568"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "77003"
+        },
+        "address": {
+          "type": "literal",
+          "value": "801 Saint Emanuel St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_450"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Antoni's Italian Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q128891"
+        },
+        "region": {
+          "type": "literal",
+          "value": "LA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "70503"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1118 Coolidge Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_451"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Johnny Carino's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bozeman"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "59718"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2159 Burke St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_572"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Briatore"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q214164"
+        },
+        "region": {
+          "type": "literal",
+          "value": "WA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "98005"
+        },
+        "address": {
+          "type": "literal",
+          "value": "13238 N E 20th St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_676"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Woodlands Restaurants"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q10884851"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "61036"
+        },
+        "address": {
+          "type": "literal",
+          "value": "444 Eagle Ridge Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_695"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mignon's At Sky Valley Resort"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Desert Hot Springs"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Sky Valley"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92241"
+        },
+        "address": {
+          "type": "literal",
+          "value": "74711 Dillon Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_742"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Joe's New York Pizza Pasta"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Palm Coast"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "32137"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1070 Palm Coast Pkwy Nw"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_789"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Angry Ham's Octane Bar & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49350460"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Framingham So"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "1701"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2 Beacon St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_219"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pietro's Coal Oven Pizza - South Street"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1535165"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19147"
+        },
+        "address": {
+          "type": "literal",
+          "value": "121 123 South St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_680"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Xpress Pizzeria"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q929327"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "11218"
+        },
+        "address": {
+          "type": "literal",
+          "value": "709 Church Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_816"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Zi's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2872106"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "78757"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1809 1 W Anderson Ln"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_76"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Austin's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2872106"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "78726"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7301 N Fm 620"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_37"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Boston's Restaurant & Sports Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q187805"
+        },
+        "region": {
+          "type": "literal",
+          "value": "City Of Spokane Valley"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "99216"
+        },
+        "address": {
+          "type": "literal",
+          "value": "14004 E Indiana Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_849"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Redbox"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q81200"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Togus"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "4330"
+        },
+        "address": {
+          "type": "literal",
+          "value": "284 Civic Center Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_449"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Obed & Isaac's Microbrewery and Eatery"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q135615"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "62701"
+        },
+        "address": {
+          "type": "literal",
+          "value": "500 S 6th St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_787"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Sunset Grill & Lounge"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Lake Havasu City"
+        },
+        "region": {
+          "type": "literal",
+          "value": "AZ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "86403"
+        },
+        "address": {
+          "type": "literal",
+          "value": "271 Lake Havasu Ave S"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_465"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Prime De Leon"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2443674"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Fmy"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "33901"
+        },
+        "address": {
+          "type": "literal",
+          "value": "33 Patio De Leon"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_366"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Blackfinn Ameripub - Mt. Prospect"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q112459554"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60056"
+        },
+        "address": {
+          "type": "literal",
+          "value": "157 Randhurst Village Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_815"
+        },
+        "label": {
+          "type": "literal",
+          "value": "West Bricktown"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q34863"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OK"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "73104"
+        },
+        "address": {
+          "type": "literal",
+          "value": "124 E Sheridan"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_201"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Nm Cafe At Neiman Marcus Topanga"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q575855"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "91313"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6550 Topanga Canyon Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_380"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Nm Cafe At Neiman Marcus - Palo Alto"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7128494"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "94304"
+        },
+        "address": {
+          "type": "literal",
+          "value": "400 Stanford Shopping Ctr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_207"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Sportsgrille"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q23197"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TN"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "37201"
+        },
+        "address": {
+          "type": "literal",
+          "value": "121 4th Ave S"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_126"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Ton's Drive-in"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122592761"
+        },
+        "region": {
+          "type": "literal",
+          "value": "LA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "70518"
+        },
+        "address": {
+          "type": "literal",
+          "value": "101 W Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_259"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mama Pepino's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Mckeesport"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "15131"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2417 Oneil Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_396"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Uptown Restaurant & Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q5083"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Ny"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "10128"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1576 3rd Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_584"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Speakeasy Bar & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q101254"
+        },
+        "region": {
+          "type": "literal",
+          "value": "RI"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "2840"
+        },
+        "address": {
+          "type": "literal",
+          "value": "254 Thames St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_407"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Land Sharks Pizza Co"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Destin"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "32541"
+        },
+        "address": {
+          "type": "literal",
+          "value": "300 Harbor Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_614"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Restaurant & Bar Ko"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q18094"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Hono"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "96816"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3196 Waialae Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_505"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Marquart's Landing"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q939412"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Clover Bottom"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "63090"
+        },
+        "address": {
+          "type": "literal",
+          "value": "300 W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_127"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Khan's Bar & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q939412"
+        },
+        "region": {
+          "type": "literal",
+          "value": "DC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "20002"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1125 H St NE"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_192"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mediterranean Harbour Bar & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Hilton Head Island"
+        },
+        "region": {
+          "type": "literal",
+          "value": "SC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "29928"
+        },
+        "address": {
+          "type": "literal",
+          "value": "13 Harbourside Ln"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_193"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pasta Faire"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q4883828"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "34420"
+        },
+        "address": {
+          "type": "literal",
+          "value": "10401 Us 441"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_394"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2118826"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Park Hills"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "41011"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1602 Madison Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_427"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2962785"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "28021"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1407 E Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_441"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q485716"
+        },
+        "region": {
+          "type": "literal",
+          "value": "AZ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "85308"
+        },
+        "address": {
+          "type": "literal",
+          "value": "8251 W Union Hills Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_456"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "E Windsor"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "address": {
+          "type": "literal",
+          "value": "400 Us 130"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_644"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa John's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Cedar City"
+        },
+        "region": {
+          "type": "literal",
+          "value": "UT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "84720"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1233 Sage Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_176"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Hut"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q139694"
+        },
+        "region": {
+          "type": "literal",
+          "value": "VA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "23222"
+        },
+        "address": {
+          "type": "literal",
+          "value": "551 E Laburnum Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_326"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Ups Store"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Encinitas"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Olivenhain"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92024"
+        },
+        "address": {
+          "type": "literal",
+          "value": "315 S Coast Highway 101"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_59"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Harry's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Quincy"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Quincy Center"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "2169"
+        },
+        "address": {
+          "type": "literal",
+          "value": "405 Sea St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_512"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mezza Westwood"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7989847"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Rivervale"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7675"
+        },
+        "address": {
+          "type": "literal",
+          "value": "20 Jefferson Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_44"
+        },
+        "label": {
+          "type": "literal",
+          "value": "La Hacienda"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Americus"
+        },
+        "region": {
+          "type": "literal",
+          "value": "GA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "31709"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1602 E Forsyth St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_47"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Casa-Rica"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q948129"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MD"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "21157"
+        },
+        "address": {
+          "type": "literal",
+          "value": "400 N Center St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_469"
+        },
+        "label": {
+          "type": "literal",
+          "value": "La Hacienda Taqueria"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Novato"
+        },
+        "region": {
+          "type": "literal",
+          "value": "San Marin"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "94945"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1401 Grant Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_659"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Los Compadres"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49225"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pleasant Valley"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "89511"
+        },
+        "address": {
+          "type": "literal",
+          "value": "25 Foothill Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_846"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Quesadillas Mexican Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q470594"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Brownhelm"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "44001"
+        },
+        "address": {
+          "type": "literal",
+          "value": "249 Church St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_157"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Oscar's Woodmont Kitchen"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1025577"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "6460"
+        },
+        "address": {
+          "type": "literal",
+          "value": "186 Hillside Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_111"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cafe Veloce"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1362758"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Kingsgate"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "98034"
+        },
+        "address": {
+          "type": "literal",
+          "value": "12514 120th Ave N E"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_175"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Doughboys"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q16910"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Bicentennial"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "90048"
+        },
+        "address": {
+          "type": "literal",
+          "value": "8136 W 3rd St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_116"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Tavern On The Square"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bothell"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Queensgate"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "98011"
+        },
+        "address": {
+          "type": "literal",
+          "value": "18607 Bothell Way N E"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_359"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Allen Street Grill (hotel State College)"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "State College"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "16801-3838"
+        },
+        "address": {
+          "type": "literal",
+          "value": "100 W College Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_165"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Bella Via"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Long Island City"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Queens"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "11101"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4746 Vernon Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_183"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Campania Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Southlake"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "76092"
+        },
+        "address": {
+          "type": "literal",
+          "value": "291 Grand Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_323"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Avenue Italy Cucina Italiana"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Rancho Palos Verdes"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pls Vrds Est"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "90275"
+        },
+        "address": {
+          "type": "literal",
+          "value": "31243 Palos Verdes Dr W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_233"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Lazy Mary's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2802663"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Fort Devens"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "1432"
+        },
+        "address": {
+          "type": "literal",
+          "value": "30 Littleton Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_143"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Sanderlings - Seascape Resort"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Aptos"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Seacliff"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "95003"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1 Seascape Resort Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_42"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Tascali's Decades Pasta & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Barboursville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "WV"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "25504"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6007 Us 60 E"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_643"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Brickyard Restaurant and Sports Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q205905"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Manor Ridge"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "17603"
+        },
+        "address": {
+          "type": "literal",
+          "value": "415 N Prince St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_320"
+        },
+        "label": {
+          "type": "literal",
+          "value": "La Vita's Pizzeria"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Moorestown"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "8057"
+        },
+        "address": {
+          "type": "literal",
+          "value": "121 W Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_532"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Planet Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6077684"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "75075"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3000 Custer Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_666"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cvs/pharmacy"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2837875"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "75013"
+        },
+        "address": {
+          "type": "literal",
+          "value": "Mcdermott"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_673"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Philly Cheese Steak Express"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Vernon Hills"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60061"
+        },
+        "address": {
+          "type": "literal",
+          "value": "701 N Milwaukee Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_704"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Jo-jo's Original Pizzeria"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Rossford"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "43460"
+        },
+        "address": {
+          "type": "literal",
+          "value": "616 Dixie Hwy"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_858"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Loophole"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Johns Island"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Seabrook Island"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "29455"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2817 Maybank Hwy"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_110"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Charlies American Grill & Spirits"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Sioux City"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "51101"
+        },
+        "address": {
+          "type": "literal",
+          "value": "701 Gordon Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_290"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Printers Inc Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7128494"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "94306"
+        },
+        "address": {
+          "type": "literal",
+          "value": "310 S California Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_712"
+        },
+        "label": {
+          "type": "literal",
+          "value": "P.j. Whelihan's Pub Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Downingtown"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19335"
+        },
+        "address": {
+          "type": "literal",
+          "value": "853 E Lancaster Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_298"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Verdile's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2738238"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pleasantdale"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "12182"
+        },
+        "address": {
+          "type": "literal",
+          "value": "572 2nd Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_850"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Villaggio Ristorante"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Whitestone"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Malba"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "11357"
+        },
+        "address": {
+          "type": "literal",
+          "value": "150 07 14th Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_257"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mario's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49227"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Hanes"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "27103"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1066 Hanes Mall Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_608"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Nypd Pizza & Delicatessen"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6505706"
+        },
+        "region": {
+          "type": "literal",
+          "value": "UT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "84041"
+        },
+        "address": {
+          "type": "literal",
+          "value": "768 W 1425 N"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_868"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pietro's Restaurante"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bossier City"
+        },
+        "region": {
+          "type": "literal",
+          "value": "LA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "71111"
+        },
+        "address": {
+          "type": "literal",
+          "value": "645 Boardwalk Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_392"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Italian Jim's Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Edmond"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OK"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "73034"
+        },
+        "address": {
+          "type": "literal",
+          "value": "15 S Broadway"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_149"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Chef"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2044"
+        },
+        "region": {
+          "type": "literal",
+          "value": "SC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "29501"
+        },
+        "address": {
+          "type": "literal",
+          "value": "944 S Irby St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_696"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cafe Taylor"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q205905"
+        },
+        "region": {
+          "type": "literal",
+          "value": "SC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "29720"
+        },
+        "address": {
+          "type": "literal",
+          "value": "126 S Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_299"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Paloma's Pasta Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bronx"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "10455"
+        },
+        "address": {
+          "type": "literal",
+          "value": "650 Westchester Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_374"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Wei Chuan Kitchen"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Little Ferry"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7643"
+        },
+        "address": {
+          "type": "literal",
+          "value": "46 Bergen Tpke"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_647"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Paesanos Delicatessen"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122589495"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Pamrapo"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7002"
+        },
+        "address": {
+          "type": "literal",
+          "value": "108 Kennedy Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_778"
+        },
+        "label": {
+          "type": "literal",
+          "value": "L'allegria Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1883378"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7940"
+        },
+        "address": {
+          "type": "literal",
+          "value": "11 Prospect St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_453"
+        },
+        "label": {
+          "type": "literal",
+          "value": "El Rey Burrito Lounge"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1311946"
+        },
+        "region": {
+          "type": "literal",
+          "value": "AL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "36106"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1031 E Fairview Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_169"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Patrizio"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q5759927"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "75104"
+        },
+        "address": {
+          "type": "literal",
+          "value": "305 W Fm 1382"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_171"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Captains Point"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6479210"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "43331"
+        },
+        "address": {
+          "type": "literal",
+          "value": "305 E Harrison St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_102"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Italian Oven"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Connellsville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "S Connelsvl"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "15425"
+        },
+        "address": {
+          "type": "literal",
+          "value": "623 Highland Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_708"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Gourmet Seafood & Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Schwenksville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Fruitville"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19473"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4101 W Skippack Pike"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_49"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Peter Piper Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1012894"
+        },
+        "region": {
+          "type": "literal",
+          "value": "AZ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "85044"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4940 E Ray Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_613"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Peter Piper Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1324441"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "79925"
+        },
+        "address": {
+          "type": "literal",
+          "value": "10501 Gateway Blvd W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_105"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Oh' Brian's on the Green"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1086117"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7066"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1300 Raritan Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_674"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Sweet Tomatoes"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "South Yarmouth"
+        },
+        "region": {
+          "type": "literal",
+          "value": "So Yarmouth"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "2664"
+        },
+        "address": {
+          "type": "literal",
+          "value": "461 Station Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_22"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Casino's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Addison"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60101"
+        },
+        "address": {
+          "type": "literal",
+          "value": "190 N Swift Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_569"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Stinger's Cafe"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q494723"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92832"
+        },
+        "address": {
+          "type": "literal",
+          "value": "Fullerton College"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_134"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Ralph's Grocery Deli"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q5083"
+        },
+        "region": {
+          "type": "literal",
+          "value": "WA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "98121"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2035 4th Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_56"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Carluccio's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1535165"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19147"
+        },
+        "address": {
+          "type": "literal",
+          "value": "932 S 10th St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_33"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Stissing House"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Pine Plains"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Mount Ross"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "12567"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7801 S Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_683"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Lafayette House"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q128891"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7848"
+        },
+        "address": {
+          "type": "literal",
+          "value": "100 Route 94"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_719"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Bascettis Italian Grille"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q133073"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "34698"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1568 Main St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_487"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Buttermilk Hill Restaruant and Bar"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Sylacauga"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Talladega Springs"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "35150"
+        },
+        "address": {
+          "type": "literal",
+          "value": "300 E 3rd St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_339"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Time"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122552405"
+        },
+        "region": {
+          "type": "literal",
+          "value": "PA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "19464"
+        },
+        "address": {
+          "type": "literal",
+          "value": "190 Moser Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_804"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Time"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Bennettsville"
+        },
+        "region": {
+          "type": "literal",
+          "value": "SC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "29512"
+        },
+        "address": {
+          "type": "literal",
+          "value": "Hwy 15401"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_541"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Jake's Italian Bistro & Brew"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Yucaipa"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "92399"
+        },
+        "address": {
+          "type": "literal",
+          "value": "12170 4th St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_686"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Grotto - The Woodlands"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q135615"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "77380"
+        },
+        "address": {
+          "type": "literal",
+          "value": "9595 Six Pnes"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_820"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cafe Gratitude - Venice"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q585026"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "90291"
+        },
+        "address": {
+          "type": "literal",
+          "value": "512 Rose Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_365"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Las Vegas - Town Square"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q17636479"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NV"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "89119"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6653 S Las Vegas Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_383"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - North Bethesda"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7355625"
+        },
+        "region": {
+          "type": "literal",
+          "value": "No Bethesda"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "20852"
+        },
+        "address": {
+          "type": "literal",
+          "value": "20 Paseo Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_384"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Danbury - Danbury Fair"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Danbury"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "6810"
+        },
+        "address": {
+          "type": "literal",
+          "value": "7 Backus Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_391"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Marlton - The Promenade At Sagemore"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122563468"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Evesham Twp"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "8053"
+        },
+        "address": {
+          "type": "literal",
+          "value": "500 S Rt 73 10"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_398"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Columbus - Easton"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q239870"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "43219"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3993 Easton Sta"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_412"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Cherokee - Cherokee Casino"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q5092112"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NC"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "28719"
+        },
+        "address": {
+          "type": "literal",
+          "value": "777 Casino Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_445"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Puerto Rico"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q749283"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Alt De Berwind"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "924"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1000 Mall Of San Juan Blvd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_687"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Lombard - The Shops On Butterfield"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Lombard"
+        },
+        "region": {
+          "type": "literal",
+          "value": "IL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "60148"
+        },
+        "address": {
+          "type": "literal",
+          "value": "330 Yorktown Ctr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_838"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Murray"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q116059033"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Salt Lake Cty"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "84107"
+        },
+        "address": {
+          "type": "literal",
+          "value": "6173 S State St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_19"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Brio Tuscan Grille - Southlake - Southlake Town Square"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Southlake"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "76092"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1431 Plaza Pl"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_231"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mr. Chung's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q6914103"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7960"
+        },
+        "address": {
+          "type": "literal",
+          "value": "78 Speedwell Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_289"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Papa Murphy's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q497793"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OR"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "97702"
+        },
+        "address": {
+          "type": "literal",
+          "value": "61160 S Highway 97"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_273"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Ken Stewart's Grille"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q163132"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "44313"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1970 W Market St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_54"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pizza Bistro"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Massapequa Park"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NY"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "11762"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4952 Merrick Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_851"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Mc Kitchen"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Miami"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "33137"
+        },
+        "address": {
+          "type": "literal",
+          "value": "4141 N E 2nd Ave 101a"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_90"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Taco Pronto"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q128349"
+        },
+        "region": {
+          "type": "literal",
+          "value": "KS"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "67205"
+        },
+        "address": {
+          "type": "literal",
+          "value": "8385 W 21st St N"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_721"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Texadelphia"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2230568"
+        },
+        "region": {
+          "type": "literal",
+          "value": "TX"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "77065"
+        },
+        "address": {
+          "type": "literal",
+          "value": "12914 Fm 1960 Rd W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_124"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Hamilton Inn"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Hoboken"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Uptown"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7030"
+        },
+        "address": {
+          "type": "literal",
+          "value": "708 Jersey Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_675"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Sokai Sushi Bar - Flagler"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Miami"
+        },
+        "region": {
+          "type": "literal",
+          "value": "FL"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "33174-1811"
+        },
+        "address": {
+          "type": "literal",
+          "value": "10141 W Flagler St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_805"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cinders Wood Fire Grill"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Mine Hill"
+        },
+        "region": {
+          "type": "literal",
+          "value": "NJ"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7803"
+        },
+        "address": {
+          "type": "literal",
+          "value": "319 Rt"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_153"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Philtower Building"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q44989"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OK"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "74103"
+        },
+        "address": {
+          "type": "literal",
+          "value": "427 S Boston Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_51"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Martinizing"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q590849"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CO"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "80007"
+        },
+        "address": {
+          "type": "literal",
+          "value": "14805 W 64th Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_462"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Pasquale's"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Beckley"
+        },
+        "region": {
+          "type": "literal",
+          "value": "WV"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "25801"
+        },
+        "address": {
+          "type": "literal",
+          "value": "224 Harper Park Dr"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_489"
+        },
+        "label": {
+          "type": "literal",
+          "value": "The Pizza Lady"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Pawcatuck"
+        },
+        "region": {
+          "type": "literal",
+          "value": "CT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "6379"
+        },
+        "address": {
+          "type": "literal",
+          "value": "50 Liberty St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_86"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Little Italy Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q3322233"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Mphs"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "38104"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1495 Union Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_807"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Cugino's Pizza"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49350368"
+        },
+        "region": {
+          "type": "literal",
+          "value": "West Fort Lee"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "7024"
+        },
+        "address": {
+          "type": "literal",
+          "value": "2151 Lemoine Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_210"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Donte's Restaurant & Pizza Shop"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q122594035"
+        },
+        "region": {
+          "type": "literal",
+          "value": "OH"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "44142"
+        },
+        "address": {
+          "type": "literal",
+          "value": "20850 Sheldon Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_279"
+        },
+        "label": {
+          "type": "literal",
+          "value": "That Pizza Place"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q166304"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MT"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "59102"
+        },
+        "address": {
+          "type": "literal",
+          "value": "3189 King Ave W"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_304"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Ristorante Via Alto 27"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1101670"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "1510"
+        },
+        "address": {
+          "type": "literal",
+          "value": "27 High St"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_357"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Zuccos Restaurant"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Pittsfield"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "1201"
+        },
+        "address": {
+          "type": "literal",
+          "value": "451 Dalton Ave"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_637"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Astoria Craft"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "literal",
+          "value": "Astoria"
+        },
+        "region": {
+          "type": "literal",
+          "value": "Queens"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "11102"
+        },
+        "address": {
+          "type": "literal",
+          "value": "1801 26th Rd"
+        }
+      },
+      {
+        "restaurant": {
+          "type": "uri",
+          "value": "http://ontology.daniel-motz.de/ontology#Pizzeria_79"
+        },
+        "label": {
+          "type": "literal",
+          "value": "Lineage - Permanently Closed"
+        },
+        "country": {
+          "type": "literal",
+          "value": "US"
+        },
+        "locality": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q49142"
+        },
+        "region": {
+          "type": "literal",
+          "value": "MA"
+        },
+        "zip": {
+          "type": "literal",
+          "value": "2446"
+        },
+        "address": {
+          "type": "literal",
+          "value": "242 Harvard St"
+        }
+      }
+    ]
+  }
+}
