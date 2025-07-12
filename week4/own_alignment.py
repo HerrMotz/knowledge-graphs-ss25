@@ -4,12 +4,6 @@ Ontology alignment script (Argos-powered, auto-installer)
 Aligns two OWL/RDF ontologies at the *schema* level (classes and properties)
 and emits `owl:equivalentClass` / `owl:equivalentProperty` links in Turtle.
 
-**Fix – Argos download API**
----------------------------
-`package.download_package(pkg)` no longer exists in recent Argos‑Translate
-versions.  The correct call is `pkg.download()`.  This revision updates the
-auto‑installer accordingly.
-
 Quick start
 -----------
 ```bash
@@ -169,7 +163,7 @@ def main() -> None:
     p.add_argument("ns1", help="Namespace IRI of first ontology (ends with # or /)")
     p.add_argument("ontology2", type=Path, help="Second ontology (.owl/.ttl)")
     p.add_argument("ns2", help="Namespace IRI of second ontology (ends with # or /)")
-    p.add_argument("-o", "--output", type=Path, default=Path("automatic_own_alignment.ttl"))
+    p.add_argument("-o", "--output", type=Path, default=Path("own_alignment.ttl"))
     p.add_argument("--threshold", type=float, default=0.87)
     args = p.parse_args()
 
