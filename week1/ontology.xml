@@ -75,6 +75,7 @@
         </rdfs:comment>
     </owl:ObjectProperty>
 
+
     <!-- http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria -->
 
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria">
@@ -87,6 +88,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Wird in Pizzeria serviert</rdfs:label>
     </owl:ObjectProperty>
+
 
     <!-- http://ontology.daniel-motz.de/ontology#hatPizza -->
 

@@ -99,6 +99,22 @@ Wir haben Teig nicht als vegan modelliert, damit wir ggf. auch Teige mit Ei erla
 
 Unsere Ontologie enthält ein Beispiel für eine unerfüllbare Klasse: `VegetarischePizza_Hawaii`, modelliert als Schnitt zwischen `Vegetarische_Pizza` und `Pizza_Hawaii`. Die Bedingungen sind also, dass jedes Individuum dieses Typs ausschließlich vegetarische Zutaten enthält, sowie die für eine Pizza Hawaii notwendigen (Ananas, Tomatensauce, Teig/Boden und Schinken). Da Schinken nicht den Typ `Vegetarische` besitzt, kann es die Anforderungen der Klasse `Vegetarische_Pizza` nicht erfüllen.
 
+== Anreichung der Ontologie
+
+Im Zuge der Weiterentwicklung der Ontologie habe ich mich mit der semantischen Anreicherung von Eigenschaften (Properties) befasst. Ziel dieser Arbeit war es, die inferenzielle Leistungsfähigkeit der Ontologie zu erhöhen und fehlerhafte Modellierungen durch logische Inkonsistenzen erkennbar zu machen. Dabei orientierte ich mich an den in OWL verfügbaren Property-Charakteristiken wie funktional, asymmetrisch, irreflexiv und inverseOf.
+
+Zu Beginn fiel mir auf, dass sich bestimmte Eigenschaften -- beispielsweise `enthaeltZutat` -- besonders gut für eine semantische Anreicherung eignen. Diese Relation ist sowohl asymmetrisch als auch irreflexiv, da es nicht möglich ist, dass eine Pizza eine Zutat enthält, die wiederum die Pizza enthält oder mit ihr identisch ist. Zur verbesserten Navigierbarkeit innerhalb der Ontologie ergänzte ich zudem eine inverse Eigenschaft `istZutatVon`, sodass sowohl von der Pizza auf die Zutat als auch umgekehrt geschlossen werden kann.
+
+Auch für die Relation `gehoertZuPizzeria` entschied ich mich dazu, die inverse Beziehung `hatPizza` zu modellieren. Diese Relation ist asymmetrisch, da zwar eine Pizza einer Pizzeria zugeordnet sein kann, nicht jedoch umgekehrt. Die Funktionalität von `gehoertZuPizzeria` -- im Sinne der Annahme, dass jede Pizza genau einer Pizzeria zugeordnet ist -- wurde beibehalten.
+
+Im Zusammenhang mit der Eigenschaft waehrung stellte sich die Frage, ob eine Standardwährung (beispielsweise „USD“) angenommen werden kann, wenn keine Angabe erfolgt. Da OWL keine direkte Möglichkeit bietet, einen Standardwert zu hinterlegen, ohne die Option zur expliziten Abweichung (etwa „EUR“) zu verlieren, entschied ich mich gegen eine globale Einschränkung des Wertebereichs mittels allValuesFrom. Stattdessen 
+
+Durch diese Erweiterungen ist es mir möglich, die Modellierungsschärfe der Ontologie zu erhöhen und gezielter zu überprüfen, ob konkrete Ontologieinstanzen valide abgebildet sind. Ein Beispiel: Sollte die Eigenschaft `enthaeltZutat` irrtümlich zyklisch verwendet werden, kann ein Reasoner dies aufgrund der definierten Irreflexivität erkennen. Ebenso erleichtern inverse Beziehungen die Ableitung zusätzlicher Informationen aus wenigen ABox-Einträgen -- etwa darüber, welche Zutaten in mehreren Pizzen verwendet werden.
+
+Diese formale Präzisierung stellt einen weiteren Schritt in Richtung einer robusten und qualitativ hochwertigen Ontologie dar, die nicht nur zur Wissensmodellierung, sondern auch zur automatisierten Konsistenzprüfung eingesetzt werden kann.
+
+
+
 == Informelle Hierarchisierung
 
 #show link: it => underline(stroke: (paint: blue, thickness: 1pt, dash: "dashed"), offset: 2.5pt, it)
