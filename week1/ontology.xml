@@ -40,26 +40,64 @@
     <!-- http://ontology.daniel-motz.de/ontology#enthaeltZutat -->
 
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#enthaeltZutat">
+        <rdf:type rdf:resource="owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment>
+        <owl:inverseOf rdf:resource="http://ontology.daniel-motz.de/ontology#istZutatVon"/>
+
+        <rdfs:comment xml:lang="de">
             Beschreibt, dass eine Zutat auf einer bestimmten Pizza enthalten ist. Diese Zutat ist bspw.
             eine Sauce, ein Teig, ein Gemüse oder ein Fleisch.
         </rdfs:comment>
-        <rdfs:label>Enthält Zutat</rdfs:label>
+        <rdfs:label xml:lang="de">Enthält Zutat</rdfs:label>
     </owl:ObjectProperty>
 
+
+    <!-- http://ontology.daniel-motz.de/ontology#istZutatVon -->
+
+    <owl:ObjectProperty rdf:about="...#istZutatVon">
+        <owl:inverseOf rdf:resource="...#enthaeltZutat"/>
+        <rdfs:domain rdf:resource="...#Zutat"/>
+        <rdfs:range rdf:resource="...#Pizza"/>
+
+        <rdfs:label xml:lang="de">ist Zutat von</rdfs:label>
+        <rdfs:label xml:lang="en">is ingredient of</rdfs:label>
+
+        <rdfs:comment xml:lang="de">
+            Diese Eigenschaft beschreibt, dass eine Zutat Bestandteil einer bestimmten Pizza ist.
+            Sie ist die Umkehrung der Eigenschaft „enthaeltZutat“ und verbindet eine Zutat mit der Pizza, zu der sie
+            gehört.
+        </rdfs:comment>
+        <rdfs:comment xml:lang="en">
+            This property indicates that an ingredient is part of a specific pizza.
+            It is the inverse of the property "containsIngredient" and links an ingredient to the pizza it belongs to.
+        </rdfs:comment>
+    </owl:ObjectProperty>
 
     <!-- http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria -->
 
     <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
+        <rdf:type rdf:resource="owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="owl#AsymmetricProperty"/>
+        <owl:inverseOf rdf:resource="http://ontology.daniel-motz.de/ontology#hatPizza"/>
         <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria"/>
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Beschreibt, dass eine Pizza als auf der Speisekarte einer Pizzeria aufgeführt wird.
         </rdfs:comment>
-        <rdfs:label>Wird in Pizzeria serviert</rdfs:label>
+        <rdfs:label xml:lang="de">Wird in Pizzeria serviert</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://ontology.daniel-motz.de/ontology#hatPizza -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#hatPizza">
+        <owl:inverseOf rdf:resource="http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria"/>
+        <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria"/>
+        <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
+        <rdfs:comment>
+            Beschreibt aus Sicht einer Pizzeria, dass sie eine Pizza auf der Speisekarte aufführt.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Serviert Pizza</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -73,7 +111,7 @@
         <rdfs:comment>
             Beschreibt die Größe einer Pizza. Diese kann in quantitativen Werten angegeben werden.
         </rdfs:comment>
-        <rdfs:label>Größe</rdfs:label>
+        <rdfs:label xml:lang="de">Größe</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -94,10 +132,10 @@
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Beschreibt den Preis einer Pizza. Dieser kann in einem numerischen Wert angegeben werden.
         </rdfs:comment>
-        <rdfs:label>Preis</rdfs:label>
+        <rdfs:label xml:lang="de">Preis</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -109,10 +147,10 @@
         <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Beschreibt die Währung des Preises zu einer Pizza.
         </rdfs:comment>
-        <rdfs:label>Währung</rdfs:label>
+        <rdfs:label xml:lang="de">Währung</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -145,11 +183,11 @@
             </owl:Restriction>
         </rdfs:subClassOf>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält konkrete Pizzen als Instanzen. Eine Pizza ist eine italienische Spezialität aus
             gebackenem, mit verschiedenen Zutaten belegtem Teig.
         </rdfs:comment>
-        <rdfs:label>Pizza</rdfs:label>
+        <rdfs:label xml:lang="de">Pizza</rdfs:label>
     </owl:Class>
 
 
@@ -158,11 +196,11 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Glutenfreie">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält alle möglichen glutenfreien Zutaten einer Pizza als Instanzen, damit inferiert werden
             kann, ob eine Pizza glutenfrei ist.
         </rdfs:comment>
-        <rdfs:label>Glutenfreie Zutaten</rdfs:label>
+        <rdfs:label xml:lang="de">Glutenfreie Zutaten</rdfs:label>
     </owl:Class>
 
 
@@ -171,8 +209,8 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Käse">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
-        <rdfs:label>Käse</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
+        <rdfs:label xml:lang="de">Käse</rdfs:label>
     </owl:Class>
 
 
@@ -181,10 +219,10 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Laktosefreie">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält alle laktosefreien Zutaten, damit inferiert werden kann, ob eine Pizza laktosefrei ist.
         </rdfs:comment>
-        <rdfs:label>Laktosefreie Zutaten</rdfs:label>
+        <rdfs:label xml:lang="de">Laktosefreie Zutaten</rdfs:label>
     </owl:Class>
 
 
@@ -217,9 +255,9 @@
             </owl:Restriction>
         </rdfs:subClassOf>
 
-        <rdfs:comment>Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza FCC&quot; erfüllen.</rdfs:comment>
-        <rdfs:label>Pizza FCC</rdfs:label>
-        <rdfs:label>Pizza Fußballclub Carl Zeiss Jena</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza FCC&quot; erfüllen.</rdfs:comment>
+        <rdfs:label xml:lang="de">Pizza FCC</rdfs:label>
+        <rdfs:label xml:lang="de">Pizza Fußballclub Carl Zeiss Jena</rdfs:label>
     </owl:Class>
 
 
@@ -252,10 +290,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza Hawaii&quot; erfüllen.
         </rdfs:comment>
-        <rdfs:label>Pizza Hawaii</rdfs:label>
+        <rdfs:label xml:lang="de">Pizza Hawaii</rdfs:label>
     </owl:Class>
 
 
@@ -263,11 +301,11 @@
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizzeria">
         <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält konkrete Pizzerien als Instanzen. Eine Pizzeria ist eine Lokalität, welche Pizzen zum
             Verkauf anbietet.
         </rdfs:comment>
-        <rdfs:label>Pizzeria</rdfs:label>
+        <rdfs:label xml:lang="de">Pizzeria</rdfs:label>
     </owl:Class>
 
 
@@ -276,8 +314,8 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Sauce">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Enthält alle Saucen, die als Zutat Teil einer Pizza sein können.</rdfs:comment>
-        <rdfs:label>Sauce</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält alle Saucen, die als Zutat Teil einer Pizza sein können.</rdfs:comment>
+        <rdfs:label xml:lang="de">Sauce</rdfs:label>
     </owl:Class>
 
 
@@ -287,8 +325,8 @@
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Vegetarische"/>
 
-        <rdfs:comment>Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
-        <rdfs:label>Teig</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält verschiedene Teigsorten, die für eine Pizza verwendet werden können.</rdfs:comment>
+        <rdfs:label xml:lang="de">Teig</rdfs:label>
     </owl:Class>
 
 
@@ -298,10 +336,10 @@
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Laktosefreie"/>
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Vegetarische"/>
 
-        <rdfs:comment>Enthält alle veganen Zutaten, um eine Aussage darüber treffen zu können, ob eine konkrete Pizza
+        <rdfs:comment xml:lang="de">Enthält alle veganen Zutaten, um eine Aussage darüber treffen zu können, ob eine konkrete Pizza
             vegan ist.
         </rdfs:comment>
-        <rdfs:label>Vegane Zutaten</rdfs:label>
+        <rdfs:label xml:lang="de">Vegane Zutaten</rdfs:label>
     </owl:Class>
 
 
@@ -310,8 +348,8 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Vegetarische">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Enthält alle vegetarischen Zutaten, die Teil einer Pizza sein können.</rdfs:comment>
-        <rdfs:label>Vegetarische Zutaten</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält alle vegetarischen Zutaten, die Teil einer Pizza sein können.</rdfs:comment>
+        <rdfs:label xml:lang="de">Vegetarische Zutaten</rdfs:label>
     </owl:Class>
 
 
@@ -326,10 +364,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Enthält vegetarische Pizzen, also Pizzen mit Zutaten, die allesamt vegetarisch sind.
         </rdfs:comment>
-        <rdfs:label>Vegetarische Pizza</rdfs:label>
+        <rdfs:label xml:lang="de">Vegetarische Pizza</rdfs:label>
     </owl:Class>
 
 
@@ -345,16 +383,16 @@
             </owl:Class>
         </owl:equivalentClass>
 
-        <rdfs:comment>Enthält alle Pizzen Hawaii, die vegetarisch sind. Diese Schnittmenge ist leer.</rdfs:comment>
-        <rdfs:label>Vegetarische Pizza Hawaii</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält alle Pizzen Hawaii, die vegetarisch sind. Diese Schnittmenge ist leer.</rdfs:comment>
+        <rdfs:label xml:lang="de">Vegetarische Pizza Hawaii</rdfs:label>
     </owl:Class>
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Zutat -->
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Zutat">
-        <rdfs:comment>Enthält alle möglichen Zutaten einer Pizza als Instanzen.</rdfs:comment>
-        <rdfs:label>Zutat</rdfs:label>
+        <rdfs:comment xml:lang="de">Enthält alle möglichen Zutaten einer Pizza als Instanzen.</rdfs:comment>
+        <rdfs:label xml:lang="de">Zutat</rdfs:label>
     </owl:Class>
 
 
@@ -374,10 +412,10 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Tropische Obstsorte. Die Ananaspflanze stammt aus der Familie der Bromeliengewächse.
         </rdfs:comment>
-        <rdfs:label>Ananas</rdfs:label>
+        <rdfs:label xml:lang="de">Ananas</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -387,8 +425,8 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Gemüsepflanze aus der Familie der Kreuzblütengewächse.</rdfs:comment>
-        <rdfs:label>Brokkoli</rdfs:label>
+        <rdfs:comment xml:lang="de">Gemüsepflanze aus der Familie der Kreuzblütengewächse.</rdfs:comment>
+        <rdfs:label xml:lang="de">Brokkoli</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -405,8 +443,8 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Teig aus Maismehl, Wasser und Salz.</rdfs:comment>
-        <rdfs:label>Maismehlteig</rdfs:label>
+        <rdfs:comment xml:lang="de">Teig aus Maismehl, Wasser und Salz.</rdfs:comment>
+        <rdfs:label xml:lang="de">Maismehlteig</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -415,9 +453,9 @@
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Mozzarella">
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Käse"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegetarische"/>
-        <rdfs:comment>Ein ursprünglich italienischer Filata-Käse, der aber auch außerhalb Italiens hergestellt wird.
+        <rdfs:comment xml:lang="de">Ein ursprünglich italienischer Filata-Käse, der aber auch außerhalb Italiens hergestellt wird.
         </rdfs:comment>
-        <rdfs:label>Mozzarella</rdfs:label>
+        <rdfs:label xml:lang="de">Mozzarella</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -425,8 +463,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Pepperoniwurst">
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment>Scharf gewürzte Rohwurst aus Schweine- und/oder Rindfleisch.</rdfs:comment>
-        <rdfs:label>Pepperoniwurst</rdfs:label>
+        <rdfs:comment xml:lang="de">Scharf gewürzte Rohwurst aus Schweine- und/oder Rindfleisch.</rdfs:comment>
+        <rdfs:label xml:lang="de">Pepperoniwurst</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -453,11 +491,11 @@
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.50</preis>
         <waehrung rdf:datatype="http://www.w3.org/2001/XMLSchema#stringl">EUR</waehrung>
 
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Eine besondere Pizza-Kreation des Hauses, welche zu Ehren des glorreichen FC Carl Zeiss Jena
             erschaffen wurde.
         </rdfs:comment>
-        <rdfs:label>Pizza FCC bei Mekan</rdfs:label>
+        <rdfs:label xml:lang="de">Pizza FCC bei Mekan</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -482,8 +520,8 @@
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.50</preis>
         <waehrung rdf:datatype="http://www.w3.org/2001/XMLSchema#stringl">EUR</waehrung>
 
-        <rdfs:comment>Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
-        <rdfs:label>Pizza Hawaii bei Mekan</rdfs:label>
+        <rdfs:comment xml:lang="de">Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
+        <rdfs:label xml:lang="de">Pizza Hawaii bei Mekan</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -494,8 +532,8 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Teig"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment>Teig aus Reismehl, Wasser und Salz.</rdfs:comment>
-        <rdfs:label>Reismehlteig</rdfs:label>
+        <rdfs:comment xml:lang="de">Teig aus Reismehl, Wasser und Salz.</rdfs:comment>
+        <rdfs:label xml:lang="de">Reismehlteig</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -503,10 +541,10 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Salami">
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Eine Rohwurstsorte aus Schweinefleisch und anderen Fleischsorten, die in Italien erfunden wurde.
         </rdfs:comment>
-        <rdfs:label>Salami</rdfs:label>
+        <rdfs:label xml:lang="de">Salami</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -514,8 +552,8 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Schinken">
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment>(Meist) Schweinefleisch aus der Keule, das durch Pökeln konserviert wurde.</rdfs:comment>
-        <rdfs:label>Schinken</rdfs:label>
+        <rdfs:comment xml:lang="de">(Meist) Schweinefleisch aus der Keule, das durch Pökeln konserviert wurde.</rdfs:comment>
+        <rdfs:label xml:lang="de">Schinken</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -525,11 +563,11 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Laktosefreie"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Sauce"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
-        <rdfs:comment>
+        <rdfs:comment xml:lang="de">
             Sauce aus Tomaten und optional weiteren Zutaten wie Knoblauch, Zwiebeln und Olivenöl, sowie
             verschiedenen Gewürzen und Kräutern.
         </rdfs:comment>
-        <rdfs:label>Tomatensauce</rdfs:label>
+        <rdfs:label xml:lang="de">Tomatensauce</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -541,8 +579,8 @@
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
 
-        <rdfs:comment>Teig aus Weizenmehl, Wasser und Salz. Optional können Öl und Hefe enthalten sein.</rdfs:comment>
-        <rdfs:label>Weizenmehlteig</rdfs:label>
+        <rdfs:comment xml:lang="de">Teig aus Weizenmehl, Wasser und Salz. Optional können Öl und Hefe enthalten sein.</rdfs:comment>
+        <rdfs:label xml:lang="de">Weizenmehlteig</rdfs:label>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan">
@@ -559,8 +597,8 @@
             </schema:PostalAddress>
         </schema:address>
 
-        <rdfs:label>Mekan</rdfs:label>
-        <rdfs:comment>Eine der besten klassischen Pizzerien in Jena</rdfs:comment>
+        <rdfs:label xml:lang="de">Mekan</rdfs:label>
+        <rdfs:comment xml:lang="de">Eine der besten klassischen Pizzerien in Jena</rdfs:comment>
     </owl:NamedIndividual>
 
     <!--
