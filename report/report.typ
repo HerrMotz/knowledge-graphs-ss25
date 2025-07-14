@@ -255,7 +255,7 @@ Hier sind nur die fünf Teilaufgaben aufgeführt, die auch bewertet werden.
 
 Die Integration von fehlerbehafteten Daten in semi-strukturierter Form erfordern eine Vielzahl von Abwägungen und ingenieurstechnischen Methoden um die Informationen präzise und semantisch fundiert abzubilden. Im Folgenden werden die getroffenen Entscheidungen hinsichtlich _Entity Identification_ und Datenbereinigung diskutiert.
 
-== Die Struktur und Besonderheiten des gegebenen Datensatzes
+== Struktur des Datensatzes
 
 Der gegebene Datensatz ist eine Tabelle mit 11 Spalten. Je Zeile können o.B.d.A. zwei Entitäten bzw. Individuen _identifiziert_ werden: Die Spalten `name`, `address`, `city`, `country`, `postcode`, `state` und `categories` beschreiben ein _*Restaurant*_ (`ontology:Pizzeria`), das über einen Namen verfügt, sich an einem bestimmten Ort (beschrieben durch Straße, Stadt, Land, Postleitzahl und Staat) befindet und zudem unter bestimmte Kategorien fällt. Die Spalten `menu item`, `item value`, `currency` und `item description` beschreiben einen _*Eintrag in der Speisekarte*_ (`ontology:Pizza`) des genannten Restaurants. Die Spalten sind in der Datei wie oben beschrieben aufgeführt und suggerieren damit in ihrer Struktur einen Zusammenhang. Nimmt man diese Abbildung an, existiert eine "1:n"-Zuordnung zwischen _Restaurant_ und _Speisekarteneintrag_. Dies erscheint schlüssig.
 
@@ -272,7 +272,7 @@ Sofern die Pizzeria gleiche Ausprägungen in den Merkmalen Name, Addresse und St
 
 Die Wahl des Merkmals Stadt ist erstmal arbiträr. Ebenso gut hätte die Postleitzahl anstelle der Stadt zur Unterscheidung der groben Region dienen können. Die Daten haben allerdings einige Einträge, bei denen die Postleitzahl nicht gesetzt ist, der Name der Stadt allerdings sehr wohl. Daher field die Wahl (datensatzspezifisch) auf das Merkmal Stadt, statt Postleitzahl.
 
-=== Anomalien im Datensatz
+== Anomalien im Datensatz
 
 Es gibt einige Beispiele für Namen und Kategorien die suggerieren, dass die aufgeführten Einträge keine Pizzerien sind (und bspw. die Erfassung der Daten fehlerhaft war).
 
@@ -297,13 +297,15 @@ Auch das Feld für `item description` wurde verschiedentlich verwendet. Am häuf
 
 - Create your own pizza
 
-Die erste Ausprägung suggeriert, dass die Pizza mit dieser Beschreibung 324g wiegt. Dies ist in der Ontologie nicht modelliert und im Sinne der Competency Questions nicht relevant; weiters ist die Information im Datensatz nur selten verfügbar. Eine Erweiterung der Ontologie um diese Data Property wurde daher nicht vorgenommen.
+Die erste Ausprägung suggeriert, dass die Pizza mit dieser Beschreibung 324g wiegt. Dies ist in der Ontologie nicht modelliert und im Sinne der Competency Questions nicht relevant; weiters ist die Information im Datensatz nur selten verfügbar. Eine Erweiterung der Ontologie um diese Data Property wurde daher nicht vorgenommen. Außerdem finden sich mitunter sehr spezifische Angaben für Zutaten:
 
-  - Sehr spezifische Angaben
-    - Seven layer bean dip
-    - Sun dried tomatoes
-    - sliced chicken breast
+- Seven layer bean dip
+- Sun dried tomatoes
 
-== Die Integrationspipeline
+- sliced chicken breast
+
+Relevant im Sinne der Competency Questions ist lediglich die grobe Kategorie der jeweiligen Zutat: "beans", "tomato" und "chicken". Eine später separat besprochene Erweiterung ist die Einführung einer tieferen Zutatenhierarchie, die dies ermöglicht. Ebenfalls werden Singular- und Pluralformen einer Zutat verwendet, bspw. "tomato" und "tomatoes". In meiner persönlichen Erfahrung ist dies in der realen Welt keine Angabe der Menge an Tomaten auf einer Pizza, sondern eine Präferenz des Erstellers der Speisekarte. Daher wurde hier festgelegt, dass das Ziel der Extraktion der Zutat immer der Singular sein soll, bspw. "beans" #sym.arrow "bean". (Dies ist später für die Integration von bestehenden Knowledge Graphs relevant.)
+
+== Die Pipeline
 
 // TODO: Wie habe ich das ingenieursmäßig realisiert?
