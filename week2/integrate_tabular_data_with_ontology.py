@@ -57,7 +57,7 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
                 continue  # Skip non-pizza items
 
             # Create or get Pizzeria
-            pizz_key = (row['name'], row['address'], row['city'])
+            pizz_key = (row['name'], row['address'], row['city'], row['state'], row['country'])
             if pizz_key not in pizzerias:
                 pizz_uri = ONT[f"Pizzeria_{len(pizzerias)}"]
                 pizzerias[pizz_key] = pizz_uri

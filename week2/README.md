@@ -1,5 +1,10 @@
 # Week 2 — Create KG from Tabular Data
 
+You will need an OpenAI API Key to run the code. Store it in the environment variable `OPENAI_API_KEY` or change the
+code to pass it to the client when instantiating it.
+
+
+## Overview
 The pipeline works as follows:
 
 1. Extract ingredients from the dataset (tabular data) using a large language model [create_batch.py](create_batch.py), [upload_batch.py](upload_batch.py)
@@ -20,9 +25,8 @@ The pipeline works as follows:
         3. Add the price
     3. Write the results to [pizza_data.ttl](pizza_data.ttl)
 
-## TL;DR
-
-## Ingredients
+## Commands for the Pipeline
+### Ingredients
 
 1. Run
 
@@ -55,7 +59,7 @@ python3 ingredient_QID_mapping.py
 python3 create_ingredients.jsonl.py
 ```
 
-## Cities
+### Cities
 
 1. Fill the [locked_city_qid_map.json](locked_city_qid_map.json) with "expert" knowledge
 2. Run
@@ -64,7 +68,7 @@ python3 create_ingredients.jsonl.py
 python3 city_qid_mapping.py
 ```
 
-## Integrate Data from CSV-file with Ontology
+### Integrate Data from CSV-file with Ontology
 
 ```shell
 python3 integrate_tabular_data_with_ontology.py 

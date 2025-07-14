@@ -1,13 +1,16 @@
+#import "dvd.typ": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.1": *
+
+#show: dvdtyp.with(
+  title: "Bericht zum Modul Knowledge Graphs",
+  subtitle: [Im Sommersemester 2025 von König-Ries, Bachinger, Enderling],
+  author: "Bericht von Daniel Motz",
+
+)
+
 #show: codly-init.with()
-
 #codly(languages: codly-languages)
-
-#set page(header: [
-  Daniel Motz\
-  Gruppenname: _"BECKS"_
-])
 
 #set text(lang: "de")
 #set par(justify: true)
@@ -16,9 +19,26 @@
 
 #let check = [✅]
 
+#let theorem-style = builder-thmbox(color: colors.at(3), shadow: (offset: (x: 3pt, y: 3pt), color: luma(70%)))
+#let theorem = theorem-style("theorem", "Theorem")
+#let beispiel = theorem-style("Beispiel", "Beispiel")
+
+#let definition-style = builder-thmline(color: colors.at(8))
+#let definition = definition-style("definition", "Definition")
+#let diskussion = definition-style("diskussion", "Diskussionsanregung")
+
+#outline(depth: 2)
+
+#show heading.where(depth: 1): it => {
+  if not state("in-outline", false).get() {
+    pagebreak(weak: true)
+  }
+  it
+}
+
 = Modellierung
-Entspricht Übungsserie 1
-\
+
+Die Aufgaben in diesem Abschnitt waren das systematische Herangehen an das Modellieren von Wissensgraphen kennenzulernen, eigene Competency Questions zu einem gegebenen Thema (hier die Domäne Pizza) zu erstellen, den Begriff der Concept Hierarchy zu erfassen sowie die wesentlichen Konzepte des OntoClean-Ansatzes zu verstehen und auf die erstellte Ontologie anzuwenden.
 
 #grid(columns: (2fr, 2fr), column-gutter: 2em, [
 == Competency Questions
@@ -46,7 +66,7 @@ Entspricht Übungsserie 1
 + Welche #underline[laktosefreien] Pizzen gibt es?
 
 ], [
-  == Important Terms and their Derivates
+  == Important and Derived Terms
   *Dickgedruckte* Terme sind für die Termhierarchie relevant.
   #v(2mm)
   - Topping #sym.arrow *Zutat*
@@ -85,34 +105,25 @@ Entspricht Übungsserie 1
 
 == Terms and Classes
 
-Unsere Ontologie modelliert nicht konkrete, real existierende Pizzen, sondern Einträge einer Speisekarte. Anfangs modellierten wir eine am Prozess der Fastfoodkette "Dominos" orientierte Kategorisierung. Wir stellten jedoch fest, dass dies aufwändig ist. Wir stellten jedoch die Anforderung, dass die Ontologie sowohl Pizzen die in einer Pizzeria, als auch für solche, die in den "eigenen vier Wänden", produziert werden, abbilden kann. Die Klasse Pizza umfasst daher die für eine Pizza wesentlichen Eigenschaften, wie etwa eine Zutatenliste, jedoch ist die Eigenschaft  "Preis" nur im Zusammenhang mit einer Pizzeria präsent.
+Unsere Ontologie modelliert nicht konkrete, real existierende Pizzen, sondern Einträge einer Speisekarte. Anfangs modellierten wir eine am Prozess der Fastfoodkette "Dominos" orientierte Kategorisierung. Wir stellten jedoch fest, dass dies aufwändig und zur Beantwortung der Competency Questions nicht notwendig ist. Wir stellten jedoch die Anforderung, dass die Ontologie sowohl Pizzen die in einer Pizzeria, als auch für solche, die in den "eigenen vier Wänden", produziert werden, abbilden kann. Die Klasse Pizza umfasst daher die für eine Pizza wesentlichen Eigenschaften, wie etwa eine Zutatenliste.
 
 Wir entschieden außerdem, dass weit verbreitete Rezepturen, wie etwa "Pizza Hawaii", als Unterklasse von *Pizza* mit Einschränkungen im Wertebereich der Zutaten modelliert werden. Dafür ist es notwendig, dass wir entweder Klassen für Zutaten anlegen, wie etwa "Schinken" oder aber wir liefern zu unserer TBox eine ABox. Wir haben uns für letzteres entschieden. Dies entstand aus der CQ "Kann man eine Pizza Hawaii ohne Ananas herstellen".
 
 Wir haben uns außerdem dazu entschieden, dass gewisse Zutaten eine eigene Klasse erhalten, nämlich Teig, Sauce und Käse, um erzwingen zu können, dass eine Pizza mindestens aus einem Teig und einer Sauce bestehen muss.
 
-Zu Pizzerien haben wir folgende Gedanken: Eine Pizza kann bei einer Pizzeria hergestellt werden. Dann wird sie zu einem konkreten Preis verkauft und der Preis variiert zudem mit der Größe. In unserer Feldstudie im Raum Jena stellten wir fest, dass es Pizzerien gibt, die an ihrer Speisenkartentafel eigens Klassifizierungen vornehmen. So fanden wir beispielsweise die Aufschrift "Alle Pizzen mit Tomatensauce und Käse#super[g]". Diese Hilfestellung würdigen wir durch Aufnahme in unsere Ontologie als eine eigene Klasse "*Pizza_bei_Mekan*". Wir wissen, a posteriori, dass man auch bei Mekan keine Pizza ohne Teig herstellt, auch wenn der Speisekartenersteller dies nicht expliziert hat.
+Zu Pizzerien haben wir folgende Gedanken: Eine Pizza kann bei einer Pizzeria hergestellt werden. Dann wird sie zu einem konkreten Preis verkauft und der Preis variiert zudem mit der Größe. In unserer Feldstudie im Raum Jena stellten wir fest, dass es Pizzerien gibt, die an ihrer Speisenkartentafel eigens Klassifizierungen vornehmen. So fanden wir beispielsweise die Aufschrift "Alle Pizzen mit Tomatensauce und Käse#super[g]". Dies lieferte die Idee, dass eine Pizza gewisse Mindestanforderungen in ihren Zutaten erfüllen muss. In unserer Ontologie wurde daher ursprünglich gefordert, dass eine Pizza aus den Zutaten "mindestens eine Sauce" und "genau einen Teig" bestehen muss. Es gibt allerdings Ausnahmen, wie etwa die "Pizza Bianca", die möglciherweise keine Sauce enthalten -- das Bestreichen mit Crème Fraîche ist zwar möglich, aber nicht notwendig. In der Abwägung zwischen einer *konzeptionell sauberen* und nicht *übermäßig restriktiven* Definition wurde entschieden zu definieren, dass eine Pizza mindestens eine Sauce oder einen Käse enthalten muss, um als solche zu gelten. Es gibt andere Gerichte, wie etwa Focaccia, die diese Zutatenkombinationen abdecken und damit nicht in die zu modellierende Domäne "Pizza" fallen.
 
 Anfangs modellierten wir "Toppings" bzw. Beläge (bspw. Schinken, Brokkolli, Blumenkohl und Zwiebeln, aber auch Saucen) in der Klasse *Zutat* und fügten data properties für wie `istGlutenfrei` ein. Dies ersetzten wir durch Typen wie etwa `Glutenfreie`, `Vegetarische` und `Vegane`.
 
 Wir haben Teig nicht als vegan modelliert, damit wir ggf. auch Teige mit Ei erlauben können. Die Einschränkung in vegetarisch erscheint sinnvoll, jedoch wird die Zubereitung des Teigs in unserer Ontologie nicht näher spezifiziert. 
 
-Unsere Ontologie enthält ein Beispiel für eine unerfüllbare Klasse: `VegetarischePizza_Hawaii`, modelliert als Schnitt zwischen `Vegetarische_Pizza` und `Pizza_Hawaii`. Die Bedingungen sind also, dass jedes Individuum dieses Typs ausschließlich vegetarische Zutaten enthält, sowie die für eine Pizza Hawaii notwendigen (Ananas, Tomatensauce, Teig/Boden und Schinken). Da Schinken nicht den Typ `Vegetarische` besitzt, kann es die Anforderungen der Klasse `Vegetarische_Pizza` nicht erfüllen.
+Die Ontologie enthält ein Beispiel für eine unerfüllbare Klasse: `VegetarischePizza_Hawaii`, modelliert als Schnitt zwischen `Vegetarische_Pizza` und `Pizza_Hawaii`. Die Bedingungen sind also, dass jedes Individuum dieses Typs ausschließlich vegetarische Zutaten enthält, sowie die für eine Pizza Hawaii notwendigen (Ananas, Tomatensauce, Teig/Boden und Schinken). Da Schinken nicht den Typ `Vegetarische` besitzt, kann es die Anforderungen der Klasse `Vegetarische_Pizza` nicht erfüllen.
 
-== Anreichung der Ontologie
+#pagebreak()
 
-Im Zuge der Weiterentwicklung der Ontologie habe ich mich mit der semantischen Anreicherung von Eigenschaften (Properties) befasst. Ziel dieser Arbeit war es, die inferenzielle Leistungsfähigkeit der Ontologie zu erhöhen und fehlerhafte Modellierungen durch logische Inkonsistenzen erkennbar zu machen. Dabei orientierte ich mich an den in OWL verfügbaren Property-Charakteristiken wie funktional, asymmetrisch, irreflexiv und inverseOf.
-
-Zu Beginn fiel mir auf, dass sich bestimmte Eigenschaften -- beispielsweise `enthaeltZutat` -- besonders gut für eine semantische Anreicherung eignen. Diese Relation ist sowohl asymmetrisch als auch irreflexiv, da es nicht möglich ist, dass eine Pizza eine Zutat enthält, die wiederum die Pizza enthält oder mit ihr identisch ist. Zur verbesserten Navigierbarkeit innerhalb der Ontologie ergänzte ich zudem eine inverse Eigenschaft `istZutatVon`, sodass sowohl von der Pizza auf die Zutat als auch umgekehrt geschlossen werden kann.
-
-Auch für die Relation `gehoertZuPizzeria` entschied ich mich dazu, die inverse Beziehung `hatPizza` zu modellieren. Diese Relation ist asymmetrisch, da zwar eine Pizza einer Pizzeria zugeordnet sein kann, nicht jedoch umgekehrt. Die Funktionalität von `gehoertZuPizzeria` -- im Sinne der Annahme, dass jede Pizza genau einer Pizzeria zugeordnet ist -- wurde beibehalten.
-
-Im Zusammenhang mit der Eigenschaft waehrung stellte sich die Frage, ob eine Standardwährung (beispielsweise „USD“) angenommen werden kann, wenn keine Angabe erfolgt. Da OWL keine direkte Möglichkeit bietet, einen Standardwert zu hinterlegen, ohne die Option zur expliziten Abweichung (etwa „EUR“) zu verlieren, entschied ich mich gegen eine globale Einschränkung des Wertebereichs mittels allValuesFrom. Stattdessen 
-
-Durch diese Erweiterungen ist es mir möglich, die Modellierungsschärfe der Ontologie zu erhöhen und gezielter zu überprüfen, ob konkrete Ontologieinstanzen valide abgebildet sind. Ein Beispiel: Sollte die Eigenschaft `enthaeltZutat` irrtümlich zyklisch verwendet werden, kann ein Reasoner dies aufgrund der definierten Irreflexivität erkennen. Ebenso erleichtern inverse Beziehungen die Ableitung zusätzlicher Informationen aus wenigen ABox-Einträgen -- etwa darüber, welche Zutaten in mehreren Pizzen verwendet werden.
-
-Diese formale Präzisierung stellt einen weiteren Schritt in Richtung einer robusten und qualitativ hochwertigen Ontologie dar, die nicht nur zur Wissensmodellierung, sondern auch zur automatisierten Konsistenzprüfung eingesetzt werden kann.
-
+#bemerkung("Änderungen an der Ontologie basierend auf dem Feedback")[
+  Obwohl die Aufgabenstellung zum Projekt folgendes erlaubte: #quote[The ontology should abstract knowledge about the domain, valid for the data at hand but potentially valid for other datasets (e.g., tables)], gab es Feedback, dass die Eigenschaft `bewertungAufGoogle` von Pizzerien nicht in den Daten begründet liegt und auch in keiner Competency Question erwähnt wird -- sie wurde daher entfernt.
+]
 
 
 == Informelle Hierarchisierung
@@ -120,9 +131,6 @@ Diese formale Präzisierung stellt einen weiteren Schritt in Richtung einer robu
 #show link: it => underline(stroke: (paint: blue, thickness: 1pt, dash: "dashed"), offset: 2.5pt, it)
 
 Die Datei befindet sich im Repositorium unter #link("week1/terminology-hierarchy.pdf")[`terminology-hierarchy.pdf`].
-
-== Ontologie
-Die Datei befindet sich ebenfalls im Repositorium unter #link("week1/ontology.xml")[`ontology.xml`].
 
 // TODO: fix, dass das nicht überdeckt wird
 #place(bottom+left)[#v(1cm)\ #text(1.2em, super[g])"Milch"]
@@ -157,6 +165,24 @@ Wir haben uns nachträglich dazu entschieden, ausschließlich die Klasse *Pizzer
 Instanzen der Klasse *Pizza*, so genannte Pizzen, bilden ein zusammenhängendes Ganzes und werden daher mit $+U$ markiert. Diese Eigenschaft wird logischerweise an alle Subklassen wie *Pizza_Hawaii* oder *Pizza_bei_Mekan* vererbt. Gleiches gilt für die Klasse *Pizzeria*.
 
 Für die meisten anderen Klassen kann aus unserer Sicht keine eindeutige Aussage über deren Unity getroffen werden. Wenn wir die Klasse *Zutat* betrachten, enthält diese sowohl Instanzen, die als ein Ganzes angesehen werden _können_ (eine Tomate, ein Brokkolirösschen etc.), es gibt aber auch Zutaten, die eindeutig kein Unity-Kriterium erfüllen (Käseraspeln, Tomatensauce etc.). Dennoch haben wir uns dazu entschlossen, die Klasse *Zutat* sowie all ihre Subklassen als anti-unity ($~U$) zu modellieren und dementsprechend _alle_ in unserer Ontologie potentiell vorkommenden Zutaten nicht als ein physisches Ganzes zu betrachten. Beispielsweise betrachten wir anstatt einer Tomate eine Tomatenscheibe als Zutat, welche auch nach Teilen dieser immer noch eine Tomatenscheibe ist.
+
+
+== Anreichung der Properties Ontologie
+
+Im Zuge der Weiterentwicklung der Ontologie habe ich mich mit der semantischen Anreicherung von Properites befasst. Ziel war es, die Korrektheit und Leistung der Ontologie zu erhöhen und fehlerhafte Assertions durch logische Inkonsistenzen erkennbar zu machen. Dabei orientierte ich mich an den in OWL verfügbaren Property-Charakteristiken wie funktional, asymmetrisch, irreflexiv und inverseOf.
+
+Zu Beginn fiel mir auf, dass sich bestimmte Eigenschaften -- beispielsweise `enthaeltZutat` -- besonders gut für eine Anreicherung eignen. Diese Relation ist sowohl asymmetrisch als auch irreflexiv, da es nicht möglich ist, dass eine Pizza eine Zutat enthält, die wiederum die Pizza enthält oder mit ihr identisch ist. Zur verbesserten Navigierbarkeit innerhalb der Ontologie ergänzte ich zudem eine inverse Eigenschaft `istZutatVon`, sodass sowohl von der Pizza auf die Zutat als auch umgekehrt geschlossen werden kann.
+
+Auch für die Relation `gehoertZuPizzeria` entschied ich mich dazu, die inverse Beziehung `hatPizza` zu modellieren. Diese Relation ist asymmetrisch, da zwar eine Pizza einer Pizzeria zugeordnet sein kann, nicht jedoch umgekehrt. Die Funktionalität von `gehoertZuPizzeria` -- im Sinne der Annahme, dass jede Pizza genau einer Pizzeria zugeordnet ist -- wurde beibehalten.
+
+Beim Prüfen der Datatype Property `waehrung` stellte sich die Frage, ob eine Standardwährung (beispielsweise „USD“) angenommen werden kann, wenn keine Angabe erfolgt. Da OWL keine direkte Möglichkeit bietet, einen Standardwert zu hinterlegen, ohne die Option zur expliziten Abweichung (etwa „EUR“) zu verlieren, entschied ich mich gegen eine globale Einschränkung des Wertebereichs mittels allValuesFrom. Stattdessen 
+
+Durch diese Erweiterungen ist es mir möglich, die Modellierungsschärfe der Ontologie zu erhöhen und gezielter zu überprüfen, ob konkrete Assertions valide sind. Ein Beispiel: Sollte die Eigenschaft `enthaeltZutat` irrtümlich zyklisch verwendet werden, kann ein Reasoner dies aufgrund der definierten Irreflexivität erkennen. Ebenso erleichtern inverse Beziehungen die Ableitung zusätzlicher Informationen aus wenigen ABox-Einträgen -- etwa darüber, welche Zutaten in mehreren Pizzen verwendet werden.
+
+Diese formale Präzisierung stellt einen weiteren Schritt in Richtung einer robusten und qualitativ hochwertigen Ontologie dar, die nicht nur zur Wissensmodellierung, sondern auch zur automatisierten Konsistenzprüfung eingesetzt werden kann.
+
+== Ontologie
+Die Datei befindet sich ebenfalls im Repositorium unter #link("week1/ontology.xml")[`ontology.xml`].
 
 /*
 
@@ -223,3 +249,61 @@ Hier sind nur die fünf Teilaufgaben aufgeführt, die auch bewertet werden.
 - Weitere Eigenschaften von Zutaten hinzufügen (z.B. ist Brokkoli auch glutenfrei). #check
 - Identity und Unity überarbeiten. #check
 */
+
+
+= Integration tabellarischer Daten in die Ontologie
+
+Die Integration von fehlerbehafteten Daten in semi-strukturierter Form erfordern eine Vielzahl von Abwägungen und ingenieurstechnischen Methoden um die Informationen präzise und semantisch fundiert abzubilden. Im Folgenden werden die getroffenen Entscheidungen hinsichtlich _Entity Identification_ und Datenbereinigung diskutiert.
+
+== Die Struktur und Besonderheiten des gegebenen Datensatzes
+
+Der gegebene Datensatz ist eine Tabelle mit 11 Spalten. Je Zeile können o.B.d.A. zwei Entitäten bzw. Individuen _identifiziert_ werden: Die Spalten `name`, `address`, `city`, `country`, `postcode`, `state` und `categories` beschreiben ein _*Restaurant*_ (`ontology:Pizzeria`), das über einen Namen verfügt, sich an einem bestimmten Ort (beschrieben durch Straße, Stadt, Land, Postleitzahl und Staat) befindet und zudem unter bestimmte Kategorien fällt. Die Spalten `menu item`, `item value`, `currency` und `item description` beschreiben einen _*Eintrag in der Speisekarte*_ (`ontology:Pizza`) des genannten Restaurants. Die Spalten sind in der Datei wie oben beschrieben aufgeführt und suggerieren damit in ihrer Struktur einen Zusammenhang. Nimmt man diese Abbildung an, existiert eine "1:n"-Zuordnung zwischen _Restaurant_ und _Speisekarteneintrag_. Dies erscheint schlüssig.
+
+#bemerkung("Categories")[
+  Bei der ursprünglichen Aufstellung der Competency Questions wurden keine aufgeführt, die nach der Kategorie einer Pizzeria fragen. Daher findet sich in der Ontologie diese Object Property auch nicht wieder und wird in diesem Schritt nicht berücksichtigt.
+]
+
+Sofern die Pizzeria gleiche Ausprägungen in den Merkmalen Name, Addresse und Stadt besitzt, wird angenommen, dass es sich um dieselbe Pizzeria handelt. Dies ist das Ergebnis der Abwägung zwischen Exaktheit der Reidentifikation und Übergenauigkeit -- sollte bspw. die Postleitzahl in einer Zeile fehlen, jedoch sind Name, Stadt und Addresse gleich, so würde der Vergleich fehlschlagen und eine neue Pizzeria instanziiert werden. Eine nachträgliche Verbesserung war das Aufnehmen von Bundesstaat und Land in die 
+
+#text(.8em)[
+```python
+  pizz_key = (row['name'], row['address'], row['city'], row['state'], row['country'])
+```]
+
+Die Wahl des Merkmals Stadt ist erstmal arbiträr. Ebenso gut hätte die Postleitzahl anstelle der Stadt zur Unterscheidung der groben Region dienen können. Die Daten haben allerdings einige Einträge, bei denen die Postleitzahl nicht gesetzt ist, der Name der Stadt allerdings sehr wohl. Daher field die Wahl (datensatzspezifisch) auf das Merkmal Stadt, statt Postleitzahl.
+
+=== Anomalien im Datensatz
+
+Es gibt einige Beispiele für Namen und Kategorien die suggerieren, dass die aufgeführten Einträge keine Pizzerien sind (und bspw. die Erfassung der Daten fehlerhaft war).
+
+#let data= ("24 Hour Express Locksmith Inc", "Locksmiths", "7 Day 24 Hours Emergency Locks", "Locks & Locksmiths")
+
+#figure(
+  table(columns: 2,
+  [*Name*], [*Categories*],
+  ..data
+  ),
+  caption: [Namen, die suggerieren, dass es sich nicht um eine Pizzeria handelt]
+)
+
+Jedoch werden in einem Fall 7 und im anderen 17 Speisekarteneinträge aufgeführt.
+
+Einige Einträge erwecken den Eindruck eines Formatierungsfehlers, etwa: gibt es einen Eintrag in dem das erste Feld (`name`) folgenden Wert enthält:
+`'l Bistro,100 S 42nd St,Grand Forks,US,58201,ND,"Italian Restaurant,Seafood Restaurant,Pizza Place,Italian Restaurant, Seafood Restaurant, and Pizza Place",Roasted Vegetable and Goat Cheese Pizza,,,Oven roasted vegetables and kalamata olives with marinara sauce topped with goat cheese and mozzarella`. Diese Einträge wurden _manuell_ durch das entfernen des führenden einfachen Anführungszeichen korrigiert.
+
+Auch das Feld für `item description` wurde verschiedentlich verwendet. Am häufigsten führt es Zutaten an, wie etwa "tomatoes, garlic, mozzarella, basil". Daher wurde von mir die Annahme getroffen, dass ein typisches `item description`-Feld eine Zutatenliste darstellt. Jedoch finden sich auch Beschreibungen wie
+
+- 1 each (324.00 g)
+
+- Create your own pizza
+
+Die erste Ausprägung suggeriert, dass die Pizza mit dieser Beschreibung 324g wiegt. Dies ist in der Ontologie nicht modelliert und im Sinne der Competency Questions nicht relevant; weiters ist die Information im Datensatz nur selten verfügbar. Eine Erweiterung der Ontologie um diese Data Property wurde daher nicht vorgenommen.
+
+  - Sehr spezifische Angaben
+    - Seven layer bean dip
+    - Sun dried tomatoes
+    - sliced chicken breast
+
+== Die Integrationspipeline
+
+// TODO: Wie habe ich das ingenieursmäßig realisiert?

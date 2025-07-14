@@ -56,10 +56,10 @@
 
     <!-- http://ontology.daniel-motz.de/ontology#istZutatVon -->
 
-    <owl:ObjectProperty rdf:about="...#istZutatVon">
-        <owl:inverseOf rdf:resource="...#enthaeltZutat"/>
-        <rdfs:domain rdf:resource="...#Zutat"/>
-        <rdfs:range rdf:resource="...#Pizza"/>
+    <owl:ObjectProperty rdf:about="http://ontology.daniel-motz.de/ontology#istZutatVon">
+        <owl:inverseOf rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+        <rdfs:domain rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
+        <rdfs:range rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
 
         <rdfs:label xml:lang="de">ist Zutat von</rdfs:label>
         <rdfs:label xml:lang="en">is ingredient of</rdfs:label>
@@ -170,19 +170,32 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizza">
         <rdfs:subClassOf rdf:resource="http://schema.org/Offer"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.daniel-motz.de/ontology#Sauce"/>
-            </owl:Restriction>
+        <owl:Restriction> <!-- Either, the pizza has a sauce or it has cheese -->
+            <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+            <owl:someValuesFrom>
+            <owl:Class> <!-- This is to allow Pizza Bianca -->
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.daniel-motz.de/ontology#Sauce"/>
+                    <rdf:Description rdf:about="http://ontology.daniel-motz.de/ontology#Kaese"/>
+                </owl:unionOf>
+            </owl:Class>
+            </owl:someValuesFrom>
+        </owl:Restriction>
         </rdfs:subClassOf>
+        <!-- At least one Teig -->
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.daniel-motz.de/ontology#Teig"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">
-                    1
-                </owl:maxQualifiedCardinality>
-            </owl:Restriction>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontolog#enthaeltZutat"/>
+            <owl:someValuesFrom rdf:resource="http://ontology.daniel-motz.de/ontolog#Teig"/>
+        </owl:Restriction>
+        </rdfs:subClassOf>
+        <!-- At most one Teig -->
+        <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontolog#enthaeltZutat"/>
+            <owl:onClass rdf:resource="http://ontology.daniel-motz.de/ontolog#Teig"/>
+            <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+        </owl:Restriction>
         </rdfs:subClassOf>
 
         <rdfs:comment xml:lang="de">
