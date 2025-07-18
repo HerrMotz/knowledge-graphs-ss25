@@ -315,6 +315,10 @@ Relevant im Sinne der Competency Questions ist lediglich die grobe Kategorie der
 
 Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation. 
 
+== SPARLQ.1 -- Reasoning über der Ontologie und den integrierten Daten
+
+
+
 == SPARQL.2 -- Pizzerien, die Pizza ohne Tomaten servieren
 
 Die Abfrage sucht lediglich nach Dingen vom Typ Pizzeria und filtert anschließend mit `FILTER NOT EXISTS` Dinge aus der Ergebnismenge, die eine Pizza servieren die Tomatensauce oder Tomaten enthält. Wichtig ist hier, dass möglicherweise unvollständige Informationen, die allerdings die Ergebnismenge nicht einschränken sollen, als `OPTIONAL` statiert werden, etwa wenn die Adressangabe unvollständig ist: es soll alles verfügbare in das Ergebnis projeziert, aber nicht die Ergebnismenge eingeschränkt werden.

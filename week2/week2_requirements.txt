@@ -1,0 +1,3 @@
+rdflib
+owlrl
+-r ../requirements.txt
