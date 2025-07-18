@@ -2,7 +2,8 @@ PREFIX schema1: <http://schema.org/>
 PREFIX : <http://ontology.daniel-motz.de/ontology#>
 
 SELECT (AVG(?price) AS ?avgPrice) WHERE {
-    ?pizza :enthaeltZutat :tomato, :Mozzarella ;
+    ?pizza rdf:type :Pizza ;
+           :enthaeltZutat :tomato, :Mozzarella ;
            schema1:price ?price ;
            schema1:priceCurrency ?currency .
 

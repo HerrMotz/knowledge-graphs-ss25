@@ -313,4 +313,20 @@ Relevant im Sinne der Competency Questions ist lediglich die grobe Kategorie der
 
 = Abfrage des RDF-basierten Knowledge Graphs
 
-Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation.
+Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation. 
+
+== SPARQL.2 -- Pizzerien, die Pizza ohne Tomaten servieren
+
+Die Abfrage sucht lediglich nach Dingen vom Typ Pizzeria und filtert anschließend mit `FILTER NOT EXISTS` Dinge aus der Ergebnismenge, die eine Pizza servieren die Tomatensauce oder Tomaten enthält. Wichtig ist hier, dass möglicherweise unvollständige Informationen, die allerdings die Ergebnismenge nicht einschränken sollen, als `OPTIONAL` statiert werden, etwa wenn die Adressangabe unvollständig ist: es soll alles verfügbare in das Ergebnis projeziert, aber nicht die Ergebnismenge eingeschränkt werden.
+
+== SPARQL.3 -- Durchschnittspreis der Pizza Margherita
+
+Die Abfrage ist insofern unintuitiv, dass es Dinge vom Typ Pizza gehen soll, die genau die Zutaten "Tomate" und "Mozzarella" enthalten. In SPARQL kann dies formuliert werden als "mindestens `Tomate` und `Mozzarella`" und "höchstens `Tomate` und `Mozzarella`" in der Menge der Zutaten. Die Aussage "mindestens" ist durch die Zeile 6 gegeben, jedoch sind es ohne den `FILTER`-Block in der Zeile 11 ff. potentiell Pizzen, die auch mehr enhalten. Für diese Abfrage war es auch entscheidend Preise auszuschließen die ungültige Fließkommazahlen (`NaN`) sind. Dafür sorgt das `FILTER`-statement in der vorletzten Zeile der Abfrage.
+
+== SPARQL.4 -- Pizzerien sortiert nach Stadt
+
+Die Abfrage ist insofern korrekt, als sie die Anzahl der Pizzerien pro Stadt ermittelt und nach Bundesland sowie Restaurantanzahl sortiert. Durch `rdf:type :Pizzeria` wird die betrachtete Klasse eingegrenzt. Die Adressdaten werden über verschachtelte `OPTIONAL`-Blöcke eingebunden, sodass auch unvollständige Adressen nicht ausgeschlossen werden. Die Gruppierung über `GROUP BY ?region ?locality` sorgt dafür, dass die Zählung eindeutig auf Stadt- und Bundeslandebene erfolgt. `COUNT(?restaurant)` liefert die benötigte Aggregation, während `ORDER BY ?region DESC(?restaurantCount)` die geforderte Sortierung sicherstellt.
+
+== SPARQL.5 -- Pizzerien ohne Postleitzahl
+
+Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitzahl existiert, zurückgeliefert werden sollen. Dies ist dadurch erfüllt, dass das `FILTER`-statement alle Einträge aus der Ergbnismenge entfernt, zu denen keine Postleitzahl vermerkt wurde.

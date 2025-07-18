@@ -5,12 +5,12 @@ PREFIX : <http://ontology.daniel-motz.de/ontology#>
 
 SELECT ?restaurant ?label ?country ?locality ?region ?zip ?address WHERE {
     ?restaurant rdf:type   :Pizzeria.
-    ?restaurant rdfs:label ?label.
 
     # This block is optional, so that incomplete
-    # address information does not restrict the
-    # query's results.
+    # address information or a missing name does 
+    # not restrict the query's results.
     OPTIONAL {
+        ?restaurant rdfs:label ?label.
         ?restaurant schema1:address ?a.
         OPTIONAL { ?a schema1:addressCountry ?country. }
   		OPTIONAL { ?a schema1:addressLocality ?locality. }
