@@ -309,3 +309,8 @@ Relevant im Sinne der Competency Questions ist lediglich die grobe Kategorie der
 == Die Pipeline
 
 // TODO: Wie habe ich das ingenieursmäßig realisiert?
+
+
+= Abfrage des RDF-basierten Knowledge Graphs
+
+Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation.
