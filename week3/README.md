@@ -1,5 +1,9 @@
 # Week 3 — Querying
 
+## Reasoning over the ontology
+
+The task 
+
 | File                                                                                 | Description                                                                                                                             |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [pizza_data.ttl](/week2/pizza_data.ttl)                                              | The output of [integrate_tabular_data_with_ontology.py](/week2/integrate_tabular_data_with_ontology.py). Does not contain the ontology. |
