@@ -119,8 +119,6 @@ Wir haben Teig nicht als vegan modelliert, damit wir ggf. auch Teige mit Ei erla
 
 Die Ontologie enthält ein Beispiel für eine unerfüllbare Klasse: `VegetarischePizza_Hawaii`, modelliert als Schnitt zwischen `Vegetarische_Pizza` und `Pizza_Hawaii`. Die Bedingungen sind also, dass jedes Individuum dieses Typs ausschließlich vegetarische Zutaten enthält, sowie die für eine Pizza Hawaii notwendigen (Ananas, Tomatensauce, Teig/Boden und Schinken). Da Schinken nicht den Typ `Vegetarische` besitzt, kann es die Anforderungen der Klasse `Vegetarische_Pizza` nicht erfüllen.
 
-#pagebreak()
-
 #bemerkung("Änderungen an der Ontologie basierend auf dem Feedback")[
   Obwohl die Aufgabenstellung zum Projekt folgendes erlaubte: #quote[The ontology should abstract knowledge about the domain, valid for the data at hand but potentially valid for other datasets (e.g., tables)], gab es Feedback, dass die Eigenschaft `bewertungAufGoogle` von Pizzerien nicht in den Daten begründet liegt und auch in keiner Competency Question erwähnt wird -- sie wurde daher entfernt.
 ]
@@ -135,7 +133,6 @@ Die Datei befindet sich im Repositorium unter #link("week1/terminology-hierarchy
 // TODO: fix, dass das nicht überdeckt wird
 #place(bottom+left)[#v(1cm)\ #text(1.2em, super[g])"Milch"]
 
-#pagebreak()
 
 == OntoClean: Rigidity, Unity, Identity
 
@@ -166,23 +163,28 @@ Instanzen der Klasse *Pizza*, so genannte Pizzen, bilden ein zusammenhängendes 
 
 Für die meisten anderen Klassen kann aus unserer Sicht keine eindeutige Aussage über deren Unity getroffen werden. Wenn wir die Klasse *Zutat* betrachten, enthält diese sowohl Instanzen, die als ein Ganzes angesehen werden _können_ (eine Tomate, ein Brokkolirösschen etc.), es gibt aber auch Zutaten, die eindeutig kein Unity-Kriterium erfüllen (Käseraspeln, Tomatensauce etc.). Dennoch haben wir uns dazu entschlossen, die Klasse *Zutat* sowie all ihre Subklassen als anti-unity ($~U$) zu modellieren und dementsprechend _alle_ in unserer Ontologie potentiell vorkommenden Zutaten nicht als ein physisches Ganzes zu betrachten. Beispielsweise betrachten wir anstatt einer Tomate eine Tomatenscheibe als Zutat, welche auch nach Teilen dieser immer noch eine Tomatenscheibe ist.
 
+== Verbesserungsmöglichkeiten
 
-== Anreichung der Properties Ontologie
+Die Benennung der Klasse *Pizza* ist unklar, denn sie lässt weit offen, was mit einer Pizza gemeint ist; erst der Kommentar schafft Klarheit.
 
-Im Zuge der Weiterentwicklung der Ontologie habe ich mich mit der semantischen Anreicherung von Properites befasst. Ziel war es, die Korrektheit und Leistung der Ontologie zu erhöhen und fehlerhafte Assertions durch logische Inkonsistenzen erkennbar zu machen. Dabei orientierte ich mich an den in OWL verfügbaren Property-Charakteristiken wie funktional, asymmetrisch, irreflexiv und inverseOf.
+== Ontologie
+Die Datei befindet sich ebenfalls im Repositorium unter #link("week1/ontology.xml")[`ontology.xml`].
 
-Zu Beginn fiel mir auf, dass sich bestimmte Eigenschaften -- beispielsweise `enthaeltZutat` -- besonders gut für eine Anreicherung eignen. Diese Relation ist sowohl asymmetrisch als auch irreflexiv, da es nicht möglich ist, dass eine Pizza eine Zutat enthält, die wiederum die Pizza enthält oder mit ihr identisch ist. Zur verbesserten Navigierbarkeit innerhalb der Ontologie ergänzte ich zudem eine inverse Eigenschaft `istZutatVon`, sodass sowohl von der Pizza auf die Zutat als auch umgekehrt geschlossen werden kann.
+=== Anreichung der Properties <abs:anreichung_properites>
 
-Auch für die Relation `gehoertZuPizzeria` entschied ich mich dazu, die inverse Beziehung `hatPizza` zu modellieren. Diese Relation ist asymmetrisch, da zwar eine Pizza einer Pizzeria zugeordnet sein kann, nicht jedoch umgekehrt. Die Funktionalität von `gehoertZuPizzeria` -- im Sinne der Annahme, dass jede Pizza genau einer Pizzeria zugeordnet ist -- wurde beibehalten.
+Im Zuge der Weiterentwicklung der Ontologie habe ich mich mit der semantischen Anreicherung von Properites befasst. Ziel war es, die Korrektheit und Leistung der Ontologie zu erhöhen und fehlerhafte Assertions durch logische Inkonsistenzen erkennbar zu machen. Dabei orientierte ich mich an den in OWL verfügbaren Property-Charakteristiken wie `functional`, `asymmetric`, `irreflexive` und `inverseOf`.
+
+Zu Beginn fiel mir auf, dass sich bestimmte Eigenschaften -- beispielsweise `enthaeltZutat` -- besonders gut für eine Anreicherung eignen. Diese Relation ist sowohl asymmetrisch als auch irreflexiv, da es nicht möglich ist, dass eine Pizza eine Zutat enthält, die wiederum die Pizza enthält oder mit ihr identisch ist. Zur verbesserten Navigierbarkeit (mit bspw. SPARQL) innerhalb der Ontologie ergänzte ich zudem eine inverse Eigenschaft `istZutatVon`, sodass sowohl von der Pizza auf die Zutat als auch umgekehrt geschlossen werden kann. Sie sind allerdings beide nicht `functional`.
+
+Auch für die Relation `gehoertZuPizzeria` entschied ich mich dazu, die inverse Beziehung `hatPizza` zu modellieren. Diese Relation ist asymmetrisch, da zwar eine Pizza einer Pizzeria zugeordnet, jedoch das Gegenteil semantisch unsinnig ($"Pizza" stretch(->)^" hatPizza " "Pizzeria"$). Die Funktionalität von `gehoertZuPizzeria` -- im Sinne der Annahme, dass jede Pizza (ein Eintrag einer Speisekarte) genau einer Pizzeria zugeordnet ist -- wurde beibehalten. Dabei ist zu bedenken, dass OWL2 die Eigenschaften nicht autoatisch der T-Box hinzufügt. Grundsätzlich sollte eine Inkonsistenz festgestellt, da für eine Assertion in der inversen Relation immer eine Assertion in der ursprünglichen existiert, die die entsprechenden Prädikate trägt. Es ist daher möglich, aber überflüssig, sie in der TBox zu explizieren. Für meine Version von Protegé die HermiT 1.4.3 ausgestattet ist und auch das Paket `owlready2` (das ebenfalls eine Variante von HermiT verwendet) hat sich dies allerdings nicht bewahrheitet.
+
+Ein Beispiel in meiner Ontologie für eine `functional data property` ist `groesse`: Eine Pizza kann genau eine Größe haben und die Aussage ist ungültig, sofern es zwei Assertions gibt die sich auf die gleiche Pizza beziehen.
 
 Beim Prüfen der Datatype Property `waehrung` stellte sich die Frage, ob eine Standardwährung (beispielsweise „USD“) angenommen werden kann, wenn keine Angabe erfolgt. Da OWL keine direkte Möglichkeit bietet, einen Standardwert zu hinterlegen, ohne die Option zur expliziten Abweichung (etwa „EUR“) zu verlieren, entschied ich mich gegen eine globale Einschränkung des Wertebereichs mittels allValuesFrom. Stattdessen 
 
 Durch diese Erweiterungen ist es mir möglich, die Modellierungsschärfe der Ontologie zu erhöhen und gezielter zu überprüfen, ob konkrete Assertions valide sind. Ein Beispiel: Sollte die Eigenschaft `enthaeltZutat` irrtümlich zyklisch verwendet werden, kann ein Reasoner dies aufgrund der definierten Irreflexivität erkennen. Ebenso erleichtern inverse Beziehungen die Ableitung zusätzlicher Informationen aus wenigen ABox-Einträgen -- etwa darüber, welche Zutaten in mehreren Pizzen verwendet werden.
 
 Diese formale Präzisierung stellt einen weiteren Schritt in Richtung einer robusten und qualitativ hochwertigen Ontologie dar, die nicht nur zur Wissensmodellierung, sondern auch zur automatisierten Konsistenzprüfung eingesetzt werden kann.
-
-== Ontologie
-Die Datei befindet sich ebenfalls im Repositorium unter #link("week1/ontology.xml")[`ontology.xml`].
 
 /*
 
@@ -317,7 +319,7 @@ Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls
 
 == SPARLQ.1 -- Reasoning über der Ontologie und den integrierten Daten
 
-
+Wie in @abs:anreichung_properites angeschnitten können Reasoner verwendet werden um bestimmte Schlussfolgerungen in der TBox zu explizieren. Es ist grundsätzlich nicht sinnvoll die deduktive Hülle zu explizieren, u.a. weil sich dadurch Speicherplatz sparen und Übersichtlichkeit schaffen lässt. Wird in Protégé (mit Reasoner HermiT 1.4.3) ein Ding als Typ verwendet, so wird gefolgert und expliziert, dass es als Klasse aufzufassen ist.“
 
 == SPARQL.2 -- Pizzerien, die Pizza ohne Tomaten servieren
 

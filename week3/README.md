@@ -2,7 +2,9 @@
 
 ## Reasoning over the ontology
 
-The task 
+The task specifies to "perform reasoning with the ontology and the generated data". I interpret this to ask for the 
+deductive closure of A- and T-Box. The [inferred_data.ttl](inferred_data.ttl) file contains the result of this reasoning
+step.
 
 | File                                                                                 | Description                                                                                                                             |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
