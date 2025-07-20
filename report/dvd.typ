@@ -23,6 +23,8 @@
   rgb("#9E9E9E"),
 )
 
+#let todo(it) = text(font: "DejaVu Sans Mono", style: "italic", fill: green, "// todo: " + it)
+
 #let dvdtyp(
   title: "",
   subtitle: "",

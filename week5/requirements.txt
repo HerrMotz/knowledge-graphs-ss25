@@ -1,0 +1,4 @@
+gensim
+pyyaml
+git+https://github.com/KRR-Oxford/OWL2Vec-Star.git
+-r ../requirements.txt

@@ -336,3 +336,7 @@ Die Abfrage ist insofern korrekt, als sie die Anzahl der Pizzerien pro Stadt erm
 == SPARQL.5 -- Pizzerien ohne Postleitzahl
 
 Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitzahl existiert, zurückgeliefert werden sollen. Dies ist dadurch erfüllt, dass das `FILTER`-statement alle Einträge aus der Ergbnismenge entfernt, zu denen keine Postleitzahl vermerkt wurde.
+
+= Alignment
+
+#todo[Diskussion der verwendeten Techniken]
