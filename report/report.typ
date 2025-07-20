@@ -340,3 +340,4 @@ Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitza
 = Alignment
 
 #todo[Diskussion der verwendeten Techniken]
+
