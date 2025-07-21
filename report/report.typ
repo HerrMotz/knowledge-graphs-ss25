@@ -343,10 +343,6 @@ Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitza
 
 = Embedding
 
-#todo[Diskussion der similarity und dissimilarity für meine Beispiele]
-
-#todo[Ggf. Menge der Beispiele für cfg2 erhöhen.]
-
 Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es gibt in dieser Betrachtung zwei Konfigurationen:
 
 - Configuration 1: `embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1`
@@ -354,11 +350,22 @@ Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es 
 
 Die Konfigurationen entscheiden sich in zweierlei Hinsicht: Der Größe des Merkmalsvektor für das Embedding und der Random-Walk Depth. Die Tiefe der Random Walks in OWL2Vec\* beeinflusst die Qualität der erzeugten Embeddings deutlich. Größere Tiefen erfassen komplexere semantische Zusammenhänge, können jedoch auch irrelevante oder störende Informationen einbeziehen. Daher muss eine geeignete Tiefe gewählt werden, um ein gutes Gleichgewicht zwischen Ausdrucksstärke und Genauigkeit zu erzielen.
 
+Folgende Paare wurden gewählt
+
+#let fill_function = (x, y) => if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}
+
+#let raw_pairs = csv("../week5/pairs.txt", delimiter: " ")
+
+#figure(
+  caption: [Die zur Beobachtung gewählten Paare],
+  table(columns: 2, [*Term1*], [*Term2*], ..raw_pairs.flatten())
+)
+
 Das Embedding wurde zunächst jedoch nur mit 100 Samples aus der ABox angefertigt. 
 Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding nicht wesentlich unterscheidbar.
 
 #figure(
-  caption: "Eine Auswahl 20 zufälliger Embeddings aus der Ontologie.",
+  caption: "Eine Auswahl 20 zufälliger Embeddings, Configuration 1, Sample Size 100",
   image("../week5/random_similarity_report_100_samples.png", width: 70%),
 )
 
@@ -370,30 +377,29 @@ Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede 
 #let pairs2 = csv("../week5/similarities2_2000.csv")
 
 #figure(
-  table(columns: 4, fill: (x, y) =>
-    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs1.flatten()),
+  table(columns: 4, fill: fill_function, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs1.flatten()),
   caption: [Configuration 1, Sample Size 2,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
 )
 
 #figure(
-  table(columns: 4, fill: (x, y) =>
-    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs2.flatten()),
+  table(columns: 4, fill: fill_function, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs2.flatten()),
   caption: [Configuration 2, Sample Size 2,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
 )
 
 
-#let pairs10k_2 = csv("../week5/similarities1.csv")
+#let pairs10k_1 = csv("../week5/similarities1.csv")
 #let pairs10k_2 = csv("../week5/similarities2.csv")
 
 #figure(
-  table(columns: 4, fill: (x, y) =>
-    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_2.flatten()),
+  table(columns: 4, fill: fill_function, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_1.flatten()),
   caption: [Configuration 1, Sample Size 10,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
-)
+) <looool>
 
 #figure(
-  table(columns: 4, fill: (x, y) =>
-    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_2.flatten()),
+  table(columns: 4, fill: fill_function, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_2.flatten()),
   caption: [Configuration 2, Sample Size 10,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
 )
 
+#pagebreak()
+
+Die für diese Beispiele beste Konfiguration scheint @looool zu zeigen: 
