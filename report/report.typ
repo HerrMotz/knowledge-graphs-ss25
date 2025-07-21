@@ -312,6 +312,40 @@ Relevant im Sinne der Competency Questions ist lediglich die grobe Kategorie der
 
 // TODO: Wie habe ich das ingenieursmäßig realisiert?
 
+Ich habe diesen Abschnitt zur Vertiefung gewählt, weil viele Möglichkeiten zur Verbesserung in jedem Teilschritt existieren. Die Pipeline ist in etwa wie folgt aufgebaut:
+
+$
+  "data.csv" stretch(->)^"Bereinigen & Extrahieren" "Pizza- und Zutatenliste" stretch(->)^"Matching" "TBox oder ABox anpassen"
+$
+
+Alle Schritte sind fehleranfällig; Bei der Bereinigung der Daten können wertvolle Informationen verworfen und unsinnige als wichtig angesehen werden. Die Auflösung mit den bestehenden Zutaten in der Ontologie kann verwechselt werden, aber auch eine falsche Entsprechung gefunden werden. Selbst ein manuelles Mapping ist nicht fehlerfrei, aufgrund der teilweise fehlenden Informationen über die Pizzatypen, bspw. "Choose Your Own Pizza". Auch das Matching mit der Ontologie kann semantisch falsch sein und letztlich muss der Interpretant unter einem Bezeichner der Ontologie nicht dasselbe wie der Entwickler verstehen.
+
+=== Vorüberlegungen
+Im Datensatz finden sich einige typische Pizzasorten/-typen/-klassen, wie etwa _Pizza Margherita_. Hier ist recht klar welche Zutaten zu ihr gehören und gehören sollten. Die Wahrscheinlichkeit, dass populäre Sorten in der Ontologie modelliert sind ist hoch und die Variationen halten sich in geringem Maße. Jedoch gibt es ebenfalls Sorten am anderen Ende des Spektrums oder solche, die je nach Region (und Land) sehr unterschiedlich zubereitet werden. Grundsätzlich sind alle Macharten valide und sollten daher vom Extraksionsschritt berücksichtigt und dem Nutzer in der letzendlichen Abfrage transparent gemacht werden. Dies muss allerdings aus Gründen der Praktikabilität und Überschaubarkeit nur bis zu einem bestimmten Detailgrad möglich sein; diese Schwelle gilt es zur Umsetzung dieses Pipeline-Schritts zu setzen.
+
+Folgende zwei grundlegenden Ansätze sind denkbar: 1) Man geht vom Namen des Menüeintrags aus oder 2) man geht von der Beschreibung aus. Es ist natürlich sinnvoll beide Merkmale zu nutzen, um den Informationsgehalt maximal auszuschöpfen. Eine Möglichkeit, zur Nutzung beider Merkmale, wäre, basierend auf dem Bezeichner des Menüeintrags (bspw. `menu item` = _Pizza Margherita_) die Zutatenliste durch die Ontologie bei einer Übereinstimmung zu übernehen (bspw. Tomate, Mozzarella, Basilikum) und in der ABox festzuschreiben. Falls keine Entsprechung existiert, wird kein solcher Pizzatyp bzw. -klasse und die Zutatenliste festgelegt, sondern ein Pizzaeintrag mit der Zutatenliste wird angelegt. Dieser Ansatz hat kein Problem, wenn die Zutatenliste leer ist, solange es einen Pizzatypen zum Bezeichnes aus dem Datensatz gibt, jedoch ignoriert er gänzlich die individuelle Rezeptur einer Pizzeria, die ggf. dem in der Ontologie definierten Typen und seiner Einschränkungen widersprechen. Wenn man beide Informationen einbeziehen möchte, muss man sich über Schritte zur Konfliktresolution  einigen. Für meinen Ansatz habe ich eine übersichtliche Menge an Sorten definiert, hier sind die "Pizza Bianca" und "Pizza Frutti Di Mare" zu nennen.
+
+=== Ingredient Extraction Step
+
+Unabhängig von der Wahl des "Merging"-Verfahrens ist es sinnvoll die Zutaten zu extrahieren und kategorisieren. Dies wäre für einen Datensatz dieser Größe ein hoher Aufwand, insbesondere, wenn man allein agiert. Das Feld `item description` wird verschiedentlich genutzt und ist nicht in jedem Fall eine Zutatenliste (sondern gelegentlich leer oder mit irreführenden Angaben gefüllt). Die überwältigende Mehrheit macht jedoch indikative Einträge über die Gestalt der Pizza. Dies mit klassischen Werkzeugen des Natural Language Processing zu verarbeiten wäre in der Konzeption aufwändig, daher habe ich mich eines Large Language Models bedient.
+
++ Ein Large Language Model bereinigt die Rohdaten (Größenangaben und sonstige unpassende Beschreibungen werden entfernt). Je Zeile in der ursprünglichen CSV-Datei gibt es nun einen strukturierten Datensatz.
+
++ Diese Liste wird einem Clusteringverfahren übergeben und führt ein
+  + Clustering der `menu item`-Namen in Pizzasorten, und ein
+  + Hierarchiches Clustering der Zutaten unter Hinzunahme von Expertenwissen durch.
+
++ Das Clustering wird für die Integration der Daten in die Ontologie abgelegt (in `cluster_labels.json`).
+
+==== LLM Prompt
+Der Prompt verlangt, basierend auf den Merkmalen `menu item` und `item description`, zu klassifizieren ob es sich um eine Pizza handelt, welche Zutaten sie enthält und den Namen des Menüeitnrags zu kanonisieren. Explizit wird das LLM aufgefordert die Zutaten zu "vereinfachen" (Beispiel _green pepper_ soll zu _pepper_ werden). _Dies ist selbstverständlich fehleranfällig_, jedoch gab es keine bedeutenden Auffälligkeiten in einer stichprobenartigen Kontrolle. Der Schritt kann durch eine weitere Anpassung des Prompts und Einstellen der Temperatur (Zufälligkeit), sowie das Auslassen der Aufforderung des Konfabulierens vermutlich verbessert werden. Erstaunlich gut funktioniert die Klassifizierung, ob etwas eine Pizza ist. Der Prompt fordert bspw. "Pizza Bagel" nicht als Pizza anzuerkennen#footnote[Grundsätzlich wäre ein Pizza Bagel im Sinne meiner Ontologie eine Pizza. Jedoch zeigt dieses Beispiel, dass man unerwünschte Einträge mit einem LLM leicht filtern kann.].
+
+==== Clustering
+Das Clustering setzt ein Sentence Embedding ein. Die Zutat wird nicht einfach nur als Wort mit einem vortrainierten Embedding vektorisiert, sondern in einem Satz der die Zutat benennt und aufzählt, auf welchen `menu items` sie vorkommt. "\<Zutat\> in Margherita, Caprese, Quattro Formaggi". Im ersten Schritt wird mit der Cosine Similarity als Metrik das Louvain-Verfahren (bekannt aus der Netzwerkanalyse zur Community-Detection) angewandt. Die zweite Hierarchieebene wird mit der Scikit-Learn-Methode _AgglomerativeClustering_ berechnet.
+
+==== Qualität des Clustering
+Für Pizzasorten hat das Clustering rein schlecht funktioniert. Etwa gehört zur Kategorie "Bianca" die "Tuna Pizza", die "Whole Breakfast Pizza", allerdings auch die "White Pizza" und ihre Varianten.
+
 
 = Abfrage des RDF-basierten Knowledge Graphs
 
@@ -403,24 +437,18 @@ Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede 
 
 #pagebreak()
 
-In the report, embeddings were analyzed using two distinct configurations:
+Wie schon erwähnt, beeinflussen die Parameter Random-Walk-Tiefe und die Merkmalsvektorgröße wesentlich, wie gut semantische Zusammenhänge durch Embeddings erfasst werden können. Größere Dimensionen und tiefere Random-Walks bieten in der Regel reichhaltigere semantische Informationen, bergen jedoch auch das Risiko, irrelevante oder störende Daten einzubeziehen.
 
-* *Configuration 1*: Embedding size = 200, Random Walk Depth = 2
-* *Configuration 2*: Embedding size = 400, Random Walk Depth = 4
-
-These configurations significantly affect the semantic capture capabilities of embeddings. Higher embedding dimensions and deeper random walks generally provide richer semantic information but can introduce noise.
-
-== Analysis of Selected Entity Pairs:
 
 === Pairs Expected to Be Similar:
 
 1. *margherita and pizza*:
 
-   - High similarity was expected as Margherita is a type of pizza.
-   - Configuration 1: With increasing sample size from 2000 (cosine similarity = 0.8380) to 10,000 samples (cosine similarity drops significantly to 0.3188), indicating instability or overfitting at higher sample sizes.
-   - Configuration 2: Similarity remains consistently high (cosine similarity around 0.9014 at 2000 samples and 0.7744 at 10,000 samples), confirming robustness in capturing semantic relationships.
+Zwischen "margherita" und "pizza" wurde eine hohe Ähnlichkeit erwartet, da Margherita eine spezifische Pizza-Variante ist. In Konfiguration 1 zeigte sich bei steigender Stichprobengröße von 2000 auf 10.000 Samples zunächst eine hohe Cosine Similarity ($0.8380$), die jedoch überraschend auf $0.3188$ absank, was auf Instabilitäten hindeuten könnte. Configuration 2 hingegen bestätigte die Erwartung konsistenter, mit einem stabilen Rückgang der Cosine Similarity von $0.9014$ auf $0.7744$.
 
 2. *mozzarella and kaese (cheese)*:
+
+
 
    - Expected similarity as Mozzarella is a specific type of cheese.
    - Configuration 1: High cosine similarity at 2000 samples (0.9327), but notably decreases at 10,000 samples (0.6492), suggesting potential dilution of semantic signal with increased sample size.

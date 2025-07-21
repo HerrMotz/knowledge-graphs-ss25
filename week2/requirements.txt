@@ -1,2 +1,6 @@
 openai~=1.88.0
 requests~=2.32.4
+sentence-transformers>=3.0
+scikit-learn>=1.4
+networkx>=3.5
+-r ../requirements.txt

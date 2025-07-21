@@ -3,26 +3,19 @@
 You will need an OpenAI API Key to run the code. Store it in the environment variable `OPENAI_API_KEY` or change the
 code to pass it to the client when instantiating it.
 
-## Overview
-The pipeline works as follows:
+## The Pipeline
 
-1. Extract ingredients from the dataset (tabular data) using a large language model [create_batch.py](create_batch.py), [upload_batch.py](upload_batch.py)
-2. Download the results using [get_batch_results.py](get_batch_results.py)
-3. Clean the LLMs results by manually removing/mapping some common mistakes to the correct category, e.g. "banana
-   pepper" to "bell pepper"
-4. Map the ingredients to Wikidata items using elastic search and a SPARQL query [ingredient_QID_mapping.py](ingredient_QID_mapping.py)
-5. Extract cities from the dataset and map them to Wikidata items [city_QID_mapping.py](city_QID_mapping.py)
-6. Use `rdflib` to integrate the three data sources into statements within the ontology
-   [integrate_tabular_data_with_ontology.py](integrate_tabular_data_with_ontology.py)
-    1. Add the pizza places with schema.org-addresses
-    2. Create the pizzas
-        1. The ontology has existing ingredients. Again override the mapping to the entities from within the ontology
-           using
-           `KNOWN_INGREDIENTS`
-        2. Add these ingredients (hierarchy: use ontology ingredients → use wikidata items → create canonical ingredient
-           in the ontology)
-        3. Add the price
-    3. Write the results to [pizza_data.ttl](pizza_data.ttl)
+The new pipeline works as follows:
+1. Extract ingredients from the tabular data using a large language model, to get rid of irrelevant information. [create_batch.py](create_batch.py), [upload_batch.py](upload_batch.py), [get_batch_results.py](get_batch_results.py)
+2. Create a hierarchical clustering of the ingredients. Similar ingredients should be put into the same category, e.g. "tomato" and "sun-dried tomato".
+3. Map the ingredients to my Ontology or Wikidata.
+   1. The ontology has existing ingredients. Again override the mapping to the entities from within the ontology
+          using `KNOWN_INGREDIENTS`
+   2. Add these ingredients (hierarchy: use ontology ingredients → use wikidata items → create canonical ingredient
+      in the ontology)
+4. Map cities to the mentioned locations in the dataset.
+5. Lastly, integrate the tabular data with the ontology, by creating pizza places, pizzas and ingredients.
+6. Write the results to [pizza_data.ttl](pizza_data.ttl)
 
 ## Commands for the Pipeline
 ### Ingredients

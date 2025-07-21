@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://ontology.daniel-motz.de/ontology#"
-         xml:base="http://ontology.daniel-motz.de/ontology"
-         xmlns:dc="http://purl.org/dc/elements/1.1/"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xml="http://www.w3.org/XML/1998/namespace"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:schema="http://schema.org/">
+     xml:base="http://ontology.daniel-motz.de/ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://ontology.daniel-motz.de/ontology#">
         <dc:creator>Daniel Motz</dc:creator>
         <dc:creator>Maximilian Stock</dc:creator>
     </owl:Ontology>
+    
 
 
     <!-- 
@@ -22,55 +23,67 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
 
 
     <!-- http://schema.org/address -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/address"/>
+    
 
 
     <!-- http://schema.org/addressCountry -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/addressCountry"/>
+    
 
 
     <!-- http://schema.org/addressLocality -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/addressLocality"/>
+    
 
 
     <!-- http://schema.org/name -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
+    
 
 
     <!-- http://schema.org/postalCode -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/postalCode"/>
+    
 
 
     <!-- http://schema.org/streetAddress -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/streetAddress"/>
+    
 
 
     <!-- http://schema.org/unitCode -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/unitCode"/>
+    
 
 
     <!-- http://schema.org/value -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/value"/>
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
 
 
     <!-- 
@@ -80,6 +93,8 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#enthaeltZutat -->
@@ -96,6 +111,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Enthält Zutat</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria -->
@@ -111,6 +127,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Wird in Pizzeria serviert</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#groesse -->
@@ -124,6 +141,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Größe</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#hatPizza -->
@@ -138,6 +156,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Serviert Pizza</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#istZutatVon -->
@@ -160,6 +179,7 @@
         <rdfs:label xml:lang="en">is ingredient of</rdfs:label>
         <rdfs:label xml:lang="de">ist Zutat von</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- 
@@ -169,6 +189,8 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#preis -->
@@ -183,6 +205,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Preis</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#waehrung -->
@@ -197,16 +220,19 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Währung</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://schema.org/price -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/price"/>
+    
 
 
     <!-- http://schema.org/priceCurrency -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/priceCurrency"/>
+    
 
 
     <!-- 
@@ -216,6 +242,8 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Glutenfreie -->
@@ -228,6 +256,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Glutenfreie Zutaten</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Kaese -->
@@ -235,6 +264,7 @@
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Kaese">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Laktosefreie -->
@@ -246,6 +276,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Laktosefreie Zutaten</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza -->
@@ -274,8 +305,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1
-                </owl:maxQualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://ontology.daniel-motz.de/ontology#Teig"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -287,6 +317,32 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Pizza</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Pizza_Bianca -->
+
+    <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizza_Bianca">
+        <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Ricotta"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">
+            Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza Bianca&quot; erfüllen – klassisch mit Ricotta und
+            Mozzarella, aber ohne Tomatensauce.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Pizza Bianca</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza_FCC -->
@@ -322,6 +378,37 @@
         <rdfs:label xml:lang="de">Pizza FCC</rdfs:label>
         <rdfs:label xml:lang="de">Pizza Fußballclub Carl Zeiss Jena</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Pizza_Frutti_Di_Mare -->
+
+    <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizza_Frutti_Di_Mare">
+        <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Meeresfruechte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">
+            Enthält alle Pizzen mit verschiedenen Meeresfrüchten, Tomatensauce und Mozzarella.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Pizza Meeresfrüchte</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza_Hawaii -->
@@ -357,20 +444,13 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Pizza Hawaii</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza_Margherita -->
 
     <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizza_Margherita">
         <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
-
-        <!-- Tomate muss enthalten sein -->
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
-                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Tomate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
@@ -383,12 +463,48 @@
                 <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Mozzarella"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Tomate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">
-            Enthält alle Pizzen, die die Anforderungen an eine "Pizza Margherita" erfüllen.
+            Enthält alle Pizzen, die die Anforderungen an eine &quot;Pizza Margherita&quot; erfüllen.
         </rdfs:comment>
         <rdfs:label xml:lang="de">Pizza Margherita</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Pizza_Salami -->
+
+    <owl:Class rdf:about="http://ontology.daniel-motz.de/ontology#Pizza_Salami">
+        <rdfs:subClassOf rdf:resource="http://ontology.daniel-motz.de/ontology#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Salami"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.daniel-motz.de/ontology#enthaeltZutat"/>
+                <owl:hasValue rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">
+            Enthält alle Pizzen mit Salami, Tomatensauce und Mozzarella – die klassische Salami-Pizza.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Pizza Salami</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizzeria -->
@@ -401,6 +517,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Pizzeria</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Sauce -->
@@ -410,6 +527,7 @@
         <rdfs:comment xml:lang="de">Enthält alle Saucen, die als Zutat Teil einer Pizza sein können.</rdfs:comment>
         <rdfs:label xml:lang="de">Sauce</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Teig -->
@@ -421,6 +539,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Teig</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Vegane -->
@@ -434,6 +553,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Vegane Zutaten</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Vegetarische -->
@@ -443,6 +563,7 @@
         <rdfs:comment xml:lang="de">Enthält alle vegetarischen Zutaten, die Teil einer Pizza sein können.</rdfs:comment>
         <rdfs:label xml:lang="de">Vegetarische Zutaten</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#VegetarischePizza -->
@@ -460,6 +581,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Vegetarische Pizza</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#VegetarischePizza_Hawaii -->
@@ -477,6 +599,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Vegetarische Pizza Hawaii</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Zutat -->
@@ -485,31 +608,37 @@
         <rdfs:comment xml:lang="de">Enthält alle möglichen Zutaten einer Pizza als Instanzen.</rdfs:comment>
         <rdfs:label xml:lang="de">Zutat</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://schema.org/FoodEstablishment -->
 
     <owl:Class rdf:about="http://schema.org/FoodEstablishment"/>
+    
 
 
     <!-- http://schema.org/Offer -->
 
     <owl:Class rdf:about="http://schema.org/Offer"/>
+    
 
 
     <!-- http://schema.org/PostalAddress -->
 
     <owl:Class rdf:about="http://schema.org/PostalAddress"/>
+    
 
 
     <!-- http://schema.org/QuantitativeValue -->
 
     <owl:Class rdf:about="http://schema.org/QuantitativeValue"/>
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#IrreflexiveProperty -->
 
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    
 
 
     <!-- 
@@ -519,6 +648,8 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Ananas -->
@@ -532,6 +663,19 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Ananas</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Basilikum -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Basilikum">
+        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
+        <rdfs:comment xml:lang="de">
+            Basilikum ist ein aromatisches Kraut, das häufig als frische Zutat oder Garnitur auf Pizza verwendet wird.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Basilikum</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Brokkoli -->
@@ -542,11 +686,13 @@
         <rdfs:comment xml:lang="de">Gemüsepflanze aus der Familie der Kreuzblütengewächse.</rdfs:comment>
         <rdfs:label xml:lang="de">Brokkoli</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Kaese -->
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Kaese"/>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Maismehlteig -->
@@ -559,6 +705,18 @@
         <rdfs:comment xml:lang="de">Teig aus Maismehl, Wasser und Salz.</rdfs:comment>
         <rdfs:label xml:lang="de">Maismehlteig</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Meeresfruechte -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Meeresfruechte">
+        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
+        <rdfs:comment xml:lang="de">Verschiedene essbare Tiere aus dem Meer, z. B. Tintenfisch, Garnelen, Muscheln.
+        </rdfs:comment>
+        <rdfs:label xml:lang="de">Meeresfrüchte</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Mozzarella -->
@@ -572,17 +730,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Mozzarella</rdfs:label>
     </owl:NamedIndividual>
-
-
-    <!-- http://ontology.daniel-motz.de/ontology#Basilikum -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Basilikum">
-        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegane"/>
-        <rdfs:comment xml:lang="de">
-            Basilikum ist ein aromatisches Kraut, das häufig als frische Zutat oder Garnitur auf Pizza verwendet wird.
-        </rdfs:comment>
-        <rdfs:label xml:lang="de">Basilikum</rdfs:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pepperoniwurst -->
@@ -592,6 +740,7 @@
         <rdfs:comment xml:lang="de">Scharf gewürzte Rohwurst aus Schweine- und/oder Rindfleisch.</rdfs:comment>
         <rdfs:label xml:lang="de">Pepperoniwurst</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza_FCC_bei_Mekan -->
@@ -613,13 +762,14 @@
             </rdf:Description>
         </groesse>
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.50</preis>
-        <waehrung rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</waehrung>
+        <waehrung>EUR</waehrung>
         <rdfs:comment xml:lang="de">
             Eine besondere Pizza-Kreation des Hauses, welche zu Ehren des glorreichen FC Carl Zeiss Jena
             erschaffen wurde.
         </rdfs:comment>
         <rdfs:label xml:lang="de">Pizza FCC bei Mekan</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizza_Hawaii_bei_Mekan -->
@@ -632,7 +782,6 @@
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Schinken"/>
         <enthaeltZutat rdf:resource="http://ontology.daniel-motz.de/ontology#Tomatensauce"/>
         <gehoertZuPizzeria rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan"/>
-        <hatPizza rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan"/>
         <groesse>
             <rdf:Description>
                 <rdf:type rdf:resource="http://schema.org/QuantitativeValue"/>
@@ -640,11 +789,13 @@
                 <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</schema:value>
             </rdf:Description>
         </groesse>
+        <hatPizza rdf:resource="http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan"/>
         <preis rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.50</preis>
-        <waehrung rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</waehrung>
+        <waehrung>EUR</waehrung>
         <rdfs:comment xml:lang="de">Die Pizza Hawaii, die bei Mekan angeboten wird.</rdfs:comment>
         <rdfs:label xml:lang="de">Pizza Hawaii bei Mekan</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan -->
@@ -665,6 +816,7 @@
         <rdfs:comment xml:lang="de">Eine der besten klassischen Pizzerien in Jena</rdfs:comment>
         <rdfs:label xml:lang="de">Mekan</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Reismehlteig -->
@@ -677,6 +829,18 @@
         <rdfs:comment xml:lang="de">Teig aus Reismehl, Wasser und Salz.</rdfs:comment>
         <rdfs:label xml:lang="de">Reismehlteig</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Ricotta -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Ricotta">
+        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Kaese"/>
+        <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Vegetarische"/>
+        <rdfs:comment xml:lang="de">Ein italienischer Frischkäse aus Molke.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ricotta</rdfs:label>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Salami -->
@@ -688,6 +852,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Salami</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Schinken -->
@@ -698,6 +863,13 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Schinken</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.daniel-motz.de/ontology#Tomate -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Tomate"/>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Tomatensauce -->
@@ -712,6 +884,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Tomatensauce</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://ontology.daniel-motz.de/ontology#Weizenmehlteig -->
@@ -725,6 +898,7 @@
         </rdfs:comment>
         <rdfs:label xml:lang="de">Weizenmehlteig</rdfs:label>
     </owl:NamedIndividual>
+    
 
 
     <!-- 
@@ -739,6 +913,7 @@
         <rdfs:comment xml:lang="de">Enthält verschiedene Käsesorten sowie vegane Käsealternativen.</rdfs:comment>
         <rdfs:label xml:lang="de">Käse</rdfs:label>
     </rdf:Description>
+    
 
 
     <!-- 
@@ -760,5 +935,6 @@
 </rdf:RDF>
 
 
-        <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
