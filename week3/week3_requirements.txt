@@ -1,4 +1,4 @@
 rdflib
 owlrl
-owlready2
+OWLready2==0.47
 -r ../requirements.txt
