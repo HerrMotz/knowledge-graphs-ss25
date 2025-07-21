@@ -22,8 +22,7 @@ import torch
 
 # ─────────────────────── CONFIG ───────────────────────
 HF_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"  # 768‑d embeddings
-COARSE_THRESHOLD = 0.70  # similarity edge cutoff for Level‑1 graph
-FINE_THRESHOLD = 0.30  # distance cutoff for synonym merge (Level‑2)
+FINE_THRESHOLD = 0.30  # distance cutoff for synonym merge
 GENERIC_TOKENS = {"sauce", "fresh", "dried"}
 RANDOM_SEED = 42
 OUTPUT_FILE = "cluster_labels.json"
@@ -132,7 +131,7 @@ embeddings = embed(sentences)
 distance = cosine_distances(embeddings)
 similarity = 1 - distance
 
-# Level‑2 via tight agglomerative merge (to be named)
+# clustering via tight agglomerative merge (to be named)
 syn_clusterer = AgglomerativeClustering(
     linkage="average", metric="cosine", distance_threshold=FINE_THRESHOLD, n_clusters=None
 ).fit(embeddings)
