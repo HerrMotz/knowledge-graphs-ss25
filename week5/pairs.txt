@@ -1,4 +1,4 @@
-margherita pizza
+http://ontology.daniel-motz.de/ontology#Pizza_Margherita http://ontology.daniel-motz.de/ontology#Pizza
 mozzarella kaese
 zutat tomatensauce
 margherita scampi

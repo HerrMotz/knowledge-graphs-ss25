@@ -343,6 +343,7 @@ Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitza
 
 = Embedding
 
+== Konfiguration und Begriffe
 Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es gibt in dieser Betrachtung zwei Konfigurationen:
 
 - Configuration 1: `embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1`
@@ -350,7 +351,7 @@ Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es 
 
 Die Konfigurationen entscheiden sich in zweierlei Hinsicht: Der Größe des Merkmalsvektor für das Embedding und der Random-Walk Depth. Die Tiefe der Random Walks in OWL2Vec\* beeinflusst die Qualität der erzeugten Embeddings deutlich. Größere Tiefen erfassen komplexere semantische Zusammenhänge, können jedoch auch irrelevante oder störende Informationen einbeziehen. Daher muss eine geeignete Tiefe gewählt werden, um ein gutes Gleichgewicht zwischen Ausdrucksstärke und Genauigkeit zu erzielen.
 
-Folgende Paare wurden gewählt
+Die Paare wurden gewählt um einem ausgewogenen unterschiedlicher Taxonomieebenen und Typen zu repräsentieren. Margherita und Pizza sind sich vermutlich recht ähnlich, da Margherita eine Einschränkung über der 
 
 #let fill_function = (x, y) => if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}
 
@@ -358,7 +359,7 @@ Folgende Paare wurden gewählt
 
 #figure(
   caption: [Die zur Beobachtung gewählten Paare],
-  table(columns: 2, [*Term1*], [*Term2*], ..raw_pairs.flatten())
+  table(columns: 2, fill: fill_function, [*Term1*], [*Term2*], ..raw_pairs.flatten())
 )
 
 Das Embedding wurde zunächst jedoch nur mit 100 Samples aus der ABox angefertigt. 
@@ -402,4 +403,54 @@ Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede 
 
 #pagebreak()
 
-Die für diese Beispiele beste Konfiguration scheint @looool zu zeigen: 
+In the report, embeddings were analyzed using two distinct configurations:
+
+* *Configuration 1*: Embedding size = 200, Random Walk Depth = 2
+* *Configuration 2*: Embedding size = 400, Random Walk Depth = 4
+
+These configurations significantly affect the semantic capture capabilities of embeddings. Higher embedding dimensions and deeper random walks generally provide richer semantic information but can introduce noise.
+
+== Analysis of Selected Entity Pairs:
+
+=== Pairs Expected to Be Similar:
+
+1. *margherita and pizza*:
+
+   - High similarity was expected as Margherita is a type of pizza.
+   - Configuration 1: With increasing sample size from 2000 (cosine similarity = 0.8380) to 10,000 samples (cosine similarity drops significantly to 0.3188), indicating instability or overfitting at higher sample sizes.
+   - Configuration 2: Similarity remains consistently high (cosine similarity around 0.9014 at 2000 samples and 0.7744 at 10,000 samples), confirming robustness in capturing semantic relationships.
+
+2. *mozzarella and kaese (cheese)*:
+
+   - Expected similarity as Mozzarella is a specific type of cheese.
+   - Configuration 1: High cosine similarity at 2000 samples (0.9327), but notably decreases at 10,000 samples (0.6492), suggesting potential dilution of semantic signal with increased sample size.
+   - Configuration 2: Moderate similarity at 2000 samples (0.8048), further decreasing slightly at 10,000 samples (0.6192), reflecting an unexpected weakening of semantic relatedness.
+
+3. *zutat (ingredient) and tomatensauce (tomato sauce)*:
+
+   - Strong semantic link anticipated as tomato sauce is clearly an ingredient.
+   - Configuration 1: Cosine similarity slightly decreased from 0.8764 at 2000 samples to 0.6761 at 10,000 samples, possibly indicating context dilution.
+   - Configuration 2: Initially moderate similarity (0.7766) improving slightly at 10,000 samples (0.7864), illustrating greater stability.
+
+=== Pairs Expected to Be Dissimilar:
+
+1. *margherita and scampi*:
+
+   - Expected to be semantically distant, Margherita being vegetarian pizza, Scampi seafood.
+   - Configuration 1: High similarity at 2000 samples (0.8932) drastically decreases at 10,000 samples (0.3230), aligning better with expectations at larger samples.
+   - Configuration 2: Moderate similarity at 2000 samples (0.7736), decreasing slightly at 10,000 samples (0.6472), indicating correct semantic distancing at larger samples.
+
+2. *dessert and waehrung (currency)*:
+
+   - Clearly unrelated semantic concepts, thus expecting low similarity.
+   - Both configurations surprisingly showed consistently high similarity (Configuration 1: 0.9882 at 2000 samples, dropping slightly to 0.8470 at 10,000; Configuration 2: 0.9773 and 0.8779 respectively), indicating potential embedding anomalies or common co-occurrence patterns unrelated to actual semantic content.
+
+3. *breakfast and schinken (ham)*:
+
+   - Initially considered dissimilar; however, contextually breakfast often includes ham, making semantic overlap plausible.
+   - Configuration 1: Initially high similarity at 2000 samples (0.9062), dropping significantly to moderate levels at 10,000 samples (0.4825), showing sensitivity to contextual nuances.
+   - Configuration 2: Consistently high similarity (0.8766 at 2000 samples and 0.9005 at 10,000 samples), suggesting embeddings effectively captured relevant contextual associations.
+
+=== Conclusion:
+
+The embeddings' semantic clarity varied significantly with embedding dimension, random walk depth, and sample size. Configuration 2 generally demonstrated greater semantic stability due to its higher dimensionality and deeper contextual exploration, while Configuration 1 exhibited more variability. Large sample sizes sometimes diluted semantic precision due to increased noise or context ambiguity. Unexpected semantic similarities highlight potential limitations or peculiarities of the embedding method, necessitating careful tuning of embedding parameters.
