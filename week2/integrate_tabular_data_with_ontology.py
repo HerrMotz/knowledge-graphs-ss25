@@ -114,10 +114,12 @@ with open('data.csv', 'r') as csv_file, open('ingredients.jsonl', 'r') as jsonl_
             try:
                 _p = float(row['item value'])
             except ValueError:
-                _p = float("nan")
-            price = Literal(_p, datatype=XSD.decimal)
-            g.add((menu_item_uri, SCHEMA.price, price))
-            g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row['currency'])))
+                _p = None
+
+            if _p is not None:
+                price = Literal(_p, datatype=XSD.decimal)
+                g.add((menu_item_uri, SCHEMA.price, price))
+                g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row['currency'])))
 
             # Link to pizzeria
             g.add((menu_item_uri, ONT.gehoertZuPizzeria, pizzerias[pizz_key]))
