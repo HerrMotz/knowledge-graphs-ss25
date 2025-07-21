@@ -350,7 +350,9 @@ Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitza
 Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es gibt in dieser Betrachtung zwei Konfigurationen:
 
 - Configuration 1: `embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1`
-- Configuration 2: `embed_size=400, walk_depth=6, reasoner="elk", outfile=cfg2`
+- Configuration 2: `embed_size=400, walk_depth=4, reasoner="elk", outfile=cfg2`
+
+Die Konfigurationen entscheiden sich in zweierlei Hinsicht: Der Größe des Merkmalsvektor für das Embedding und der Random-Walk Depth. Die Tiefe der Random Walks in OWL2Vec\* beeinflusst die Qualität der erzeugten Embeddings deutlich. Größere Tiefen erfassen komplexere semantische Zusammenhänge, können jedoch auch irrelevante oder störende Informationen einbeziehen. Daher muss eine geeignete Tiefe gewählt werden, um ein gutes Gleichgewicht zwischen Ausdrucksstärke und Genauigkeit zu erzielen.
 
 Das Embedding wurde zunächst jedoch nur mit 100 Samples aus der ABox angefertigt. 
 Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding nicht wesentlich unterscheidbar.
@@ -360,28 +362,38 @@ Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding ni
   image("../week5/random_similarity_report_100_samples.png", width: 70%),
 )
 
-Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede in den Begrifflichkeiten festzustellen, daher wurde die Sample Size auf zunächst 2000 Beispiele erhöht.
+Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede in den Begrifflichkeiten festzustellen, daher wurde die Sample Size auf zunächst 2000 Beispiele erhöht. Dies führte einerseits zu einer Annäherung an die erwarteten Ergebnisse, als auch eine allgemein höhere Streuung. Dies ist allein durch das erhöhen der Stichprobe begründet -- Word2Vec erhält die Gelegenheit die Worte in mehr und unterschiedlichen Kontexten zu observieren und kann dadurch die Bedeutung besser approximieren. Die nachfolgenden zwei Tabellen zeigen die Ergebnisse 
 
-#let pairs = csv("../week5/similarities1_2000.csv")
+#pagebreak()
 
-#let similar_pairs = pairs.slice(0,3)
-
-#let dissimilar_pairs = pairs.slice(3,6)
+#let pairs1 = csv("../week5/similarities1_2000.csv")
+#let pairs2 = csv("../week5/similarities2_2000.csv")
 
 #figure(
-  table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..similar_pairs.flatten()),
-  caption: [In der Erwartung ähnliche Embeddings,\ Configuration 1, , Sample Size 2000]
+  table(columns: 4, fill: (x, y) =>
+    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs1.flatten()),
+  caption: [Configuration 1, Sample Size 2,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
 )
 
 #figure(
-  table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..dissimilar_pairs.flatten()),
-  caption: [In der Erwartung unähnliche Embeddings,\ Configuration 1, Sample Size 2000]
+  table(columns: 4, fill: (x, y) =>
+    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs2.flatten()),
+  caption: [Configuration 2, Sample Size 2,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
 )
 
 
-#let pairs10k = csv("../week5/similarities1.csv")
-#let pairs10k = csv("../week5/similarities2.csv")
+#let pairs10k_2 = csv("../week5/similarities1.csv")
+#let pairs10k_2 = csv("../week5/similarities2.csv")
 
-#let similar_pairs10k = pairs.slice(0,3)
+#figure(
+  table(columns: 4, fill: (x, y) =>
+    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_2.flatten()),
+  caption: [Configuration 1, Sample Size 10,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
+)
 
-#let dissimilar_pairs10k = pairs.slice(3,6)
+#figure(
+  table(columns: 4, fill: (x, y) =>
+    if y > 0 and y < 4 { green.lighten(50%) } else if y > 3 {red.lighten(50%)}, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..pairs10k_2.flatten()),
+  caption: [Configuration 2, Sample Size 10,000\ Erwartet ähnliche Embeddings sind grün und erwartet unähnliche rot markiert.]
+)
+
