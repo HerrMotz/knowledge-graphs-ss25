@@ -378,3 +378,10 @@ Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede 
   caption: [In der Erwartung unähnliche Embeddings,\ Configuration 1, Sample Size 2000]
 )
 
+
+#let pairs10k = csv("../week5/similarities1.csv")
+#let pairs10k = csv("../week5/similarities2.csv")
+
+#let similar_pairs10k = pairs.slice(0,3)
+
+#let dissimilar_pairs10k = pairs.slice(3,6)
