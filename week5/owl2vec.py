@@ -228,12 +228,12 @@ def main(argv: Optional[List[str]] = None) -> None:
 
     # Config 1
     cfg1 = args.outdir / "cfg1.ini"
-    cache1 = write_cfg(merged, embed_size=200, walk_depth=2, reasoner=None, outfile=cfg1)
+    cache1 = write_cfg(merged, embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1)
     run_owl2vec(cfg1, cache1, args.outdir / "cfg1")
 
     # Config 2
     cfg2 = args.outdir / "cfg2.ini"
-    cache2 = write_cfg(merged, embed_size=400, walk_depth=4, reasoner="elk", outfile=cfg2)
+    cache2 = write_cfg(merged, embed_size=400, walk_depth=6, reasoner="elk", outfile=cfg2)
     run_owl2vec(cfg2, cache2, args.outdir / "cfg2")
 
     logging.info("All done ✔︎  Embeddings in %s", args.outdir)
