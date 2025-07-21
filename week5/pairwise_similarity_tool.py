@@ -28,7 +28,7 @@ from typing import Iterable, List, Sequence, Tuple
 import matplotlib.pyplot as plt
 import numpy as np
 from gensim.models import KeyedVectors
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances
 
 ###############################################################################
 # Vector‑loading helpers
@@ -98,7 +98,6 @@ def build_similarity_matrix(model, entities: Sequence[str]) -> np.ndarray:
     matrix = np.vstack([model[e] for e in entities])
     return cosine_similarity(matrix)
 
-
 def plot_similarity(sim_matrix: np.ndarray, entities: Sequence[str], output: str | None = None) -> None:
     fname, fmt = None, None
     if output:
@@ -161,16 +160,18 @@ def read_pairs(filepath: str) -> List[Tuple[str, str]]:
     return pairs
 
 
-def compute_similarity(v1: np.ndarray, v2: np.ndarray) -> float:
-    return float(cosine_similarity(v1.reshape(1, -1), v2.reshape(1, -1))[0][0])
+def compute_similarity_and_distance(v1: np.ndarray, v2: np.ndarray) -> Tuple[float, float]:
+    sim = float(cosine_similarity(v1.reshape(1, -1), v2.reshape(1, -1))[0][0])
+    dist = float(euclidean_distances(v1.reshape(1, -1), v2.reshape(1, -1))[0][0])
+    return sim, dist
 
 
 def compare_entity_pairs(model, pairs: Iterable[Tuple[str, str]]) -> List[str]:
     results: list[str] = []
     for e1, e2 in pairs:
         try:
-            sim = compute_similarity(model[e1], model[e2])
-            line = f"Similarity({e1}, {e2}) = {sim:.4f}"
+            sim, dist = compute_similarity_and_distance(model[e1], model[e2])
+            line = f"Pair({e1}, {e2}): Cosine = {sim:.4f}, Euclidean = {dist:.4f}"
         except KeyError as ke:
             line = f"Missing vector for '{ke.args[0]}'"
         print(line)

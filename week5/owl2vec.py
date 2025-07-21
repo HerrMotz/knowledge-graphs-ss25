@@ -19,6 +19,7 @@ Resulting *embeddings/* directory::
 
 from __future__ import annotations
 
+import os
 import sys
 import argparse
 import configparser
@@ -192,7 +193,9 @@ def run_owl2vec(cfg_file: Path, cache_dir: Path, output_prefix: Path) -> None:
     """Run OWL2Vec* and relocate its embeddings to *output_prefix*.* files."""
 
     logging.info("Running OWL2Vec* – %s", cfg_file.stem)
-    subprocess.run(["owl2vec_star", "standalone", "--config_file", str(cfg_file)], check=True)
+    env = os.environ.copy()
+    env["PYTHONIOENCODING"] = "utf-8"
+    subprocess.run(["owl2vec_star", "standalone", "--config_file", str(cfg_file)], check=True, env=env)
 
     output_dir = cache_dir / "output"
     txt_files = sorted(output_dir.glob("*.embeddings.txt"))

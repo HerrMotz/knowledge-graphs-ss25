@@ -347,28 +347,28 @@ Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitza
 
 #todo[Ggf. Menge der Beispiele für cfg2 erhöhen.]
 
-Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Das Ergebnis war allerdings vorerst sehr eintönig.
-Das Embedding wurde jedoch nur mit 100 Samples aus der ABox angefertigt.
+Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es gibt in dieser Betrachtung zwei Konfigurationen:
 
-#let similar_pairs = (
-"margherita", "pizza", "0.8625",
-"mozzarella", "kaese", "0.9086",
-"zutat", "tomatensauce", "0.8899",
-)
+- Configuration 1: `embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1`
+- Configuration 2: `embed_size=400, walk_depth=6, reasoner="elk", outfile=cfg2`
 
-#let dissimilar_pairs = (
-"margherita", "scampi", "0.9328",
-"dessert", "waehrung", "0.9808",
-"breakfast", "schinken", "0.8901",
-)
+Das Embedding wurde zunächst jedoch nur mit 100 Samples und Configuration aus der ABox angefertigt. 
+Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding nicht wesentlich unterscheidbar.
+
+
+#let pairs = csv("../week5/similarities1_2000.csv")
+
+#let similar_pairs = pairs.slice(0,3)
+
+#let dissimilar_pairs = pairs.slice(3,6)
 
 #figure(
-  table(columns: 3, [*Term1*], [*Term2*], [*Cosine Similarity*], ..similar_pairs),
+  table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..similar_pairs.flatten()),
   caption: "In der Erwartung ähnliche Embeddings"
 )
 
 #figure(
-  table(columns: 3, [*Term1*], [*Term2*], [*Cosine Similarity*], ..dissimilar_pairs),
+  table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..dissimilar_pairs.flatten()),
   caption: "In der Erwartung unähnliuche Embeddings"
 )
 
@@ -376,3 +376,6 @@ Das Embedding wurde jedoch nur mit 100 Samples aus der ABox angefertigt.
   caption: "Eine Auswahl 20 zufälliger Embeddings aus der Ontologie.",
   image("../week5/random_similarity_report_100_samples.png", width: 70%),
 )
+
+
+

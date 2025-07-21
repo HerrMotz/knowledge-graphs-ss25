@@ -1,6 +1,0 @@
-Similarity(margherita, pizza) = 0.9014
-Similarity(mozzarella, kaese) = 0.8048
-Similarity(zutat, tomatensauce) = 0.7766
-Similarity(margherita, scampi) = 0.7736
-Similarity(dessert, waehrung) = 0.9773
-Similarity(breakfast, schinken) = 0.8766
