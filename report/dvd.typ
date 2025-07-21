@@ -66,6 +66,12 @@
 
   show math.equation: set text(weight: 400)
 
+  set figure.caption(position: bottom)
+  show figure.caption: it => box(width: 20em, text(size: .8em, [
+
+    #it
+  ]))
+
 
   // Title row.
   align(center)[
