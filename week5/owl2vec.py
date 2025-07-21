@@ -205,7 +205,7 @@ def run_owl2vec(cfg_file: Path, cache_dir: Path, output_prefix: Path) -> None:
     logging.info("Copied vectors → %s", txt_dst.relative_to(output_prefix.parent))
 
     kv = _load_vectors_resilient(txt_dst)
-    kv.save_word2vec_format(bin_dst, binary=True)
+    kv.save_word2vec_format(str(bin_dst), binary=True)
     logging.info("Converted to binary → %s", bin_dst.relative_to(output_prefix.parent))
 
 # ---------------------------------------------------------------------------
