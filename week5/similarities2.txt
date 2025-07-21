@@ -1,0 +1,6 @@
+Pair(margherita, pizza): Cosine = 0.7744, Euclidean = 4.0436
+Pair(mozzarella, kaese): Cosine = 0.6192, Euclidean = 4.4495
+Pair(zutat, tomatensauce): Cosine = 0.7864, Euclidean = 3.7651
+Pair(margherita, scampi): Cosine = 0.6472, Euclidean = 4.9613
+Pair(dessert, waehrung): Cosine = 0.8779, Euclidean = 1.6322
+Pair(breakfast, schinken): Cosine = 0.9005, Euclidean = 2.0396

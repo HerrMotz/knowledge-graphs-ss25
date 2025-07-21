@@ -37,4 +37,8 @@ The output files will be located in the directory `/week5/`.
 | [cfg2_cache](/week5/cfg2_cache) (generated)                                 | Cache directory generated during the second OWL2Vec* run.                                                                  |
 | [merged.owl](/week5/merged.owl) (generated)                                 | The ontology merged with tabular data (output of the first step of the pipeline).                                          |
 | [cfg1.similarity_report.txt](/week5/cfg1.similarity_report.txt) (generated) | Similarity report for configuration 1 (same for second configuration) for selected pairs of similar and dissimilar vectors |
+| similarities1.txt (generated)                                               | The embeddings with a sample size of 10000 for configuration 1.                                                            |
+| similarities2.txt (generated)                                               | The embeddings with a sample size of 10000 for configuration 2.                                                            |
+| similarities1_2000.txt (generated)                                          | The embeddings with a sample size of 2000 for configuration 1.                                                             |
+| similarities2_2000.txt (generated)                                          | The embeddings with a sample size of 2000 for configuration 2.                                                             |
 

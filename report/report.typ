@@ -352,9 +352,15 @@ Für die Ähnlichkeit und Unähnlichkeit wurden jeweils drei Paare gewählt. Es 
 - Configuration 1: `embed_size=200, walk_depth=2, reasoner="elk", outfile=cfg1`
 - Configuration 2: `embed_size=400, walk_depth=6, reasoner="elk", outfile=cfg2`
 
-Das Embedding wurde zunächst jedoch nur mit 100 Samples und Configuration aus der ABox angefertigt. 
+Das Embedding wurde zunächst jedoch nur mit 100 Samples aus der ABox angefertigt. 
 Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding nicht wesentlich unterscheidbar.
 
+#figure(
+  caption: "Eine Auswahl 20 zufälliger Embeddings aus der Ontologie.",
+  image("../week5/random_similarity_report_100_samples.png", width: 70%),
+)
+
+Offensichtlich war die Größe der Stichprobe nicht ausreichend um Unterschiede in den Begrifflichkeiten festzustellen, daher wurde die Sample Size auf zunächst 2000 Beispiele erhöht.
 
 #let pairs = csv("../week5/similarities1_2000.csv")
 
@@ -364,18 +370,11 @@ Das Ergebnis war allerdings eintönig: Die Begriffe waren durch das Embedding ni
 
 #figure(
   table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..similar_pairs.flatten()),
-  caption: "In der Erwartung ähnliche Embeddings"
+  caption: [In der Erwartung ähnliche Embeddings,\ Configuration 1, , Sample Size 2000]
 )
 
 #figure(
   table(columns: 4, [*Term1*], [*Term2*], [*Cosine Similarity*], [*Euclidean Distance*], ..dissimilar_pairs.flatten()),
-  caption: "In der Erwartung unähnliuche Embeddings"
+  caption: [In der Erwartung unähnliche Embeddings,\ Configuration 1, Sample Size 2000]
 )
-
-#figure(
-  caption: "Eine Auswahl 20 zufälliger Embeddings aus der Ontologie.",
-  image("../week5/random_similarity_report_100_samples.png", width: 70%),
-)
-
-
 
