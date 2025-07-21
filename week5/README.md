@@ -11,12 +11,12 @@ python owl2vec.py ../week1/ontology.xml ../week2/pizza_data.ttl --outdir . --sam
 
 ## Pairwise comparison of embeddings
 ```shell
-python pairwise_similarity_tool.py pairs --vec model.vec --pairs pairs.txt --output similarities.txt
+python pairwise_similarity_tool.py pairs --vec cfg2.vec.txt --pairs pairs.txt --output similarities.txt
 ```
 
 ## Pairwise similarity plot of $k$ random vectors
 ```shell
-python pairwise_similarity_tool.py random --vec model.vec -k 20 --output heatmap.png
+python pairwise_similarity_tool.py random --vec cfg2.vec.txt -k 20
 ```
 
 ## File structure overview

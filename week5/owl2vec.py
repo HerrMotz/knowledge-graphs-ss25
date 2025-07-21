@@ -19,6 +19,7 @@ Resulting *embeddings/* directory::
 
 from __future__ import annotations
 
+import sys
 import argparse
 import configparser
 import logging
@@ -33,6 +34,8 @@ from gensim.models import KeyedVectors
 
 logging.basicConfig(level=logging.INFO,
                     format="[%(levelname)s] %(message)s")
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 # ---------------------------------------------------------------------------
 # Helper functions
