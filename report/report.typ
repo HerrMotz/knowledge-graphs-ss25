@@ -341,12 +341,38 @@ Unabhängig von der Wahl des "Merging"-Verfahrens ist es sinnvoll die Zutaten zu
 Der Prompt verlangt, basierend auf den Merkmalen `menu item` und `item description`, zu klassifizieren ob es sich um eine Pizza handelt, welche Zutaten sie enthält und den Namen des Menüeitnrags zu kanonisieren. Explizit wird das LLM aufgefordert die Zutaten zu "vereinfachen" (Beispiel _green pepper_ soll zu _pepper_ werden). _Dies ist selbstverständlich fehleranfällig_, jedoch gab es keine bedeutenden Auffälligkeiten in einer stichprobenartigen Kontrolle. Der Schritt kann durch eine weitere Anpassung des Prompts und Einstellen der Temperatur (Zufälligkeit), sowie das Auslassen der Aufforderung des Konfabulierens vermutlich verbessert werden. Erstaunlich gut funktioniert die Klassifizierung, ob etwas eine Pizza ist. Der Prompt fordert bspw. "Pizza Bagel" nicht als Pizza anzuerkennen#footnote[Grundsätzlich wäre ein Pizza Bagel im Sinne meiner Ontologie eine Pizza. Jedoch zeigt dieses Beispiel, dass man unerwünschte Einträge mit einem LLM leicht filtern kann.].
 
 ==== Clustering
-Das Clustering setzt ein Sentence Embedding ein. Die Zutat wird nicht einfach nur als Wort mit einem vortrainierten Embedding vektorisiert, sondern in einem Satz der die Zutat benennt und aufzählt, auf welchen `menu items` sie vorkommt. "\<Zutat\> in Margherita, Caprese, Quattro Formaggi". Im ersten Schritt wird mit der Cosine Similarity als Metrik das Louvain-Verfahren (bekannt aus der Netzwerkanalyse zur Community-Detection) angewandt. Die zweite Hierarchieebene wird mit der Scikit-Learn-Methode _AgglomerativeClustering_ berechnet.
+Das Clustering setzt ein Sentence Embedding ein. Die Zutat wird nicht einfach nur als Wort mit einem vortrainierten Embedding vektorisiert, sondern in einem Satz der die Zutat benennt und aufzählt, auf welchen `menu items` sie vorkommt. "\<Zutat\> in Margherita, Caprese, Quattro Formaggi". Das Clustering wird mit einem _agglomerativem Clustering_-Verfahren berechnet. Dies würde es prinzipiell ermöglichen einen beliebigen Schnitt im Dendrogramm zu setzen, jedoch habe ich mich dafür entschieden das Ergebnis dieses Schritts in eine manuell angelegte Sammlung von Buckets mit Stichworten einordnen zu lassen:
+
+- Jeder Blatt-Cluster enthält eine Liste Zutaten.
+- Die Zutaten werden nach den Stichworten der Buckets durchsucht.
+- Enthält ein Blatt-Cluster ein Stichwort so wird es diesem Bucket untergeordnet.
+
+Dies ist vorteilhaft, weil das automatische Clustering (mit Labeling) einer ontologischen Kategorie zugordnet werden kann. Die Stichwortsuche ohne vorheriges Clustering war weniger erfolgreich.
 
 ==== Qualität des Clustering
-Für Pizzasorten hat das Clustering rein schlecht funktioniert. Etwa gehört zur Kategorie "Bianca" die "Tuna Pizza", die "Whole Breakfast Pizza", allerdings auch die "White Pizza" und ihre Varianten.
+Für Pizzasorten hat das Clustering rein schlecht funktioniert. Etwa gehört zur Kategorie "Bianca" die "Tuna Pizza", die "Whole Breakfast Pizza", allerdings auch die "White Pizza" und ihre Varianten. Aufgrund dieses Ergebnisses habe ich mich dazu entschieden es nicht weiterzuverfolgen. Das Clustering der Zutaten weist ebenfalls Mängel auf.
 
 
+```json
+    ... "Other": {
+      "pizza crust": [
+        "",
+        "bbq",
+        "beef",
+        "buffalo",
+        "cheddar",
+        "ground beef",
+        "hot",
+        "lettuce",
+        "pizza crust",
+        "pork",
+        "pulled pork",
+        "ranch",
+        "steak"
+      ], ... }
+    ```
+
+Der Bucket "Other" enthält den Cluster "pizza crust", der sich zu einem "Catch-All" entwickelt hat.
 = Abfrage des RDF-basierten Knowledge Graphs
 
 Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation. 
