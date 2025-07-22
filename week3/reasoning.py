@@ -5,7 +5,7 @@ if __name__ == "__main__":
     # Step 1: Load base ontology and data
     g = Graph()
     g.parse("../week1/ontology.xml", format="xml")
-    g.parse("pizza_data.ttl", format="turtle")
+    g.parse("../week2/pizza_data.ttl", format="turtle")
 
     print(f"Original triples: {len(g)}")
 

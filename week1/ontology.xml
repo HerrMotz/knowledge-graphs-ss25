@@ -712,7 +712,7 @@
 
     <owl:NamedIndividual rdf:about="http://ontology.daniel-motz.de/ontology#Meeresfruechte">
         <rdf:type rdf:resource="http://ontology.daniel-motz.de/ontology#Zutat"/>
-        <rdfs:comment xml:lang="de">Verschiedene essbare Tiere aus dem Meer, z. B. Tintenfisch, Garnelen, Muscheln.
+        <rdfs:comment xml:lang="de">Verschiedene essbare Tiere aus dem Meer, z.B. Tintenfisch, Garnelen, Muscheln.
         </rdfs:comment>
         <rdfs:label xml:lang="de">Meeresfrüchte</rdfs:label>
     </owl:NamedIndividual>

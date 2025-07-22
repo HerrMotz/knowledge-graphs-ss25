@@ -17,7 +17,7 @@ CITY_QID_MAP = "city_qid_map.json"
 ING_QID_MAP = "ingredient_qid_map.json"
 CLUSTER_JSON = "cluster_labels.json"   # <--- NEW
 OUTPUT_TTL = "pizza_data.ttl"
-FUZZY_SCORE_THRESHOLD = 82
+FUZZY_SCORE_THRESHOLD = 85
 
 # -------------------------
 # Namespaces
@@ -376,7 +376,7 @@ def main():
                     price_val = float(row.get("item value"))
                 except (TypeError, ValueError):
                     price_val = None
-                if price_val is not None:
+                if price_val is not None and price_val != 0:
                     g.add((menu_item_uri, SCHEMA.price, Literal(price_val, datatype=XSD.decimal)))
                     g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row.get("currency"))))
 

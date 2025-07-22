@@ -1,4 +1,4 @@
 rdflib
-owlrl
+pyshacl
 OWLready2==0.47
 -r ../requirements.txt

@@ -24,38 +24,21 @@ The new pipeline works as follows:
 
 ```shell
 python3 create_batch.py
-```
-
-2. Run
-
-```shell
 python3 upload_batch.py
-```
+python3 get_batch_results.py
+python3 clean_llm_results.py
+```  
 
+2. Fill the [locked_qid_map.json](locked_qid_map.json) with expert knowledge
 3. Run
 
 ```shell
-python3 get_batch_results.py
-```  
-
-4. Run
-
-```shell
-python3 clean_llm_results.py
+python3 create_ingredients.jsonl.py 
+python3 ingredient_QID_mapping.py
+python3 copy_pizza_ingredients_to_clean_json.py
+python3 clustering.py
 ```
 
-5. Fill the [locked_qid_map.json](locked_qid_map.json) with expert knowledge
-6. Run
-
-```shell
-python3 ingredient_QID_mapping.py 
-```
-
-7. Run
-
-```shell
-python3 create_ingredients.jsonl.py
-```
 
 ### Cities
 
@@ -69,7 +52,7 @@ python3 city_qid_mapping.py
 ### Integrate Data from CSV-file with Ontology
 
 ```shell
-python3 integrate_tabular_data_with_ontology.py 
+python3 integrate_tabular_data_with_ontology.py # creates pizza_data.ttl
 ```
 
 ## File Purposes
@@ -90,32 +73,9 @@ python3 integrate_tabular_data_with_ontology.py
 + It is obvious that the ontology is in German and the data is English, and it would be nice to unify them
   We made an informed decision to keep them different, to show that they can be integrated, even though different
   languages were used. Furthermore, we could use this for other cases, were different, but equivalently legitimate
-  terminology was used.
-+ Based on the name of the menu item, the ontological category could be identified and an assumption about
-  the ingredients could be made, e.g. the name is "Pizza Margherita", then the ontological category "Pizza Margherita"
-  could inferred by lexicographic matching, adding the category's characteristic ingredients.
+  terminology was used. A translation step could be added to the pipeline, but it is beyond the scope of this task.
+
 + Add place categories to Pizzeria, like "Burger Place", "University", ...
-+ The list of KNOWN_INGREDIENTS should only contain ingredients which are not present in Wikidata.
-  Furthermore, it would be even better to add the missing ingredients to Wikidata, instead of
-  defining them in our ontology. But this script's purpose it to show what can be done, not the real deal.
-+ The ingredients could be further categorised, e.g. "sun-dried tomatoes", "cherry tomatoes" and "tomato basil sauce"
-  could be subsumed in a class "tomato ingredients". The same applies to "fried egg". If the goal is to keep the
-  querying simple, one could add the class itself as an ingredient assertion.
-+ We could, instead of creating our own ontology, use `schema.org` for any assertion.
 + The LLM extraction step can be improved with more prompt engineering
 + The LLM cleaning step can be improved with classical NLP methods, e.g. the word
   stems or singulars could be used as normalised names or for matching a Wikidata item
-
-```turtle
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-@prefix schema: <http://schema.org/> .
-
-ex:Store1 a schema:FoodEstablishment ;
-    schema:hasMenuItem ex:MenuItem1 .
-
-ex:MenuItem1 a schema:MenuItem ;
-    schema:name "Cheeseburger" ;
-    schema:price "5.99"^^xsd:decimal ;
-    schema:priceCurrency "USD" .
-```
