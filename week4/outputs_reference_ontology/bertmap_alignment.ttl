@@ -1,0 +1,370 @@
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix city:    <http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#> .
+@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+
+[] a align:Alignment ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:AmericanPizza ;
+      align:entity2 pizza:American ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:AmericanPizza ;
+      align:entity2 pizza:AmericanHot ;
+      align:relation "=" ;
+      align:measure "0.982526"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:AmericanRestaurant ;
+      align:entity2 pizza:AmericanHot ;
+      align:relation "=" ;
+      align:measure "0.968872"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Artichokes ;
+      align:entity2 pizza:ArtichokeTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Capers ;
+      align:entity2 pizza:CaperTopping ;
+      align:relation "=" ;
+      align:measure "0.999544"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Chicken ;
+      align:entity2 pizza:ChickenTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Country ;
+      align:entity2 pizza:Country ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:SeaFood ;
+      align:entity2 pizza:FishTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Food ;
+      align:entity2 pizza:Food ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Fruit ;
+      align:entity2 pizza:FruitTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Garlic ;
+      align:entity2 pizza:GarlicTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Gorgonzola ;
+      align:entity2 pizza:GorgonzolaTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:GreenPepper ;
+      align:entity2 pizza:GreenPepperTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Ham ;
+      align:entity2 pizza:HamTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Herbs ;
+      align:entity2 pizza:HerbSpiceTopping ;
+      align:relation "=" ;
+      align:measure "0.998064"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:HotSauce ;
+      align:entity2 pizza:Hot ;
+      align:relation "=" ;
+      align:measure "0.916159"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:HotSauce ;
+      align:entity2 pizza:HotSpicedBeefTopping ;
+      align:relation "=" ;
+      align:measure "0.990369"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:JalapenoPepper ;
+      align:entity2 pizza:JalapenoPepperTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:MargheritaPizza ;
+      align:entity2 pizza:Margherita ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Meat ;
+      align:entity2 pizza:MeatTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:MeatPizza ;
+      align:entity2 pizza:MeatyPizza ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Mozzarella ;
+      align:entity2 pizza:MozzarellaTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:MushroomPizza ;
+      align:entity2 pizza:Mushroom ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Mushroom ;
+      align:entity2 pizza:Mushroom ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Mushroom ;
+      align:entity2 pizza:MushroomTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Pizzeria ;
+      align:entity2 pizza:NamedPizza ;
+      align:relation "=" ;
+      align:measure "0.976479"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:PizzaByStyle ;
+      align:entity2 pizza:NamedPizza ;
+      align:relation "=" ;
+      align:measure "0.953218"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianRestaurant ;
+      align:entity2 pizza:NonVegetarianPizza ;
+      align:relation "=" ;
+      align:measure "0.968894"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianPizza ;
+      align:entity2 pizza:NonVegetarianPizza ;
+      align:relation "=" ;
+      align:measure "0.965155"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Olives ;
+      align:entity2 pizza:OliveTopping ;
+      align:relation "=" ;
+      align:measure "0.998493"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:OliveOil ;
+      align:entity2 pizza:OliveTopping ;
+      align:relation "=" ;
+      align:measure "0.980576"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Onion ;
+      align:entity2 pizza:OnionTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Parmesan ;
+      align:entity2 pizza:Parmense ;
+      align:relation "=" ;
+      align:measure "0.999681"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Parmesan ;
+      align:entity2 pizza:ParmesanTopping ;
+      align:relation "=" ;
+      align:measure "0.999754"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Pepper ;
+      align:entity2 pizza:PepperTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:PineapplePizza ;
+      align:entity2 pizza:PineKernels ;
+      align:relation "=" ;
+      align:measure "0.999565"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Pineapple ;
+      align:entity2 pizza:PineKernels ;
+      align:relation "=" ;
+      align:measure "0.999549"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Pizza ;
+      align:entity2 pizza:Pizza ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Pizzeria ;
+      align:entity2 pizza:PizzaTopping ;
+      align:relation "=" ;
+      align:measure "0.992633"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:RedPepper ;
+      align:entity2 pizza:RedOnionTopping ;
+      align:relation "=" ;
+      align:measure "0.998542"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Rosemary ;
+      align:entity2 pizza:RosemaryTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Sauce ;
+      align:entity2 pizza:SauceTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:HotSauce ;
+      align:entity2 pizza:Spiciness ;
+      align:relation "=" ;
+      align:measure "0.970220"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Spinach ;
+      align:entity2 pizza:SpinachTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:Tomato ;
+      align:entity2 pizza:TomatoTopping ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianPizza ;
+      align:entity2 pizza:VegetarianPizza ;
+      align:relation "=" ;
+      align:measure "1.000000"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianRestaurant ;
+      align:entity2 pizza:VegetarianPizzaEquivalent1 ;
+      align:relation "=" ;
+      align:measure "0.973666"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianPizza ;
+      align:entity2 pizza:VegetarianPizzaEquivalent1 ;
+      align:relation "=" ;
+      align:measure "0.970504"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianRestaurant ;
+      align:entity2 pizza:VegetarianPizzaEquivalent2 ;
+      align:relation "=" ;
+      align:measure "0.971366"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianPizza ;
+      align:entity2 pizza:VegetarianPizzaEquivalent2 ;
+      align:relation "=" ;
+      align:measure "0.966377"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianRestaurant ;
+      align:entity2 pizza:VegetarianTopping ;
+      align:relation "=" ;
+      align:measure "0.981060"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 city:VegetarianPizza ;
+      align:entity2 pizza:VegetarianTopping ;
+      align:relation "=" ;
+      align:measure "0.975979"^^xsd:float
+   ] .

@@ -1,0 +1,406 @@
+{
+    "http://www.co-ode.org/ontologies/pizza#FoodTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#American": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#American",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#AmericanPizza",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#AmericanPizza",
+            0.9825261831283569
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#AmericanRestaurant",
+            0.9688721895217896
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Artichokes",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Capers",
+            0.9995435476303101
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Chicken",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Country": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Country",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Country",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#DeepPanBase": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#SeaFood",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Food": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Food",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Food",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Fruit",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Garlic",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Gorgonzola",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#GreenPepper",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Ham",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Herbs",
+            0.9980639219284058
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#HotSauce",
+            0.9161590337753296
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#HotSauce",
+            0.9903687238693237
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#JalapenoPepper",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#MargheritaPizza",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Meat",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#MeatPizza",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Mozzarella",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#MushroomPizza",
+            1.0
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Mushroom",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Mushroom",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pizzeria",
+            0.9764790534973145
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#PizzaByStyle",
+            0.9532184600830078
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianRestaurant",
+            0.968894362449646
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza",
+            0.965155303478241
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Olives",
+            0.9984931349754333
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#OliveOil",
+            0.9805755615234375
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Onion",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmaHamTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Parmesan",
+            0.9996806383132935
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Parmesan",
+            0.9997543692588806
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pepper",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#PineapplePizza",
+            0.999564528465271
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pineapple",
+            0.9995487928390503
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pizza",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pizzeria",
+            0.9926327466964722
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#RedPepper",
+            0.998542308807373
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Rosemary",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Sauce",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#HotSauce",
+            0.9702203273773193
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Spinach",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Tomato",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping": [],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza",
+            1.0
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianRestaurant",
+            0.9736658930778503
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza",
+            0.9705036878585815
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianRestaurant",
+            0.9713659286499023
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza",
+            0.9663774967193604
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping": [
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianRestaurant",
+            0.9810599088668823
+        ],
+        [
+            "http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping",
+            "http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza",
+            0.9759788513183594
+        ]
+    ],
+    "http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana": [],
+    "http://www.w3.org/2002/07/owl#Thing": []
+}
