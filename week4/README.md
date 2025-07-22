@@ -8,6 +8,14 @@ ontological hierarchy (using the subclass relation) and all categorised as _Food
 because _Food Topping_ only has one subclass, namely _Pizza Topping_. More confusingly, _Ice Cream_ can have an instance 
 of _Fruit Topping_ (subclass of _Pizza Topping_), with the only subclass being _Sultana Topping_.
 
+## File Overview
+
+| File                                                  | Description                                                                                                                    |
+|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| [aml_alignment.rdf](/week4/aml_alignment.rdf)         | Alignment generated using AML                                                                                                  |
+| [own_alignment.ttl](/week4/own_alignment.ttl)         | Own Alignment using Sequence Matching and ArgosTranslate                                                                       |
+| [bert_raw_mapping.json](/week4/bert_raw_mapping.json) | BERTMap (as part of the deeponto package, which was extremely difficult to setup and still does not do everything it promises) |
+
 
 ## Example usage
 > [!TIP]

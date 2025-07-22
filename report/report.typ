@@ -448,9 +448,22 @@ Wie in @abs:anreichung_properites angeschnitten können Reasoner verwendet werde
 
 Die Abfrage sucht lediglich nach Dingen vom Typ Pizzeria und filtert anschließend mit `FILTER NOT EXISTS` Dinge aus der Ergebnismenge, die eine Pizza servieren die Tomatensauce oder Tomaten enthält. Wichtig ist hier, dass möglicherweise unvollständige Informationen, die allerdings die Ergebnismenge nicht einschränken sollen, als `OPTIONAL` statiert werden, etwa wenn die Adressangabe unvollständig ist: es soll alles verfügbare in das Ergebnis projeziert, aber nicht die Ergebnismenge eingeschränkt werden.
 
+#bemerkung("Nach der Verbesserung")[
+  Durch die Verbesserung hat sich lediglich im `FILTER NOT EXISTS`-Block die Bezeichnung zu `:tomato_ToppingCategory` geändert.
+]
+
 == SPARQL.3 -- Durchschnittspreis der Pizza Margherita
 
 Die Abfrage ist insofern unintuitiv, dass es Dinge vom Typ Pizza gehen soll, die genau die Zutaten "Tomate" und "Mozzarella" enthalten. In SPARQL kann dies formuliert werden als "mindestens `Tomate` und `Mozzarella`" und "höchstens `Tomate` und `Mozzarella`" in der Menge der Zutaten. Die Aussage "mindestens" ist durch die Zeile 6 gegeben, jedoch sind es ohne den `FILTER`-Block in der Zeile 11 ff. potentiell Pizzen, die auch mehr enhalten. Für diese Abfrage war es auch entscheidend Preise auszuschließen die ungültige Fließkommazahlen (`NaN`) sind. Dafür sorgt das `FILTER`-statement in der vorletzten Zeile der Abfrage.
+
+#bemerkung("Nach der Verbesserung")[
+  Durch die Verbesserung wird nun nach der Tomaten-Expertenkategorie und dem Cluster für Mozzarella gefragt. Dies hat den Durchschnittspreis von \$15 auf \$13 Dollar gesenkt.
+  ```
+    ?tomato rdf:type :tomato_ToppingCategory.
+    ?mozzarella rdf:type :mozzarella_Toppings.
+    ?pizza :enthaeltZutat ?tomato, ?mozzarella.
+  ```
+]
 
 == SPARQL.4 -- Pizzerien sortiert nach Stadt
 

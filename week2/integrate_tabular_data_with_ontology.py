@@ -350,6 +350,7 @@ def main():
 
                     g.add((pizz_uri, SCHEMA.address, address))
 
+                    # the city will get asserted separately (because this makes querying easier and more conclusive)
                     city = row.get("city")
                     if city:
                         city_data = cities_map.get(city, {})
