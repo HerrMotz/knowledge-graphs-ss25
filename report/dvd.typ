@@ -26,6 +26,7 @@
 #let todo(it) = text(font: "DejaVu Sans Mono", style: "italic", fill: green, "// todo: " + it)
 
 #let dvdtyp(
+  main_title: "",
   title: "",
   subtitle: "",
   author: "",
@@ -76,7 +77,7 @@
   // Title row.
   align(center)[
     #set text()
-    #block(text(weight: 700, 25pt, title))
+    #block(text(weight: 700, 25pt, main_title))
     #v(1em, weak: true)
     #if subtitle != none [#text(14pt, weight: 500)[#subtitle]]
     #v(1em, weak: true)

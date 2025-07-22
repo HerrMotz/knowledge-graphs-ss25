@@ -3,9 +3,10 @@
 #import "@preview/codly-languages:0.1.1": *
 
 #show: dvdtyp.with(
-  title: "Bericht zum Modul Knowledge Graphs",
+  main_title: [Bericht zum Modul\ \"Knowledge Graphs\"],
+  title: [Bericht zum Modul \"Knowledge Graphs\"],
   subtitle: [Im Sommersemester 2025 von König-Ries, Bachinger, Enderling],
-  author: "Bericht von Daniel Motz",
+  author: "Daniel Motz",
 
 )
 
@@ -64,6 +65,7 @@ Die Aufgaben in diesem Abschnitt waren das systematische Herangehen an das Model
 + Welche Pizzen enthalten #underline[Schinken]?
 
 + Welche #underline[laktosefreien] Pizzen gibt es?
++ Welche Pizzen sind mit #underline[Tomaten] belegt?
 
 ], [
   == Important and Derived Terms
@@ -90,14 +92,13 @@ Die Aufgaben in diesem Abschnitt waren das systematische Herangehen an das Model
   - *Sorte* #sym.arrow *Kinds* von Pizza
   - *vegetarisch* #sym.arrow Ein direktes Prädikat für *Zutat* und ein Inferiertes für Pizza, sofern alle Zutaten der Pizza das Prädikat tragen.
   - *vegan* #sym.arrow Ebenfalls Prädikat für *Zutat* und ein Inferiertes für Pizza
-  - *glutenfrei* #sym.arrow Analog zu vegan, vegetarisch
+  - *glutenfrei* #sym.arrow Analog zu vegetarisch, ...
   - *Mekan* #sym.arrow Eine *Pizzeria*
   - *Form* / *Maße*
   - billigsten #sym.arrow *Preis*
   - *Schinken*
 
   - *laktosefrei*
-
 ])
 
 
@@ -318,9 +319,13 @@ $
   "data.csv" stretch(->)^"Bereinigen & Extrahieren" "Pizza- und Zutatenliste" stretch(->)^"Matching" "TBox oder ABox anpassen"
 $
 
+Aus den tabellarischen Daten werden natürlich auch andere Informationen (bspw. über Restaurants) extrahiert. Diese Schritte erforderten jedoch nur wenig Bereinigung und sind daher nur in der technischen Dokumentation erwähnt.
+
 Alle Schritte sind fehleranfällig; Bei der Bereinigung der Daten können wertvolle Informationen verworfen und unsinnige als wichtig angesehen werden. Die Auflösung mit den bestehenden Zutaten in der Ontologie kann verwechselt werden, aber auch eine falsche Entsprechung gefunden werden. Selbst ein manuelles Mapping ist nicht fehlerfrei, aufgrund der teilweise fehlenden Informationen über die Pizzatypen, bspw. "Choose Your Own Pizza". Auch das Matching mit der Ontologie kann semantisch falsch sein und letztlich muss der Interpretant unter einem Bezeichner der Ontologie nicht dasselbe wie der Entwickler verstehen.
 
 === Vorüberlegungen
+Dieser Abschnitt soll grob zusammenfassen, wie die Pipeline funktioniert und warum ich welche Entscheidungen getroffen habe. Die technischen Details sind im Repositorium dokumentiert.
+
 Im Datensatz finden sich einige typische Pizzasorten/-typen/-klassen, wie etwa _Pizza Margherita_. Hier ist recht klar welche Zutaten zu ihr gehören und gehören sollten. Die Wahrscheinlichkeit, dass populäre Sorten in der Ontologie modelliert sind ist hoch und die Variationen halten sich in geringem Maße. Jedoch gibt es ebenfalls Sorten am anderen Ende des Spektrums oder solche, die je nach Region (und Land) sehr unterschiedlich zubereitet werden. Grundsätzlich sind alle Macharten valide und sollten daher vom Extraksionsschritt berücksichtigt und dem Nutzer in der letzendlichen Abfrage transparent gemacht werden. Dies muss allerdings aus Gründen der Praktikabilität und Überschaubarkeit nur bis zu einem bestimmten Detailgrad möglich sein; diese Schwelle gilt es zur Umsetzung dieses Pipeline-Schritts zu setzen.
 
 Folgende zwei grundlegenden Ansätze sind denkbar: 1) Man geht vom Namen des Menüeintrags aus oder 2) man geht von der Beschreibung aus. Es ist natürlich sinnvoll beide Merkmale zu nutzen, um den Informationsgehalt maximal auszuschöpfen. Eine Möglichkeit, zur Nutzung beider Merkmale, wäre, basierend auf dem Bezeichner des Menüeintrags (bspw. `menu item` = _Pizza Margherita_) die Zutatenliste durch die Ontologie bei einer Übereinstimmung zu übernehen (bspw. Tomate, Mozzarella, Basilikum) und in der ABox festzuschreiben. Falls keine Entsprechung existiert, wird kein solcher Pizzatyp bzw. -klasse und die Zutatenliste festgelegt, sondern ein Pizzaeintrag mit der Zutatenliste wird angelegt. Dieser Ansatz hat kein Problem, wenn die Zutatenliste leer ist, solange es einen Pizzatypen zum Bezeichnes aus dem Datensatz gibt, jedoch ignoriert er gänzlich die individuelle Rezeptur einer Pizzeria, die ggf. dem in der Ontologie definierten Typen und seiner Einschränkungen widersprechen. Wenn man beide Informationen einbeziehen möchte, muss man sich über Schritte zur Konfliktresolution  einigen. Für meinen Ansatz habe ich eine übersichtliche Menge an Sorten definiert, hier sind die "Pizza Bianca" und "Pizza Frutti Di Mare" zu nennen.
@@ -333,26 +338,30 @@ Unabhängig von der Wahl des "Merging"-Verfahrens ist es sinnvoll die Zutaten zu
 
 + Diese Liste wird einem Clusteringverfahren übergeben und führt ein
   + Clustering der `menu item`-Namen in Pizzasorten, und ein
-  + Hierarchiches Clustering der Zutaten unter Hinzunahme von Expertenwissen durch.
+  + Zuordnen der Zutaten in Expertenkategorien durch.
 
-+ Das Clustering wird für die Integration der Daten in die Ontologie abgelegt (in `cluster_labels.json`).
++ Das Clustering wird für die Integration der Daten in die Ontologie abgelegt.
 
 ==== LLM Prompt
 Der Prompt verlangt, basierend auf den Merkmalen `menu item` und `item description`, zu klassifizieren ob es sich um eine Pizza handelt, welche Zutaten sie enthält und den Namen des Menüeitnrags zu kanonisieren. Explizit wird das LLM aufgefordert die Zutaten zu "vereinfachen" (Beispiel _green pepper_ soll zu _pepper_ werden). _Dies ist selbstverständlich fehleranfällig_, jedoch gab es keine bedeutenden Auffälligkeiten in einer stichprobenartigen Kontrolle. Der Schritt kann durch eine weitere Anpassung des Prompts und Einstellen der Temperatur (Zufälligkeit), sowie das Auslassen der Aufforderung des Konfabulierens vermutlich verbessert werden. Erstaunlich gut funktioniert die Klassifizierung, ob etwas eine Pizza ist. Der Prompt fordert bspw. "Pizza Bagel" nicht als Pizza anzuerkennen#footnote[Grundsätzlich wäre ein Pizza Bagel im Sinne meiner Ontologie eine Pizza. Jedoch zeigt dieses Beispiel, dass man unerwünschte Einträge mit einem LLM leicht filtern kann.].
 
 ==== Clustering
-Das Clustering setzt ein Sentence Embedding ein. Die Zutat wird nicht einfach nur als Wort mit einem vortrainierten Embedding vektorisiert, sondern in einem Satz der die Zutat benennt und aufzählt, auf welchen `menu items` sie vorkommt. "\<Zutat\> in Margherita, Caprese, Quattro Formaggi". Das Clustering wird mit einem _agglomerativem Clustering_-Verfahren berechnet. Dies würde es prinzipiell ermöglichen einen beliebigen Schnitt im Dendrogramm zu setzen, jedoch habe ich mich dafür entschieden das Ergebnis dieses Schritts in eine manuell angelegte Sammlung von Buckets mit Stichworten einordnen zu lassen:
+Das Ziel dieses Clustering-Schritts ist die Verbesserung der Zusammenfassung von gleich oder ähnlich bedeutenden Zutaten. Beispielsweise ist es für die meisten Abfragen irrelevant, ob man _sun dried tomatoes_ oder _spiced tomatoes_ auf der Pizza vorfinden kann. Der LLM-Step hat jedoch einiges auf deer Strecke gelassen (unter anderem das gerade genannte Beispiel). Die Hoffnung ist, dass nach einem Embedding der Zutaten ein Clustering-Verfahren ähnliche Zutaten zusammenfassen kann. Hier soll die Besonderheit von der Domäne Pizza ausgenutzt werden: Bestimmte Pizzasorten enthalten oft die gleichen (oder ähnliche Zutaten) die mit kleinen Variationen oder auch Euphemismen ausgestattet sind. Beispielsweise wird oft _Pecorino_ und _Parmesan_ auf Pizzen in ähnlicher Art verwendet (weil es beides würzige italienische Hartkäse sind). Im Datensatz finden sich auch solche Sorten gelegentlich, jedoch sind sie etwas unspezifischer, beispielsweise "Italian Pizza"  oder "Junior Pizza".
+
+Das Clustering setzt ein Sentence Embedding ein. Die Zutat wird nicht einfach nur als Wort mit einem vortrainierten Embedding vektorisiert, sondern in einem Satz der die Zutat benennt und aufzählt, auf welchen `menu items` sie vorkommt. "\<Zutat\> in Margherita, Caprese, Quattro Formaggi". Das Clustering wird mit einem _agglomerativem Clustering_-Verfahren berechnet. Dies würde es prinzipiell ermöglichen einen beliebigen Schnitt im Dendrogramm zu setzen, jedoch habe ich mich dafür entschieden das Ergebnis dieses Schritts in eine semiautomatisch angelegte Sammlung von Buckets (das oben erwähnte "Expertenwissen") mit Stichworten einordnen zu lassen:
 
 - Jeder Blatt-Cluster enthält eine Liste Zutaten.
 - Die Zutaten werden nach den Stichworten der Buckets durchsucht.
 - Enthält ein Blatt-Cluster ein Stichwort so wird es diesem Bucket untergeordnet.
 
-Dies ist vorteilhaft, weil das automatische Clustering (mit Labeling) einer ontologischen Kategorie zugordnet werden kann. Die Stichwortsuche ohne vorheriges Clustering war weniger erfolgreich.
+Dies ist vorteilhaft, weil das automatische Clustering (mit Labeling mithilfe des Zentroiden) einer Kategorie zugordnet werden kann. Die Stichwortsuche ohne vorheriges Clustering war weniger erfolgreich. Der große Vorteil von der Einordnung in manuelle Kategorien ist die Übersichtlichkeit für eine spätere Abfrage mit SPARQL. In einer echten (Produktions-)Anwendung könnte diese Kategorieliste ausziseliert werden um potente Abfragen zu ermöglichen, da das automatische Clustering teilweise zu wünschen übrig lässt.
 
 ==== Qualität des Clustering
-Für Pizzasorten hat das Clustering rein schlecht funktioniert. Etwa gehört zur Kategorie "Bianca" die "Tuna Pizza", die "Whole Breakfast Pizza", allerdings auch die "White Pizza" und ihre Varianten. Aufgrund dieses Ergebnisses habe ich mich dazu entschieden es nicht weiterzuverfolgen. Das Clustering der Zutaten weist ebenfalls Mängel auf.
+Für Pizzasorten hat das Clustering schlecht funktioniert. Etwa gehört zur Kategorie "Bianca" die "Tuna Pizza", die "Whole Breakfast Pizza", allerdings auch die "White Pizza" und ihre Varianten. Aufgrund dieses Ergebnisses habe ich mich dazu entschieden es nicht weiterzuverfolgen. Das Clustering der Zutaten weist ebenfalls Mängel auf.
 
+#bemerkung()[Das Clustering findet sich in der Datei #link("https://git.uni-jena.de/fusion/teaching/project/2025sose/KnowledgeGraphs/group-05/-/blob/main/week2/cluster_labels.json")[week2/cluster_labels.json] und enthält zwei Abschnitte: Pizza-Sorten Clustering (oben) und darunter das Zutatenclustering.]
 
+#figure(
 ```json
     ... "Other": {
       "pizza crust": [
@@ -370,9 +379,63 @@ Für Pizzasorten hat das Clustering rein schlecht funktioniert. Etwa gehört zur
         "ranch",
         "steak"
       ], ... }
-    ```
+    ```, caption: [Beispiel für ein semantisch wenig wertvolles Clustering.])
 
 Der Bucket "Other" enthält den Cluster "pizza crust", der sich zu einem "Catch-All" entwickelt hat.
+
+Leider konnte auch mit keinem (angemessenen) Schwellwert die Kategorie _Basilikumpesto_ gefunden werden (selbst für $0.5$ im Agglomerative Clustering wurden sie nicht zusammegefasst). Hier reicht vermutlich die Menge der Trainingsdaten nicht aus um mit diesem Verfahren zu einem angemessenen Ergebnis zu kommen.
+
+#figure(
+```json
+      ... "basil pesto sauce": [
+        "basil aioli",
+        "basil pesto sauce",
+        "chipotle pesto",
+        "garlic pesto",
+        "hempseed pesto",
+        "lemon aioli"
+      ],
+      "basil pesto": [
+        "basil pesto",
+        "marinara sauce",
+        "pesto",
+        "pesto sauce",
+        "ranch dressing"
+      ], ...
+  ```,
+  caption: [Basilikumpesto wird aufgrund des Worts "Sauce" nicht in eine Kategorie zusammegefasst.]
+  )
+
+Das Clustering ist jedoch in Summe sehr gut und fasst Zutaten ähnlicher Bedeutung gut zusammen.
+
+#figure(
+```json
+    "Hard Cheeses": {
+      "white parmesan sauce": [
+        "brazil nut parmesan",
+        "white parmesan sauce"
+      ],
+      "pecorino": [
+        "grana padano",
+        "parmesan",
+        "parmesan cheese",
+        "pecorino",
+        "pecorino cheese",
+        "pecorino romano",
+        "romano",
+        "romano cheese"
+      ]
+    },
+    ```, caption: [Beispiel für ein gelungenes Clustering: _Hartkäse_])
+
+=== Integration der Daten in die Ontologie
+
+Es ist nicht offensichtlich, wie die Ergebnisse des Clusterings in die Ontologie integriert werden sollen. Denkbar sind etwa folgende Ansätze: 1) Man fügt die Fragmente (Expertenkategorie und dem Cluster als Subklasse) der TBox hinzu, erstellt in der ABox die Zutaten als benannte Individuen und gibt ihr den Typ der Clusteringkategorie, 2) man verwendet Vokabulare wie das SKOS um einen Thesaurus bzw. kleines WordNet anzulegen oder 3) man verwendet die generierten Labels der automatischen Kategorisierung und betrachtet sie als Zutat. 
+
+Für das Beispiel _Tomate_ würde Ansatz 3) fast funktionieren: Die Expertenkategorie Tomate enthält einen Cluster mit dem Label _sundried tomato_, welche zumindest einige Tomaten zusammenfasst, jedoch enthält sie auch _tomato sauce_. Würde man diese Ebene zusammenstauchen würde es die Qualität wesentlich verschlechtern. Es gibt jedoch auch noch schlechetere Beispiele, etwa _Mushrooms_ oder die bereits genannte _Pizza Crust_-Cluster. Ansatz 2) mit SKOS ist insofern eine Herausforderung, als dass SKOS selbst ein ausgereiftes RDFS-Vokabular ist und eine formale Sprache sein soll. Das Projekt hat jedoch den Fokus OWL als Modallogik; es wäre dahher etwas überflüssig (auch wenn SKOS genau für Thesauri und einfache Taxonomien gedacht ist) quasi eine zweite Logik mit eigenen Regeln anzulegen. Ansatz 1) ist daher für den Scope dieses Projekt meiner Auffassung am Besten geeignet.
+
+Dabei ist besonders darauf zu achten, dass ein potenziell schlechtes Clustering keine Qualitätsminderung der Ontologie und des Knowledge Graphen im Vergleich zum Ausgangszustand bewirkt (wie bspw. bei Ansatz 3). Daher ist hier ein Vergleich zum vorherigen Zustand sinnvoll: Die Daten wurden nach dem LLM-Step zu bestehenden Zutaten in der Ontologie und sonst zu Items in Wikidata gemappt und anschließend als Zutat in die ABox übernommen. Durch diese Erweiterung der TBox bleibt diese Information erhalten und der Nutzer kann in der SPARQL Abfrage wählen, ob er die Expertenkategorie "Tomatoes", den labelled Cluster "Sundried Tomato" abfragen möchte oder gar direkt die Zutat "tomato". Die Cluster werden in der TBox mit einem Vermerk "automatisch generiert" abgelegt, damit Nutzer informiert ihren Umgang wählen können.
+
 = Abfrage des RDF-basierten Knowledge Graphs
 
 Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation. 
