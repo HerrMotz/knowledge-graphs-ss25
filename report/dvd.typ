@@ -123,7 +123,7 @@
   }
   t = a.join()
 
-  text(font: "New Computer Modern", fill: color)[#t]
+  text(fill: color)[#t]
 }
 
 #let thmbase(

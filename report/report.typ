@@ -436,16 +436,13 @@ Für das Beispiel _Tomate_ würde Ansatz 3) fast funktionieren: Die Expertenkate
 
 Dabei ist besonders darauf zu achten, dass ein potenziell schlechtes Clustering keine Qualitätsminderung der Ontologie und des Knowledge Graphen im Vergleich zum Ausgangszustand bewirkt (wie bspw. bei Ansatz 3). Daher ist hier ein Vergleich zum vorherigen Zustand sinnvoll: Die Daten wurden nach dem LLM-Step zu bestehenden Zutaten in der Ontologie und sonst zu Items in Wikidata gemappt und anschließend als Zutat in die ABox übernommen. Durch diese Erweiterung der TBox bleibt diese Information erhalten und der Nutzer kann in der SPARQL Abfrage wählen, ob er die Expertenkategorie "Tomatoes", den labelled Cluster "Sundried Tomato" abfragen möchte oder gar direkt die Zutat "tomato". Die Cluster werden in der TBox mit einem Vermerk "automatisch generiert" abgelegt, damit Nutzer informiert ihren Umgang wählen können.
 
-==== Fuzzy Matching
-
-
 = Abfrage des RDF-basierten Knowledge Graphs
 
 Zur Abfrage von RDF-basierten Knowledge Graphs wird in aller Regel der ebenfalls von der W3C spezifizierte SPARQL-Formalismus verwendet. Einige Systeme, wie etwa Wikibase/Wikidata, bilden lediglich in das Resource Description Framework ab und verwenden andere interne Repräsentation. 
 
 == SPARLQ.1 -- Reasoning über der Ontologie und den integrierten Daten
 
-Wie in @abs:anreichung_properites angeschnitten können Reasoner verwendet werden um bestimmte Schlussfolgerungen in der TBox zu explizieren. Es ist grundsätzlich nicht sinnvoll die deduktive Hülle zu explizieren, u.a. weil sich dadurch Speicherplatz sparen und Übersichtlichkeit schaffen lässt. Wird in Protégé (mit Reasoner HermiT 1.4.3) ein Ding als Typ verwendet, so wird gefolgert und expliziert, dass es als Klasse aufzufassen ist.“
+Wie in @abs:anreichung_properites angeschnitten können Reasoner verwendet werden um bestimmte Schlussfolgerungen in der TBox zu machen. Es ist grundsätzlich nicht sinnvoll die deduktive Hülle zu explizieren, u.a. weil sich dadurch Speicherplatz sparen und Übersichtlichkeit schaffen lässt. Wird in Protégé (mit Reasoner HermiT 1.4.3) ein Ding als Typ verwendet, so wird gefolgert und expliziert, dass es als Klasse aufzufassen ist. Zum Reasoning verwende ich _OWL RL_ (statt OWL DL und Lite), weil es ausreichend und Stand der Technik ist. Leider hat die Python-Implementation von OWL RL den entscheidenden (eigentlich Fehler), dass Tripel inferiert und asserted werden, die nicht dem RDF-Standard entsprechen. Daher enthält das Script für das Reasoning `reasoning.py` eine Funktion `remove_invalid_owl_triples` die Tripel entfernt, bei denen das Subjekt ein Literal ist. Die Python-Implementation nimmt bspw. Statements wie `"0.25"^^xsd:decimal owl:SameAs "0.25"^^xsd:decimal` auf (was GraphDB strikt ablehnt). Die Ursache konnte ich bisher nicht abschließend klären.
 
 == SPARQL.2 -- Pizzerien, die Pizza ohne Tomaten servieren
 
