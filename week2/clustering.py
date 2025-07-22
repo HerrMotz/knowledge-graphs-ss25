@@ -23,7 +23,7 @@ import torch
 # ─────────────────────── CONFIG ───────────────────────
 HF_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"  # 768‑d embeddings
 FINE_THRESHOLD = 0.30  # distance cutoff for synonym merge
-GENERIC_TOKENS = {"sauce", "fresh", "dried"}
+GENERIC_TOKENS = {"fresh", "dried"}
 RANDOM_SEED = 42
 OUTPUT_FILE = "cluster_labels.json"
 
@@ -36,6 +36,7 @@ STOPWORDS = GENERIC_TOKENS | {
 # --‑‑‑‑‑ Manual base categories -------------------------------------------------
 CATEGORY_KEYWORDS: Dict[str, Set[str]] = {
     "Peppers":              {"pepper", "jalapeno", "chili", "bell"},
+    "Tomatoes":             {"tomato", "tomatoes"},
     "Tortillas and Nachos": {"tortilla", "nacho"},
     "Hard Cheeses":         {"parmesan", "romano", "pecorino", "grana"},
     "Soft Cheeses":         {"mozzarella", "feta", "ricotta", "gorgonzola",

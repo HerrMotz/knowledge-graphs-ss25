@@ -3025,885 +3025,530 @@
   },
   "ingredient_level2_clusters": {
     "Other": {
-      "pizza crust": [
-        "",
-        "barbecue",
-        "bbq",
+      "delicata squash": [
+        "acorn squash",
+        "brussels sprouts",
+        "butternut squash",
+        "delicata squash",
+        "pea pod",
+        "peas",
+        "pumpkin",
+        "seasonal vegetables",
+        "squash",
+        "yellow squash",
+        "zucchini blossom"
+      ],
+      "spicy tuna": [
+        "aji amarillo",
+        "microgreens",
+        "spicy tuna",
+        "tobiko caviar",
+        "tobiko crunch",
+        "tuna",
+        "wasabi cream sauce"
+      ],
+      "provolone": [
+        "alfredo sauce",
+        "anchovy",
+        "artichoke",
+        "arugula",
+        "asiago",
+        "avocado",
+        "barbecue sauce",
+        "basil",
         "bbq chicken",
+        "bbq sauce",
         "beef",
-        "buffalo",
+        "black olive",
+        "black olives",
+        "bread",
+        "broccoli",
+        "broccoli rabe",
+        "broccolini",
+        "buffalo chicken",
+        "buffalo sauce",
+        "butter",
+        "calamari",
+        "capicola",
+        "caramelized onion",
         "cheddar",
+        "chicken",
+        "chipotle sauce",
+        "cilantro",
+        "cinnamon",
+        "clam",
+        "clams",
+        "corn",
+        "corned beef",
+        "crab",
+        "cream sauce",
+        "crust",
+        "dough",
+        "egg",
+        "eggplant",
+        "flatbread",
+        "fontina",
+        "french fries",
+        "garlic",
+        "garlic sauce",
+        "gouda",
+        "green olive",
+        "green onion",
         "ground beef",
-        "hot",
+        "herbs",
+        "hot sauce",
+        "kalamata olives",
+        "leek",
         "lettuce",
-        "pizza",
+        "linguica",
+        "mayonnaise",
+        "nutella",
+        "olive",
+        "olive oil",
+        "olives",
+        "onion",
+        "onions",
+        "oregano",
+        "parmigiano",
+        "parsley",
+        "pine nuts",
+        "pita bread",
         "pizza crust",
+        "pizza dough",
+        "pizza sauce",
         "pork",
         "provolone",
         "pulled pork",
         "ranch",
-        "steak"
+        "ranch sauce",
+        "red onion",
+        "red sauce",
+        "sage",
+        "sauce",
+        "sauerkraut",
+        "smoked gouda",
+        "sour cream",
+        "spices",
+        "spicy sauce",
+        "spinach",
+        "steak",
+        "sugar",
+        "topping",
+        "toppings",
+        "truffle oil",
+        "various toppings",
+        "vegetables",
+        "white sauce",
+        "zucchini"
       ],
-      "delicata squash": [
-        "acorn squash",
-        "butternut squash",
-        "delicata squash",
-        "squash",
-        "yellow squash"
-      ],
-      "tuna": [
-        "aji amarillo",
-        "tuna"
-      ],
-      "black olive": [
-        "alfredo",
-        "black olive",
-        "black olives",
-        "olive",
-        "olives"
-      ],
-      "almond": [
-        "almond"
-      ],
-      "anchovies": [
-        "anchovies"
-      ],
-      "asiago": [
-        "anchovy",
-        "asiago",
-        "avocado",
-        "butter",
-        "calamari",
-        "capicola",
-        "corn",
-        "fontina",
-        "green olive",
-        "green onion",
-        "kalamata olives",
-        "leek",
-        "parmigiano",
-        "parsley",
-        "pine nuts",
-        "white"
-      ],
-      "spinach": [
-        "artichoke",
-        "basil",
-        "broccoli",
-        "chicken",
-        "garlic",
-        "olive oil",
-        "oregano",
-        "spinach"
-      ],
-      "artichokes": [
-        "artichoke heart",
-        "artichokes"
-      ],
-      "artichoke hearts": [
-        "artichoke hearts"
-      ],
-      "arugula": [
-        "arugula",
-        "eggplant"
-      ],
-      "asparagus": [
-        "asparagus"
-      ],
-      "mixed vegetables": [
+      "various vegetables": [
+        "almond",
+        "asparagus",
         "assorted vegetables",
         "grilled vegetables",
+        "hummus",
         "mixed vegetables",
         "oven roasted vegetables",
         "various vegetables",
-        "vegetable"
+        "veal",
+        "vegan protein",
+        "vegan proteins",
+        "vegan vegetables",
+        "vegetable",
+        "vegetarian",
+        "vegetarian toppings",
+        "veggie burger crumbles"
       ],
-      "balsamic": [
+      "sofritto": [
+        "anchovies",
+        "bulgogi",
+        "burrata",
+        "escarole",
+        "fontinella",
+        "reggiano",
+        "sofrito",
+        "sofritto",
+        "soppressata",
+        "sopressata"
+      ],
+      "carrot": [
+        "artichoke heart",
+        "artichoke hearts",
+        "artichokes",
+        "carrot",
+        "carrots",
+        "green olives",
+        "kalamata olive",
+        "olive tapenade",
+        "pancetta",
+        "potato",
+        "potato gnocchi",
+        "potatoes",
+        "rapini",
+        "roasted garlic",
+        "rosemary",
+        "shallots",
+        "sweet potato",
+        "tallegio",
+        "thyme"
+      ],
+      "balsamic vinegar": [
         "balsamic",
         "balsamic drizzle",
-        "balsamic reduction",
-        "balsamic vinaigrette"
-      ],
-      "balsamic glaze": [
         "balsamic glaze",
+        "balsamic reduction",
+        "balsamic vinaigrette",
         "balsamic vinegar",
-        "italian seasoning"
+        "coriander",
+        "guanciale",
+        "hot giardiniera",
+        "italian seasoning",
+        "vinaigrette",
+        "white cheddar"
       ],
       "beans": [
         "bean",
+        "bean sprouts",
         "beans",
         "black beans",
         "refried beans"
       ],
-      "bean sprouts": [
-        "bean sprouts"
-      ],
-      "berry": [
-        "berry"
+      "mango": [
+        "berry",
+        "mango"
       ],
       "blood orange reduction": [
         "blood orange reduction"
       ],
-      "boursin": [
-        "boursin"
+      "scrambled eggs": [
+        "boursin",
+        "eggs",
+        "fried egg",
+        "hollandaise",
+        "scrambled eggs"
       ],
-      "brandy cream": [
-        "brandy cream"
+      "special sauce": [
+        "brandy cream sauce",
+        "jerk sauce",
+        "marsala sauce",
+        "special sauce"
       ],
-      "bread": [
-        "bread",
-        "pita bread"
-      ],
-      "breaded chicken": [
-        "breaded chicken"
-      ],
-      "sun tomato": [
-        "broccoli rabe",
-        "broccolini",
-        "cherry tomato",
-        "sun tomato",
-        "tomatoes"
-      ],
-      "brussels sprouts": [
-        "brussels sprouts",
-        "seasonal vegetables"
-      ],
-      "buffalo chicken": [
-        "buffalo chicken",
-        "buttermilk ranch buffalo",
-        "celery"
-      ],
-      "wing": [
-        "buffalo wing",
+      "wing sauce": [
+        "breaded chicken",
+        "buffalo wing sauce",
+        "buttermilk ranch buffalo sauce",
+        "celery",
+        "chicken breast",
         "chicken wings",
-        "wing"
+        "chive",
+        "chives",
+        "green onions",
+        "wing sauce"
       ],
-      "bulgogi": [
-        "bulgogi"
-      ],
-      "bun": [
-        "bun"
-      ],
-      "burrata": [
-        "burrata"
+      "pickle": [
+        "bun",
+        "hot dog",
+        "mustard",
+        "pickle",
+        "pickles"
       ],
       "cajun seasoning": [
         "cajun seasoning",
-        "cajun spices"
+        "cajun spices",
+        "caribbean spices",
+        "shrimp"
       ],
       "caper": [
         "caper"
       ],
       "capers": [
         "capers",
-        "mascarpone"
-      ],
-      "onion": [
-        "caramelized onion",
-        "onion",
-        "onions",
-        "red onion"
-      ],
-      "caribbean spices": [
-        "caribbean spices"
-      ],
-      "carrots": [
-        "carrot",
-        "carrots"
-      ],
-      "cashews": [
-        "cashew",
-        "cashews"
-      ],
-      "chicken breast": [
-        "chicken breast"
-      ],
-      "chile": [
-        "chile",
-        "green chile",
-        "smoked chile"
-      ],
-      "chipotle": [
-        "chipotle"
-      ],
-      "chive": [
-        "chive",
-        "chives"
-      ],
-      "marshmallow": [
-        "chocolate",
-        "marshmallow"
-      ],
-      "milk chocolate": [
-        "chocolate chips",
-        "milk chocolate",
-        "white chocolate"
-      ],
-      "zucchini": [
-        "cilantro",
-        "herbs",
-        "vegetables",
-        "zucchini"
-      ],
-      "cinnamon": [
-        "cinnamon",
-        "sugar"
-      ],
-      "clam": [
-        "clam",
-        "clams",
-        "crab"
-      ],
-      "coconut cream": [
-        "coconut cream"
-      ],
-      "pie crust": [
-        "cookie crust",
-        "pie crust"
-      ],
-      "coriander": [
-        "coriander"
-      ],
-      "corn chips": [
-        "corn chips"
-      ],
-      "corn shell": [
-        "corn shell",
-        "flour shell",
-        "taco shell crust"
-      ],
-      "sauerkraut": [
-        "corned beef",
-        "sauerkraut"
-      ],
-      "vodka": [
         "cream",
-        "vodka"
-      ],
-      "creamy garlic": [
-        "creamy garlic"
-      ],
-      "croutons": [
-        "croutons"
-      ],
-      "dough": [
-        "crust",
-        "dough",
-        "pizza dough",
-        "tomato",
-        "topping"
-      ],
-      "cucumber": [
-        "cucumber"
-      ],
-      "dill": [
         "dill",
-        "salmon"
-      ],
-      "dough gluten free": [
-        "dough gluten free",
-        "dough gluten free base"
-      ],
-      "egg": [
-        "egg"
-      ],
-      "eggs": [
-        "eggs",
-        "scrambled eggs"
-      ],
-      "enchilada": [
-        "enchilada"
-      ],
-      "escarole": [
-        "escarole"
-      ],
-      "falafel": [
-        "falafel"
-      ],
-      "fennel": [
-        "fennel"
-      ],
-      "flatbread": [
-        "flatbread"
-      ],
-      "flour": [
-        "flour"
-      ],
-      "fontinella": [
-        "fontinella"
-      ],
-      "french fries": [
-        "french fries",
-        "red"
-      ],
-      "fried egg": [
-        "fried egg"
-      ],
-      "garlic butter": [
-        "garlic butter"
-      ],
-      "garlic olive oil": [
-        "garlic oil",
-        "garlic olive oil"
-      ],
-      "garlic white": [
-        "garlic white",
-        "italian spices",
-        "white garlic"
-      ],
-      "whole wheat crust": [
-        "gluten free crust",
-        "whole wheat crust"
-      ],
-      "smoked gouda": [
-        "gouda",
-        "smoked gouda"
-      ],
-      "grape": [
-        "grape"
-      ],
-      "kalamata olive": [
-        "green olives",
-        "kalamata olive"
-      ],
-      "green onions": [
-        "green onions"
+        "mascarpone",
+        "penne pasta",
+        "salmon",
+        "smoked salmon",
+        "vodka sauce"
       ],
       "romaine lettuce": [
+        "cashew",
+        "cashews",
+        "croutons",
         "grilled chicken",
+        "kale",
         "romaine",
         "romaine lettuce"
       ],
-      "guacamole": [
-        "guacamole"
+      "spicy pizza sauce": [
+        "chile",
+        "enchilada sauce",
+        "green chile",
+        "guacamole",
+        "mexican spices",
+        "seasoned beef",
+        "smoked chile sauce",
+        "spicy pizza sauce",
+        "taco sauce",
+        "taco seasoned beef",
+        "taco seasoning"
       ],
-      "guanciale": [
-        "guanciale",
-        "vinaigrette"
+      "sweet toppings": [
+        "chocolate",
+        "chocolate chips",
+        "coconut cream",
+        "cookie crust",
+        "icing",
+        "marshmallow",
+        "milk chocolate",
+        "pie crust",
+        "powdered sugar",
+        "sweet crust",
+        "sweet dough",
+        "sweet toppings",
+        "white chocolate"
       ],
-      "hazelnut": [
+      "corn shell": [
+        "corn chips",
+        "corn shell",
+        "flour shell",
+        "sweet corn",
+        "taco shell crust"
+      ],
+      "garlic white sauce": [
+        "creamy garlic sauce",
+        "garlic butter",
+        "garlic butter sauce",
+        "garlic oil",
+        "garlic olive oil",
+        "garlic white sauce",
+        "italian spices",
+        "seasoning",
+        "seasonings",
+        "white garlic sauce"
+      ],
+      "peanut sauce": [
+        "cucumber",
+        "korean style sauce",
+        "peanut sauce",
+        "peanuts",
+        "soy onion spread",
+        "soy sauce",
+        "teriyaki sauce",
+        "tofu"
+      ],
+      "gluten free crust": [
+        "dough gluten free",
+        "dough gluten free base",
+        "gluten free crust",
+        "wheat crust",
+        "whole wheat crust"
+      ],
+      "naan bread": [
+        "falafel",
+        "lavash bread",
+        "naan bread"
+      ],
+      "fennel": [
+        "fennel",
+        "parsnip"
+      ],
+      "yeast": [
+        "flour",
+        "lemon",
+        "mint",
+        "salt",
+        "water",
+        "yeast",
+        "yeast dough"
+      ],
+      "grape": [
+        "grape",
+        "white wine"
+      ],
+      "hazelnuts": [
         "hazelnut",
-        "hazelnuts"
-      ],
-      "hollandaise": [
-        "hollandaise"
-      ],
-      "hot dog": [
-        "hot dog"
-      ],
-      "hot giardiniera": [
-        "hot giardiniera"
-      ],
-      "hummus": [
-        "hummus"
-      ],
-      "icing": [
-        "icing"
-      ],
-      "jerk": [
-        "jerk"
-      ],
-      "kale": [
-        "kale"
-      ],
-      "korean style": [
-        "korean style"
-      ],
-      "lavash bread": [
-        "lavash bread"
+        "hazelnuts",
+        "sunflower seed crust"
       ],
       "leeks": [
-        "leeks"
-      ],
-      "lemon": [
-        "lemon"
+        "leeks",
+        "soubise sauce"
       ],
       "lemon juice": [
         "lemon creme fraiche",
-        "lemon juice"
+        "lemon juice",
+        "lemongrass",
+        "mustard oil",
+        "pickled ginger"
       ],
-      "lemongrass": [
-        "lemongrass"
-      ],
-      "linguica": [
-        "linguica"
-      ],
-      "lobster": [
-        "lobster"
-      ],
-      "mango": [
-        "mango"
-      ],
-      "marsala": [
-        "marsala"
+      "scallop": [
+        "lobster",
+        "mussels",
+        "octopus",
+        "scallion",
+        "scallions",
+        "scallop",
+        "scallops",
+        "seafood",
+        "tarragon"
       ],
       "mashed potato": [
         "mashed potato"
       ],
-      "mayonnaise": [
-        "mayonnaise"
-      ],
-      "mexican spices": [
-        "mexican spices",
-        "spicy pizza"
-      ],
-      "microgreens": [
-        "microgreens"
-      ],
       "mini greek salad": [
-        "mini greek salad"
-      ],
-      "mint": [
-        "mint"
+        "mini greek salad",
+        "tzatziki sauce"
       ],
       "miso": [
-        "miso"
-      ],
-      "mizuna": [
-        "mizuna"
+        "miso",
+        "mizuna",
+        "tamale"
       ],
       "mortadella": [
         "mortadella"
-      ],
-      "mussels": [
-        "mussels"
-      ],
-      "mustard": [
-        "mustard"
-      ],
-      "mustard oil": [
-        "mustard oil"
-      ],
-      "naan bread": [
-        "naan bread"
-      ],
-      "nutella": [
-        "nutella"
-      ],
-      "octopus": [
-        "octopus"
-      ],
-      "olive tapenade": [
-        "olive tapenade"
       ],
       "one topping": [
         "one topping",
         "two toppings"
       ],
-      "pancetta": [
-        "pancetta",
-        "roasted garlic"
-      ],
-      "parsnip": [
-        "parsnip"
-      ],
       "pasta": [
         "pasta",
+        "pasta dough or pizza dough",
+        "pasta sauce",
         "ziti pasta"
       ],
-      "pasta dough or pizza dough": [
-        "pasta dough or pizza dough"
-      ],
-      "peas": [
-        "pea pod",
-        "peas"
-      ],
-      "peanut": [
-        "peanut",
-        "peanuts"
-      ],
-      "penne pasta": [
-        "penne pasta"
-      ],
-      "pickle": [
-        "pickle",
-        "pickles"
-      ],
-      "pickled ginger": [
-        "pickled ginger"
-      ],
-      "plum tomato": [
-        "plum tomato"
-      ],
       "pork tenderloin": [
-        "pork tenderloin"
-      ],
-      "potato": [
-        "potato",
-        "potatoes",
-        "sweet potato"
-      ],
-      "potato gnocchi": [
-        "potato gnocchi"
-      ],
-      "powdered sugar": [
-        "powdered sugar"
-      ],
-      "prime rib": [
-        "prime rib"
-      ],
-      "pumpkin": [
-        "pumpkin"
-      ],
-      "rapini": [
-        "rapini"
-      ],
-      "reggiano": [
-        "reggiano"
-      ],
-      "ribeye": [
-        "ribeye"
-      ],
-      "roasted tomato": [
-        "roasted tomato"
-      ],
-      "rosemary": [
-        "rosemary",
-        "thyme"
-      ],
-      "sage": [
-        "sage"
-      ],
-      "salt": [
-        "salt"
-      ],
-      "scallops": [
-        "scallion",
-        "scallions",
-        "scallop",
-        "scallops"
-      ],
-      "seafood": [
-        "seafood"
-      ],
-      "taco seasoned beef": [
-        "seasoned beef",
-        "taco seasoned beef",
-        "taco seasoning"
-      ],
-      "seasonings": [
-        "seasoning",
-        "seasonings"
-      ],
-      "shallots": [
-        "shallots"
-      ],
-      "short rib": [
-        "short rib"
-      ],
-      "shrimp": [
-        "shrimp"
-      ],
-      "sirloin": [
+        "pork tenderloin",
         "sirloin"
       ],
-      "smoked salmon": [
-        "smoked salmon"
-      ],
-      "sofritto": [
-        "sofrito",
-        "sofritto"
-      ],
-      "soppressata": [
-        "soppressata"
-      ],
-      "sopressata": [
-        "sopressata"
-      ],
-      "soubise": [
-        "soubise"
-      ],
-      "sour cream": [
-        "sour cream"
-      ],
-      "soy": [
-        "soy"
-      ],
-      "teriyaki": [
-        "soy onion spread",
-        "teriyaki"
+      "prime rib": [
+        "prime rib",
+        "ribeye",
+        "short rib"
       ],
       "spam": [
         "spam"
       ],
-      "special": [
-        "special"
-      ],
-      "spicy": [
-        "spices",
-        "spicy"
-      ],
-      "spicy tomato": [
-        "spicy tomato",
-        "tomato basil"
-      ],
-      "wasabi cream": [
-        "spicy tuna",
-        "wasabi cream"
-      ],
-      "sundried tomatoes": [
-        "sun tomatoes",
-        "sundried tomato",
-        "sundried tomatoes"
-      ],
-      "sunflower seed crust": [
-        "sunflower seed crust"
-      ],
-      "sweet corn": [
-        "sweet corn"
-      ],
-      "sweet crust": [
-        "sweet crust",
-        "sweet dough",
-        "sweet toppings"
-      ],
-      "taco": [
-        "taco"
-      ],
-      "tallegio": [
-        "tallegio"
-      ],
-      "tamale": [
-        "tamale"
-      ],
-      "tarragon": [
-        "tarragon"
-      ],
-      "tobiko caviar": [
-        "tobiko caviar",
-        "tobiko crunch"
-      ],
-      "tofu": [
-        "tofu"
-      ],
-      "tomato crust": [
-        "tomato crust"
-      ],
-      "various toppings": [
-        "toppings",
-        "various toppings"
-      ],
-      "truffle cream": [
-        "truffle",
-        "truffle cream"
-      ],
-      "truffle oil": [
-        "truffle oil"
-      ],
-      "tzatziki": [
-        "tzatziki"
-      ],
-      "veal": [
-        "veal"
-      ],
-      "vegan proteins": [
-        "vegan protein",
-        "vegan proteins",
-        "vegan vegetables"
-      ],
-      "vegetarian": [
-        "vegetarian",
-        "vegetarian toppings"
-      ],
-      "veggie burger crumbles": [
-        "veggie burger crumbles"
-      ],
-      "water": [
-        "water"
-      ],
-      "wheat crust": [
-        "wheat crust"
-      ],
-      "white cheddar": [
-        "white cheddar"
-      ],
       "white truffle": [
+        "truffle",
+        "truffle cream",
         "white truffle",
         "white truffle oil"
-      ],
-      "white wine": [
-        "white wine"
-      ],
-      "yeast": [
-        "yeast",
-        "yeast dough"
-      ],
-      "yellow tomato": [
-        "yellow tomato"
-      ],
-      "zucchini blossom": [
-        "zucchini blossom"
       ]
     },
     "Soft Cheeses": {
-      "caciocavallo cheese": [
+      "parmigiana cheese": [
         "alta badia cheese",
-        "caciocavallo cheese"
-      ],
-      "american cheese": [
-        "american cheese",
-        "blue cheese",
-        "cheddar cheese",
-        "feta",
-        "feta cheese",
-        "gorgonzola",
-        "provolone cheese",
-        "ricotta cheese"
-      ],
-      "caprino cheese": [
         "asiago cheese",
-        "caprino cheese"
-      ],
-      "bleu cheese": [
-        "bleu cheese"
-      ],
-      "bleu cheese dressing": [
         "bleu cheese dressing",
-        "blue cheese dressing"
-      ],
-      "boursin cheese": [
-        "boursin cheese"
-      ],
-      "brie cheese": [
+        "blue cheese dressing",
+        "boursin cheese",
         "brie",
         "brie cheese",
-        "gruyere cheese"
-      ],
-      "burrata cheese": [
-        "burrata cheese"
-      ],
-      "cashew cheese": [
-        "cashew cheese"
-      ],
-      "jack cheese": [
+        "burrata cheese",
+        "caciocavallo cheese",
+        "caprino cheese",
+        "cashew cheese",
         "cheddar jack cheese",
-        "jack cheese",
-        "monterey jack cheese"
-      ],
-      "mozzarella": [
-        "cheese",
-        "mozzarella",
-        "mozzarella cheese",
-        "ricotta"
-      ],
-      "cheese blend": [
-        "cheese blend"
-      ],
-      "garlic cheese": [
+        "cheese blend",
         "cheese crust",
-        "garlic cheese"
-      ],
-      "chevre cheese": [
-        "chevre cheese"
-      ],
-      "cream cheese": [
-        "cream cheese"
-      ],
-      "parmigiano cheese": [
-        "fontina cheese",
-        "parmigiano cheese"
-      ],
-      "four cheese": [
-        "four cheese"
-      ],
-      "goat cheese": [
-        "goat cheese"
-      ],
-      "gouda cheese": [
+        "cheese sauce",
+        "chevre cheese",
+        "cream cheese",
+        "four cheese sauce",
+        "garlic cheese sauce",
         "gorgonzola cheese",
-        "gouda cheese"
-      ],
-      "manouri cheese": [
+        "gorgonzola sauce",
+        "gouda cheese",
         "graviera cheese",
-        "manouri cheese"
-      ],
-      "herb cheese": [
-        "herb cheese"
-      ],
-      "manchego cheese": [
-        "manchego cheese"
-      ],
-      "parmigiana cheese": [
+        "gruyere cheese",
+        "herb cheese",
+        "jack cheese",
+        "manchego cheese",
+        "manouri cheese",
+        "monterey jack cheese",
         "parmigiana cheese",
-        "reggiano cheese"
-      ],
-      "robiola cheese": [
-        "robiola cheese"
-      ],
-      "spicy bleu cheese": [
-        "spicy bleu cheese"
-      ],
-      "swiss cheese": [
-        "swiss cheese"
-      ],
-      "taleggio cheese": [
+        "reggiano cheese",
+        "robiola cheese",
+        "spicy bleu cheese sauce",
+        "swiss cheese",
         "taleggio cheese"
       ],
-      "vegan cheese": [
+      "ricotta cheese": [
+        "american cheese",
+        "bleu cheese",
+        "blue cheese",
+        "cheddar cheese",
+        "cheese",
+        "feta",
+        "feta cheese",
+        "fontina cheese",
+        "goat cheese",
+        "gorgonzola",
+        "mozzarella",
+        "mozzarella cheese",
+        "parmigiano cheese",
+        "provolone cheese",
+        "ricotta",
+        "ricotta cheese",
         "vegan cheese"
       ]
     },
     "Sweet and Fruit Toppings": {
-      "apple": [
-        "apple"
+      "fruit": [
+        "apple",
+        "fruit",
+        "fruits",
+        "honey",
+        "pear",
+        "pineapple",
+        "vegan fruits"
       ],
       "figs": [
         "fig",
         "fig preserve",
         "figs"
       ],
-      "fruits": [
-        "fruit",
-        "fruits",
-        "vegan fruits"
-      ],
-      "honey bbq": [
-        "honey",
-        "honey barbecue",
-        "honey bbq"
-      ],
-      "honey mustard": [
-        "honey mustard"
-      ],
-      "onion jam": [
-        "onion jam"
-      ],
-      "pear": [
-        "pear"
-      ],
-      "pineapple": [
-        "pineapple"
-      ],
-      "truffle honey": [
+      "honey bbq sauce": [
+        "honey barbecue sauce",
+        "honey bbq",
+        "honey bbq sauce",
+        "honey mustard",
+        "onion jam",
         "truffle honey"
       ]
     },
     "Meat": {
-      "ham": [
+      "salami": [
         "bacon",
+        "chorizo",
         "ham",
-        "sausage"
+        "meat",
+        "meatball",
+        "meatballs",
+        "prosciutto",
+        "salami",
+        "sausage",
+        "various meats"
       ],
-      "bechamel": [
-        "bechamel"
+      "bechamel sauce": [
+        "bechamel sauce"
       ],
-      "chicken meatball": [
-        "chicken meatball"
-      ],
-      "chorizo sausage": [
+      "chicken sausage": [
+        "chicken meatball",
         "chicken sausage",
-        "chorizo sausage"
-      ],
-      "chorizo": [
-        "chorizo"
+        "chorizo sausage",
+        "fennel sausage",
+        "italian sausage",
+        "lunch meat",
+        "meat ragu",
+        "meat sauce",
+        "taco meat",
+        "venison sausage"
       ],
       "crabmeat": [
         "crabmeat"
-      ],
-      "italian sausage": [
-        "fennel sausage",
-        "italian sausage",
-        "venison sausage"
       ],
       "graham cracker crust": [
         "graham cracker crust"
@@ -3912,82 +3557,45 @@
         "gyro meat",
         "gyros meat"
       ],
-      "lunch meat": [
-        "lunch meat"
-      ],
-      "salami": [
-        "meat",
-        "meatball",
-        "meatballs",
-        "prosciutto",
-        "salami"
-      ],
-      "meat ragu": [
-        "meat ragu"
-      ],
       "spicy salami": [
         "spicy salami"
-      ],
-      "taco meat": [
-        "taco meat"
-      ],
-      "various meats": [
-        "various meats"
       ]
     },
     "Peppers": {
-      "roasted red pepper": [
+      "red pepper": [
         "banana pepper",
+        "banana peppers",
+        "bell pepper",
+        "black pepper",
         "chili",
+        "chili chips",
+        "chili flake",
+        "chili pepper",
+        "crushed red pepper",
+        "green chili",
+        "green pepper",
         "hot pepper",
         "jalapeno",
-        "pepper",
-        "pepperoncini",
-        "red pepper",
-        "roasted red pepper"
-      ],
-      "banana peppers": [
-        "banana peppers"
-      ],
-      "pepperoni": [
-        "bell pepper",
-        "pepperoni"
-      ],
-      "black pepper": [
-        "black pepper"
-      ],
-      "chili chips": [
-        "chili chips"
-      ],
-      "chili flake": [
-        "chili flake"
-      ],
-      "chili pepper": [
-        "chili pepper",
-        "piquante pepper"
-      ],
-      "crushed red pepper": [
-        "crushed red pepper"
-      ],
-      "green chili": [
-        "green chili"
-      ],
-      "green pepper": [
-        "green pepper"
-      ],
-      "jalapeno pepper": [
         "jalapeno pepper",
-        "jalapenos"
-      ],
-      "lemon pepper": [
-        "lemon pepper"
-      ],
-      "mild peppers": [
+        "jalapenos",
+        "lemon pepper",
         "mild peppers",
-        "sweet pepper"
-      ],
-      "pepper jack cheese": [
-        "pepper jack cheese"
+        "pepper",
+        "pepper jack cheese",
+        "pepper sauce",
+        "pepperoncini",
+        "pepperoni",
+        "piquante pepper",
+        "red pepper",
+        "red pepper flakes",
+        "roasted peppers",
+        "roasted piquillo pepper",
+        "roasted red pepper",
+        "roasted red pepper sauce",
+        "serrano chili",
+        "serrano pepper",
+        "sweet pepper",
+        "thai chili sauce"
       ],
       "pork belly": [
         "pork belly"
@@ -3997,123 +3605,95 @@
         "portabello mushroom",
         "portobello mushroom",
         "portobello mushrooms"
-      ],
-      "red pepper flakes": [
-        "red pepper flakes"
-      ],
-      "roasted peppers": [
-        "roasted peppers",
-        "roasted piquillo pepper"
-      ],
-      "serrano pepper": [
-        "serrano chili",
-        "serrano pepper"
-      ],
-      "thai chili": [
-        "thai chili"
       ]
     },
     "Sauces and Dressing": {
-      "basil aioli": [
-        "basil aioli"
+      "basil pesto sauce": [
+        "basil aioli",
+        "basil pesto sauce",
+        "chipotle pesto",
+        "garlic pesto",
+        "hempseed pesto",
+        "lemon aioli"
       ],
       "basil pesto": [
         "basil pesto",
-        "marinara"
-      ],
-      "caesar dressing": [
-        "caesar dressing"
-      ],
-      "chipotle pesto": [
-        "chipotle pesto"
-      ],
-      "garlic pesto": [
-        "garlic pesto"
-      ],
-      "hempseed pesto": [
-        "hempseed pesto"
+        "marinara sauce",
+        "pesto",
+        "pesto sauce",
+        "ranch dressing"
       ],
       "island dressing": [
-        "island dressing"
+        "caesar dressing",
+        "island dressing",
+        "marinara",
+        "russian dressing"
       ],
       "ketchup": [
         "ketchup"
       ],
-      "lemon aioli": [
-        "lemon aioli"
-      ],
-      "pesto": [
-        "pesto"
-      ],
-      "ranch dressing": [
-        "ranch dressing"
-      ],
-      "russian dressing": [
-        "russian dressing"
-      ],
-      "salsa": [
-        "salsa"
-      ],
       "salsa verde": [
+        "salsa",
         "salsa verde"
       ]
     },
     "Hard Cheeses": {
-      "brazil nut parmesan": [
-        "brazil nut parmesan"
-      ],
-      "grana padano": [
-        "grana padano"
-      ],
-      "parmesan cheese": [
-        "parmesan",
-        "parmesan cheese",
-        "romano",
-        "romano cheese"
+      "white parmesan sauce": [
+        "brazil nut parmesan",
+        "white parmesan sauce"
       ],
       "pecorino": [
+        "grana padano",
+        "parmesan",
+        "parmesan cheese",
         "pecorino",
         "pecorino cheese",
-        "pecorino romano"
-      ],
-      "white parmesan": [
-        "white parmesan"
+        "pecorino romano",
+        "romano",
+        "romano cheese"
       ]
     },
     "Mushrooms": {
-      "button mushrooms": [
+      "shiitake mushrooms": [
         "button mushrooms",
-        "cremini mushrooms"
-      ],
-      "mushroom": [
+        "cremini mushrooms",
         "mushroom",
-        "mushrooms"
-      ],
-      "shiitake mushroom": [
+        "mushrooms",
         "shiitake mushroom",
-        "shiitake mushrooms"
-      ],
-      "wild mushroom": [
+        "shiitake mushrooms",
         "wild mushroom"
       ]
     },
+    "Tomatoes": {
+      "sundried tomato": [
+        "cherry tomato",
+        "plum tomato",
+        "roasted tomato",
+        "spicy tomato",
+        "sun tomato",
+        "sun tomato sauce",
+        "sun tomatoes",
+        "sundried tomato",
+        "sundried tomatoes",
+        "tomato",
+        "tomato basil sauce",
+        "tomato crust",
+        "tomato sauce",
+        "tomatoes",
+        "yellow tomato"
+      ]
+    },
     "Tortillas and Nachos": {
-      "tortilla crust": [
+      "tortilla or pizza crust": [
         "flour tortilla",
+        "nacho cheese",
+        "nacho chips",
+        "tortilla",
+        "tortilla chips",
         "tortilla crust",
         "tortilla or pizza crust",
         "tortilla or pizza dough",
         "tortilla tortilla crust"
-      ],
-      "tortilla chips": [
-        "nacho cheese",
-        "tortilla chips"
-      ],
-      "nacho chips": [
-        "nacho chips"
-      ],
-      "tortilla": [
-        "tortilla"
       ]
     }
   }
