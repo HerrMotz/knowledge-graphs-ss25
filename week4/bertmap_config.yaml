@@ -58,7 +58,7 @@ bert:
 # Global matching knobs (bigger candidate pool, gentler filters)
 # -------------------------------------------------------
 global_matching:
-  enabled: false
+  enabled: true
   num_raw_candidates: 1000
   num_best_predictions: 20
   mapping_extension_threshold: 0.5
@@ -69,5 +69,5 @@ global_matching:
 device: auto  # auto | cpu | cuda | cuda:N
 
 # Mapping repair (disable for debugging recall)
-reapir:
+repair:
   enabled: false        # disable full extension+repair
