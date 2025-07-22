@@ -485,6 +485,16 @@ Ich verwende im Rahmen dieses Projekts vier Verfahren:
 
 + ChatGPT o4-mini-high (beide Ontologien werden einfach eingegeben, bei 4o war der Kontext zu klein)
 
+Ergebnisse
+
+```
+Loaded reference mappings: 33
+aml         TP: 30  FP:  3  FN:  3  P:0.909  R:0.909  F1:0.909
+own         TP:  5  FP:1576  FN: 28  P:0.003  R:0.152  F1:0.006
+bertmap     TP: 28  FP: 24  FN:  5  P:0.538  R:0.848  F1:0.659
+chatllm     TP:  6  FP:  1  FN: 27  P:0.857  R:0.182  F1:0.300
+```
+
 = Embedding
 
 == Konfiguration und Begriffe
@@ -556,11 +566,11 @@ Wie schon erwähnt, beeinflussen die Parameter Random-Walk-Tiefe und die Merkmal
 
 Zwischen "margherita" und "pizza" wurde eine hohe Ähnlichkeit erwartet, da Margherita eine spezifische Pizza-Variante ist. In Konfiguration 1 zeigte sich bei steigender Stichprobengröße von 2000 auf 10.000 Samples zunächst eine hohe Cosine Similarity ($0.8380$), die jedoch überraschend auf $0.3188$ absank, was auf Instabilitäten hindeuten könnte. Configuration 2 hingegen bestätigte die Erwartung konsistenter, mit einem stabilen Rückgang der Cosine Similarity von $0.9014$ auf $0.7744$.
 
-2. *mozzarella and kaese (cheese)*:
+2. *mozzarella and kaese*:
 
 Auch bei den Begriffen "mozzarella" und "käse" wurde eine hohe Ähnlichkeit erwartet, da Mozzarella eine Käsesorte ist. In Konfiguration 1 wurde bei 2000 Samples eine sehr hohe Cosinus-Ähnlichkeit von 0,9327 gemessen, welche jedoch bei 10.000 Samples deutlich auf 0,6492 absank, möglicherweise ein Hinweis auf eine semantische Verwässerung bei größeren Stichproben. Konfiguration 2 zeigte zunächst eine moderate Ähnlichkeit (0,8048 bei 2000 Samples), die sich bei 10.000 Samples leicht auf 0,6192 verringerte und somit unerwartet schwächer wurde.
 
-3. *zutat (ingredient) and tomatensauce (tomato sauce)*:
+3. *zutat and tomatensauce*:
 
 Zwischen den Begriffen "zutat" und "tomatensauce" wurde eine starke semantische Verbindung angenommen, da Tomatensauce eindeutig eine Zutat ist. In Konfiguration 1 sank die Cosinus-Ähnlichkeit leicht von 0,8764 bei 2000 Samples auf 0,6761 bei 10.000 Samples, was möglicherweise auf eine Kontextverwässerung hindeutet. Konfiguration 2 hingegen zeigte zunächst eine moderate Ähnlichkeit (0,7766 bei 2000 Samples), die bei 10.000 Samples leicht auf 0,7864 anstieg und somit eine größere Stabilität veranschaulichte.
 
@@ -570,11 +580,11 @@ Zwischen den Begriffen "zutat" und "tomatensauce" wurde eine starke semantische 
 
 Bei Begriffspaaren, die semantisch unähnlich sein sollten, wie "margherita" und "scampi", wurde erwartet, dass sie klar voneinander entfernt sind, da Margherita vegetarisch ist, Scampi hingegen Meeresfrüchte beschreibt. Konfiguration 1 zeigte bei 2000 Samples zunächst eine überraschend hohe Ähnlichkeit (0,8932), die aber bei 10.000 Samples deutlich auf 0,3230 sank, was besser zu den ursprünglichen Erwartungen passte. In Konfiguration 2 wurde zunächst eine moderate Ähnlichkeit von 0,7736 gemessen, welche bei 10.000 Samples leicht auf 0,6472 zurückging und somit die erwartete semantische Distanzierung widerspiegelte.
 
-2. *dessert and waehrung (currency)*:
+2. *dessert and waehrung*:
 
 Unerwartete Ergebnisse zeigten sich bei den klar semantisch unverbundenen Begriffen "dessert" und "währung", für die eine niedrige Ähnlichkeit erwartet wurde. In beiden Konfigurationen wurde überraschenderweise eine konstant hohe Ähnlichkeit festgestellt (Konfiguration 1: 0,9882 bei 2000 Samples, 0,8470 bei 10.000 Samples; Konfiguration 2: 0,9773 bei 2000 Samples und 0,8779 bei 10.000 Samples). Dies könnte auf Anomalien in den Embeddings oder auf häufige Co-Occurence hinweisen, die nicht unbedingt eine semantische Verbindung widerspiegeln.
 
-3. *breakfast and schinken (ham)*:
+3. *breakfast and schinken*:
 
 Das Begriffspaar "breakfast" und "schinken" habe ich zunächst als unähnlich betrachtet, jedoch ist ein semantischer Zusammenhang aufgrund der Häufigkeit von Schinken zum Frühstück durchaus plausibel. In Konfiguration 1 wurde bei 2000 Samples eine hohe Ähnlichkeit von 0,9062 gemessen, die bei 10.000 Samples deutlich auf moderate 0,4825 sank, was auf eine Kontextsensitivität hinweist. Konfiguration 2 hingegen zeigte eine konsistent hohe Ähnlichkeit (0,8766 bei 2000 Samples, 0,9005 bei 10.000 Samples), was darauf schließen lässt, dass die Embeddings relevante kontextuelle Zusammenhänge effektiv erfasst haben.
 
