@@ -1,0 +1,90 @@
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a align:Alignment ;
+    align:map [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#Pizza> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness> ;
+            align:entity2 <http://ontology.daniel-motz.de/ontology#gehoertZuPizzeria> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ] .
+
