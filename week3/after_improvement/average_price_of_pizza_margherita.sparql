@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema1: <http://schema.org/>
+PREFIX : <http://ontology.daniel-motz.de/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (AVG(?price) as ?avgPrice) WHERE {
+    ?tomato rdf:type :tomato_ToppingCategory.
+    ?mozzarella rdf:type :mozzarella_Toppings.
+
+    ?pizza :enthaeltZutat ?tomato, ?mozzarella.
+    ?pizza schema1:price ?price.
+    ?pizza schema1:priceCurrency ?currency.
+}

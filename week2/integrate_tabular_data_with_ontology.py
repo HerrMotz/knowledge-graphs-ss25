@@ -2,6 +2,7 @@ import csv
 import json
 from pathlib import Path
 from datetime import datetime
+import re
 
 from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode, URIRef
 from rdflib.collection import Collection
@@ -377,7 +378,7 @@ def main():
                 except (TypeError, ValueError):
                     price_val = None
                 if price_val is not None and price_val != 0:
-                    g.add((menu_item_uri, SCHEMA.price, Literal(str(price_val), datatype=XSD.decimal, normalize=False)))
+                    g.add((menu_item_uri, ONT.preis, Literal(str(price_val), datatype=XSD.decimal)))
                     g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row.get("currency"))))
 
                 # pizzeria link
@@ -401,6 +402,24 @@ def main():
 
     g.serialize(OUTPUT_TTL, format="turtle")
 
+    with open(OUTPUT_TTL, 'r+', encoding='utf-8') as f:
+        ttl_data = f.read()
+
+        # Ensure xsd prefix is included
+        if 'xsd:' not in ttl_data:
+            ttl_data = '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n' + ttl_data
+
+        # Replace schema1:price value with xsd:decimal annotation
+        updated_ttl = re.sub(
+            r'(:preis\s)(\d+\.\d+)',
+            r'\1"\2"^^xsd:decimal',
+            ttl_data
+        )
+
+        # Go back to the beginning and overwrite the file
+        f.seek(0)
+        f.write(updated_ttl)
+        f.truncate()
 
     print(f"Wrote {OUTPUT_TTL}")
 

@@ -12,12 +12,12 @@ python reasoning.py
 ```
 
 ## File Descriptions
+After I made the change of the "integration of tabular data step", I was able to make more advanced queries in this step.
+Therefore, I have now two directories containing queries:
+- `after_improvement/` contains the queries/results after the improvements
+- `before_improvement/` before the improvements.
 
-There are two directories containing the same set of files:
-- `after_improvement/` contains the files after the improvements
-- `before_improvement/` contains the files before the improvements
-
-The following table is true for both subdirectories:
+I only posted changed queries in the `after_improvement/` directory. These are "average price of a pizza margherita" and "pizza without tomato".
 
 | File                                                                                 | Description                                                                                                                             |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|

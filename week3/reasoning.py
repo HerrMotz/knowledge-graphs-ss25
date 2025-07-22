@@ -1,9 +1,27 @@
-from rdflib import Graph
+from rdflib import Graph, Literal
 from rdflib import RDF, RDFS, Namespace
 from rdflib.namespace import OWL, XSD
 from owlrl import DeductiveClosure, OWLRL_Semantics
 
 SCHEMA = Namespace("http://schema.org/")
+
+def remove_invalid_owl_triples(graph):
+    to_remove = []
+
+    for s, p, o in graph:
+        # Rule 1: Subject must not be a Literal
+        if isinstance(s, Literal):
+            to_remove.append((s, p, o))
+
+        # Rule 2: owl:sameAs must not involve literals at all
+        elif p == OWL.sameAs and (isinstance(s, Literal) or isinstance(o, Literal)):
+            to_remove.append((s, p, o))
+
+    # Remove all offending triples
+    for triple in to_remove:
+        graph.remove(triple)
+
+    return graph
 
 
 if __name__ == "__main__":
@@ -12,17 +30,13 @@ if __name__ == "__main__":
     g.parse("../week1/ontology.xml", format="xml")
     g.parse("../week2/pizza_data.ttl", format="turtle")
 
-    # Tell every reasoner that these are data properties
-    g.add((SCHEMA.price, RDF.type, OWL.DatatypeProperty))
-    g.add((SCHEMA.price, RDFS.range, XSD.decimal))
-
-    g.add((SCHEMA.priceCurrency, RDF.type, OWL.DatatypeProperty))
-    g.add((SCHEMA.priceCurrency, RDFS.range, XSD.string))
 
     print(f"Original triples: {len(g)}")
 
     # Step 2: Apply OWL RL reasoning
     DeductiveClosure(OWLRL_Semantics).expand(g)
+
+    remove_invalid_owl_triples(g)
 
     print(f"After reasoning: {len(g)}")
 

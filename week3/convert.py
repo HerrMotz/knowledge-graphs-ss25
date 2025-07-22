@@ -2,14 +2,14 @@ import json
 import csv
 
 # Load the JSON data from the specified file path
-with open("before_improvement/pizza_without_tomato.json", "r", encoding="utf-8") as f:
+with open("before_improvement/restaurants_with_missing_postcode.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
 # Extract the variables (column headers)
 headers = json_data["head"]["vars"]
 
 # Open a CSV file for writing
-with open("before_improvement/pizza_without_tomato.csv", mode="w", newline='', encoding="utf-8") as file:
+with open("before_improvement/restaurants_with_missing_postcode.csv", mode="w", newline='', encoding="utf-8") as file:
     writer = csv.writer(file)
 
     # Write the header row
@@ -23,4 +23,4 @@ with open("before_improvement/pizza_without_tomato.csv", mode="w", newline='', e
             row.append(value)
         writer.writerow(row)
 
-print("CSV file 'restaurants.csv' created successfully.")
+print("CSV file 'restaurants_with_missing_postcode.csv' created successfully.")

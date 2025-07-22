@@ -1,0 +1,882 @@
+restaurant,label,country,locality,region,zip,address
+http://ontology.daniel-motz.de/ontology#Pizzeria_464,Slugger's Pizzeria,US,Lancaster,Manor Ridge,17603,701 N Queen St
+http://ontology.daniel-motz.de/ontology#Pizzeria_682,Johnny's Pizza House,US,Rayville,Holly Ridge,71269,1924 Julia St
+http://ontology.daniel-motz.de/ontology#Pizzeria_622,Johnny's Pizza,US,Farmerville,LA,71241,717 Sterlington Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_319,Roma Bistro,US,Naples,FL,34102,655 5th Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_390,Giovanni's Pizzeria,US,Sicklerville,NJ,8081,250 Sicklerville Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_482,Giovanni's Pizza,US,Ashland,Bellefonte,41101,715 Greenup Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_504,Casa Bianca Pizza,US,West Haven,N Haven,6516,217 Campbell Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_136,Kingston Pizza,US,Middletown,RI,2842,659 W Main Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_698,Hungry Hoiwes Pizza & Subs,US,Arcadia,FL,34266,1003 E Oak St
+http://ontology.daniel-motz.de/ontology#Pizzeria_130,Bosses Pizza - Keller,US,Keller,TX,76248,201 N Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_236,Milt's Pizza Place Llc,US,Lynden,WA,,8122 Guide Meridian Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_478,"Francesca's Pizza, Pasta and Grill",US,Mount Laurel,Mount Laurel Township,8054,127 Ark Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_610,Galaxy Restaurant Inc,US,Hilliard,OH,43026,5240 Cemetery Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_727,Empire Pizza,US,Berlin,CT,06037-1355,300 New Britain Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_16,Little Caesars Pizza,US,Pasadena,TX,77506,2619 Red Bluff Kroger Jct
+http://ontology.daniel-motz.de/ontology#Pizzeria_857,Quinnipiac Pizza Deli,US,New Haven,Fair Haven,6513,1653 Quinnipiac Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_172,The Perfect Pizza Company,US,Manassas,VA,20110,9774 Zimbro Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_461,Escape From New York Pizza,US,Redwood City,CA,94063,831 Middlefield Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_562,U Pick 6 Beer Store,US,Erie,PA,16509,7520 Peach St
+http://ontology.daniel-motz.de/ontology#Pizzeria_822,Nolita,US,East Hartford,East Htfd,6108,363 Roberts St
+http://ontology.daniel-motz.de/ontology#Pizzeria_514,Daddy's Pizza,US,Saint Cloud,FL,34769,902 13th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_58,Jet's Pizza,US,White Lake,MI,48383,901 Nordic Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_814,Jet's Pizza,US,Macomb,Macomb Twp,48044,16852 21 Mile Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_208,Buddha Belly Deli,US,Henderson,NV,89074,50 N Valle Verde Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_762,Gattitown,US,Clearwater,FL,33759,1560 N Mcmullen Booth Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_498,Gianfabio's Italian Cafe,US,Chesterfield,Clarkson Valley,63017,127 Hilltown Village Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_372,The Bistro,US,Lexington,Edmund,29072,109 Old Chapin Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_484,Chicago Connection,US,Eagle,ID,83616,344 W State St
+http://ontology.daniel-motz.de/ontology#Pizzeria_581,Mamas Pizza,US,Bucyrus,OH,44820,219 S Sandusky Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_669,Marcello's Pizza,US,Corona,CA,92882,691 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_872,The Pizza Parlor,US,Pearland,TX,77584,2810 Business Center Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_431,Life Is Good Store,US,Newport,RI,2840,Thames St
+http://ontology.daniel-motz.de/ontology#Pizzeria_670,Weissgerber's Gasthaus,US,Waukesha,WI,53188,2720 N Grandview Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_806,Fresh Pizzeria,US,Rockville,No Bethesda,20852,807 Rockville Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_375,Bertucci's,US,Newington,Htfd,6111,2929 Berlin Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_812,Bertucci's,US,Hazlet,NJ,,2847 State Route 35
+http://ontology.daniel-motz.de/ontology#Pizzeria_571,Papa John's Pizza,US,Bronx,NY,10462,2241 Westchester Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_639,Papa John's Pizza,US,Charleston,Saint Andrews,29407,610 Wesley Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_497,Fire Works - Arlington,US,Arlington,VA,22201,2350 Clarendon Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_502,Jerry's Pizza,US,Trenton,Hamilton Twp,8611,701 S Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_341,New York Pizza Department & Bagels,US,Corona,CA,92883,2279 Eagle Glen Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_640,Good Fella's Pizza,US,Mc Cordsville,Woodbury,46055,9641 Olio Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_170,Labella Pizza and Pasta,US,Clifton Park,Elnora,12065,15 Route 236
+http://ontology.daniel-motz.de/ontology#Pizzeria_39,Zios Italian Kitchen - Olathe,US,Olathe,KS,66062,11981 S Strang Line Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_251,City Pizza,US,Amsterdam,West Glenville,12010,1370 Riverfront Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_95,The Fire Den,US,Alameda,CA,94501,1231 Park St
+http://ontology.daniel-motz.de/ontology#Pizzeria_232,Bodrum Turkish Mediterranean,US,New York,Nyc,10024,584 Amsterdam Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_70,Walnut Grille,US,Newton Highlands,MA,2461,1203 Walnut St
+http://ontology.daniel-motz.de/ontology#Pizzeria_422,The Green Table,US,Isanti,MN,55040,4 Enterprise Ave N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_566,Firestone's,US,Frederick,MD,21701,105 N Market St
+http://ontology.daniel-motz.de/ontology#Pizzeria_93,Gran Morsi,US,New York,Manhattan,10007,22 Warren St
+http://ontology.daniel-motz.de/ontology#Pizzeria_813,Kefi,US,New York,Nyc,10024,505 Columbus Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_703,Fatty 'cue Kiosk,US,New York,NY,10004,Battery Park
+http://ontology.daniel-motz.de/ontology#Pizzeria_329,Jimmys Slice,US,Ventura,La Conchita,93001,586 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_370,Kaydee Kats!,US,Peoria Heights,IL,61616,4109 N Prospect Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_378,Tony's Mexican Grill,US,Lyons,IL,60534,8699 Ogden Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_385,The Cheesecake Factory,US,Indianapolis,Williams Crk,46240,8701 Keystone Xing
+http://ontology.daniel-motz.de/ontology#Pizzeria_46,Original Giorgio's,US,Cockeysville,MD,21030,14 Scott Adam Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_400,J & G Restaurant,US,East Granby,CT,6026,35 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_442,Ameci Pizza & Pasta,US,Lake Forest,CA,92630,25431 Trabuco Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_455,Ak Diamonds,US,Nantucket,MA,,Old South Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_466,The Pizza Joint,US,Columbus,OH,43202,2402 N High St
+http://ontology.daniel-motz.de/ontology#Pizzeria_471,Josephine's Pizza Pastaria,US,Green Bay,Howard,54313,2560 Glendale Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_473,Giovanni's Pizza and Pasta,US,Whitehouse Station,NJ,8889,431 E Us Hwy 22 Bishop's Plz
+http://ontology.daniel-motz.de/ontology#Pizzeria_481,Louie's Bar Restaurant,US,Fishers,IN,46038,13825 Britton Park Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_494,Stone and Paddle,US,Vernon Rockville,Rockville,6066,40 West St
+http://ontology.daniel-motz.de/ontology#Pizzeria_506,Papa Romeo's Pizza,US,Highwood,IL,60040,410 Sheridan Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_519,Jcpenney,US,Natick,No Natick,1760,1245 Worcester St
+http://ontology.daniel-motz.de/ontology#Pizzeria_63,California Pizza Kitchen,US,Wellington,Village Of Wellington,33414,10300 Forest Hill Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_543,River House Bar & Grill,US,Middletown,Hbg Inter Airp,17057,2495 Harrisburg Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_66,Icon Grill,US,Seattle,WA,98101,1933 5th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_9,Giovanni's Pizza and Pasta,US,Menifee,CA,92584,26900 Newport Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_711,Manhattan In The Desert - Palm Desert,US,Palm Desert,CA,92260,74 225 Hwy 111
+http://ontology.daniel-motz.de/ontology#Pizzeria_722,Wick's Pizza,US,Louisville,KY,40299,9700 Bluegrass Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_736,Bertucci's,US,Manchester,CT,6042,194 Buckland Hills Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_798,The Union Kitchen (memorial Dr),US,Houston,Bunker Hill Village,77024,12538 Memorial Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_860,Bulldog Ale House - Bolingbrook,US,Bolingbrook,IL,60490,157 S Weber Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_114,Mellow Mushroom Pizza Bakers,US,Denver,CO,80202,1201 16th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_129,California Pizza Kitchen,US,Austin,TX,78758,3401 Esperanza Xing
+http://ontology.daniel-motz.de/ontology#Pizzeria_140,Bearno's Pizza,US,Louisville,KY,40291,6101 Bardstown Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_145,California Pizza Kitchen,US,Saint Louis,Country Life Acres,63131,109 W County Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_159,Interurban,US,Chickasha,OK,73018,300 E Grand Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_163,Baba Louie's,US,Great Barrington,N Egremont,1230,286 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_178,Spinelli's Pizza,US,Louisville,Brownsboro Farm,40241,2905 Goose Creek Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_180,Takka Grill,US,Philadelphia,PA,19120,418 E Wyoming Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_181,Mamma Lucia,US,Rockville,No Bethesda,20852,12274 Rockville Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_186,Pizza Chalet,US,Yucaipa,CA,92399,34579 Yucaipa Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_190,Giovanni's Pizzeria,US,Wyckoff,NJ,7481,637 Wyckoff Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_227,Mama's Pizza & Restaurant,US,Matthews,Wesley Chapel,28104,15080 Idlewild Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_229,California Pizza Kitchen - Nyc,US,New York,Nyc,10016,440 Park Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_256,Bagels & Brew,US,Aliso Viejo,CA,92656,26601 Aliso Creek Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_287,The Cheesecake Factory - Thousand Oaks,US,Thousand Oaks,CA,91360,442 W Hillcrest Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_294,California Pizza Kitchen,US,Henrico,VA,23233,11800 W Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_486,Gino's Pizza of Babylon,US,Babylon,Gilgo Beach,11702,258 Deer Park Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_828,Warrens Place,US,South Weymouth,Weymouth Nas,2190,27 Pleasant St
+http://ontology.daniel-motz.de/ontology#Pizzeria_477,Valentino Pizza I,US,Philadelphia,PA,19124,5536 Torresdale Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_558,Sicilia's Pizzeria,US,Charleston,WV,25387,1605 Kanawha Blvd W
+http://ontology.daniel-motz.de/ontology#Pizzeria_650,Sicilia's Pizzeria,US,Weirton,WV,26062,3601 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_655,Nacho Mamma's,US,Bristol,RI,2809,76 State St
+http://ontology.daniel-motz.de/ontology#Pizzeria_759,Mackenzie River Pizza Co.,US,Missoula,MT,59802,137 W
+http://ontology.daniel-motz.de/ontology#Pizzeria_10,Uncle John's Pizza,US,Grand Prairie,TX,75052,3480 S Carrier Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_235,Passero's Pizza,US,Lisle,IL,60532,5328 Main Saint (rt 53)
+http://ontology.daniel-motz.de/ontology#Pizzeria_342,North End Pizzeria,US,Los Angeles,Wla,90025,11628 Santa Monica Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_875,Prison Brews Brewery & Restaurant,US,Jefferson City,Honey Creek,65101,305 Ash St
+http://ontology.daniel-motz.de/ontology#Pizzeria_137,Hotel Fiesole - Bella Rossa,US,Skippack,PA,19474,4046 Skippack Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_739,Cottage Inn Pizza,US,Dearborn,MI,48126,7840 Wyoming St
+http://ontology.daniel-motz.de/ontology#Pizzeria_108,Cristy's Pizza,US,Baltimore,OH,43105,1001 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_21,Frank's Pizzeria,US,Omaha,NE,68154,711 N 132nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_26,Nino's Trattoria & Pizzeria,US,Lawrence Township,Lawrenceville,8648,111 Lawrence Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_277,"Cedar + Stone, Urban Table",US,Minneapolis,MN,55425,2141 Lindau Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_292,Gino's Pizza,US,Toledo,OH,43614,1829 Eastgate Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_112,Hungry Howie's Pizza,US,Chandler,AZ,85225,1909 E Ray Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_568,Vincenzo's Pizzeria,US,Port Jefferson,Prt Jefferson,11777,109 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_707,Sopranos Italian Market,US,Waverly,NY,14892,Cayuta Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_358,Nonna's Pizza,US,White Plains,North White Plains,10603,52 Lake St
+http://ontology.daniel-motz.de/ontology#Pizzeria_55,Riccardo's Pizza,US,Saddle Brook,NJ,7663,522 Saddle River Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_173,7 Day 24 Hours Emergency Locks,US,Weehawken,NJ,7086,3502 Park Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_612,The Bahche,US,Brooklyn,NY,11215,191 7th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_297,Straw Hat Pizza,US,Hollister,CA,95023,191 San Felipe Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_330,Lebel Pizza,US,Philadelphia,PA,19139,5254 Market St
+http://ontology.daniel-motz.de/ontology#Pizzeria_616,Capitol City Brewing Company - Downtown,US,Washington,DC,20005,1100 New York Ave N W
+http://ontology.daniel-motz.de/ontology#Pizzeria_779,Wolfgangpuck Pizza | Bar,US,Greensboro,Guilford Courthouse National,27408,607 Green Valley Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_278,Lola's Bowl and Bistro,US,Indianapolis,IN,46234,9045 Crawfordsville Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_303,Centerville Pizza & Bbq,US,Dayton,Washington Township,45458,9470 Dayton Lebanon Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_198,Nobody's Sports Grill and Bbq,US,Murfreesboro,Murfreesbr,37129,116 John R Rice Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_595,Chi Chi's Pizza,US,Santa Clarita,Bouquet Canyon,91350,23043 Soledad Canyon Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_565,Midnight Muncheez,US,Costa Mesa,CA,92627,1125 Victoria St
+http://ontology.daniel-motz.de/ontology#Pizzeria_14,Imo's Pizza,US,Arnold,MO,63010,2000 El Lago Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_222,Two Brothers Pizza,US,Huntington Beach,CA,92648,19065 Beach Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_275,Pizza Bella,US,Coraopolis,Carpolis,15108,1136 Thorn Run Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_62,Tavern At The Inn,US,Findlay,OH,45840,200 E Main Cross St
+http://ontology.daniel-motz.de/ontology#Pizzeria_515,Avocado Cafe,US,Irvine,CA,92612,6060 Scholarship
+http://ontology.daniel-motz.de/ontology#Pizzeria_649,Hair Like Before,US,Lawrenceville,GA,30043,1032 Old Peachtree Rd N W
+http://ontology.daniel-motz.de/ontology#Pizzeria_545,Fred's Rivertown Alehouse,US,Snohomish,Larimers Corner,98290,1114 1st St
+http://ontology.daniel-motz.de/ontology#Pizzeria_843,Dale Street Bistro Cafe,US,Colorado Springs,Co Spgs,80903,115 E Dale St
+http://ontology.daniel-motz.de/ontology#Pizzeria_349,Roosters Brewing Co,US,Layton,UT,84041,748 Heritage Park Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_119,Rivertowne North Shore,US,Pittsburgh,Pitt,15212,337 N Shore Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_609,Atlantic City Country Club - Taproom Bar & Grille,US,Northfield,NJ,8225,One Leo Fraser Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_618,Cinema Cafe Restaurant,US,New York,Nyc,10016,505 3rd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_337,Barn Board Grill,US,Roberts,WI,54023,517 Cherry Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_347,Pizza Time,US,Portland,ME,4103,1223 Washington Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_470,Lia's,US,Chevy Chase,Chevy Chs Vlg,20815,4435 Willard Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_500,Casey's General Store,US,York,NE,68467,1822 N Lincoln Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_511,Casey's General Store,US,Bloomington,Bloomington Heights,61701,2017 Fox Creek Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_548,Bricco Kent,US,Kent,OH,44240,210 S Depeyster St
+http://ontology.daniel-motz.de/ontology#Pizzeria_723,Casey's General Store,US,Lincoln,NE,68505,2243 N Cotner Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_734,Saute,US,Baltimore,MD,21224,2844 Hudson St
+http://ontology.daniel-motz.de/ontology#Pizzeria_743,Preston's Market At Loews Miami Beach Hotel,US,Miami Beach,Venetian Islands,33139,1601 Collins Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_765,Casey's General Store,US,Minooka,IL,60447,400 W Mondamin St
+http://ontology.daniel-motz.de/ontology#Pizzeria_786,Real Bar & Bistro,US,Solana Beach,CA,92075,124 S Solana Hills Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_821,Casey's General Store,US,Mount Carmel,Friendsville,62863,418 W 9th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_834,Taphouse 15,US,Wharton,NJ,7885,75 State Route 15
+http://ontology.daniel-motz.de/ontology#Pizzeria_148,Casey's General Store,US,Marshalltown,IA,50158,1402 S 12th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_214,Rye Grill and Bar,US,Rye,NY,10580,1 Station Plz
+http://ontology.daniel-motz.de/ontology#Pizzeria_216,The County Cork Wine Pub,US,Sykesville,MD,21784,1716 Liberty Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_255,Villa Enrico,US,Long Island City,Queens,11101,11 01 43rd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_288,House of Brews,US,New York,Nyc,10036,363 W 46th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_293,Somma Pizza & Sports Bar,US,Verona,PA,15147,380 Route 909
+http://ontology.daniel-motz.de/ontology#Pizzeria_601,Roper's Reagle Beagle,US,Godfrey,IL,62035,3045 Godfrey Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_35,Mario's - Staten Island,US,Staten Island,NY,10304,1657 Richmond Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_573,Laroma Pizzeria & Resturant,US,Rome,Camroden,13440,600 Floyd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_668,Jona's Pizza,US,Miami Beach,FL,33140,544 Arthur Godfrey Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_265,Pronto Pizza,US,Ocala,FL,34471,303 SE 17th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_570,Tomaso's,US,Edgewater,NJ,7020,163 Old River Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_361,Elmer Sudds,US,Wilkes Barre,City Of Wb,18702,475 E Northampton St
+http://ontology.daniel-motz.de/ontology#Pizzeria_508,Serafina Harlem,US,New York,Manhattanville,10027,1260 Amsterdam Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_267,Toscana,US,Los Angeles,Brentwood,90049,11633 San Vicente Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_530,Joey D's Italian Grill,US,Marblehead,MA,1945,114 Pleasant St
+http://ontology.daniel-motz.de/ontology#Pizzeria_309,Pizza Masters,US,Bayonne,Pamrapo,7002,532 Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_336,Sal Vito Pizza,US,Voorhees,Echelon,8043,910 Haddonfield Berlin Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_350,Johnny Brusco Pizza,US,Bentonville,AR,72712,700 S E Walton Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_397,Roula's Pizza,US,Philadelphia,PA,19144,6200 Germantown Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_437,Morina's Italian Restaurant,US,Cabot,AR,72023,2006 S Pine St
+http://ontology.daniel-motz.de/ontology#Pizzeria_522,It's Greek To Me,US,Cliffside Park,NJ,7010,352 Anderson Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_638,Joe Cristianos Pizza,US,Hyde Park,NY,12538,1225 Route 9g
+http://ontology.daniel-motz.de/ontology#Pizzeria_78,Milanos Pizza,US,Sacramento,CA,95827,9822 Libra Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_706,Pappy's Place,US,Rochester,MN,55901,1635 Us 52 N
+http://ontology.daniel-motz.de/ontology#Pizzeria_720,Unwined,US,Swansea,MA,2777,262 Swansea Mall Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_744,J. Peppers Southern Grille,US,Kernersville,Matthewstown,27284,841 Old Winston Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_763,Romeo S Pizza,US,Staten Island,NY,10304,117 Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_794,Getaway Cafe,US,Pittsburgh,Pitt,15226,3049 Sussex Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_796,Barrels,US,Margate City,Margate,8402,9 S Granville Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_803,Big Daddy's Pizza,US,Midvale,Cushing,84047,7669 S 700 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_817,Damon's Grill,US,Denver,North Glenn,80233,10 E 120th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_856,"Mineo's Wings, Pizza & Raw Bar",US,Fort Lauderdale,Dania Beach,33314,4261 Griffin Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_204,Joey Nova's Pizzeria and Grilled Subs,US,Excelsior,Deephaven,55331,5655 Manitou Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_381,Greek Grill,US,Summit,NJ,7901,90 Summit Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_65,Suraya's - Grill and Fried Chicken,US,Piscataway,NJ,8854,1665 Stelton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_770,Fat Belly's On Main,US,East Greenwich,RI,2818,241 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_831,Adriatico Pizza,US,Union,Townley,7083,1424 Morris Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_665,Buck's Pizza,US,Mobile,AL,36606,3295 Bel Air Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_321,Southend Brewery & Smokehouse,US,Charleston,SC,29401,161 E Bay St
+http://ontology.daniel-motz.de/ontology#Pizzeria_405,Aubree's Northville,US,Northville,MI,48167,20420 Haggerty Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_416,Draft Pick,US,Austin,TX,78741,1620 E Riverside Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_430,Mellow Mushroom Pizza Bakers,US,Spring,TX,77379,16000 Stuebner Airline Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_510,Eat Maine Gourmet,US,Kansas City,MO,64111,4112 Pennsylvania Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_611,Mellow Mushroom,US,Augusta,GA,30901,1167 Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_663,Mellow Mushroom,US,Atlanta,Atl,30338,5575 Chamblee Dunwoody Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_690,Barona Hot Dog Cart,US,Lakeside,CA,92040,1932 Wildcat Canyon Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_716,Lucky Strike Lanes - Belmar,US,Denver,CO,80226,415 S Teller
+http://ontology.daniel-motz.de/ontology#Pizzeria_756,"Hearthstone Kitchen & Cellar - Red Rock Casino, Resort & Spa",US,Las Vegas,NV,89135,11011 W Charleston Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_92,Tilted Kilt Mission Valley,US,San Diego,CA,92108,1640 Camino Del Rio N
+http://ontology.daniel-motz.de/ontology#Pizzeria_776,Mellow Mushroom - Kennesaw,US,Kennesaw,GA,30144,1133 Chastain Rd N W
+http://ontology.daniel-motz.de/ontology#Pizzeria_836,Rusty Bucket,US,Bloomfield Hills,Bloomfld Hls,48304,Woodward Ave Bloomfield Hills Mi
+http://ontology.daniel-motz.de/ontology#Pizzeria_848,Mellow Mushroom - Phoenix,US,Phoenix,AZ,85044,14205 S 50th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_24,Patrick Molloy's Sports Pub,US,Hermosa Beach,CA,90254,50a
+http://ontology.daniel-motz.de/ontology#Pizzeria_802,Chung Dam,US,Duluth,GA,30096,2550 Pleasant Hill Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_109,Steinway Pizza,US,Astoria,Queens,11103,3151 Steinway St
+http://ontology.daniel-motz.de/ontology#Pizzeria_757,Ragtime Cafe,US,Birmingham,Riverchase,35244,2080 Valleydale Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_561,Tony's of North Beach,US,Rohnert Park,CA,94928,288 Golf Course Dr W
+http://ontology.daniel-motz.de/ontology#Pizzeria_228,Calabash Island Eats,US,Houston,TX,77002,1515 Pease St
+http://ontology.daniel-motz.de/ontology#Pizzeria_415,Chesdan's Pizzeria,US,Homer Glen,IL,60491,15764 S Bell Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_633,Calabria Restaurant,US,New City,NY,10956,80 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_652,Cafe Europa,US,Waterbury,CT,06702-2220,30 Bank St
+http://ontology.daniel-motz.de/ontology#Pizzeria_615,Big Daddy's Pizza,US,Pottstown,PA,19464,1300 N Charlotte St
+http://ontology.daniel-motz.de/ontology#Pizzeria_780,Euro Pizza,US,Briarcliff Manor,Briarcliff Mnr,10510,103 N State Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_117,Euro Pizzeria,US,White Plains,NY,10601,120 E Post Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_777,Disalvo's Pizza Italian Restaurant,US,Pompano Beach,Deerfield Beach,33064,2486 N Federal Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_71,Pirate's Cove,US,Mount Vernon,OH,43050,1401 Coshocton Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_161,Waterfront Restaurant,US,San Francisco,CA,94111,& The Embarcadero
+http://ontology.daniel-motz.de/ontology#Pizzeria_589,Bamboo Restaurant,US,Los Angeles,CA,90034,10835 Venice Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_491,Strano! Sicilian Kitchen & Bar,US,Memphis,Mphs,38104,948 S Cooper St
+http://ontology.daniel-motz.de/ontology#Pizzeria_269,Little Nick's New York Pizzeria,US,San Antonio,Hollywood Park,78232,2815 N Loop 1604 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_784,Fricker's Richmond,US,Richmond,East Haven,47374,3237 Chester Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_409,Maggiano's - Perimeter,US,Atlanta,GA,30346,4400 Ashford Dunwoody Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_556,Dancing Marlin,US,Frankfort,IL,60423,20590 S Lagrange Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_774,Maggiano's - Springfield,US,Springfield,VA,22150,6500 Springfield Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_139,Maggiano's Little Italy,US,Skokie,IL,60077,4999 Old Orchard Shopping Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_261,Maggiano's - Orlando,US,Orlando,FL,32819,9101 International Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_732,Poplar Pizza & Restaurant,US,Andover,KS,67002,127 W US Highway 54
+http://ontology.daniel-motz.de/ontology#Pizzeria_211,Goodfella's Cafe,US,Baltimore,MD,21223,31 S Arlington Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_0,Little Pizza Paradise,US,Bend,OR,97701,Cascade Village Mall Across From Target
+http://ontology.daniel-motz.de/ontology#Pizzeria_300,Cave of The Winds,US,Niagara Falls,NY,14303,Goat Is
+http://ontology.daniel-motz.de/ontology#Pizzeria_30,Doubledave's Pizzaworks,US,Cedar Park,TX,78613,401 E Whitestone Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_306,Pizza City,US,Windsor Mill,MD,,7408 Windsor Mill Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_308,Clara's,US,Woodridge,IL,60517,6550 Lincoln Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_312,Jacksons,US,Canonsburg,PA,15317,1000 Corporate Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_313,Raz's Little Italy,US,Canoga Park,CA,91304,23233 Saticoy St
+http://ontology.daniel-motz.de/ontology#Pizzeria_31,Buon Cibo,US,Hernando,MS,38632,2631 Mcingvale Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_318,Marco's Pizza,US,Mcdonough,GA,30252,298 Racetrack Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_32,Tomato & Basil,US,Fairfield,CT,6825,1876 Black Rock Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_324,Famous Pizza of West Warwick,US,West Warwick,RI,2893,1738 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_334,Mike's Pizza And Pasta,US,Hendersonville,NC,28792,803 Spartanburg Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_338,Linguine's Italian Eatery,US,Marlborough,MA,1752,350 Boston Post Rd W
+http://ontology.daniel-motz.de/ontology#Pizzeria_36,The Lookout Catering,US,Osseo,Hassan,55369,8680 Pineview Ln N
+http://ontology.daniel-motz.de/ontology#Pizzeria_4,Roadhouse Cafe,US,Hyannis,MA,2601,478 South St
+http://ontology.daniel-motz.de/ontology#Pizzeria_353,Bikram's Yoga College of India,US,Flagstaff,AZ,86001,119 W Phoenix Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_354,Oliveri's Pizzeria,US,Hamilton,Randallsville,13346,14 Lebanon St
+http://ontology.daniel-motz.de/ontology#Pizzeria_356,Alexander's - Hilton Head Island,US,Hilton Head Island,SC,29928,76 Queens Folly Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_360,Zone Action Park,US,Mcallen,TX,78501,2600 W Expressway 83
+http://ontology.daniel-motz.de/ontology#Pizzeria_373,Visconti's Ristorante,US,Folsom,Mormon Island,95630,2700 E Bidwell St
+http://ontology.daniel-motz.de/ontology#Pizzeria_387,Bistro Colorado,US,Evergreen,CO,80439,1552 Bergen Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_388,"Camden On The Lake Resort, Spa, Yacht Club",US,Lake Ozark,Vlg Of 4 Ssns,65049,2359 Bittersweet Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_406,Papa Dino's,US,Oklahoma City,OK,73105,718 Culbertson Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_408,Speak Easy,US,Detroit Lakes,MN,56501,1100 N Shore Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_411,Macy's Place Pizzeria,US,Buffalo,NY,14225,3348 Genesee St
+http://ontology.daniel-motz.de/ontology#Pizzeria_413,Louie's Pizza,US,Colorado Springs,Cimarron Hills,80923,5996 Stetson Hills Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_418,Center Pizza,US,Manchester,CT,6040,648 Center St
+http://ontology.daniel-motz.de/ontology#Pizzeria_419,Laveranda Ristorante Italiano,US,Pittsburg,West Pittsburg,94565,444 Railroad Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_425,Marco's Pizza,US,Medina,OH,44256,244 N Court St
+http://ontology.daniel-motz.de/ontology#Pizzeria_426,Drkula's 32 Bowl,US,Inver Grove Heights,South St Paul,55076,6710 Cahill Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_428,Villa Rose Pizza,US,Broward County,FL,,1114 N State Road 7
+http://ontology.daniel-motz.de/ontology#Pizzeria_429,Mama's Bakery Pizza & Salad Bar,US,Minneapolis,MN,55402,800 Nicollet Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_433,Piara Pizza,US,Pomona,CA,91767,1664 Indian Hill Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_434,Marcos Pizza,US,Schofield,WI,54476,3910 Schofield Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_439,Pasta Brioni,US,Scottsdale,AZ,85251,4416 N Miller
+http://ontology.daniel-motz.de/ontology#Pizzeria_443,La China Poblana,US,East Brunswick,NJ,8816,556 State Route 18
+http://ontology.daniel-motz.de/ontology#Pizzeria_448,San Remo Pizza,US,Syracuse,Syr,13212,7575 Buckley Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_457,I.talia,US,Olympia,WA,98502,2505 4th Ave W
+http://ontology.daniel-motz.de/ontology#Pizzeria_459,Italian Pizza & Subs,US,Wilson,NC,27896,3711 Peppermill Dr N
+http://ontology.daniel-motz.de/ontology#Pizzeria_483,Nanuet Restaurant,US,Nanuet,NY,10954,211 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_488,Maggiano's - Buckhead,US,Atlanta,GA,30326,3368 Peachtree Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_490,Besa's Pizza,US,Garland,TX,75044,7602 N Jupiter Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_60,Greek's Pizzeria,US,Indianapolis,IN,46237,8028 S Emerson Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_525,Brannon's Pub and Brewery,US,Beaverton,OR,97005,3800 S W Cedar Hills Blvd D
+http://ontology.daniel-motz.de/ontology#Pizzeria_540,Sicilian Style Pizza Pie,US,Santa Cruz,Paradise Park,95060,2415 Mission St
+http://ontology.daniel-motz.de/ontology#Pizzeria_546,Calandra's Mediterranean Grill,US,Fairfield,NJ,7004,118 Us Highway 46 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_552,Dobro's,US,Deland,FL,32720,658 W New York Ave Deland
+http://ontology.daniel-motz.de/ontology#Pizzeria_554,The Crazy Tuna,US,Essex,MD,21221,203 Nanticoke Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_557,Marco's Pizza,US,South Burlington,Queen City,5403,1301 Williston Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_69,Atheneos Greek Village Cafe,US,Mesquite,TX,75149,1425 Gross Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_576,USA Doors Gates Svc,US,Vallejo,CA,94590,295 Mare Island Way
+http://ontology.daniel-motz.de/ontology#Pizzeria_579,Cici's Pizza,US,Kingwood,TX,77339,1202 Kingwood Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_582,Marco's Pizza,US,N Olmsted,OH,44070-2222,23657 Lorain Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_586,Rico's Italian Pizza,US,Brentwood,CA,94513,4550 Balfour Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_592,Toss Up Salads,US,Fort Lauderdale,Ft Lauderdale,33328,8616 Griffin Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_594,North Italia - El Segundo,US,El Segundo,CA,90245,840 S Sepulveda
+http://ontology.daniel-motz.de/ontology#Pizzeria_602,Milan's Pizza,US,Lathrop,CA,95330,15030 S Harlan Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_607,Louie's Famous Pizza,US,Abington,MA,2351,988 Bedford St
+http://ontology.daniel-motz.de/ontology#Pizzeria_73,Broad Street Cafe,US,Newark,Midtown,7102,562 Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_624,Elicia's Pizza & Wings,US,Saint Louis,MO,63139,2801 Hampton Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_629,Marzanos,US,Peterborough,NH,3458,6 School St
+http://ontology.daniel-motz.de/ontology#Pizzeria_630,Fazoli's,US,Wausau,WI,54401,3812 Rib Mountain Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_634,Hillside Pizza,US,Hadley,MA,1035,173 Russell St
+http://ontology.daniel-motz.de/ontology#Pizzeria_635,Blondie's Firehouse Pub,US,Englewood,Cherry Hl Vlg,80110,3435 S Inca St
+http://ontology.daniel-motz.de/ontology#Pizzeria_642,Ipic Theaters Bayshore,US,Milwaukee,Glendale,53217,5800 N Bayshore Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_653,Tommy V's Osteria Pizzeria,US,Phoenix,AZ,85018,3223 E Camelback Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_656,First and Last Tavern,US,Scarborough,ME,4074,240 Pine Point Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_678,New York Pizzeria,US,Missouri City,TX,77459,5320 Highway 6
+http://ontology.daniel-motz.de/ontology#Pizzeria_80,Fox's Pizza Den,US,Lafayette,IN,47905,4921 State Road 26 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_684,Sabatino's Pizza,US,Philadelphia,PA,19130,873 N 26th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_81,Bronson Strike Zone,US,Bronson,MI,49028,717 E Chicago St
+http://ontology.daniel-motz.de/ontology#Pizzeria_694,Yogurt Zone,US,Mansfield,TX,76063,2771 E Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_701,Don Carmelo's Pizzeria,US,Elkhorn,NE,68022,1024 N 204th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_702,Casey's Carry Out Pizza,US,Grinnell,IA,50112,217 6th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_82,Copeland's Cheescake Bistro,US,New Orleans,LA,70130,2001 Saint Charles Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_718,John's Pizzeria and Resturant,US,Fenton,MI,48430,1492 N Leroy St
+http://ontology.daniel-motz.de/ontology#Pizzeria_733,Pizza Forum,US,Auburn,Norland Park,46706,215 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_735,Nick's Pizza,US,Chicago Ridge,IL,60415,10500 10534 S Ridgeland Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_738,Barraco's Pizza,US,Tinley Park,IL,60487,8915 159th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_760,Carbone's Pizzeria,US,Stillwater,Oak Park Hts,55082,5988 Osgood Ave N
+http://ontology.daniel-motz.de/ontology#Pizzeria_761,Portland Adventist Medical Pavilion,US,Portland,OR,97216,10000 S E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_764,Dunwellz Custom Kitchen & Pour House,US,Charlotte,NC,28227,7110 Brighton Park Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_766,Giadas Italian Cucina,US,Henderson,NV,89052,2540 Anthem Village Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_769,Ogle's Brick Oven Pizza,US,Gatlinburg,TN,37738,201 Oglewood Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_781,Legal Sea Foods - Peabody,US,Peabody,MA,1960,210 Andover Saint Northshore Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_795,Joe's American Bar Grill,US,Franklin,MA,02038-2534,466 King St
+http://ontology.daniel-motz.de/ontology#Pizzeria_801,Little Italy Pizza Deli,US,New York,Nyc,10014,180 Varick St
+http://ontology.daniel-motz.de/ontology#Pizzeria_818,Upper Crust Pizza,US,Santa Fe,Chupadero,87501,329 Old Santa Fe Trl
+http://ontology.daniel-motz.de/ontology#Pizzeria_835,San Biagio's Pizza,US,Upland,CA,,1263 7th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_855,Mainland Grille,US,Harleysville,PA,19438,2250 Rittenhouse Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_99,Patsy's Pizzeria,US,New York,Manhattan,10017,801 2nd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_100,Fazoli's,US,Bloomington,IN,47401,315 S College Mall Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_861,Wilmington House of Pizza,US,Wilmington,Wilm,28403,1016 S College Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_863,Deangelo's,US,Bloomington,IN,47401,2620 E Third St
+http://ontology.daniel-motz.de/ontology#Pizzeria_867,Romio's Pizza & Pasta - Downtown,US,Seattle,WA,98101,927 Howell St
+http://ontology.daniel-motz.de/ontology#Pizzeria_103,Pagliacci Pizza,US,Kirkland,Juanita,98033,13005 N E 70th Pl
+http://ontology.daniel-motz.de/ontology#Pizzeria_113,Pie In The Sky,US,Saint Albans,St Albans,5478,267 Swanton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_13,Gatehouse Restaurant,US,Pickens,SC,29671,116 Ann St
+http://ontology.daniel-motz.de/ontology#Pizzeria_150,Old Mill Brewpub,US,Lexington,Edmund,29072,711 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_160,Candlelight Dinner Playhouse,US,Johnstown,CO,80534,4747 Marketplace Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_167,Custom Pie,US,Moorpark,CA,93021,6593 Collins Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_20,Doubledave's Pizza Works,US,College Station,TX,77845,3505 A Longmire Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_182,Il Primo Pizza Wings,US,Lehigh Acres,FL,33971,5781 Lee Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_184,You-be's U-bake Pizza,US,Dinuba,CA,93618,820 N Alta Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_185,"Solamor Hospice | Denver, Co",US,Denver,CO,80211,2460 W 26th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_187,Calderone Club,US,Milwaukee,Glendale,53217,8001 N Port Washington Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_191,Rico's Pizza,US,Modesto,CA,95351,1420 E Hatch Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_197,The Veranda At The Kahala Resort,US,Honolulu,Hono,96816,5000 Kahala Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_199,Dream Cafe,US,Dallas,TX,75201,2800 Routh St
+http://ontology.daniel-motz.de/ontology#Pizzeria_2,Bravo Pizza Hollywood,US,Los Angeles,Los Feliz,90027,5142 Hollywood Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_202,Kings Chicago - Lincoln Park,US,Chicago,Fort Dearborn,60610,1500 N Clybourn Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_212,Caseys Carry Out Pizza,US,Camdenton,MO,65020,487 S Business Route 5
+http://ontology.daniel-motz.de/ontology#Pizzeria_217,The Marina,US,Cadillac,MI,49601,2404 Sunnyside Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_221,Minervas,US,Wareham,MA,2571,257 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_225,The 263 Restaurant & Provisions,US,Austin,TX,78733,1705 N. Cuernavaca Dr.
+http://ontology.daniel-motz.de/ontology#Pizzeria_237,Pizza Time,US,Tacoma,WA,98405,3906 S 12th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_243,Penn State Sub Shop #3,US,State College,PA,16803,1788 N Atherton St
+http://ontology.daniel-motz.de/ontology#Pizzeria_245,Freshii,US,Vancouver,WA,98661,2420 Columbia House Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_260,Starbucks Coffee,US,Petaluma,CA,94954,3100 Lakeville Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_264,Bulldawgs Pizza,US,Athens,GA,30605,2026 S Milledge Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_271,Phat Boyz New York Style Pizzeria,US,Perry,GA,31069,1365 Sam Nunn Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_283,Fazoli's,US,Jonesboro,AR,72401,1730 E Highland Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_29,Uno Pizzeria & Grill - Sturbridge,US,Sturbridge,MA,1566,100 Charlton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_295,Lucky Mouse Chinese Gifts,US,Kissimmee,FL,34746,5770 W Irlo Bronson Memorial Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_40,Town Pub,US,Bloomfield,Grove,7003,378 Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_302,Angie's Restaurant Pizzeria,US,Chicago,IL,60652,8352 S Pulaski Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_83,Uno Pizzeria & Grill,US,Burlington,MA,1803,95 Mall Rd Burlington Mall Nordstrom Entrance
+http://ontology.daniel-motz.de/ontology#Pizzeria_516,The Grey Plume,US,Omaha,NE,68131,220 S 31st Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_534,Mi Amore Pizza & Pasta,US,Lompoc,CA,93436,1321 N H St
+http://ontology.daniel-motz.de/ontology#Pizzeria_825,Park Ave Pizzeria,US,Lansdale,PA,19446,620 S Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_15,Applebee's Tracy,US,Tracy,CA,95304,3060 Naglee Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_691,East Coast Wings & Grill,US,Wake Forest,NC,27587,12646 Capital Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_131,East Coast Wings & Grill,US,Kernersville,Matthewstown,27284,800 N Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_177,Breakside Brewery,US,Portland,OR,97222,5821 SE International Way
+http://ontology.daniel-motz.de/ontology#Pizzeria_583,Il Lupino,US,Honolulu,Hono,96815,2233 B 180a Kalakaua Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_593,Old Chicago Pasta Pizza,US,Sioux Falls,SD,57106,4301 W 41st St
+http://ontology.daniel-motz.de/ontology#Pizzeria_371,The Melting Pot - Maple Shade Nj,US,Maple Shade,NJ,8052,584 Route 38 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_578,The Melting Pot - Jacksonville,US,Jacksonville,FL,32256,7860 Gate Parkway 101
+http://ontology.daniel-motz.de/ontology#Pizzeria_627,The Melting Pot - Wilmington(nc),US,Wilmington,Wilm,28405,885 Town Center Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_645,The Melting Pot - St Petersburg,US,Saint Petersburg,FL,33704,2221 4th St N
+http://ontology.daniel-motz.de/ontology#Pizzeria_646,The Melting Pot - Myrtle Beach,US,Myrtle Beach,SC,29577,5001 N Kings Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_797,The Melting Pot - Columbia,US,Columbia,MD,21045,10451 Twin Rivers Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_839,The Melting Pot - Albany,US,Albany,Mckownville,12203,1 Crossgates Mall Road Crossgates Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_840,The Melting Pot - Westwood,US,Westwood,Rivervale,7675,250 Center Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_869,The Melting Pot - Boise,US,Boise,ID,83702,200 N 6th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_104,The Melting Pot - White Plains,US,White Plains,NY,10601,30 Mamaroneck Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_218,The Melting Pot - Albuquerque,US,Albuquerque,NM,87110,2201 Uptown Loop N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_305,The Boarding House,US,Chicago,IL,60654,720 N Wls
+http://ontology.daniel-motz.de/ontology#Pizzeria_692,Citiline Deli 7,US,Houston,Bammel,77040,13430 Northwest Fwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_314,Tutti Gusti,US,Harrisonburg,VA,22801,Harrisonburg Va
+http://ontology.daniel-motz.de/ontology#Pizzeria_435,Pat's Pizza,US,Yarmouth,ME,4096,791 Us 1
+http://ontology.daniel-motz.de/ontology#Pizzeria_632,The Pizza Stop,US,Collegeville,Rahns,19426,222 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_132,Brando's Pizza,US,Buffalo,NY,14224,1042 Union Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_617,Zo��s Kitchen,US,San Antonio,TX,78230,11225 Huebner Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_800,Zoës Kitchen,US,Richardson,TX,75080,222 W Campbell Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_53,Enterprise Deli,US,Shelton,CT,6484,1 Corporate Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_689,Angela's Pizza,US,Islip,Islip Manor,11751,192 Islip Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_327,24 Hour Express Locksmith Inc,US,Philadelphia,PA,19130,2328 Fairmount Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_529,Gracie See,US,Detroit,MI,48228,6889 Greenfield Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_332,Eleni's Restaurant,US,Centereach,NY,11720,2136 Middle Country Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_799,Bravo Cucina Italiana - Whitehall - Lehigh Valley,US,Whitehall,PA,18052,950 Lehigh Valley Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_852,Bravo Cucina Italiana - Rochester Hills,US,Rochester,MI,48309,286 N Adams Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_246,Bravo Cucina Italiana - Willow Grove,US,Willow Grove,PA,19090,2500 Moreland Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_94,Kennebunk House Of Pizza,US,Kennebunk,ME,4043,5 York St
+http://ontology.daniel-motz.de/ontology#Pizzeria_151,Cruise Shop,US,Grapevine,TX,76051,317 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_603,Palace Pizza Bartow,US,Bartow,FL,33830,105 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_25,Salerno's Pizza Restaurant,US,Luzerne,PA,18709,19 Kelly St
+http://ontology.daniel-motz.de/ontology#Pizzeria_41,Ming Garden Cocktails Chinese Restaurant,US,Newark,DE,19713,4138 Ogletown Stanton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_476,Fortune Cookie,US,Merchantville,NJ,8109,7708 Maple Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_503,Dragon Inn Chinese Restaurant,US,Philadelphia,Phila,19151,7710 City Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_623,Tony Roni's Pizza Drexel Hill,US,Drexel Hill,Drexelbrook,19026,4911 Township Line Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_436,Puerto Vallarta Mexican Restaurant,US,Greenville,SC,29609,3207 N Pleasantburg Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_138,Doubledave's Pizzaworks,US,Midland,TX,79707,3208 N Loop 250 W
+http://ontology.daniel-motz.de/ontology#Pizzeria_452,Max Brenner Chocolate Bar,US,Paramus,NJ,7652,1 Garden State Plz
+http://ontology.daniel-motz.de/ontology#Pizzeria_537,Jandro's,US,Dallas,TX,75201,703 Mckinney Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_499,Fiamma Wood Fire Tavern,US,Mahopac,Lake Mahopac,10541,18 Clark Pl
+http://ontology.daniel-motz.de/ontology#Pizzeria_523,"Idevicemd Iphone, Cell Phone Repair and Sell",US,West Palm Beach,FL,33401,123 S Olive Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_282,Southside Grill & Margarita Factory,US,Gardner,MA,1440,242 W Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_654,Palomino Restaurant Rotisseria (reported closed),US,Minneapolis,MN,55402,825 Hennepin Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_107,Valley Lahvosh Baking,US,Fresno,CA,,502 M St
+http://ontology.daniel-motz.de/ontology#Pizzeria_444,Michael's Cuisine,US,Fort Worth,TX,76107,3413 W 7th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_731,John's Pizzeria,US,Chicopee,MA,1013,424
+http://ontology.daniel-motz.de/ontology#Pizzeria_213,Vecchia - Wayne,US,Wayne,Saint Davids,19087,134 N Wayne Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_842,Maria D's,US,Joppa,Joppatowne,21085,1411 Mountain Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_162,Victoria's Secret Pink,US,Kensington,MD,20895,11301 Rockville Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_317,Gio's Ristorante and Bar,US,Saint Louis,MO,63101,701 Market St
+http://ontology.daniel-motz.de/ontology#Pizzeria_3,Lucky's Pub,US,Houston,TX,77003,801 Saint Emanuel St
+http://ontology.daniel-motz.de/ontology#Pizzeria_450,Antoni's Italian Cafe,US,Lafayette,LA,70503,1118 Coolidge Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_451,Johnny Carino's,US,Bozeman,MT,59718,2159 Burke St
+http://ontology.daniel-motz.de/ontology#Pizzeria_572,Briatore,US,Bellevue,WA,98005,13238 N E 20th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_676,Woodlands Restaurants,US,Galena,IL,61036,444 Eagle Ridge Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_688,Mama's Cafe Baci,US,Hackettstown,NJ,7840,260 Mountain Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_695,Mignon's At Sky Valley Resort,US,Desert Hot Springs,Sky Valley,92241,74711 Dillon Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_717,Manor House Restaurant,US,Blowing Rock,Bamboo,28605,500 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_742,Joe's New York Pizza Pasta,US,Palm Coast,FL,32137,1070 Palm Coast Pkwy Nw
+http://ontology.daniel-motz.de/ontology#Pizzeria_789,Angry Ham's Octane Bar & Grill,US,Framingham,Framingham So,1701,2 Beacon St
+http://ontology.daniel-motz.de/ontology#Pizzeria_219,Pietro's Coal Oven Pizza - South Street,US,Philadelphia,PA,19147,121 123 South St
+http://ontology.daniel-motz.de/ontology#Pizzeria_680,Xpress Pizzeria,US,Brooklyn,NY,11218,709 Church Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_816,Zi's Pizza,US,Austin,TX,78757,1809 1 W Anderson Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_527,Cart-driver,US,Denver,CO,80205,2500 Larimer St
+http://ontology.daniel-motz.de/ontology#Pizzeria_382,l Bistro,US,Grand Forks,ND,58201,100 S 42nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_226,Hungry Howie's Pizza,US,Birmingham,MI,48009,33901 Woodward Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_351,Mama Mia's - Hollywood,US,Hollywood,FL,33020,1818 S Young Cir
+http://ontology.daniel-motz.de/ontology#Pizzeria_72,Antonio's Pizza,US,Chatham,IL,62629,1001 Jason Pl
+http://ontology.daniel-motz.de/ontology#Pizzeria_234,Amico's Pizza & Pasta,US,Dallas,TX,75219,4032 Cedar Springs Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_352,Lagrande Pizza & Subs,US,Wapakoneta,OH,45895,16 S Blackhoof St
+http://ontology.daniel-motz.de/ontology#Pizzeria_76,Austin's Pizza,US,Austin,TX,78726,7301 N Fm 620
+http://ontology.daniel-motz.de/ontology#Pizzeria_268,Greco's,US,Wheeling,Mozart,26003,45 Washington Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_362,Main Street Pie Company,US,Alachua,FL,32615,14933 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_37,Boston's Restaurant & Sports Bar,US,Spokane,City Of Spokane Valley,99216,14004 E Indiana Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_200,La Hacienda Real,US,Salem,OR,,3960 Commercial St S E
+http://ontology.daniel-motz.de/ontology#Pizzeria_849,Redbox,US,Augusta,Togus,4330,284 Civic Center Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_315,Bellini's Pizza & Grill,US,Kinston,NC,28501,2918 N Herritage St
+http://ontology.daniel-motz.de/ontology#Pizzeria_549,Pizza Inn,US,Hattiesburg,MS,39402,5040 Hardy St
+http://ontology.daniel-motz.de/ontology#Pizzeria_705,Pizza Inn,US,Rockingham,NC,28379,1352 E Broad Ave/hwy 74 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_726,Pizza Inn,US,Wilson,NC,27896,3332 Airport Blvd N W
+http://ontology.daniel-motz.de/ontology#Pizzeria_291,Campion's Pizza,US,South Windsor,Wapping,6074,465 Buckland Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_790,Piatti - Danville,US,Danville,CA,94526,100 Sycamore Valley Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_449,Obed & Isaac's Microbrewery and Eatery,US,Springfield,IL,62701,500 S 6th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_538,Mr Shoes Pizza,US,Rochester,NY,14613,107 Driving Park Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_715,Montys Old Brick Tavern,US,Williston,VT,5495,7921 Williston Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_787,Sunset Grill & Lounge,US,Lake Havasu City,AZ,86403,271 Lake Havasu Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_230,Laishley Crab House,US,Punta Gorda,FL,33950,150 Laishley Ct
+http://ontology.daniel-motz.de/ontology#Pizzeria_465,Prime De Leon,US,Fort Myers,Fmy,33901,33 Patio De Leon
+http://ontology.daniel-motz.de/ontology#Pizzeria_590,Cooper's Hawk Winery & Restaurant,US,Barrington,Fox Rv Vly Gn,60010,100 W Higgins Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_328,River Rock,US,Studio City,CA,91604,12833 Ventura Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_366,Blackfinn Ameripub - Mt. Prospect,US,Mount Prospect,IL,60056,157 Randhurst Village Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_463,Ciminos,US,Freeport,IL,61032,421 Challenge St
+http://ontology.daniel-motz.de/ontology#Pizzeria_474,Mediterranea,US,Montclair,NJ,7043,578 Bloomfield Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_535,Garden Room At Santa Maria Inn,US,Santa Maria,CA,93454-6668,801 S Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_677,Jolane's,US,Glenview,IL,60025,1100 Milwaukee Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_815,West Bricktown,US,Oklahoma City,OK,73104,124 E Sheridan
+http://ontology.daniel-motz.de/ontology#Pizzeria_837,Cafe Noma,US,New Orleans,LA,70124,1 Collins Diboll Cir
+http://ontology.daniel-motz.de/ontology#Pizzeria_201,Nm Cafe At Neiman Marcus Topanga,US,Chatsworth,CA,91313,6550 Topanga Canyon Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_242,Terra American Bistro,US,San Diego,CA,92115,7091 El Cajon
+http://ontology.daniel-motz.de/ontology#Pizzeria_380,Nm Cafe At Neiman Marcus - Palo Alto,US,Palo Alto,CA,94304,400 Stanford Shopping Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_84,Dioli's Italian Market,US,Winston Salem,Oldtown,27106,2898 Reynolda Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_207,The Sportsgrille,US,Nashville,TN,37201,121 4th Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_101,Paisans Pizza - Berwyn,US,Berwyn,IL,60402,6226 W Ogden
+http://ontology.daniel-motz.de/ontology#Pizzeria_791,Cafe Pesto - Kawaihae Harbor,US,Kamuela,HI,96743,3665 Kawaihae Shopping Center / 61 Hi 270
+http://ontology.daniel-motz.de/ontology#Pizzeria_106,Baldinelli Pizza,US,Homer Glen,IL,,12326 W 143rd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_301,Maaco Collision Repair & Auto Painting,US,Katy,TX,77450,510 S Mason Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_432,Blackfinn American Grille,US,Jacksonville,FL,32246,4840 Big Island Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_741,Frisch's,US,Pittsburgh,West Mifflin,15236,5301 Grove Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_276,Chicken Derby Inc,US,Pittsburgh,West Mifflin,15236,10 Old Clairton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_120,Burgers & Cupcakes,US,New York,Nyc,10018,458 9th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_829,Cantina Di Napoli,US,Wilmington,DE,19806,7A Trolly Sq
+http://ontology.daniel-motz.de/ontology#Pizzeria_126,Ton's Drive-in,US,Broussard,LA,70518,101 W Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_68,Spagio,US,Columbus,Marble Cliff,43212,1295 Grandview Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_259,Mama Pepino's Pizza,US,Mckeesport,PA,15131,2417 Oneil Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_348,Uncle Al's Pizza Parlours,US,Elyria,Sheffield Village,44035,8707 W Ridge Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_335,Bill's Pizza,US,Hopkinton,MA,1748,14 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_661,Andrea's Pizza,US,Grand Rapids,Cascade,49506,2014 Boston St S E
+http://ontology.daniel-motz.de/ontology#Pizzeria_749,Bella Piazza,US,Fairfield,NJ,7004,286 Us Highway 46
+http://ontology.daniel-motz.de/ontology#Pizzeria_396,The Uptown Restaurant & Bar,US,New York,Ny,10128,1576 3rd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_248,Good Company Bar,US,Colorado Springs,Colorado Spgs,80920,7625 N Union Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_531,Aj's Pizza,US,Butler,Fayson Lakes,7405,12 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_369,Joey's Northside Pizzeria,US,Endicott,Crestview Heights,13760,200 Oak Hill Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_423,Sal's Italian Ristorante,US,Pompano Beach,FL,33067,6280 W Sample Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_50,Gina Maria's Pizza,US,Minneapolis,MN,55447,1400 County Road 101 N
+http://ontology.daniel-motz.de/ontology#Pizzeria_57,Prima Pizza,US,Essex,MD,21221,133 Back River Neck Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_587,Pepperoni Express,US,Shrewsbury,MA,1545,506 Boston Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_679,Leon's Italian Bistro & Pizza,US,Niagara Falls,Wheatfield,14304,8890 Porter Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_166,Dennisport House of Pizza,US,Dennis Port,MA,2639,481 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_215,La Fresca Pizza,US,Houston,TX,77096,5300 N Braeswood Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_263,Vinny's New York Pizza & Grill,US,Duluth,GA,30097,6590 Sugarloaf Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_266,Great River Bowl & Partners Pub,US,Sartell,MN,56377,208 2nd St S
+http://ontology.daniel-motz.de/ontology#Pizzeria_270,Mr Jims Pizza Inc,US,Grand Prairie,TX,75050,1604 N State Highway 161
+http://ontology.daniel-motz.de/ontology#Pizzeria_286,Paris Cafe,US,Sandy,OR,97055,16607 Champion Way
+http://ontology.daniel-motz.de/ontology#Pizzeria_513,Romeo's Pizza,US,Strongsville,OH,44136,14769 Pearl Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_648,Nordstrom The Plaza At King of Prussia,US,King Of Prussia,PA,19406,190 N Gulph Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_420,Ellden's Grill & Banquet - River Oaks Golf Club,US,Grand Island,NY,14072,201 Whitehaven Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_604,Bulls Head Inn,US,Campbell Hall,NY,10916,120 Sarah Wells Trl
+http://ontology.daniel-motz.de/ontology#Pizzeria_247,Delicious Heights Berkley Heights,US,Berkeley Heights,NJ,7922,428 Springfield Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_584,Speakeasy Bar & Grill,US,Newport,RI,2840,254 Thames St
+http://ontology.daniel-motz.de/ontology#Pizzeria_133,Woolworth Tower Kitchen,US,New York,Nyc,10279,233 Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_740,Butera's Restaurant of Sayville,US,Sayville,Fire Island Pines,11782,100 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_164,Ayhan's Shish Kebab,US,Westbury,NY,11590,1504 Old Country Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_751,Paesano's Pizza,US,Hamden,CT,6514,1370 Dixwell Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_407,Land Sharks Pizza Co,US,Destin,FL,32541,300 Harbor Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_539,Trattoria Il Mulino - Nashville,US,Nashville,TN,37203,144 Fifth Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_614,Restaurant & Bar Ko,US,Honolulu,Hono,96816,3196 Waialae Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_681,Cove Pizza,US,Stamford,CT,6902,864 Cove Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_505,Marquart's Landing,US,Washington,Clover Bottom,63090,300 W
+http://ontology.daniel-motz.de/ontology#Pizzeria_43,Chena's Alaskan Grill,US,Fairbanks,AK,99709,4200 Boat St
+http://ontology.daniel-motz.de/ontology#Pizzeria_5,Brigham Young University,US,Provo,UT,84602,1 N University Hl
+http://ontology.daniel-motz.de/ontology#Pizzeria_518,House of Pizza,US,North Andover,MA,1845,133 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_811,Hogarth's Bar & Bistro,US,Williamsburg,VA,23188,5201 Center St
+http://ontology.daniel-motz.de/ontology#Pizzeria_340,David's Club Bar & Grill,US,Orlando,FL,32819,6001 Destination Parkway Hilton Orlando
+http://ontology.daniel-motz.de/ontology#Pizzeria_755,Thirsty Lion Gastropub & Grill – Tempe,US,Tempe,AZ,85281,2000 E Rio Salado Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_322,Jerry's Pizza & Subs,US,Altamonte Springs,FL,32714,924 W 436
+http://ontology.daniel-motz.de/ontology#Pizzeria_127,Khan's Bar & Grill,US,Washington,DC,20002,1125 H St NE
+http://ontology.daniel-motz.de/ontology#Pizzeria_754,City Bites,US,Mustang,OK,73064,425 OK-152
+http://ontology.daniel-motz.de/ontology#Pizzeria_379,Kafe Neo - Marysville,US,Marysville,WA,98270,9730 State Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_591,Bella Frutteto,US,Wexford,PA,15090,2602 Brandt School Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_660,The Firehouse,US,Garfield,Ritz,7026,42 Plauderville Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_824,Uncle's Pizzeria & Co.,US,Fort Collins,CO,80524,120 W Olive Saint Fort Collins Co
+http://ontology.daniel-motz.de/ontology#Pizzeria_192,Mediterranean Harbour Bar & Grill,US,Hilton Head Island,SC,29928,13 Harbourside Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_34,Larosa's Pizzeria,US,Loveland,Murdock,45140,901 Loveland Madeira Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_620,Larosa's Pizzeria,US,Oxford,Darrtown,45056,21 Lynn Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_122,Larosa's Pizzeria,US,Cincinnati,Fairmont,45211,6607 Glenway Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_193,Pasta Faire,US,Belleview,FL,34420,10401 Us 441
+http://ontology.daniel-motz.de/ontology#Pizzeria_394,Papa John's Pizza,US,Covington,Park Hills,41011,1602 Madison Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_427,Papa John's Pizza,US,Cherryville,NC,28021,1407 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_441,Papa John's Pizza,US,Glendale,AZ,85308,8251 W Union Hills Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_456,Papa John's Pizza,US,E Windsor,NJ,,400 Us 130
+http://ontology.daniel-motz.de/ontology#Pizzeria_644,Papa John's Pizza,US,Cedar City,UT,84720,1233 Sage Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_664,Phở Lê Hòa Phat,US,Pleasant Hill,CA,94523,508 Contra Costa Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_146,Papa John's Pizza,US,Charlotte,NC,28277,16049 Johnson Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_176,Pizza Hut,US,Richmond,VA,23222,551 E Laburnum Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_223,Papa John's Pizza,US,Franklin,Bengal,46131,275 N Morton St
+http://ontology.daniel-motz.de/ontology#Pizzeria_472,Chester's Kitchen & Bar,US,Rochester,MN,55904,111 S Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_496,Zpizza,US,Rochester,MN,55904,111 S Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_326,The Ups Store,US,Encinitas,Olivenhain,92024,315 S Coast Highway 101
+http://ontology.daniel-motz.de/ontology#Pizzeria_710,Simmzy's,US,Long Beach,Naples,90803,5271 E 2nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_249,The Wild Goose,US,Willoughby,Willoughby Hills,44094,4144 Erie St
+http://ontology.daniel-motz.de/ontology#Pizzeria_118,Abo's Pizza,US,Littleton,CO,80129,2220 Wildcat Reserve
+http://ontology.daniel-motz.de/ontology#Pizzeria_59,Harry's Pizza,US,Quincy,Quincy Center,2169,405 Sea St
+http://ontology.daniel-motz.de/ontology#Pizzeria_512,Mezza Westwood,US,Westwood,Rivervale,7675,20 Jefferson Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_783,Seasons Pizza,US,Cherry Hill,Cherry Hill Township,8034,450 Marlton Pike E
+http://ontology.daniel-motz.de/ontology#Pizzeria_44,La Hacienda,US,Americus,GA,31709,1602 E Forsyth St
+http://ontology.daniel-motz.de/ontology#Pizzeria_401,Eduardo's,US,Duncan,OK,73533,1304 N Highway 81
+http://ontology.daniel-motz.de/ontology#Pizzeria_47,Casa-Rica,US,Westminster,MD,21157,400 N Center St
+http://ontology.daniel-motz.de/ontology#Pizzeria_468,Don Juan's Mexican Restaurant,US,Lexington,Arnold,27292,43 S Talbert Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_469,La Hacienda Taqueria,US,Novato,San Marin,94945,1401 Grant Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_599,La Hacienda Real,US,Salem,OR,97303,5024 River Rd N
+http://ontology.daniel-motz.de/ontology#Pizzeria_659,Los Compadres,US,Reno,Pleasant Valley,89511,25 Foothill Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_697,Wooden Windmill,US,Fremont,NE,68025,1155 S Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_714,Pizza Nora,US,Corona,CA,92880,6987 Hamner Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_728,Acapulco Mexican Restaurant,US,Saint Ann,Saint Anne,63074,10114 Saint Charles Rock Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_87,Mexican Gardens,US,Southgate,MI,48195,15950 Eureka Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_846,Quesadillas Mexican Restaurant,US,Amherst,Brownhelm,44001,249 Church St
+http://ontology.daniel-motz.de/ontology#Pizzeria_854,Joe's Grill & Cantina,US,Fort Smith,AR,72903,3400 S 74th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_125,Rancho Viejo Mexican Grill,US,Hickory,Longview,28602,715 Lenoir Rhyne Blvd S E
+http://ontology.daniel-motz.de/ontology#Pizzeria_157,Oscar's Woodmont Kitchen,US,Milford,CT,6460,186 Hillside Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_174,Pancho Mc Gillicuddy's Mexican,US,Williams,AZ,86046,141 W Railroad Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_195,Olivas' Mexican Food,US,Prescott Valley,AZ,86314,8370 E State Route 69
+http://ontology.daniel-motz.de/ontology#Pizzeria_209,Blue Agave Mexican Restaurant,US,Lafayette,LA,70508,3558 W Pinhook Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_285,Senior Tequila,US,Sherwood,Nlr,72120,8605 Highway 107
+http://ontology.daniel-motz.de/ontology#Pizzeria_619,Baratta's,US,Des Moines,IA,50315,2320 S Union St
+http://ontology.daniel-motz.de/ontology#Pizzeria_38,Ristorante Italiano,US,Santa Cruz,CA,95062,555 Soquel Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_575,Historic Revere Tavern,US,Paradise,Harristown,17562,3063 Lincoln Hwy E
+http://ontology.daniel-motz.de/ontology#Pizzeria_628,J. Willys Public House and Eatery,US,West Linn,Wankers Corners,97068,1717 Willamette Falls Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_767,Morgans,US,Allentown,PA,18104,Willow St
+http://ontology.daniel-motz.de/ontology#Pizzeria_440,Pizza Factory,US,Show Low,AZ,85901,100 N White Mountain Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_189,Izakaya Bincho,US,Redondo Beach,CA,90277,112 Internatl Boardwalk
+http://ontology.daniel-motz.de/ontology#Pizzeria_730,Lunello's Montville Inn,US,Montville,Montville Township,7045,167 Rte 202
+http://ontology.daniel-motz.de/ontology#Pizzeria_111,Cafe Veloce,US,Kirkland,Kingsgate,98034,12514 120th Ave N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_175,Doughboys,US,Los Angeles,Bicentennial,90048,8136 W 3rd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_280,Cellar Restaurant,US,Blacksburg,VA,24060,302 N Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_772,True Food Kitchen - Houston,US,Houston,TX,77056,1700 Post Oak Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_116,Tavern On The Square,US,Bothell,Queensgate,98011,18607 Bothell Way N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_458,Thurmans To Go,US,Reynoldsburg,OH,43068,14950 Broad At
+http://ontology.daniel-motz.de/ontology#Pizzeria_355,Dewolf Tavern,US,Bristol,RI,2809,267 Thames St
+http://ontology.daniel-motz.de/ontology#Pizzeria_359,The Allen Street Grill (hotel State College),US,State College,PA,16801-3838,100 W College Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_393,Lucky Star Lounge,US,Front Royal,Riverton,22630,205 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_521,Tavola,US,New York,Nyc,10018,488 9th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_165,Bella Via,US,Long Island City,Queens,11101,4746 Vernon Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_183,Campania Pizza,US,Southlake,TX,76092,291 Grand Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_709,Cesco's Pizza,US,Newton,Fredon Twp,7860,538 State Route 94 S
+http://ontology.daniel-motz.de/ontology#Pizzeria_564,Tony Colombos,US,Rockville Centre,Rockville Center,11570,208 Sunrise Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_367,Verace: True Italian,US,Islip,Islip Manor,11751,599 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_323,Avenue Italy Cucina Italiana,US,Rancho Palos Verdes,Pls Vrds Est,90275,31243 Palos Verdes Dr W
+http://ontology.daniel-motz.de/ontology#Pizzeria_233,Lazy Mary's,US,Ayer,Fort Devens,1432,30 Littleton Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_671,Two Brothers Deli,US,Idaho Springs,CO,,1424 Miner St
+http://ontology.daniel-motz.de/ontology#Pizzeria_460,Ruscello - Nordstrom Mayfair,US,Milwaukee,WI,53226,2424 N Mayfair Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_343,Spinners Rootop Revolving Bistro & Lounge @ Grand Plaza Hotel-st Pete Beach,US,Saint Petersburg,Saint Pete Beach,33706,5250 Gulf Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_364,Firehouse,US,Bakersfield,CA,93309,7701 White Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_402,Charley's Restaurant & Lounge,US,Mankato,MN,56001,920 Madison Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_417,Brendan's Bar & Grill,US,New York,G P O,10001,42 W 35th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_517,Wolfgang Puck Bar & Grill - Summerlin,US,Las Vegas,NV,89135,10955 Oval Park Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_700,The Dining Room @ The Woodlands Resort,US,Spring,TX,77380,2301 Milbend
+http://ontology.daniel-motz.de/ontology#Pizzeria_737,Wine Experience Cafe and World Cellar,US,Aurora,CO,80016,6240 S Main Saint L115 (behind Mcalisteraposs Deli)
+http://ontology.daniel-motz.de/ontology#Pizzeria_844,Manhasset Bay Marina,US,Port Washington,Baxter Estates,11050,10 Matinicock Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_143,Sanderlings - Seascape Resort,US,Aptos,Seacliff,95003,1 Seascape Resort Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_272,The Depot,US,Missoula,MT,59802,201 Railroad St W
+http://ontology.daniel-motz.de/ontology#Pizzeria_284,Anya's Pizza,US,Rancho Cucamonga,CA,91739,7270 Victoria Park Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_536,Zeiderelli's Pizza,US,Mechanicsburg,Brandtsville,17055,33 E Simpson St
+http://ontology.daniel-motz.de/ontology#Pizzeria_810,Meltz Extreme Grilled Cheese,US,Coeur D Alene,Huetter,83815,1735 W Kathleen Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_560,Mattress Factory Museum,US,Pittsburgh,Pitt,15212,500 Sampsonia Way
+http://ontology.daniel-motz.de/ontology#Pizzeria_480,Dollar Tree,US,Clifton,NJ,7013,1006 US Highway 46
+http://ontology.daniel-motz.de/ontology#Pizzeria_42,Tascali's Decades Pasta & Grill,US,Barboursville,WV,25504,6007 Us 60 E
+http://ontology.daniel-motz.de/ontology#Pizzeria_830,Geno's Deli,US,Bowling Green,KY,42104,1751 Scottsville Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_873,Rick's Cabaret,US,Indianapolis,IN,46222,3551 Lafayette Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_507,Pasta Loft,US,Milford,NH,3055,241 Union Sq
+http://ontology.daniel-motz.de/ontology#Pizzeria_224,Brix Wine Café,US,Kirkland,Kingsgate,98034,9749 N E 119th Way
+http://ontology.daniel-motz.de/ontology#Pizzeria_399,Zimorino's Red Pies Over Montana,US,Missoula,MT,59802,1250 W Broadway St
+http://ontology.daniel-motz.de/ontology#Pizzeria_48,Crane Alley,US,Urbana,IL,61801,115 W Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_643,The Brickyard Restaurant and Sports Bar,US,Lancaster,Manor Ridge,17603,415 N Prince St
+http://ontology.daniel-motz.de/ontology#Pizzeria_809,Cafe Stratos,US,North Olmsted,OH,44070,23642 Lorain Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_876,Moonlight Cafe,US,Dover,Davidsburg,17315,4140 Carlisle Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_320,La Vita's Pizzeria,US,Moorestown,NJ,8057,121 W Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_389,Tiffany's Pizza,US,Flat Rock,Brownstown Twp,48134,25066 Telegraph Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_403,Bellacino's Pizza & Grinders,US,Daleville,VA,24083,1176 Roanoke Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_61,The Spud Spot,US,Harvey,LA,70058,1818 Manhattan Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_526,Saltwater Willys,US,Grapevine,TX,76051,2455 E Grapevine Mills Cir
+http://ontology.daniel-motz.de/ontology#Pizzeria_532,Planet Pizza,US,Plano,TX,75075,3000 Custer Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_547,Lunch Box,US,Taylors,SC,29687,355 Saint Mark Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_559,Buster's Sports Bar and Grill,US,Mankato,MN,56001,1325 Madison Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_574,Paradise Lanes,US,Racine,WI,53406,6501 Washington Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_580,George's Pizza Restaurant,US,Newtown,CT,6470,1 Dodgingtown Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_606,Soulshine Pizza Factory,US,Oxford,MS,38655,308 S Lamar Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_621,The Beachhouse,US,Bradenton Beach,FL,34217,200 Gulf Dr N
+http://ontology.daniel-motz.de/ontology#Pizzeria_636,Main Street Restaurant,US,Detroit Lakes,MN,56501,Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_658,Billy's Red Room,US,Whippany,NJ,7981,60 Parsippany Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_666,Cvs/pharmacy,US,Allen,TX,75013,Mcdermott
+http://ontology.daniel-motz.de/ontology#Pizzeria_673,Philly Cheese Steak Express,US,Vernon Hills,IL,60061,701 N Milwaukee Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_704,Jo-jo's Original Pizzeria,US,Rossford,OH,43460,616 Dixie Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_746,Luigi's Patio Ristorante,US,College Station,TX,77845,3975 State Highway 6 S
+http://ontology.daniel-motz.de/ontology#Pizzeria_782,Georgio's Oven Fresh Pizza Co,US,Cleveland,Mayfield Hts,44124,1282 Som Center Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_788,Denny's,US,Pullman,WA,99163,1170 S E Bishop Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_826,Nypd Pizza,US,Cincinnati,Groesbeck,45247,5761 Springdale Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_98,Booies Pizza,US,Erie,PA,16508,653 W 26th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_858,The Loophole,US,Johns Island,Seabrook Island,29455,2817 Maybank Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_859,Massey's Pizza,US,Columbus,Valleyview,43204,2970 Sullivant Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_862,Mount Laurel Bagels & Bakery,US,Mount Laurel,Mount Laurel Township,8054,888 Union Mill Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_871,Carvalho's Brazilian Kitchen,US,Scottsdale,AZ,85255,23623 N Scottsdale Rd D107
+http://ontology.daniel-motz.de/ontology#Pizzeria_11,Philly's Subs,US,Wausau,WI,54401,2111 Stewart Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_110,Charlies American Grill & Spirits,US,Sioux City,IA,51101,701 Gordon Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_121,Mo's Pub Eatery,US,Langley,WA,98260,317 2nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_128,Zpizza,US,Irvine,CA,92604,5365 Alton Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_155,Don Giovanni Ristorante Italiano and Wine Bar,US,Auburn,WA,98002,18 Auburn Way S
+http://ontology.daniel-motz.de/ontology#Pizzeria_18,Tower Hill Tavern,US,Laconia,Weirs Beach,3246,264 Lakeside Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_205,Bellacino's Grinders & Pizza,US,Findlay,OH,45840,2320 Tiffin Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_206,Suite 600,US,Lincoln,RI,2865,600 George Washington Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_241,Cafe Americana,US,Cincinnati,OH,45202-5211,550 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_253,Spinning Wheel Diner,US,Califon,NJ,7830,283 U.S. 22
+http://ontology.daniel-motz.de/ontology#Pizzeria_28,Brothers 2,US,Endicott,Crestview Heights,13760,2901 Watson Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_290,Printers Inc Cafe,US,Palo Alto,CA,94306,310 S California Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_196,Stella Notte,US,Ellicott City,Oella,21043,8809 Baltimore National Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_154,Ciao Bella,US,Schererville,IN,46375,1514 Us 41
+http://ontology.daniel-motz.de/ontology#Pizzeria_588,Dolce Vita,US,Fairfax,VA,22030,10824 Fairfax Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_625,Eddie's Italian Restaurant,US,Marina Del Rey,CA,90292,4002 Lincoln Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_832,Culina,US,Los Angeles,Bicentennial,90048,300 S Doheny Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_712,P.j. Whelihan's Pub Restaurant,US,Downingtown,PA,19335,853 E Lancaster Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_775,Sea Salt,US,Salt Lake City,Salt Lake Cty,84108,1709 E 1300 S
+http://ontology.daniel-motz.de/ontology#Pizzeria_768,Lil' Frankie's,US,New York,Manhattan,10003,19 First Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_298,Verdile's,US,Troy,Pleasantdale,12182,572 2nd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_368,Positano - Greensboro,US,Greensboro,Guilford Courthouse National,27408,2605 Lawndale Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_475,Davanti Enoteca - Little Italy,US,San Diego,CA,92101,1655 India St
+http://ontology.daniel-motz.de/ontology#Pizzeria_870,Famous Famiglia,US,New York,Manhattan,10003,757 Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_509,Seco,US,Pasadena,CA,91101,140 S Lake Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_850,Villaggio Ristorante,US,Whitestone,Malba,11357,150 07 14th Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_257,Mario's Pizza,US,Winston Salem,Hanes,27103,1066 Hanes Mall Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_651,Caf������ Milano,US,Washington,DC,20007,3251 Prospect St N W
+http://ontology.daniel-motz.de/ontology#Pizzeria_467,Casey's General Store,US,Chatsworth,IL,60921,300 E Locust St
+http://ontology.daniel-motz.de/ontology#Pizzeria_52,Nypd Pizza,US,Maitland,FL,32751,400 S Orlando Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_608,Nypd Pizza & Delicatessen,US,Layton,UT,84041,768 W 1425 N
+http://ontology.daniel-motz.de/ontology#Pizzeria_868,Pietro's Restaurante,US,Bossier City,LA,71111,645 Boardwalk Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_485,Gianni's Pizza & Wings,US,Frostburg,MD,21532,6 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_752,Original Italian Pizza,US,Binghamton,Choconut Center,13905,904
+http://ontology.daniel-motz.de/ontology#Pizzeria_395,Francesco's Ristorante & Pizzeria,US,Maitland,FL,32751,400 S Orlando Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_785,Jake's Pizza,US,Elgin,IL,60123,728 W Chicago St
+http://ontology.daniel-motz.de/ontology#Pizzeria_657,Avanti's Italian Restaurant,US,Peoria,IL,61615,4711 N Rockwood Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_392,Italian Jim's Restaurant,US,Edmond,OK,73034,15 S Broadway
+http://ontology.daniel-motz.de/ontology#Pizzeria_585,Mangy Moose Emporium,US,Jackson,Jackson Hole,83001,80 W Broadway Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_693,Pizza Chef,US,Davenport,IA,52804,1904 N Division St
+http://ontology.daniel-motz.de/ontology#Pizzeria_149,Pizza Chef,US,Florence,SC,29501,944 S Irby St
+http://ontology.daniel-motz.de/ontology#Pizzeria_404,The 10th,US,Vail,West Vail,81657,Mid Vail Area On Vail Mtn
+http://ontology.daniel-motz.de/ontology#Pizzeria_85,D. Vino Italian Food and Wine Bar - Monte Carlo,US,Las Vegas,NV,89109,3770 Las Vegas Blvd S
+http://ontology.daniel-motz.de/ontology#Pizzeria_685,Piazza D'angelo,US,Mill Valley,Strawberry Point,94941,22 Miller Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_667,Ken's West End Pizza,US,Portsmouth,NH,3801,801 Islington St
+http://ontology.daniel-motz.de/ontology#Pizzeria_27,Oceano Bistro - Clayton,US,Saint Louis,MO,63105,44 N Brentwood
+http://ontology.daniel-motz.de/ontology#Pizzeria_696,Cafe Taylor,US,Lancaster,SC,29720,126 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_833,Paulo and Bill,US,Shawnee,Shawnee Mission,66217,16501 Midland Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_344,Flatbread Neapolitan Pizzeria,US,Bend,OR,97702,375 S W Powerhouse Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_45,West River Cafe,US,Providence,No Providence,2904,148 W River St
+http://ontology.daniel-motz.de/ontology#Pizzeria_758,Andrea Pizza - Towle Building,US,Minneapolis,MN,55401,330 2nd Ave S
+http://ontology.daniel-motz.de/ontology#Pizzeria_544,Buona Gente,US,Long Beach,Naples,90803,5205 E 2nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_377,Buca Di Beppo - Cedar Park,US,Cedar Park,TX,78613,11200 Lakeline Mall Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_386,Buca Di Beppo - Thousand Oaks,US,Thousand Oaks,CA,91360,205 N Moorpark Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_479,Buca Di Beppo - Wheeling,US,Wheeling,IL,60090,604 N Milwaukee Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_8,Buca Di Beppo - San Jose - Oakridge,US,San Jose,CA,95123,925 Blossom Hill Road Oakridge Mall
+http://ontology.daniel-motz.de/ontology#Pizzeria_194,Buca Di Beppo,US,Saint George,Bloomington Hills,84790,1812 Red Cliffs Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_6,Luke's Locker,US,Spring,TX,77380,9595 Six Pines Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_299,Paloma's Pasta Cafe,US,Bronx,NY,10455,650 Westchester Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_374,Wei Chuan Kitchen,US,Little Ferry,NJ,7643,46 Bergen Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_495,Kennedy Fried Chicken,US,Bronx,NY,10456,638 E 169th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_647,Paesanos Delicatessen,US,Bayonne,Pamrapo,7002,108 Kennedy Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_168,Twisted Olive Cafe,US,Petoskey,MI,49770,319 Bay St
+http://ontology.daniel-motz.de/ontology#Pizzeria_567,Gamberetti's Italian Restaurant,US,Salem,OR,97301,325 High St S E
+http://ontology.daniel-motz.de/ontology#Pizzeria_778,L'allegria Restaurant,US,Madison,NJ,7940,11 Prospect St
+http://ontology.daniel-motz.de/ontology#Pizzeria_453,El Rey Burrito Lounge,US,Montgomery,AL,36106,1031 E Fairview Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_169,Patrizio,US,Cedar Hill,TX,75104,305 W Fm 1382
+http://ontology.daniel-motz.de/ontology#Pizzeria_866,Osteria Procaccini,US,Pennington,NJ,8534,101 Tree Farm Vlg
+http://ontology.daniel-motz.de/ontology#Pizzeria_171,Captains Point,US,Lakeview,OH,43331,305 E Harrison St
+http://ontology.daniel-motz.de/ontology#Pizzeria_520,Cafe Zucchero,US,San Diego,CA,92101,1731 India St
+http://ontology.daniel-motz.de/ontology#Pizzeria_102,The Italian Oven,US,Connellsville,S Connelsvl,15425,623 Highland Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_492,Andy's Pizza Subs,US,Trenton,Brownstown Twp,48183,22118 West Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_631,Di Nardo's Ristorante Italiano,US,Pound Ridge,NY,10576,76 Westchester Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_792,Palisade,US,Seattle,Magnolia,98199,2601 W Marina Place Elliott Bay Marina
+http://ontology.daniel-motz.de/ontology#Pizzeria_376,T.j.'s Hero Shop,US,Mastic Beach,Village Of Mastic Beach,11951,524 Mastic Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_750,Cousins Cafe,US,Lockport,NY,14094,20 Market St
+http://ontology.daniel-motz.de/ontology#Pizzeria_600,Pane E Vino,US,Scottsdale,AZ,85255,8900 E Pinnacle Peak Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_713,Rossini Di Lucca,US,Palatine,IL,60074,1280 E Dundee Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_424,Holy Cannoli,US,Waterville,ME,4901,72 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_188,Franky's,US,Addison,IL,60101,1250 W Lake St
+http://ontology.daniel-motz.de/ontology#Pizzeria_307,Raimondo's Pizza,US,North Aurora,IL,60542,1033 Kilbery Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_310,Lpc - La Pietra Cucina,US,Atlanta,GA,30309,1545 Peachtree St N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_311,Fresco,US,Honolulu,Hono,96815,Rainbow Bazaar Hilton Hawaiian Vlg
+http://ontology.daniel-motz.de/ontology#Pizzeria_346,Harvey's Bistro Park Ave @ Metro West,US,Orlando,FL,32835,6400 Time Square Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_414,Doubletree Hotel Modesto,US,Modesto,CA,95354,1150 9th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_438,Lucia of Greenlake,US,Seattle,Wedgwood,98115,7102 Woodlawn Ave N E
+http://ontology.daniel-motz.de/ontology#Pizzeria_7,Francesca's On Chestnut,US,Chicago,Ontario Street,60611,200 E Chestnut St
+http://ontology.daniel-motz.de/ontology#Pizzeria_524,Derby Grille,US,Berthoud,CO,80513,110 Bunyan Ave Berthoud
+http://ontology.daniel-motz.de/ontology#Pizzeria_542,Buona Vita Pizzeria,US,Dayton,KY,41074,441 6th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_550,Gia Nina's Pizza,US,West Deptford,Woodbury,8096,312 S Evergreen Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_553,Stephi's In Southie,US,Boston,MA,2127,130 Dorchester Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_1,The Brentwood,US,Los Angeles,Brentwood,90049,148 S Barrington Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_598,Two Mamas Gourmet,US,Prescott,AZ,86301,211 N Cortez
+http://ontology.daniel-motz.de/ontology#Pizzeria_605,The Kimberly Hotel,US,New York,Manhattan,10022,145 E 50th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_74,Art Cafe,US,Bethlehem,PA,18015,3610 Route 378
+http://ontology.daniel-motz.de/ontology#Pizzeria_662,Vigilucci's Trattoria Italiana,US,Encinitas,Olivenhain,92024,530 N Coast Hwy 101
+http://ontology.daniel-motz.de/ontology#Pizzeria_699,Francesca's By The River,US,Saint Charles,Valley View,60174,200 S Second St
+http://ontology.daniel-motz.de/ontology#Pizzeria_708,Gourmet Seafood & Grill,US,Schwenksville,Fruitville,19473,4101 W Skippack Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_771,"Salute Trattoria Italiana ��� Red Rock Casino, Resort & Spa",US,Las Vegas,NV,89135,11011 W Charleston Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_793,T-bar Steak & Lounge (upper East Side),US,New York,Nyc,10028,1278 3rd Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_853,The James New York,US,New York,Manhattan,10013,27 Grand St
+http://ontology.daniel-motz.de/ontology#Pizzeria_865,Nostrana,US,Portland,OR,97214,1401 S E Morrison
+http://ontology.daniel-motz.de/ontology#Pizzeria_115,Grassfields Bar & Grill,US,Danvers,MA,1923,Rt 114
+http://ontology.daniel-motz.de/ontology#Pizzeria_17,Joey's N Y Pizza,US,Henderson,NV,89052,11165 S Eastern Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_156,Terramia Ristorante,US,Altamonte Springs,FL,32714,1150 Douglas Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_23,Mediterraneo Ristorante,US,Westminster,MD,21157,22 Englar Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_240,AquaTerra Grille,US,Pearl River,NY,10965,420 N Middletown Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_250,The Tuck Room-north Miami,US,North Miami Beach,Miami,33160,3701 N E 163rd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_262,The Hil,US,Palmetto,GA,30268,9110 Selborne Ln
+http://ontology.daniel-motz.de/ontology#Pizzeria_274,Ynot Italian,US,Chesapeake,VA,23320,1036 Volvo Pkwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_135,John's of 12th Street,US,New York,Manhattan,10003,302 E 12th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_49,Peter Piper Pizza,US,Phoenix,AZ,85044,4940 E Ray Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_613,Peter Piper Pizza,US,El Paso,TX,79925,10501 Gateway Blvd W
+http://ontology.daniel-motz.de/ontology#Pizzeria_325,Town Pizza Deli,US,Reading,MA,1867,648 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_864,Russo's Coal-fired Italian Kitchen,US,Hollywood,Pembroke Pnes,33027,14910 Pines Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_874,Mighty Mick's Pub & Cafe,US,Crown Point,Palmer,46307,10727 Randolph Saint Crown Point In
+http://ontology.daniel-motz.de/ontology#Pizzeria_258,Terrace Bagel,US,Brooklyn,NY,11215,222 And 222a Prospect W
+http://ontology.daniel-motz.de/ontology#Pizzeria_555,Holsteins - The Cosmopolitan of Las Vegas,US,Las Vegas,NV,89109,3708 Las Vegas Blvd S
+http://ontology.daniel-motz.de/ontology#Pizzeria_823,Foodies,US,Fort Montgomery,NY,10922,121 Firefighters Memorial Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_105,Oh' Brian's on the Green,US,Clark,NJ,7066,1300 Raritan Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_674,Sweet Tomatoes,US,South Yarmouth,So Yarmouth,2664,461 Station Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_296,Tea For Two Lite,US,Brooklyn,NY,11229,2811 Nostrand Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_747,Uncle Buck's BBQ,US,Plymouth,PA,18651,361 W Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_239,Francesco Pizzeria and Ristorante,US,Burlington,Burlngtn City,8016,340 W Broad St
+http://ontology.daniel-motz.de/ontology#Pizzeria_147,Medway Village Pizza,US,Medway,MA,2053,135 Village St
+http://ontology.daniel-motz.de/ontology#Pizzeria_725,Mr T's Pizza,US,Bolingbrook,IL,60440,594 N Pinecrest Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_22,Casino's Pizza,US,Addison,IL,60101,190 N Swift Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_410,Primo's Pizza,US,Novi,MI,48375,24330 Meadowbrook Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_446,Pino's On Main Pizza,US,Rockford,IL,61103,2511 N Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_569,Stinger's Cafe,US,Fullerton,CA,92832,Fullerton College
+http://ontology.daniel-motz.de/ontology#Pizzeria_134,Ralph's Grocery Deli,US,Seattle,WA,98121,2035 4th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_447,Delosa's Pizza,US,Saint Petersburg,North Redington Beach,33708,12800 Village Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_56,Carluccio's,US,Philadelphia,PA,19147,932 S 10th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_528,Pipitone Publications Inc,US,Springfield,PA,19064,226 Baltimore Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_67,Michael's Jewish Delicatessen,US,King Of Prussia,PA,19406,130 Town Center Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_577,Harper's Sandwiches Such,US,Middletown,DE,19709,4390 Summit Bridge Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_88,Mi Pal's Deli,US,Philadelphia,PA,19145,2300 S 16th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_808,Nick's Pizzeria,US,Williamstown,Collings Lakes,8094,47 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_827,Concord Pike Steak Shop,US,Chadds Ford,PA,19317,257 W Wilmington Chester Pike
+http://ontology.daniel-motz.de/ontology#Pizzeria_123,Baglianis Food Market,US,Hammonton,Blue Anchor,8037,417 12th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_254,Park Deli Too,US,New Brunswick,NJ,8901,51 Commercial Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_845,Boonies Sports Bar,US,Titusville,PA,16354,122 Diamond St
+http://ontology.daniel-motz.de/ontology#Pizzeria_141,Piero's Pizza Vino,US,Palm Desert,CA,92260,73722 El Paseo
+http://ontology.daniel-motz.de/ontology#Pizzeria_33,Stissing House,US,Pine Plains,Mount Ross,12567,7801 S Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_683,The Lafayette House,US,Lafayette,NJ,7848,100 Route 94
+http://ontology.daniel-motz.de/ontology#Pizzeria_719,Bascettis Italian Grille,US,Dunedin,FL,34698,1568 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_487,Buttermilk Hill Restaruant and Bar,US,Sylacauga,Talladega Springs,35150,300 E 3rd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_339,Pizza Time,US,Pottstown,PA,19464,190 Moser Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_804,Pizza Time,US,Bennettsville,SC,29512,Hwy 15401
+http://ontology.daniel-motz.de/ontology#Pizzeria_541,Jake's Italian Bistro & Brew,US,Yucaipa,CA,92399,12170 4th St
+http://ontology.daniel-motz.de/ontology#Pizzeria_331,Olde World Restaurant,US,North Port,FL,34287,14415 Tamiami Trl
+http://ontology.daniel-motz.de/ontology#Pizzeria_421,Giannotti's Country Manor,US,Fleetwood,Ruscombmanor Twp,19522,3118 Pricetown Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_686,Grotto - The Woodlands,US,Spring,TX,77380,9595 Six Pnes
+http://ontology.daniel-motz.de/ontology#Pizzeria_729,Brio Tuscan Grille - Sarasota - University Town Center,US,Sarasota,FL,34243,190 University Town Center Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_551,Victoria Pub & Grill,US,Ventura,CA,93003,1413 S Victoria Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_820,Cafe Gratitude - Venice,US,Venice,CA,90291,512 Rose Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_89,Rosa Ii Pizzeria & Restaurant,US,Middle Village,Elmhurst,11379,7559 Metropolitan Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_365,Brio Tuscan Grille - Las Vegas - Town Square,US,Las Vegas,NV,89119,6653 S Las Vegas Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_383,Brio Tuscan Grille - North Bethesda,US,Rockville,No Bethesda,20852,20 Paseo Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_384,Brio Tuscan Grille - Danbury - Danbury Fair,US,Danbury,CT,6810,7 Backus Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_391,Brio Tuscan Grille - Marlton - The Promenade At Sagemore,US,Marlton,Evesham Twp,8053,500 S Rt 73 10
+http://ontology.daniel-motz.de/ontology#Pizzeria_398,Brio Tuscan Grille - Columbus - Easton,US,Columbus,OH,43219,3993 Easton Sta
+http://ontology.daniel-motz.de/ontology#Pizzeria_412,Brio Tuscan Grille - Cherokee - Cherokee Casino,US,Cherokee,NC,28719,777 Casino Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_445,Brio Tuscan Grille - Puerto Rico,US,San Juan,Alt De Berwind,924,1000 Mall Of San Juan Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_687,Brio Tuscan Grille - Lombard - The Shops On Butterfield,US,Lombard,IL,60148,330 Yorktown Ctr
+http://ontology.daniel-motz.de/ontology#Pizzeria_838,Brio Tuscan Grille - Murray,US,Salt Lake City,Salt Lake Cty,84107,6173 S State St
+http://ontology.daniel-motz.de/ontology#Pizzeria_19,Brio Tuscan Grille - Southlake - Southlake Town Square,US,Southlake,TX,76092,1431 Plaza Pl
+http://ontology.daniel-motz.de/ontology#Pizzeria_231,Mr. Chung's,US,Morristown,NJ,7960,78 Speedwell Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_158,District - San Francisco,US,San Francisco,CA,94107,216 Townsend St
+http://ontology.daniel-motz.de/ontology#Pizzeria_454,Taste of Tuscany,US,Sacramento,CA,95842,7753 Roseville Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_773,John Harvard's Brewery and Ale House,US,Framingham,Framingham So,1701,1 Worcester Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_289,Papa Murphy's Pizza,US,Bend,OR,97702,61160 S Highway 97
+http://ontology.daniel-motz.de/ontology#Pizzeria_563,Inis Cairde School of Irish Dance,US,Raleigh,NC,27609,6166 Falls Of Neuse Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_745,Pepe Rosso 24,US,Port Washington,Baxter Estates,11050,24 Manorhaven Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_144,Ace's Pizza,US,Paris,TN,38242,1516 E Wood St
+http://ontology.daniel-motz.de/ontology#Pizzeria_273,Ken Stewart's Grille,US,Akron,OH,44313,1970 W Market St
+http://ontology.daniel-motz.de/ontology#Pizzeria_54,Pizza Bistro,US,Massapequa Park,NY,11762,4952 Merrick Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_179,Franklin Giant Grinder Shop,US,Hartford,Htfd,6114,448 Franklin Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_97,Kyoto Sushi,US,Flushing,Queens,11367,153 11 Union Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_252,Harry & Izzy's - Northside,US,Indianapolis,IN,46250,4050 E 82nd St
+http://ontology.daniel-motz.de/ontology#Pizzeria_142,That 70s Dough,US,Fruitport,MI,49415,1720 E Sternberg Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_851,Mc Kitchen,US,Miami,FL,33137,4141 N E 2nd Ave 101a
+http://ontology.daniel-motz.de/ontology#Pizzeria_672,Saltwater Cafe,US,Nokomis,FL,34275,1071 Tamiami Trl N
+http://ontology.daniel-motz.de/ontology#Pizzeria_316,"Anastasia���s Pizza, Oven and Grill",US,Framingham,MA,1702,12 Union Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_64,Knolla's Pizza,US,Wichita,KS,67203,3817 W 13th St N
+http://ontology.daniel-motz.de/ontology#Pizzeria_724,Manny's Pizza Sterling,US,Sterling,IL,61081,312 Locust St
+http://ontology.daniel-motz.de/ontology#Pizzeria_90,Taco Pronto,US,Wichita,KS,67205,8385 W 21st St N
+http://ontology.daniel-motz.de/ontology#Pizzeria_96,Russo's Pizza,US,Wyoming,MI,49519,1760 44th St S W
+http://ontology.daniel-motz.de/ontology#Pizzeria_152,Suds & Suds,US,Corvallis,OR,97330,1045 NW Kings Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_238,Ciddici's,US,Albany,OR,97321,859 Belmont Ave S W
+http://ontology.daniel-motz.de/ontology#Pizzeria_281,Zeppoz,US,Pullman,WA,99163,780 SE Bishop Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_721,Texadelphia,US,Houston,TX,77065,12914 Fm 1960 Rd W
+http://ontology.daniel-motz.de/ontology#Pizzeria_363,East End Kitchen - Permanently Closed,US,New York,Nyc,10028,539 E 81st St
+http://ontology.daniel-motz.de/ontology#Pizzeria_333,The Grille At Shadowrock Sedona Hilton,US,Sedona,AZ,86351-7390,90 Ridge Trail Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_493,Caffe Il Cipresso,US,Tyngsboro,MA,1879,130 Middlesex Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_819,Champney's Restaurant Tavern,US,Deerfield,West Deerfield,1342,81 Old Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_641,Bamcaf��,US,Brooklyn,NY,11217,30 Lafayette Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_124,The Hamilton Inn,US,Hoboken,Uptown,7030,708 Jersey Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_345,Nana Sushi,US,Norfolk,VA,23510,411 Granby St
+http://ontology.daniel-motz.de/ontology#Pizzeria_533,Abyssinia Chinese,US,Columbus,OH,43213,5125 E Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_597,Raku Sakura,US,East Greenwich,RI,2818,148 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_75,Hunan Gourmet,US,Englishtown,NJ,7726,357 Us Highway 9
+http://ontology.daniel-motz.de/ontology#Pizzeria_675,Sokai Sushi Bar - Flagler,US,Miami,FL,33174-1811,10141 W Flagler St
+http://ontology.daniel-motz.de/ontology#Pizzeria_753,Arirang Hibachi Steakhouse,US,Parlin,NJ,8859,986 Route 9 S
+http://ontology.daniel-motz.de/ontology#Pizzeria_847,Ruby Asian Fusion and Sushi Bar,US,Woodbury,NY,11797,8285 Jericho Tpke
+http://ontology.daniel-motz.de/ontology#Pizzeria_12,Satsuma,US,Wilmington,DE,19806,1707 Delaware Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_805,Cinders Wood Fire Grill,US,Mine Hill,NJ,7803,319 Rt
+http://ontology.daniel-motz.de/ontology#Pizzeria_501,Applebee's,US,Fort Lauderdale,Sunrise,33323,12719 W Sunrise Blvd
+http://ontology.daniel-motz.de/ontology#Pizzeria_596,Bagel Street Cafe,US,San Rafael,Santa Venetia,94903,208 Northgate One
+http://ontology.daniel-motz.de/ontology#Pizzeria_748,Casa Giuseppe's Italian Grill,US,Stuart,FL,34997,SE Indian St
+http://ontology.daniel-motz.de/ontology#Pizzeria_91,Tre Restaurant & Wine Bar,US,New York,New York City,10002,173 Ludlow St
+http://ontology.daniel-motz.de/ontology#Pizzeria_841,Applebee's,US,Hickory,Longview,28602,2180 Us Highway 70 S E
+http://ontology.daniel-motz.de/ontology#Pizzeria_153,Philtower Building,US,Tulsa,OK,74103,427 S Boston Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_220,Applebee's,US,Bowie,South Bowie,20716,4100 Crain Hwy
+http://ontology.daniel-motz.de/ontology#Pizzeria_244,Applebee's,US,Houghton,MI,49931,980 Razorback Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_51,Martinizing,US,Arvada,CO,80007,14805 W 64th Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_462,Pasquale's,US,Beckley,WV,25801,224 Harper Park Dr
+http://ontology.daniel-motz.de/ontology#Pizzeria_489,The Pizza Lady,US,Pawcatuck,CT,6379,50 Liberty St
+http://ontology.daniel-motz.de/ontology#Pizzeria_77,Sir Pizza,US,Madison,TN,,Madison St
+http://ontology.daniel-motz.de/ontology#Pizzeria_86,Little Italy Pizza,US,Memphis,Mphs,38104,1495 Union Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_807,Cugino's Pizza,US,Fort Lee,West Fort Lee,7024,2151 Lemoine Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_877,Guidos,US,Ashland,VA,23005,9563 Kings Charter Doctor B
+http://ontology.daniel-motz.de/ontology#Pizzeria_203,Toni's By George,US,Medford,West Medford,2155,399 Main St
+http://ontology.daniel-motz.de/ontology#Pizzeria_210,Donte's Restaurant & Pizza Shop,US,Brookpark,OH,44142,20850 Sheldon Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_279,That Pizza Place,US,Billings,MT,59102,3189 King Ave W
+http://ontology.daniel-motz.de/ontology#Pizzeria_304,Ristorante Via Alto 27,US,Clinton,MA,1510,27 High St
+http://ontology.daniel-motz.de/ontology#Pizzeria_357,Zuccos Restaurant,US,Pittsfield,MA,1201,451 Dalton Ave
+http://ontology.daniel-motz.de/ontology#Pizzeria_637,Astoria Craft,US,Astoria,Queens,11102,1801 26th Rd
+http://ontology.daniel-motz.de/ontology#Pizzeria_79,Lineage - Permanently Closed,US,Brookline,MA,2446,242 Harvard St
+http://ontology.daniel-motz.de/ontology#Pizzeria_626,Sammy's Woodfired Pizza & Grill,US,San Diego,CA,92108,1620 Camino De La Reina
+http://ontology.daniel-motz.de/ontology#Pizza_Hawaii_bei_Mekan,,,,,,
+http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan,Mekan,DE,Jena,,07743,Johannisstraße 12
+http://ontology.daniel-motz.de/ontology#Pizzeria_Mekan,Mekan,DE,Jena,,07743,Johannisstraße 12
