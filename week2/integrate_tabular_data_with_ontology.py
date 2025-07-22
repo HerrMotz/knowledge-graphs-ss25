@@ -1,8 +1,9 @@
 import csv
 import json
 from pathlib import Path
+from datetime import datetime
 
-from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode
+from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, XSD, BNode, URIRef
 from rdflib.collection import Collection
 
 # -------------------------
@@ -14,6 +15,7 @@ DATA_CSV = "data.csv"
 ING_JSONL = "ingredients.jsonl"
 CITY_QID_MAP = "city_qid_map.json"
 ING_QID_MAP = "ingredient_qid_map.json"
+CLUSTER_JSON = "cluster_labels.json"   # <--- NEW
 OUTPUT_TTL = "pizza_data.ttl"
 FUZZY_SCORE_THRESHOLD = 82
 
@@ -23,6 +25,7 @@ FUZZY_SCORE_THRESHOLD = 82
 ONT = Namespace(BASE_URI)
 SCHEMA = Namespace("http://schema.org/")
 WD = Namespace("http://www.wikidata.org/entity/")
+
 
 # -------------------------
 # Fuzzy matcher
@@ -44,12 +47,17 @@ except Exception:  # rapidfuzz not installed
                 best, score = c, s
         return best, score
 
+
 # -------------------------
 # Helpers
 # -------------------------
 
 def norm(s: str) -> str:
     return (s or "").strip().lower()
+
+
+def slug(s: str) -> str:
+    return norm(s).replace(" ", "_").replace("/", "_").replace('"', "").replace("'", "")
 
 
 def rdf_list_members(graph: Graph, node):
@@ -115,7 +123,7 @@ def build_ingredient_lookup(ont_graph: Graph):
         if types & zutat_classes:
             label = ont_graph.value(ind, RDFS.label) or ont_graph.value(ind, SCHEMA.name) or ind.split("#")[-1]
             lookup[norm(str(label))] = ind
-    # some individuals (like Tomate) may miss explicit NamedIndividual type in the file; catch them too
+    # catch individuals without explicit NamedIndividual type
     for ind in ont_graph.subjects(RDF.type, None):
         if ind in lookup:  # already added
             continue
@@ -141,13 +149,116 @@ def ensure_ingredient_node(g: Graph, ont_graph: Graph, name_norm: str, ing_qid_m
     if name_norm in ont_lookup:
         return ont_lookup[name_norm]
 
-    slug = name_norm.replace(" ", "_").replace('"', "").replace("'", "")
-    ing_uri = ONT[slug]
+    slugged = slug(name_norm)
+    ing_uri = ONT[slugged]
     if (ing_uri, RDF.type, ONT.Zutat) not in g:
         g.add((ing_uri, RDF.type, ONT.Zutat))
+        g.add((ing_uri, RDF.type, OWL.NamedIndividual))
+        g.add((ing_uri, RDFS.label, Literal(name_norm)))
         if name_norm in ing_qid_map and ing_qid_map[name_norm].get("qid"):
             g.add((ing_uri, OWL.sameAs, WD[ing_qid_map[name_norm]["qid"]]))
+    # update lookup to avoid dupes later
+    ont_lookup[name_norm] = ing_uri
     return ing_uri
+
+
+# -------------------------
+# Cluster integration
+# -------------------------
+
+def integrate_clusters_into_tbox(
+    g: Graph,
+    ont_graph: Graph,
+    ingredient_lookup: dict,
+    ing_qid_map: dict,
+    cluster_file: str
+):
+    """
+    Adds:
+      - :ExpertIngredientCategory (if missing)
+      - :AIIngredientCategory (subclass of Expert)
+      - For each top category: subclass of :AIIngredientCategory
+      - For each cluster: subclass of that top category, equivalentClass owl:oneOf(list of individuals)
+      - Ingredient individuals (re-used or created)
+    """
+
+    # Load JSON
+    try:
+        clusters_root = json.loads(Path(cluster_file).read_text(encoding="utf-8"))
+        clusters = clusters_root.get("ingredient_level2_clusters", clusters_root)
+    except Exception as e:
+        print(f"[WARN] Could not read {cluster_file}: {e}")
+        return
+
+    timestamp = datetime.now().isoformat()
+    run_tag = f"AI_CLUSTERS_{timestamp}"
+
+    # Ensure meta TBox terms exist
+    def ensure_class(uri: URIRef, label: str):
+        if (uri, RDF.type, OWL.Class) not in g:
+            g.add((uri, RDF.type, OWL.Class))
+            g.add((uri, RDFS.label, Literal(label)))
+        return uri
+
+    def ensure_annot_prop(uri: URIRef):
+        if (uri, RDF.type, OWL.AnnotationProperty) not in g:
+            g.add((uri, RDF.type, OWL.AnnotationProperty))
+
+    # Annotation property to flag AI
+    ensure_annot_prop(ONT.aiGenerated)
+    ensure_annot_prop(ONT.aiRunTag)
+
+    ExpertCat = ensure_class(ONT.ExpertIngredientCategory, "Expert Ingredient Category")
+    AICat = ensure_class(ONT.AIIngredientCategory, "AI Ingredient Category")
+
+    if (AICat, RDFS.subClassOf, ExpertCat) not in g:
+        g.add((AICat, RDFS.subClassOf, ExpertCat))
+
+    # Iterate over top categories
+    for top_label, cluster_dict in clusters.items():
+        top_slug = slug(top_label) + "_ToppingCategory"
+        top_uri = ONT[top_slug]
+
+        # Create top category class (subclass of AICat)
+        if (top_uri, RDF.type, OWL.Class) not in g:
+            g.add((top_uri, RDF.type, OWL.Class))
+        g.add((top_uri, RDFS.subClassOf, AICat))
+        g.add((top_uri, RDFS.label, Literal(f"Ingredient Category: {top_label}", lang="en")))
+        g.add((top_uri, RDFS.comment, Literal("Manual expert category (top level)")))
+        g.add((top_uri, ONT.aiGenerated, Literal(True, datatype=XSD.boolean)))
+        g.add((top_uri, ONT.aiRunTag, Literal(run_tag)))
+
+        # Now per cluster
+        for cluster_label, term_list in cluster_dict.items():
+            cluster_slug = slug(cluster_label) + "_Toppings"
+            cluster_uri = ONT[cluster_slug]
+
+            # class node
+            if (cluster_uri, RDF.type, OWL.Class) not in g:
+                g.add((cluster_uri, RDF.type, OWL.Class))
+            g.add((cluster_uri, RDFS.subClassOf, top_uri))
+            g.add((cluster_uri, RDFS.label, Literal(f"AI cluster ({timestamp}): {cluster_label}", lang="en")))
+            g.add((cluster_uri, RDFS.comment, Literal("AI-generated ingredient cluster")))
+            g.add((cluster_uri, ONT.aiGenerated, Literal(True, datatype=XSD.boolean)))
+            g.add((cluster_uri, ONT.aiRunTag, Literal(run_tag)))
+
+            # ensure ingredient individuals & build owl:oneOf list
+            member_uris = []
+            for raw in term_list:
+                n = norm(raw)
+                if not n:
+                    continue
+                ing_uri = ensure_ingredient_node(g, ont_graph, n, ing_qid_map, ingredient_lookup)
+                member_uris.append(ing_uri)
+
+            # Build equivalentClass owl:oneOf (...)
+            if member_uris:
+                anon = BNode()
+                list_node = BNode()
+                Collection(g, list_node, member_uris)
+                g.add((anon, RDF.type, OWL.Class))
+                g.add((anon, OWL.oneOf, list_node))
+                g.add((cluster_uri, OWL.equivalentClass, anon))
 
 
 # -------------------------
@@ -177,6 +288,18 @@ def main():
     # Index ontology data
     label_to_uri, uri_to_ings = build_pizza_class_index(ont_graph)
     ingredient_lookup = build_ingredient_lookup(ont_graph)
+
+    # --- integrate clusters into TBox before adding pizzas ---
+    integrate_clusters_into_tbox(
+        g=g,
+        ont_graph=ont_graph,
+        ingredient_lookup=ingredient_lookup,
+        ing_qid_map=ing_qid_map,
+        cluster_file=CLUSTER_JSON
+    )
+
+    # Rebuild lookup after adding possible new ingredients
+    ingredient_lookup = build_ingredient_lookup(g)
 
     pizzerias = {}
     pizza_count = 0
@@ -217,7 +340,7 @@ def main():
                         ("state", SCHEMA.addressRegion),
                         ("postcode", SCHEMA.postalCode),
                         ("country", SCHEMA.addressCountry),
-                        ("city", SCHEMA.addressLocality),  # ontology uses addressLocality in the example
+                        ("city", SCHEMA.addressLocality),
                     ]
                     for key, pred in addr_map:
                         val = row.get(key)
