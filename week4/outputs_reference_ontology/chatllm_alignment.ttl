@@ -1,0 +1,55 @@
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cw:    <http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#> .
+@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+
+[] a align:Alignment ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:Pizza ;
+      align:entity2 pizza:Pizza ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:MargheritaPizza ;
+      align:entity2 pizza:Margherita ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:MushroomPizza ;
+      align:entity2 pizza:Mushroom ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:MeatPizza ;
+      align:entity2 pizza:MeatyPizza ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:VegetarianPizza ;
+      align:entity2 pizza:VegetarianPizza ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:AmericanPizza ;
+      align:entity2 pizza:American ;
+      align:relation "=" ;
+      align:measure "1.0"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 cw:SeafoodPizza ;
+      align:entity2 pizza:FruttiDiMare ;
+      align:relation "=" ;
+      align:measure "0.9"^^xsd:float
+   ] .

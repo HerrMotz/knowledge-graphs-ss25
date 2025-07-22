@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>http://www.co-ode.org/ontologies/pizza</onto1>
+	<onto2>http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#</onto2>
+	<uri1>http://www.co-ode.org/ontologies/pizza</uri1>
+	<uri2>http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Country"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#NamedPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9899</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9895</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Food"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Food"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9861</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VegetarianPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9843</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Mushroom"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Sauce"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Cheese"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Mozzarella"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Tomato"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#GreenPepper"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Spinach"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Onion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#JalapenoPepper"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Ham"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Rosemary"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Pepper"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Chicken"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Fruit"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Garlic"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Gorgonzola"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Meat"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Anchovies"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9207</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#SeaFood"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9108</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#American"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#AmericanPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8907</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#MargheritaPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8894</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Artichokes"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8742</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#MeatPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8316</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#GoatCheese"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7251</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Capers"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7039</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Olives"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7039</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#VeganPizza"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6328</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping"/>
+			<entity2 rdf:resource="http://www.semanticweb.org/city/in3067-inm713/2024/restaurants#Parmesan"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6273</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

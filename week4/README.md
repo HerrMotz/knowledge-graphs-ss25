@@ -12,18 +12,31 @@ of _Fruit Topping_ (subclass of _Pizza Topping_), with the only subclass being _
 
 | File                                                  | Description                                                                                                                    |
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [aml_alignment.rdf](/week4/outputs/aml_alignment.rdf)         | Alignment generated using AML                                                                                                  |
-| [own_alignment.ttl](/week4/outputs/own_alignment.ttl)         | Own Alignment using Sequence Matching and ArgosTranslate                                                                       |
-| [bert_raw_mapping.json](/week4/outputs/bert_raw_mapping.json) | BERTMap (as part of the deeponto package, which was extremely difficult to setup and still does not do everything it promises) |
+| [aml_alignment.rdf](/week4/outputs_own_ontology/aml_alignment.rdf)         | Alignment generated using AML                                                                                                  |
+| [own_alignment.ttl](/week4/outputs_own_ontology/own_alignment.ttl)         | Own Alignment using Sequence Matching and ArgosTranslate                                                                       |
+| [bert_raw_mapping.json](/week4/outputs_own_ontology/bert_raw_mapping.json) | BERTMap (as part of the deeponto package, which was extremely difficult to setup and still does not do everything it promises) |
 
-## Command for AgreementMakerLight
+## Prompts/Commands
+### AML
+Automatic Matching
 
-```shell
-java -Xmx8g -jar AML.jar \
-  -s ../week1/ontology.xml \
-  -t existing_pizza.ttl \
-  -o aml_alignment.rdf \
-  -f RDF
+### ChatLLM
+```
+Create an alignment between these two ontologies. Output it in Alignment API RDF format (same as AML/LogMap). Minimal pattern:
+
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+[] a align:Alignment ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <IRI_of_source_class> ;
+      align:entity2 <IRI_of_target_class> ;
+      align:relation "=" ;
+      align:measure "0.87"^^xsd:float
+   
+   
+ ] .
 ```
 
 

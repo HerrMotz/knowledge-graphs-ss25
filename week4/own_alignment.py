@@ -204,7 +204,7 @@ def main() -> None:
     p.add_argument("ns1", help="Namespace IRI of first ontology (ends with # or /)")
     p.add_argument("ontology2", type=Path, help="Second ontology (.owl/.ttl)")
     p.add_argument("ns2", help="Namespace IRI of second ontology (ends with # or /)")
-    p.add_argument("-o", "--output", type=Path, default=Path("outputs/own_alignment.ttl"))
+    p.add_argument("-o", "--output", type=Path, default=Path("outputs_reference_ontology/own_alignment.ttl"))
     p.add_argument("--threshold", type=float, default=0.87)
     args = p.parse_args()
 

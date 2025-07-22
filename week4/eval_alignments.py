@@ -42,10 +42,10 @@ if __name__ == "__main__":
     print("Loaded reference mappings:", len(ref))
 
     systems = {
-        "aml":      "outputs/aml_alignment.rdf",
-        "own":      "outputs/own_alignment_api.ttl",
-        "bertmap":  "outputs/bertmap_alignment.ttl",
-        "chatllm":  "outputs/chatllm_alignment.ttl",
+        "aml":      "outputs_reference_ontology/aml_alignment.rdf",
+        "own":      "outputs_reference_ontology/own_alignment_api.ttl",
+        "bertmap":  "outputs_reference_ontology/bertmap_alignment.ttl",
+        "chatllm":  "outputs_reference_ontology/chatllm_alignment.ttl",
     }
 
     for name, path in systems.items():
