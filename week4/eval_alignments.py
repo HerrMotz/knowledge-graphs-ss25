@@ -38,17 +38,19 @@ def evaluate(candidate, reference):
 
 
 if __name__ == "__main__":
-    ref = normalize(load_alignment("reference/reference-mappings-pizza.ttl"))
+    ref = normalize(load_alignment("./reference/reference-mappings-pizza_align.ttl"))
+    print("Loaded reference mappings:", len(ref))
 
     systems = {
-        "aml": "outputs/aml_alignment.rdf",
-        "own": "outputs/own_alignment.rdf",
-        "bertmap": "outputs/bertmap_alignment.ttl",
-        "chatllm": "outputs/chatllm_alignment.ttl",
+        "aml":      "outputs/aml_alignment.rdf",
+        "own":      "outputs/own_alignment_api.ttl",
+        "bertmap":  "outputs/bertmap_alignment.ttl",
+        "chatllm":  "outputs/chatllm_alignment.ttl",
     }
 
     for name, path in systems.items():
         if not Path(path).exists():
+            print(path)
             continue
         cand = normalize(load_alignment(path))
         tp, fp, fn, p, r, f1 = evaluate(cand, ref)

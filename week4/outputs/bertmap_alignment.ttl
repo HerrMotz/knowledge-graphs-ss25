@@ -1,0 +1,20 @@
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a align:Alignment ;
+    align:map [ a align:Cell ;
+            align:entity1 <http://ontology.daniel-motz.de/ontology#Sauce> ;
+            align:entity2 <http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://ontology.daniel-motz.de/ontology#Laktosefreie> ;
+            align:entity2 <http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ],
+        [ a align:Cell ;
+            align:entity1 <http://ontology.daniel-motz.de/ontology#Pizza> ;
+            align:entity2 <http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> ;
+            align:measure "1.0"^^xsd:float ;
+            align:relation "=" ] .
+
