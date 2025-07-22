@@ -558,37 +558,26 @@ Zwischen "margherita" und "pizza" wurde eine hohe Ähnlichkeit erwartet, da Marg
 
 2. *mozzarella and kaese (cheese)*:
 
-
-
-   - Expected similarity as Mozzarella is a specific type of cheese.
-   - Configuration 1: High cosine similarity at 2000 samples (0.9327), but notably decreases at 10,000 samples (0.6492), suggesting potential dilution of semantic signal with increased sample size.
-   - Configuration 2: Moderate similarity at 2000 samples (0.8048), further decreasing slightly at 10,000 samples (0.6192), reflecting an unexpected weakening of semantic relatedness.
+Auch bei den Begriffen "mozzarella" und "käse" wurde eine hohe Ähnlichkeit erwartet, da Mozzarella eine Käsesorte ist. In Konfiguration 1 wurde bei 2000 Samples eine sehr hohe Cosinus-Ähnlichkeit von 0,9327 gemessen, welche jedoch bei 10.000 Samples deutlich auf 0,6492 absank, möglicherweise ein Hinweis auf eine semantische Verwässerung bei größeren Stichproben. Konfiguration 2 zeigte zunächst eine moderate Ähnlichkeit (0,8048 bei 2000 Samples), die sich bei 10.000 Samples leicht auf 0,6192 verringerte und somit unerwartet schwächer wurde.
 
 3. *zutat (ingredient) and tomatensauce (tomato sauce)*:
 
-   - Strong semantic link anticipated as tomato sauce is clearly an ingredient.
-   - Configuration 1: Cosine similarity slightly decreased from 0.8764 at 2000 samples to 0.6761 at 10,000 samples, possibly indicating context dilution.
-   - Configuration 2: Initially moderate similarity (0.7766) improving slightly at 10,000 samples (0.7864), illustrating greater stability.
+Zwischen den Begriffen "zutat" und "tomatensauce" wurde eine starke semantische Verbindung angenommen, da Tomatensauce eindeutig eine Zutat ist. In Konfiguration 1 sank die Cosinus-Ähnlichkeit leicht von 0,8764 bei 2000 Samples auf 0,6761 bei 10.000 Samples, was möglicherweise auf eine Kontextverwässerung hindeutet. Konfiguration 2 hingegen zeigte zunächst eine moderate Ähnlichkeit (0,7766 bei 2000 Samples), die bei 10.000 Samples leicht auf 0,7864 anstieg und somit eine größere Stabilität veranschaulichte.
 
 === Pairs Expected to Be Dissimilar:
 
 1. *margherita and scampi*:
 
-   - Expected to be semantically distant, Margherita being vegetarian pizza, Scampi seafood.
-   - Configuration 1: High similarity at 2000 samples (0.8932) drastically decreases at 10,000 samples (0.3230), aligning better with expectations at larger samples.
-   - Configuration 2: Moderate similarity at 2000 samples (0.7736), decreasing slightly at 10,000 samples (0.6472), indicating correct semantic distancing at larger samples.
+Bei Begriffspaaren, die semantisch unähnlich sein sollten, wie "margherita" und "scampi", wurde erwartet, dass sie klar voneinander entfernt sind, da Margherita vegetarisch ist, Scampi hingegen Meeresfrüchte beschreibt. Konfiguration 1 zeigte bei 2000 Samples zunächst eine überraschend hohe Ähnlichkeit (0,8932), die aber bei 10.000 Samples deutlich auf 0,3230 sank, was besser zu den ursprünglichen Erwartungen passte. In Konfiguration 2 wurde zunächst eine moderate Ähnlichkeit von 0,7736 gemessen, welche bei 10.000 Samples leicht auf 0,6472 zurückging und somit die erwartete semantische Distanzierung widerspiegelte.
 
 2. *dessert and waehrung (currency)*:
 
-   - Clearly unrelated semantic concepts, thus expecting low similarity.
-   - Both configurations surprisingly showed consistently high similarity (Configuration 1: 0.9882 at 2000 samples, dropping slightly to 0.8470 at 10,000; Configuration 2: 0.9773 and 0.8779 respectively), indicating potential embedding anomalies or common co-occurrence patterns unrelated to actual semantic content.
+Unerwartete Ergebnisse zeigten sich bei den klar semantisch unverbundenen Begriffen "dessert" und "währung", für die eine niedrige Ähnlichkeit erwartet wurde. In beiden Konfigurationen wurde überraschenderweise eine konstant hohe Ähnlichkeit festgestellt (Konfiguration 1: 0,9882 bei 2000 Samples, 0,8470 bei 10.000 Samples; Konfiguration 2: 0,9773 bei 2000 Samples und 0,8779 bei 10.000 Samples). Dies könnte auf Anomalien in den Embeddings oder auf häufige Co-Occurence hinweisen, die nicht unbedingt eine semantische Verbindung widerspiegeln.
 
 3. *breakfast and schinken (ham)*:
 
-   - Initially considered dissimilar; however, contextually breakfast often includes ham, making semantic overlap plausible.
-   - Configuration 1: Initially high similarity at 2000 samples (0.9062), dropping significantly to moderate levels at 10,000 samples (0.4825), showing sensitivity to contextual nuances.
-   - Configuration 2: Consistently high similarity (0.8766 at 2000 samples and 0.9005 at 10,000 samples), suggesting embeddings effectively captured relevant contextual associations.
+Das Begriffspaar "breakfast" und "schinken" habe ich zunächst als unähnlich betrachtet, jedoch ist ein semantischer Zusammenhang aufgrund der Häufigkeit von Schinken zum Frühstück durchaus plausibel. In Konfiguration 1 wurde bei 2000 Samples eine hohe Ähnlichkeit von 0,9062 gemessen, die bei 10.000 Samples deutlich auf moderate 0,4825 sank, was auf eine Kontextsensitivität hinweist. Konfiguration 2 hingegen zeigte eine konsistent hohe Ähnlichkeit (0,8766 bei 2000 Samples, 0,9005 bei 10.000 Samples), was darauf schließen lässt, dass die Embeddings relevante kontextuelle Zusammenhänge effektiv erfasst haben.
 
 === Conclusion:
 
-The embeddings' semantic clarity varied significantly with embedding dimension, random walk depth, and sample size. Configuration 2 generally demonstrated greater semantic stability due to its higher dimensionality and deeper contextual exploration, while Configuration 1 exhibited more variability. Large sample sizes sometimes diluted semantic precision due to increased noise or context ambiguity. Unexpected semantic similarities highlight potential limitations or peculiarities of the embedding method, necessitating careful tuning of embedding parameters.
+Konfiguration 2 hat grundsätzlich bessere semantische Kontingenz gezeigt. Die unerwarteten Embeddings sind mit hoher Wahrscheinlichkeit auf Overfitting bei Konfiguration und Mangel an Daten für diesen Ansatz zurückzuführen. "Mangel an Daten" ist eine allgemeine anwendbare Begründung, jedoch bei der Größe dieses Datensatzes durchaus anwendbar.
