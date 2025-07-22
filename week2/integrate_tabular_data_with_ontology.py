@@ -377,7 +377,7 @@ def main():
                 except (TypeError, ValueError):
                     price_val = None
                 if price_val is not None and price_val != 0:
-                    g.add((menu_item_uri, SCHEMA.price, Literal(price_val, datatype=XSD.decimal)))
+                    g.add((menu_item_uri, SCHEMA.price, Literal(str(price_val), datatype=XSD.decimal, normalize=False)))
                     g.add((menu_item_uri, SCHEMA.priceCurrency, Literal(row.get("currency"))))
 
                 # pizzeria link
@@ -400,6 +400,8 @@ def main():
                         g.add((menu_item_uri, ONT.enthaeltZutat, ing_uri))
 
     g.serialize(OUTPUT_TTL, format="turtle")
+
+
     print(f"Wrote {OUTPUT_TTL}")
 
 
