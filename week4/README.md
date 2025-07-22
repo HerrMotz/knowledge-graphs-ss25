@@ -12,12 +12,22 @@ of _Fruit Topping_ (subclass of _Pizza Topping_), with the only subclass being _
 
 | File                                                  | Description                                                                                                                    |
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [aml_alignment.rdf](/week4/aml_alignment.rdf)         | Alignment generated using AML                                                                                                  |
-| [own_alignment.ttl](/week4/own_alignment.ttl)         | Own Alignment using Sequence Matching and ArgosTranslate                                                                       |
-| [bert_raw_mapping.json](/week4/bert_raw_mapping.json) | BERTMap (as part of the deeponto package, which was extremely difficult to setup and still does not do everything it promises) |
+| [aml_alignment.rdf](/week4/outputs/aml_alignment.rdf)         | Alignment generated using AML                                                                                                  |
+| [own_alignment.ttl](/week4/outputs/own_alignment.ttl)         | Own Alignment using Sequence Matching and ArgosTranslate                                                                       |
+| [bert_raw_mapping.json](/week4/outputs/bert_raw_mapping.json) | BERTMap (as part of the deeponto package, which was extremely difficult to setup and still does not do everything it promises) |
+
+## Command for AgreementMakerLight
+
+```shell
+java -Xmx8g -jar AML.jar \
+  -s ../week1/ontology.xml \
+  -t existing_pizza.ttl \
+  -o aml_alignment.rdf \
+  -f RDF
+```
 
 
-## Example usage
+## Example usage for BERTMap
 > [!TIP]
 > You will first need to make some _manual_ changes to the package `deeponto` to make some fixes.
 > Look in the section below

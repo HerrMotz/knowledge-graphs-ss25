@@ -474,8 +474,16 @@ Die Abfrage ist insofern korrekt, als sie die Anzahl der Pizzerien pro Stadt erm
 Die Aufgabe fordert, dass alle Restaurants, zu denen kein Eintrag zur Postleitzahl existiert, zurückgeliefert werden sollen. Dies ist dadurch erfüllt, dass das `FILTER`-statement alle Einträge aus der Ergbnismenge entfernt, zu denen keine Postleitzahl vermerkt wurde.
 
 = Alignment
+Im Wesentlichen sieht die Aufgabe vor, dass man mit drei verschiedenen Ansätzen ein Alignment von der eigenen zu einer gegebenen Ontologie durchführt und die Ergebnisse des Alignments für die eigene Ontologie evaluiert. Im zweiten Schritt, sollen die Verfahren mit einer Ground Truth getestet werden.
+Ich verwende im Rahmen dieses Projekts vier Verfahren:
 
-#todo[Diskussion der verwendeten Techniken]
++ Eigenes, lexikographisches Alignment mit Übersetzung (`own_alignment.py`)
+
++ AgreementMakerLight
+
++ BERTMap
+
++ ChatGPT 4o (beide Ontologien werden einfach eingegeben)
 
 = Embedding
 
