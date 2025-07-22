@@ -483,7 +483,7 @@ Ich verwende im Rahmen dieses Projekts vier Verfahren:
 
 + BERTMap
 
-+ ChatGPT 4o (beide Ontologien werden einfach eingegeben)
++ ChatGPT o4-mini-high (beide Ontologien werden einfach eingegeben, bei 4o war der Kontext zu klein)
 
 = Embedding
 

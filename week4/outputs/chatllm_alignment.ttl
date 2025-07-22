@@ -1,50 +1,39 @@
-@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
-@prefix dm:    <http://ontology.daniel-motz.de/ontology#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
-###############################################################################
-#  Class alignments
-###############################################################################
-
-# A “Pizza” in the source ontology is the same concept as pizza:Pizza
-dm:Pizza
-    owl:equivalentClass pizza:Pizza .
-
-# A “Zutat” (ingredient) in the source is the same as pizza:Food
-dm:Zutat
-    owl:equivalentClass pizza:Food .
-
-# The different kinds of ingredients map into the pizza topping/base hierarchy:
-
-# Dough (“Teig”) ≡ pizza:PizzaBase
-dm:Teig
-    owl:equivalentClass pizza:PizzaBase .
-
-# Sauce ≡ pizza:SauceTopping
-dm:Sauce
-    owl:equivalentClass pizza:SauceTopping .
-
-# Cheese (“Käse”) ≡ pizza:CheeseTopping
-dm:Käse
-    owl:equivalentClass pizza:CheeseTopping .
-
-# Vegetarian pizzas ≡ pizza:VegetarianPizza
-dm:VegetarischePizza
-    owl:equivalentClass pizza:VegetarianPizza .
-
-# Vegetarian toppings ≡ pizza:VegetarianTopping
-dm:Vegetarische
-    owl:equivalentClass pizza:VegetarianTopping .
-
-###############################################################################
-#  Property alignments
-###############################################################################
-
-# The source’s “enthaeltZutat” (containsIngredient) is the same as pizza:hasIngredient
-dm:enthaeltZutat
-    owl:equivalentProperty pizza:hasIngredient .
-
-# (If you need to align the Pizzeria‐related property, you could add something like
-# dm:gehoertZuPizzeria owl:subPropertyOf <some pizza:property> .  But
-# the standard pizza ontology doesn’t define a “hasPizzeria” property.)
+[] a align:Alignment ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza> ;
+      align:entity2 <http://ontology.daniel-motz.de/ontology#Pizza> ;
+      align:relation "=" ;
+      align:measure "1.00"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping> ;
+      align:entity2 <http://ontology.daniel-motz.de/ontology#Zutat> ;
+      align:relation "=" ;
+      align:measure "0.90"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase> ;
+      align:entity2 <http://ontology.daniel-motz.de/ontology#Teig> ;
+      align:relation "=" ;
+      align:measure "0.90"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient> ;
+      align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+      align:relation "=" ;
+      align:measure "0.85"^^xsd:float
+   ] ;
+   align:map [
+      a align:Cell ;
+      align:entity1 <http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping> ;
+      align:entity2 <http://ontology.daniel-motz.de/ontology#enthaeltZutat> ;
+      align:relation "=" ;
+      align:measure "0.85"^^xsd:float
+   ] .
