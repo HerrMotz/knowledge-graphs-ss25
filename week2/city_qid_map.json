@@ -1,0 +1,2694 @@
+{
+  "Abington": {
+    "qid": "Q4054752",
+    "locked": false
+  },
+  "Addison": {
+    "qid": null,
+    "locked": false
+  },
+  "Akron": {
+    "qid": "Q163132",
+    "locked": false
+  },
+  "Alachua": {
+    "qid": null,
+    "locked": false
+  },
+  "Alameda": {
+    "qid": "Q4705846",
+    "locked": false
+  },
+  "Albany": {
+    "qid": "Q704257",
+    "locked": false
+  },
+  "Albuquerque": {
+    "qid": "Q34804",
+    "locked": false
+  },
+  "Aliso Viejo": {
+    "qid": null,
+    "locked": false
+  },
+  "Allen": {
+    "qid": "Q2837875",
+    "locked": false
+  },
+  "Allentown": {
+    "qid": "Q1085875",
+    "locked": false
+  },
+  "Altamonte Springs": {
+    "qid": null,
+    "locked": false
+  },
+  "Americus": {
+    "qid": null,
+    "locked": false
+  },
+  "Amherst": {
+    "qid": "Q470594",
+    "locked": false
+  },
+  "Amsterdam": {
+    "qid": "Q3152900",
+    "locked": false
+  },
+  "Andover": {
+    "qid": "Q492805",
+    "locked": false
+  },
+  "Aptos": {
+    "qid": null,
+    "locked": false
+  },
+  "Arcadia": {
+    "qid": "Q1752035",
+    "locked": false
+  },
+  "Arlington": {
+    "qid": "Q2025520",
+    "locked": false
+  },
+  "Arnold": {
+    "qid": null,
+    "locked": false
+  },
+  "Arvada": {
+    "qid": "Q590849",
+    "locked": false
+  },
+  "Ashland": {
+    "qid": "Q2866526",
+    "locked": false
+  },
+  "Astoria": {
+    "qid": null,
+    "locked": false
+  },
+  "Athens": {
+    "qid": "Q203263",
+    "locked": false
+  },
+  "Atlanta": {
+    "qid": "Q4815973",
+    "locked": false
+  },
+  "Auburn": {
+    "qid": "Q1922703",
+    "locked": false
+  },
+  "Audubon": {
+    "qid": "Q1085019",
+    "locked": false
+  },
+  "Augusta": {
+    "qid": "Q81200",
+    "locked": false
+  },
+  "Aurora": {
+    "qid": "Q266438",
+    "locked": false
+  },
+  "Austin": {
+    "qid": "Q2872106",
+    "locked": false
+  },
+  "Ayer": {
+    "qid": "Q2802663",
+    "locked": false
+  },
+  "Babylon": {
+    "qid": "Q1750870",
+    "locked": false
+  },
+  "Bakersfield": {
+    "qid": "Q1961737",
+    "locked": false
+  },
+  "Baltimore": {
+    "qid": "Q805740",
+    "locked": false
+  },
+  "Barboursville": {
+    "qid": null,
+    "locked": false
+  },
+  "Barrington": {
+    "qid": "Q1086411",
+    "locked": false
+  },
+  "Bartow": {
+    "qid": "Q31905808",
+    "locked": false
+  },
+  "Bayonne": {
+    "qid": "Q122589495",
+    "locked": false
+  },
+  "Beaverton": {
+    "qid": "Q4878266",
+    "locked": false
+  },
+  "Beckley": {
+    "qid": null,
+    "locked": false
+  },
+  "Belleview": {
+    "qid": "Q4883828",
+    "locked": false
+  },
+  "Bellevue": {
+    "qid": "Q214164",
+    "locked": false
+  },
+  "Bellmawr": {
+    "qid": null,
+    "locked": false
+  },
+  "Bend": {
+    "qid": "Q497793",
+    "locked": false
+  },
+  "Bennettsville": {
+    "qid": null,
+    "locked": false
+  },
+  "Bentonville": {
+    "qid": null,
+    "locked": false
+  },
+  "Berkeley Heights": {
+    "qid": null,
+    "locked": false
+  },
+  "Berlin": {
+    "qid": "Q614184",
+    "locked": false
+  },
+  "Berthoud": {
+    "qid": null,
+    "locked": false
+  },
+  "Berwyn": {
+    "qid": "Q100251905",
+    "locked": false
+  },
+  "Bethlehem": {
+    "qid": "Q755397",
+    "locked": false
+  },
+  "Billings": {
+    "qid": "Q166304",
+    "locked": false
+  },
+  "Binghamton": {
+    "qid": null,
+    "locked": false
+  },
+  "Birmingham": {
+    "qid": "Q79867",
+    "locked": false
+  },
+  "Blacksburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Bloomfield": {
+    "qid": "Q2907034",
+    "locked": false
+  },
+  "Bloomfield Hills": {
+    "qid": null,
+    "locked": false
+  },
+  "Bloomington": {
+    "qid": "Q4928330",
+    "locked": false
+  },
+  "Blowing Rock": {
+    "qid": "Q122572541",
+    "locked": false
+  },
+  "Boise": {
+    "qid": "Q35775",
+    "locked": false
+  },
+  "Bolingbrook": {
+    "qid": null,
+    "locked": false
+  },
+  "Bonney Lake": {
+    "qid": null,
+    "locked": false
+  },
+  "Bossier City": {
+    "qid": null,
+    "locked": false
+  },
+  "Boston": {
+    "qid": "Q311975",
+    "locked": false
+  },
+  "Bothell": {
+    "qid": null,
+    "locked": false
+  },
+  "Bowie": {
+    "qid": null,
+    "locked": false
+  },
+  "Bowling Green": {
+    "qid": null,
+    "locked": false
+  },
+  "Bozeman": {
+    "qid": null,
+    "locked": false
+  },
+  "Bradenton Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "Brentwood": {
+    "qid": "Q909993",
+    "locked": false
+  },
+  "Briarcliff Manor": {
+    "qid": null,
+    "locked": false
+  },
+  "Bristol": {
+    "qid": "Q755149",
+    "locked": false
+  },
+  "Bronson": {
+    "qid": null,
+    "locked": false
+  },
+  "Bronx": {
+    "qid": null,
+    "locked": false
+  },
+  "Brookline": {
+    "qid": "Q49142",
+    "locked": false
+  },
+  "Brooklyn": {
+    "qid": "Q929327",
+    "locked": false
+  },
+  "Brookpark": {
+    "qid": "Q122594035",
+    "locked": false
+  },
+  "Broussard": {
+    "qid": "Q122592761",
+    "locked": false
+  },
+  "Broward County": {
+    "qid": null,
+    "locked": false
+  },
+  "Bucyrus": {
+    "qid": "Q122551903",
+    "locked": false
+  },
+  "Buffalo": {
+    "qid": "Q3473025",
+    "locked": false
+  },
+  "Buffalo Grove": {
+    "qid": null,
+    "locked": false
+  },
+  "Burlington": {
+    "qid": "Q2928514",
+    "locked": false
+  },
+  "Butler": {
+    "qid": "Q1086677",
+    "locked": false
+  },
+  "Cabot": {
+    "qid": null,
+    "locked": false
+  },
+  "Cadillac": {
+    "qid": "Q34789154",
+    "locked": false
+  },
+  "Califon": {
+    "qid": null,
+    "locked": false
+  },
+  "Camdenton": {
+    "qid": null,
+    "locked": false
+  },
+  "Campbell Hall": {
+    "qid": "Q123206904",
+    "locked": false
+  },
+  "Canoga Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Canonsburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Cave Creek": {
+    "qid": null,
+    "locked": false
+  },
+  "Cedar City": {
+    "qid": null,
+    "locked": false
+  },
+  "Cedar Hill": {
+    "qid": "Q5759927",
+    "locked": false
+  },
+  "Cedar Park": {
+    "qid": "Q122594259",
+    "locked": false
+  },
+  "Celina": {
+    "qid": "Q620310",
+    "locked": false
+  },
+  "Centereach": {
+    "qid": null,
+    "locked": false
+  },
+  "Chadds Ford": {
+    "qid": "Q122550749",
+    "locked": false
+  },
+  "Chandler": {
+    "qid": "Q49272",
+    "locked": false
+  },
+  "Charleston": {
+    "qid": "Q2960780",
+    "locked": false
+  },
+  "Charlotte": {
+    "qid": "Q16565",
+    "locked": false
+  },
+  "Chatham": {
+    "qid": "Q729006",
+    "locked": false
+  },
+  "Chatsworth": {
+    "qid": "Q575855",
+    "locked": false
+  },
+  "Cherokee": {
+    "qid": "Q5092112",
+    "locked": false
+  },
+  "Cherry Hill": {
+    "qid": "Q5092370",
+    "locked": false
+  },
+  "Cherryville": {
+    "qid": "Q2962785",
+    "locked": false
+  },
+  "Chesapeake": {
+    "qid": "Q1028053",
+    "locked": false
+  },
+  "Chesterfield": {
+    "qid": "Q1924516",
+    "locked": false
+  },
+  "Chevy Chase": {
+    "qid": "Q114958293",
+    "locked": false
+  },
+  "Chicago": {
+    "qid": "Q1297",
+    "locked": false
+  },
+  "Chicago Ridge": {
+    "qid": null,
+    "locked": false
+  },
+  "Chickasha": {
+    "qid": null,
+    "locked": false
+  },
+  "Chicopee": {
+    "qid": "Q122565533",
+    "locked": false
+  },
+  "Cincinnati": {
+    "qid": "Q43196",
+    "locked": false
+  },
+  "Clark": {
+    "qid": "Q1086117",
+    "locked": false
+  },
+  "Clearwater": {
+    "qid": "Q244146",
+    "locked": false
+  },
+  "Cleveland": {
+    "qid": "Q37320",
+    "locked": false
+  },
+  "Cliffside Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Clifton": {
+    "qid": "Q2979102",
+    "locked": false
+  },
+  "Clifton Park": {
+    "qid": "Q123206185",
+    "locked": false
+  },
+  "Clinton": {
+    "qid": "Q1101670",
+    "locked": false
+  },
+  "Cockeysville": {
+    "qid": null,
+    "locked": false
+  },
+  "Coeur D Alene": {
+    "qid": null,
+    "locked": false
+  },
+  "College Station": {
+    "qid": "Q695511",
+    "locked": false
+  },
+  "Collegeville": {
+    "qid": "Q25001242",
+    "locked": false
+  },
+  "Colorado Springs": {
+    "qid": "Q49258",
+    "locked": false
+  },
+  "Columbia": {
+    "qid": "Q397905",
+    "locked": false
+  },
+  "Columbus": {
+    "qid": "Q239870",
+    "locked": false
+  },
+  "Connellsville": {
+    "qid": null,
+    "locked": false
+  },
+  "Coraopolis": {
+    "qid": "Q122568174",
+    "locked": false
+  },
+  "Corona": {
+    "qid": "Q494707",
+    "locked": false
+  },
+  "Corvallis": {
+    "qid": null,
+    "locked": false
+  },
+  "Costa Mesa": {
+    "qid": "Q499196",
+    "locked": false
+  },
+  "Covington": {
+    "qid": "Q2118826",
+    "locked": false
+  },
+  "Crown Point": {
+    "qid": null,
+    "locked": false
+  },
+  "Daleville": {
+    "qid": "Q935402",
+    "locked": false
+  },
+  "Dallas": {
+    "qid": "Q16557",
+    "locked": false
+  },
+  "Danbury": {
+    "qid": null,
+    "locked": false
+  },
+  "Danvers": {
+    "qid": "Q5221324",
+    "locked": false
+  },
+  "Danville": {
+    "qid": "Q5221330",
+    "locked": false
+  },
+  "Davenport": {
+    "qid": "Q26887",
+    "locked": false
+  },
+  "Dayton": {
+    "qid": "Q1020984",
+    "locked": false
+  },
+  "Dearborn": {
+    "qid": null,
+    "locked": false
+  },
+  "Decatur": {
+    "qid": "Q2626712",
+    "locked": false
+  },
+  "Deerfield": {
+    "qid": "Q5250883",
+    "locked": false
+  },
+  "Deland": {
+    "qid": null,
+    "locked": false
+  },
+  "Dennis Port": {
+    "qid": null,
+    "locked": false
+  },
+  "Denver": {
+    "qid": "Q1959011",
+    "locked": false
+  },
+  "Denville": {
+    "qid": "Q122567478",
+    "locked": false
+  },
+  "Des Moines": {
+    "qid": "Q39709",
+    "locked": false
+  },
+  "Desert Hot Springs": {
+    "qid": null,
+    "locked": false
+  },
+  "Destin": {
+    "qid": null,
+    "locked": false
+  },
+  "Detroit": {
+    "qid": "Q2738868",
+    "locked": false
+  },
+  "Detroit Lakes": {
+    "qid": null,
+    "locked": false
+  },
+  "Dinuba": {
+    "qid": null,
+    "locked": false
+  },
+  "Dover": {
+    "qid": "Q179224",
+    "locked": false
+  },
+  "Downingtown": {
+    "qid": null,
+    "locked": false
+  },
+  "Drexel Hill": {
+    "qid": "Q1132763",
+    "locked": false
+  },
+  "Duluth": {
+    "qid": null,
+    "locked": false
+  },
+  "Duncan": {
+    "qid": null,
+    "locked": false
+  },
+  "Dunedin": {
+    "qid": "Q133073",
+    "locked": false
+  },
+  "E Windsor": {
+    "qid": null,
+    "locked": false
+  },
+  "Eagle": {
+    "qid": "Q1938713",
+    "locked": false
+  },
+  "East Brunswick": {
+    "qid": null,
+    "locked": false
+  },
+  "East Granby": {
+    "qid": null,
+    "locked": false
+  },
+  "East Greenwich": {
+    "qid": null,
+    "locked": false
+  },
+  "East Hartford": {
+    "qid": null,
+    "locked": false
+  },
+  "Edgewater": {
+    "qid": "Q3047558",
+    "locked": false
+  },
+  "Edmond": {
+    "qid": null,
+    "locked": false
+  },
+  "El Paso": {
+    "qid": "Q1324441",
+    "locked": false
+  },
+  "El Segundo": {
+    "qid": "Q20219019",
+    "locked": false
+  },
+  "Elgin": {
+    "qid": "Q841074",
+    "locked": false
+  },
+  "Elkhorn": {
+    "qid": "Q967547",
+    "locked": false
+  },
+  "Ellicott City": {
+    "qid": null,
+    "locked": false
+  },
+  "Elyria": {
+    "qid": null,
+    "locked": false
+  },
+  "Encinitas": {
+    "qid": null,
+    "locked": false
+  },
+  "Endicott": {
+    "qid": "Q2736433",
+    "locked": false
+  },
+  "Englewood": {
+    "qid": "Q49349734",
+    "locked": false
+  },
+  "Englishtown": {
+    "qid": "Q939154",
+    "locked": false
+  },
+  "Ephrata": {
+    "qid": "Q5382367",
+    "locked": false
+  },
+  "Erie": {
+    "qid": "Q234061",
+    "locked": false
+  },
+  "Essex": {
+    "qid": "Q559147",
+    "locked": false
+  },
+  "Evergreen": {
+    "qid": "Q3495113",
+    "locked": false
+  },
+  "Evergreen Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Excelsior": {
+    "qid": "Q3642344",
+    "locked": false
+  },
+  "Fair Lawn": {
+    "qid": null,
+    "locked": false
+  },
+  "Fairbanks": {
+    "qid": "Q5430002",
+    "locked": false
+  },
+  "Fairfax": {
+    "qid": "Q29623803",
+    "locked": false
+  },
+  "Fairfield": {
+    "qid": "Q323432",
+    "locked": false
+  },
+  "Falmouth": {
+    "qid": "Q291134",
+    "locked": false
+  },
+  "Farmerville": {
+    "qid": null,
+    "locked": false
+  },
+  "Farmington": {
+    "qid": "Q2076191",
+    "locked": false
+  },
+  "Federal Way": {
+    "qid": null,
+    "locked": false
+  },
+  "Fenton": {
+    "qid": "Q580766",
+    "locked": false
+  },
+  "Findlay": {
+    "qid": "Q14875028",
+    "locked": false
+  },
+  "Fishers": {
+    "qid": null,
+    "locked": false
+  },
+  "Flagstaff": {
+    "qid": "Q1866599",
+    "locked": false
+  },
+  "Flat Rock": {
+    "qid": null,
+    "locked": false
+  },
+  "Fleetwood": {
+    "qid": "Q1012507",
+    "locked": false
+  },
+  "Florence": {
+    "qid": "Q2044",
+    "locked": false
+  },
+  "Flushing": {
+    "qid": "Q33512335",
+    "locked": false
+  },
+  "Folsom": {
+    "qid": null,
+    "locked": false
+  },
+  "Fords": {
+    "qid": "Q619523",
+    "locked": false
+  },
+  "Fort Collins": {
+    "qid": "Q490732",
+    "locked": false
+  },
+  "Fort Lauderdale": {
+    "qid": null,
+    "locked": false
+  },
+  "Fort Lee": {
+    "qid": "Q49350368",
+    "locked": false
+  },
+  "Fort Montgomery": {
+    "qid": null,
+    "locked": false
+  },
+  "Fort Myers": {
+    "qid": "Q2443674",
+    "locked": false
+  },
+  "Fort Smith": {
+    "qid": "Q686415",
+    "locked": false
+  },
+  "Fort Worth": {
+    "qid": "Q16558",
+    "locked": false
+  },
+  "Framingham": {
+    "qid": "Q49350460",
+    "locked": false
+  },
+  "Frankfort": {
+    "qid": "Q3642328",
+    "locked": false
+  },
+  "Franklin": {
+    "qid": "Q5491176",
+    "locked": false
+  },
+  "Frederick": {
+    "qid": "Q165941",
+    "locked": false
+  },
+  "Freeport": {
+    "qid": "Q867573",
+    "locked": false
+  },
+  "Fremont": {
+    "qid": "Q49220",
+    "locked": false
+  },
+  "Fresno": {
+    "qid": "Q23691511",
+    "locked": false
+  },
+  "Front Royal": {
+    "qid": "Q122593647",
+    "locked": false
+  },
+  "Frostburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Fruitport": {
+    "qid": "Q2720533",
+    "locked": false
+  },
+  "Fullerton": {
+    "qid": "Q494723",
+    "locked": false
+  },
+  "Gainesville": {
+    "qid": "Q487999",
+    "locked": false
+  },
+  "Galena": {
+    "qid": "Q10884851",
+    "locked": false
+  },
+  "Gardner": {
+    "qid": null,
+    "locked": false
+  },
+  "Garfield": {
+    "qid": "Q1512154",
+    "locked": false
+  },
+  "Garland": {
+    "qid": "Q5523400",
+    "locked": false
+  },
+  "Gatlinburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Glendale": {
+    "qid": "Q485716",
+    "locked": false
+  },
+  "Glenview": {
+    "qid": "Q5569384",
+    "locked": false
+  },
+  "Godfrey": {
+    "qid": "Q5576365",
+    "locked": false
+  },
+  "Grand Forks": {
+    "qid": null,
+    "locked": false
+  },
+  "Grand Island": {
+    "qid": null,
+    "locked": false
+  },
+  "Grand Prairie": {
+    "qid": "Q51694",
+    "locked": false
+  },
+  "Grand Rapids": {
+    "qid": "Q184587",
+    "locked": false
+  },
+  "Granger": {
+    "qid": "Q15222039",
+    "locked": false
+  },
+  "Grapevine": {
+    "qid": null,
+    "locked": false
+  },
+  "Great Barrington": {
+    "qid": null,
+    "locked": false
+  },
+  "Green Bay": {
+    "qid": null,
+    "locked": false
+  },
+  "Greensboro": {
+    "qid": "Q5604470",
+    "locked": false
+  },
+  "Greenville": {
+    "qid": "Q976490",
+    "locked": false
+  },
+  "Grinnell": {
+    "qid": null,
+    "locked": false
+  },
+  "Gunnison": {
+    "qid": null,
+    "locked": false
+  },
+  "Hackettstown": {
+    "qid": null,
+    "locked": false
+  },
+  "Hadley": {
+    "qid": null,
+    "locked": false
+  },
+  "Hamden": {
+    "qid": null,
+    "locked": false
+  },
+  "Hamilton": {
+    "qid": "Q133116",
+    "locked": false
+  },
+  "Hammonton": {
+    "qid": null,
+    "locked": false
+  },
+  "Harleysville": {
+    "qid": "Q122594136",
+    "locked": false
+  },
+  "Harrisonburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Hartford": {
+    "qid": "Q33486",
+    "locked": false
+  },
+  "Harvey": {
+    "qid": "Q130624",
+    "locked": false
+  },
+  "Hattiesburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Hazlet": {
+    "qid": "Q28103400",
+    "locked": false
+  },
+  "Henderson": {
+    "qid": "Q3784796",
+    "locked": false
+  },
+  "Hendersonville": {
+    "qid": "Q16892254",
+    "locked": false
+  },
+  "Henrico": {
+    "qid": null,
+    "locked": false
+  },
+  "Hermosa Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "Hernando": {
+    "qid": "Q5742232",
+    "locked": false
+  },
+  "Hershey": {
+    "qid": "Q12891535",
+    "locked": false
+  },
+  "Hickory": {
+    "qid": "Q5751223",
+    "locked": false
+  },
+  "Highwood": {
+    "qid": "Q122539170",
+    "locked": false
+  },
+  "Hilliard": {
+    "qid": null,
+    "locked": false
+  },
+  "Hilton Head Island": {
+    "qid": null,
+    "locked": false
+  },
+  "Hoboken": {
+    "qid": null,
+    "locked": false
+  },
+  "Hollister": {
+    "qid": "Q2837518",
+    "locked": false
+  },
+  "Hollywood": {
+    "qid": "Q234453",
+    "locked": false
+  },
+  "Homer Glen": {
+    "qid": null,
+    "locked": false
+  },
+  "Honolulu": {
+    "qid": "Q18094",
+    "locked": false
+  },
+  "Hopkinton": {
+    "qid": null,
+    "locked": false
+  },
+  "Houghton": {
+    "qid": "Q2326854",
+    "locked": false
+  },
+  "Houston": {
+    "qid": "Q2230568",
+    "locked": false
+  },
+  "Huntington Beach": {
+    "qid": "Q5917",
+    "locked": false
+  },
+  "Hyannis": {
+    "qid": "Q122596042",
+    "locked": false
+  },
+  "Hyde Park": {
+    "qid": "Q15227306",
+    "locked": false
+  },
+  "Idaho Springs": {
+    "qid": null,
+    "locked": false
+  },
+  "Indianapolis": {
+    "qid": "Q6346",
+    "locked": false
+  },
+  "Inver Grove Heights": {
+    "qid": null,
+    "locked": false
+  },
+  "Irvine": {
+    "qid": "Q1774629",
+    "locked": false
+  },
+  "Isanti": {
+    "qid": "Q2887",
+    "locked": false
+  },
+  "Islip": {
+    "qid": null,
+    "locked": false
+  },
+  "Jackson": {
+    "qid": "Q2890672",
+    "locked": false
+  },
+  "Jacksonville": {
+    "qid": "Q25019041",
+    "locked": false
+  },
+  "Jamaica": {
+    "qid": null,
+    "locked": false
+  },
+  "Jefferson City": {
+    "qid": null,
+    "locked": false
+  },
+  "Johns Island": {
+    "qid": null,
+    "locked": false
+  },
+  "Johnstown": {
+    "qid": "Q2084124",
+    "locked": false
+  },
+  "Joliet": {
+    "qid": "Q141760",
+    "locked": false
+  },
+  "Jonesboro": {
+    "qid": "Q100252346",
+    "locked": false
+  },
+  "Joppa": {
+    "qid": "Q180294",
+    "locked": false
+  },
+  "Justice": {
+    "qid": null,
+    "locked": false
+  },
+  "Kamuela": {
+    "qid": null,
+    "locked": false
+  },
+  "Kansas City": {
+    "qid": "Q486472",
+    "locked": false
+  },
+  "Katy": {
+    "qid": null,
+    "locked": false
+  },
+  "Keller": {
+    "qid": "Q3814382",
+    "locked": false
+  },
+  "Kennebunk": {
+    "qid": "Q1994665",
+    "locked": false
+  },
+  "Kennesaw": {
+    "qid": "Q122540151",
+    "locked": false
+  },
+  "Kensington": {
+    "qid": "Q992432",
+    "locked": false
+  },
+  "Kent": {
+    "qid": "Q3708897",
+    "locked": false
+  },
+  "Kernersville": {
+    "qid": null,
+    "locked": false
+  },
+  "King Of Prussia": {
+    "qid": null,
+    "locked": false
+  },
+  "Kingston": {
+    "qid": "Q202973",
+    "locked": false
+  },
+  "Kingwood": {
+    "qid": "Q122557230",
+    "locked": false
+  },
+  "Kinston": {
+    "qid": "Q34692",
+    "locked": false
+  },
+  "Kirkland": {
+    "qid": "Q1362758",
+    "locked": false
+  },
+  "Kissimmee": {
+    "qid": null,
+    "locked": false
+  },
+  "Laconia": {
+    "qid": "Q6468794",
+    "locked": false
+  },
+  "Lafayette": {
+    "qid": "Q128891",
+    "locked": false
+  },
+  "Lafayette Hill": {
+    "qid": null,
+    "locked": false
+  },
+  "Laguna Niguel": {
+    "qid": null,
+    "locked": false
+  },
+  "Lake Forest": {
+    "qid": "Q115666690",
+    "locked": false
+  },
+  "Lake Havasu City": {
+    "qid": null,
+    "locked": false
+  },
+  "Lake Ozark": {
+    "qid": null,
+    "locked": false
+  },
+  "Lakeside": {
+    "qid": "Q14875607",
+    "locked": false
+  },
+  "Lakeview": {
+    "qid": "Q6479210",
+    "locked": false
+  },
+  "Lancaster": {
+    "qid": "Q205905",
+    "locked": false
+  },
+  "Langley": {
+    "qid": null,
+    "locked": false
+  },
+  "Lansdale": {
+    "qid": null,
+    "locked": false
+  },
+  "Las Vegas": {
+    "qid": "Q17636479",
+    "locked": false
+  },
+  "Lathrop": {
+    "qid": null,
+    "locked": false
+  },
+  "Laurel": {
+    "qid": "Q755128",
+    "locked": false
+  },
+  "Lawrence Township": {
+    "qid": null,
+    "locked": false
+  },
+  "Lawrenceville": {
+    "qid": null,
+    "locked": false
+  },
+  "Layton": {
+    "qid": "Q6505706",
+    "locked": false
+  },
+  "Lehigh Acres": {
+    "qid": null,
+    "locked": false
+  },
+  "Lexington": {
+    "qid": "Q49241",
+    "locked": false
+  },
+  "Lincoln": {
+    "qid": "Q180057",
+    "locked": false
+  },
+  "Lisle": {
+    "qid": "Q6558990",
+    "locked": false
+  },
+  "Little Falls": {
+    "qid": null,
+    "locked": false
+  },
+  "Little Ferry": {
+    "qid": null,
+    "locked": false
+  },
+  "Littleton": {
+    "qid": "Q4263896",
+    "locked": false
+  },
+  "Lockport": {
+    "qid": "Q6665728",
+    "locked": false
+  },
+  "Locust": {
+    "qid": null,
+    "locked": false
+  },
+  "Lombard": {
+    "qid": null,
+    "locked": false
+  },
+  "Lompoc": {
+    "qid": "Q122539015",
+    "locked": false
+  },
+  "Long Beach": {
+    "qid": "Q6672259",
+    "locked": false
+  },
+  "Long Island City": {
+    "qid": null,
+    "locked": false
+  },
+  "Los Angeles": {
+    "qid": "Q16910",
+    "locked": false
+  },
+  "Louisville": {
+    "qid": "Q20714826",
+    "locked": false
+  },
+  "Loveland": {
+    "qid": "Q590147",
+    "locked": false
+  },
+  "Luzerne": {
+    "qid": "Q49356816",
+    "locked": false
+  },
+  "Lynden": {
+    "qid": null,
+    "locked": false
+  },
+  "Lyons": {
+    "qid": "Q456",
+    "locked": false
+  },
+  "Macomb": {
+    "qid": null,
+    "locked": false
+  },
+  "Madison": {
+    "qid": "Q1883378",
+    "locked": false
+  },
+  "Mahopac": {
+    "qid": "Q122557760",
+    "locked": false
+  },
+  "Maitland": {
+    "qid": "Q606900",
+    "locked": false
+  },
+  "Manassas": {
+    "qid": null,
+    "locked": false
+  },
+  "Manchester": {
+    "qid": "Q66568",
+    "locked": false
+  },
+  "Mankato": {
+    "qid": null,
+    "locked": false
+  },
+  "Mansfield": {
+    "qid": "Q937718",
+    "locked": false
+  },
+  "Maple Shade": {
+    "qid": null,
+    "locked": false
+  },
+  "Marblehead": {
+    "qid": "Q122547032",
+    "locked": false
+  },
+  "Margate City": {
+    "qid": null,
+    "locked": false
+  },
+  "Marina Del Rey": {
+    "qid": null,
+    "locked": false
+  },
+  "Marlborough": {
+    "qid": "Q1626326",
+    "locked": false
+  },
+  "Marlton": {
+    "qid": "Q122563468",
+    "locked": false
+  },
+  "Marquette": {
+    "qid": "Q2360162",
+    "locked": false
+  },
+  "Marshalltown": {
+    "qid": "Q913495",
+    "locked": false
+  },
+  "Marysville": {
+    "qid": "Q1906504",
+    "locked": false
+  },
+  "Massapequa Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Mastic Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "Matthews": {
+    "qid": "Q1649910",
+    "locked": false
+  },
+  "Mc Cordsville": {
+    "qid": null,
+    "locked": false
+  },
+  "Mcallen": {
+    "qid": "Q51698",
+    "locked": false
+  },
+  "Mcdonough": {
+    "qid": null,
+    "locked": false
+  },
+  "Mckeesport": {
+    "qid": null,
+    "locked": false
+  },
+  "Mechanicsburg": {
+    "qid": "Q3293366",
+    "locked": false
+  },
+  "Medford": {
+    "qid": "Q6805296",
+    "locked": false
+  },
+  "Medina": {
+    "qid": "Q2236684",
+    "locked": false
+  },
+  "Medway": {
+    "qid": null,
+    "locked": false
+  },
+  "Memphis": {
+    "qid": "Q3322233",
+    "locked": false
+  },
+  "Menifee": {
+    "qid": "Q122558417",
+    "locked": false
+  },
+  "Merchantville": {
+    "qid": null,
+    "locked": false
+  },
+  "Mesquite": {
+    "qid": "Q51696",
+    "locked": false
+  },
+  "Miami": {
+    "qid": null,
+    "locked": false
+  },
+  "Miami Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "Middle Village": {
+    "qid": "Q112275316",
+    "locked": false
+  },
+  "Middletown": {
+    "qid": "Q304801",
+    "locked": false
+  },
+  "Midland": {
+    "qid": "Q128321",
+    "locked": false
+  },
+  "Midlothian": {
+    "qid": null,
+    "locked": false
+  },
+  "Midvale": {
+    "qid": "Q122543322",
+    "locked": false
+  },
+  "Milford": {
+    "qid": "Q1025577",
+    "locked": false
+  },
+  "Mill Valley": {
+    "qid": "Q6858432",
+    "locked": false
+  },
+  "Milwaukee": {
+    "qid": "Q37836",
+    "locked": false
+  },
+  "Mine Hill": {
+    "qid": null,
+    "locked": false
+  },
+  "Minneapolis": {
+    "qid": "Q36091",
+    "locked": false
+  },
+  "Minooka": {
+    "qid": null,
+    "locked": false
+  },
+  "Missoula": {
+    "qid": null,
+    "locked": false
+  },
+  "Missouri City": {
+    "qid": "Q48815046",
+    "locked": false
+  },
+  "Mobile": {
+    "qid": "Q79875",
+    "locked": false
+  },
+  "Modesto": {
+    "qid": "Q204561",
+    "locked": false
+  },
+  "Monroeville": {
+    "qid": null,
+    "locked": false
+  },
+  "Montclair": {
+    "qid": null,
+    "locked": false
+  },
+  "Montgomery": {
+    "qid": "Q1311946",
+    "locked": false
+  },
+  "Montville": {
+    "qid": null,
+    "locked": false
+  },
+  "Moorestown": {
+    "qid": null,
+    "locked": false
+  },
+  "Moorpark": {
+    "qid": "Q122572546",
+    "locked": false
+  },
+  "Morristown": {
+    "qid": "Q6914103",
+    "locked": false
+  },
+  "Moses Lake": {
+    "qid": "Q30639214",
+    "locked": false
+  },
+  "Mount Carmel": {
+    "qid": "Q6024929",
+    "locked": false
+  },
+  "Mount Kisco": {
+    "qid": null,
+    "locked": false
+  },
+  "Mount Laurel": {
+    "qid": null,
+    "locked": false
+  },
+  "Mount Prospect": {
+    "qid": "Q112459554",
+    "locked": false
+  },
+  "Mount Vernon": {
+    "qid": "Q31812496",
+    "locked": false
+  },
+  "Murfreesboro": {
+    "qid": "Q501766",
+    "locked": false
+  },
+  "Mustang": {
+    "qid": null,
+    "locked": false
+  },
+  "Myrtle Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "N Olmsted": {
+    "qid": null,
+    "locked": false
+  },
+  "Nantucket": {
+    "qid": "Q14875734",
+    "locked": false
+  },
+  "Nanuet": {
+    "qid": null,
+    "locked": false
+  },
+  "Naples": {
+    "qid": "Q579986",
+    "locked": false
+  },
+  "Nashville": {
+    "qid": "Q23197",
+    "locked": false
+  },
+  "Natick": {
+    "qid": null,
+    "locked": false
+  },
+  "New Brunswick": {
+    "qid": null,
+    "locked": false
+  },
+  "New City": {
+    "qid": null,
+    "locked": false
+  },
+  "New Haven": {
+    "qid": "Q3473062",
+    "locked": false
+  },
+  "New Orleans": {
+    "qid": "Q34404",
+    "locked": false
+  },
+  "New York": {
+    "qid": "Q5083",
+    "locked": false
+  },
+  "Newark": {
+    "qid": "Q1983435",
+    "locked": false
+  },
+  "Newington": {
+    "qid": "Q7018233",
+    "locked": false
+  },
+  "Newport": {
+    "qid": "Q101254",
+    "locked": false
+  },
+  "Newton": {
+    "qid": "Q64947551",
+    "locked": false
+  },
+  "Newton Highlands": {
+    "qid": null,
+    "locked": false
+  },
+  "Newtown": {
+    "qid": "Q669171",
+    "locked": false
+  },
+  "Niagara Falls": {
+    "qid": "Q274120",
+    "locked": false
+  },
+  "Nokomis": {
+    "qid": "Q1878805",
+    "locked": false
+  },
+  "Norfolk": {
+    "qid": "Q691558",
+    "locked": false
+  },
+  "North Andover": {
+    "qid": "Q122544309",
+    "locked": false
+  },
+  "North Aurora": {
+    "qid": null,
+    "locked": false
+  },
+  "North Miami Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "North Olmsted": {
+    "qid": null,
+    "locked": false
+  },
+  "North Port": {
+    "qid": "Q122561788",
+    "locked": false
+  },
+  "Northfield": {
+    "qid": "Q7059352",
+    "locked": false
+  },
+  "Northville": {
+    "qid": "Q7059875",
+    "locked": false
+  },
+  "Novato": {
+    "qid": null,
+    "locked": false
+  },
+  "Novi": {
+    "qid": "Q486329",
+    "locked": false
+  },
+  "Oak Park": {
+    "qid": "Q7073650",
+    "locked": false
+  },
+  "Ocala": {
+    "qid": "Q122543573",
+    "locked": false
+  },
+  "Oklahoma City": {
+    "qid": "Q34863",
+    "locked": false
+  },
+  "Olathe": {
+    "qid": "Q593022",
+    "locked": false
+  },
+  "Olympia": {
+    "qid": null,
+    "locked": false
+  },
+  "Omaha": {
+    "qid": "Q7089392",
+    "locked": false
+  },
+  "Orlando": {
+    "qid": "Q3287523",
+    "locked": false
+  },
+  "Osseo": {
+    "qid": "Q122591986",
+    "locked": false
+  },
+  "Oxford": {
+    "qid": "Q539085",
+    "locked": false
+  },
+  "Palatine": {
+    "qid": "Q7126802",
+    "locked": false
+  },
+  "Palm Coast": {
+    "qid": null,
+    "locked": false
+  },
+  "Palm Desert": {
+    "qid": "Q122565429",
+    "locked": false
+  },
+  "Palmetto": {
+    "qid": "Q3398703",
+    "locked": false
+  },
+  "Palo Alto": {
+    "qid": "Q7128494",
+    "locked": false
+  },
+  "Palos Hills": {
+    "qid": null,
+    "locked": false
+  },
+  "Paradise": {
+    "qid": "Q7134186",
+    "locked": false
+  },
+  "Paramus": {
+    "qid": null,
+    "locked": false
+  },
+  "Paris": {
+    "qid": "Q62",
+    "locked": false
+  },
+  "Parlin": {
+    "qid": "Q1830661",
+    "locked": false
+  },
+  "Pasadena": {
+    "qid": "Q485176",
+    "locked": false
+  },
+  "Pawcatuck": {
+    "qid": null,
+    "locked": false
+  },
+  "Peabody": {
+    "qid": null,
+    "locked": false
+  },
+  "Pearl River": {
+    "qid": null,
+    "locked": false
+  },
+  "Pearland": {
+    "qid": "Q982550",
+    "locked": false
+  },
+  "Pennington": {
+    "qid": "Q66010",
+    "locked": false
+  },
+  "Peoria": {
+    "qid": "Q51686",
+    "locked": false
+  },
+  "Peoria Heights": {
+    "qid": null,
+    "locked": false
+  },
+  "Perry": {
+    "qid": null,
+    "locked": false
+  },
+  "Petaluma": {
+    "qid": null,
+    "locked": false
+  },
+  "Peterborough": {
+    "qid": "Q172438",
+    "locked": false
+  },
+  "Petoskey": {
+    "qid": null,
+    "locked": false
+  },
+  "Philadelphia": {
+    "qid": "Q1535165",
+    "locked": false
+  },
+  "Phoenix": {
+    "qid": "Q1012894",
+    "locked": false
+  },
+  "Pickens": {
+    "qid": "Q97927338",
+    "locked": false
+  },
+  "Pine Plains": {
+    "qid": null,
+    "locked": false
+  },
+  "Piscataway": {
+    "qid": "Q122543473",
+    "locked": false
+  },
+  "Pittsburg": {
+    "qid": "Q637229",
+    "locked": false
+  },
+  "Pittsburgh": {
+    "qid": "Q1342",
+    "locked": false
+  },
+  "Pittsfield": {
+    "qid": null,
+    "locked": false
+  },
+  "Plano": {
+    "qid": "Q6077684",
+    "locked": false
+  },
+  "Pleasant Hill": {
+    "qid": "Q3392171",
+    "locked": false
+  },
+  "Plymouth": {
+    "qid": "Q1245018",
+    "locked": false
+  },
+  "Pomona": {
+    "qid": "Q486868",
+    "locked": false
+  },
+  "Pompano Beach": {
+    "qid": "Q671458",
+    "locked": false
+  },
+  "Port Jefferson": {
+    "qid": null,
+    "locked": false
+  },
+  "Port Washington": {
+    "qid": "Q116043225",
+    "locked": false
+  },
+  "Portland": {
+    "qid": "Q1663450",
+    "locked": false
+  },
+  "Portsmouth": {
+    "qid": "Q72259",
+    "locked": false
+  },
+  "Pottstown": {
+    "qid": "Q122552405",
+    "locked": false
+  },
+  "Pound Ridge": {
+    "qid": null,
+    "locked": false
+  },
+  "Prescott": {
+    "qid": "Q1926562",
+    "locked": false
+  },
+  "Prescott Valley": {
+    "qid": null,
+    "locked": false
+  },
+  "Providence": {
+    "qid": "Q7252354",
+    "locked": false
+  },
+  "Provo": {
+    "qid": "Q2118359",
+    "locked": false
+  },
+  "Pullman": {
+    "qid": "Q983540",
+    "locked": false
+  },
+  "Punta Gorda": {
+    "qid": "Q883362",
+    "locked": false
+  },
+  "Quincy": {
+    "qid": null,
+    "locked": false
+  },
+  "Racine": {
+    "qid": "Q3416225",
+    "locked": false
+  },
+  "Rahway": {
+    "qid": null,
+    "locked": false
+  },
+  "Raleigh": {
+    "qid": "Q7286876",
+    "locked": false
+  },
+  "Rancho Cucamonga": {
+    "qid": "Q495365",
+    "locked": false
+  },
+  "Rancho Palos Verdes": {
+    "qid": null,
+    "locked": false
+  },
+  "Rayville": {
+    "qid": "Q2314639",
+    "locked": false
+  },
+  "Reading": {
+    "qid": "Q161491",
+    "locked": false
+  },
+  "Redford": {
+    "qid": "Q33474957",
+    "locked": false
+  },
+  "Redondo Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "Redwood City": {
+    "qid": null,
+    "locked": false
+  },
+  "Reisterstown": {
+    "qid": null,
+    "locked": false
+  },
+  "Reno": {
+    "qid": "Q49225",
+    "locked": false
+  },
+  "Reynoldsburg": {
+    "qid": null,
+    "locked": false
+  },
+  "Richardson": {
+    "qid": null,
+    "locked": false
+  },
+  "Richmond": {
+    "qid": "Q139694",
+    "locked": false
+  },
+  "Ridley Park": {
+    "qid": null,
+    "locked": false
+  },
+  "River Grove": {
+    "qid": "Q122559309",
+    "locked": false
+  },
+  "Roberts": {
+    "qid": "Q2841648",
+    "locked": false
+  },
+  "Rochester": {
+    "qid": "Q486479",
+    "locked": false
+  },
+  "Rockford": {
+    "qid": "Q1506047",
+    "locked": false
+  },
+  "Rockingham": {
+    "qid": "Q7355375",
+    "locked": false
+  },
+  "Rockville": {
+    "qid": "Q7355625",
+    "locked": false
+  },
+  "Rockville Centre": {
+    "qid": null,
+    "locked": false
+  },
+  "Rohnert Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Rome": {
+    "qid": "Q5582862",
+    "locked": false
+  },
+  "Rossford": {
+    "qid": null,
+    "locked": false
+  },
+  "Round Lake": {
+    "qid": null,
+    "locked": false
+  },
+  "Rye": {
+    "qid": "Q1020800",
+    "locked": false
+  },
+  "Sacramento": {
+    "qid": "Q7396948",
+    "locked": false
+  },
+  "Saddle Brook": {
+    "qid": "Q122565821",
+    "locked": false
+  },
+  "Saint Albans": {
+    "qid": "Q6226",
+    "locked": false
+  },
+  "Saint Ann": {
+    "qid": "Q993064",
+    "locked": false
+  },
+  "Saint Charles": {
+    "qid": "Q7400577",
+    "locked": false
+  },
+  "Saint Cloud": {
+    "qid": "Q122543634",
+    "locked": false
+  },
+  "Saint George": {
+    "qid": "Q731606",
+    "locked": false
+  },
+  "Saint James": {
+    "qid": "Q3884991",
+    "locked": false
+  },
+  "Saint Louis": {
+    "qid": "Q273779",
+    "locked": false
+  },
+  "Saint Petersburg": {
+    "qid": "Q656",
+    "locked": false
+  },
+  "Salem": {
+    "qid": "Q1022295",
+    "locked": false
+  },
+  "Salt Lake City": {
+    "qid": "Q116059033",
+    "locked": false
+  },
+  "San Antonio": {
+    "qid": "Q1005259",
+    "locked": false
+  },
+  "San Diego": {
+    "qid": "Q1018781",
+    "locked": false
+  },
+  "San Francisco": {
+    "qid": "Q949535",
+    "locked": false
+  },
+  "San Jose": {
+    "qid": "Q1015546",
+    "locked": false
+  },
+  "San Juan": {
+    "qid": "Q749283",
+    "locked": false
+  },
+  "San Rafael": {
+    "qid": "Q187898",
+    "locked": false
+  },
+  "Sandy": {
+    "qid": "Q1750378",
+    "locked": false
+  },
+  "Santa Clarita": {
+    "qid": "Q491132",
+    "locked": false
+  },
+  "Santa Cruz": {
+    "qid": "Q3472617",
+    "locked": false
+  },
+  "Santa Fe": {
+    "qid": "Q5620819",
+    "locked": false
+  },
+  "Santa Maria": {
+    "qid": "Q497445",
+    "locked": false
+  },
+  "Sarasota": {
+    "qid": null,
+    "locked": false
+  },
+  "Sartell": {
+    "qid": null,
+    "locked": false
+  },
+  "Sayville": {
+    "qid": "Q122566828",
+    "locked": false
+  },
+  "Scarborough": {
+    "qid": "Q743521",
+    "locked": false
+  },
+  "Schererville": {
+    "qid": null,
+    "locked": false
+  },
+  "Schofield": {
+    "qid": null,
+    "locked": false
+  },
+  "Schwenksville": {
+    "qid": null,
+    "locked": false
+  },
+  "Scottsdale": {
+    "qid": "Q1366429",
+    "locked": false
+  },
+  "Seattle": {
+    "qid": "Q5083",
+    "locked": false
+  },
+  "Sedona": {
+    "qid": "Q122565529",
+    "locked": false
+  },
+  "Shawnee": {
+    "qid": null,
+    "locked": false
+  },
+  "Shelton": {
+    "qid": null,
+    "locked": false
+  },
+  "Sherwood": {
+    "qid": "Q7495482",
+    "locked": false
+  },
+  "Show Low": {
+    "qid": "Q936839",
+    "locked": false
+  },
+  "Shrewsbury": {
+    "qid": "Q1084814",
+    "locked": false
+  },
+  "Sicklerville": {
+    "qid": null,
+    "locked": false
+  },
+  "Simsbury": {
+    "qid": null,
+    "locked": false
+  },
+  "Sioux City": {
+    "qid": null,
+    "locked": false
+  },
+  "Sioux Falls": {
+    "qid": "Q131335",
+    "locked": false
+  },
+  "Skillman": {
+    "qid": null,
+    "locked": false
+  },
+  "Skippack": {
+    "qid": "Q122564680",
+    "locked": false
+  },
+  "Skokie": {
+    "qid": "Q122546685",
+    "locked": false
+  },
+  "Snohomish": {
+    "qid": null,
+    "locked": false
+  },
+  "Solana Beach": {
+    "qid": null,
+    "locked": false
+  },
+  "South Burlington": {
+    "qid": null,
+    "locked": false
+  },
+  "South Portland": {
+    "qid": "Q33491564",
+    "locked": false
+  },
+  "South San Francisco": {
+    "qid": null,
+    "locked": false
+  },
+  "South Weymouth": {
+    "qid": "Q122566891",
+    "locked": false
+  },
+  "South Windsor": {
+    "qid": null,
+    "locked": false
+  },
+  "South Yarmouth": {
+    "qid": null,
+    "locked": false
+  },
+  "Southaven": {
+    "qid": null,
+    "locked": false
+  },
+  "Southgate": {
+    "qid": "Q7570790",
+    "locked": false
+  },
+  "Southlake": {
+    "qid": null,
+    "locked": false
+  },
+  "Spokane": {
+    "qid": "Q187805",
+    "locked": false
+  },
+  "Spring": {
+    "qid": "Q135615",
+    "locked": false
+  },
+  "Spring Park": {
+    "qid": "Q7580651",
+    "locked": false
+  },
+  "Springfield": {
+    "qid": "Q135615",
+    "locked": false
+  },
+  "Stamford": {
+    "qid": "Q591415",
+    "locked": false
+  },
+  "State College": {
+    "qid": null,
+    "locked": false
+  },
+  "Staten Island": {
+    "qid": "Q65408242",
+    "locked": false
+  },
+  "Sterling": {
+    "qid": "Q927243",
+    "locked": false
+  },
+  "Stillwater": {
+    "qid": "Q7617269",
+    "locked": false
+  },
+  "Stockbridge": {
+    "qid": null,
+    "locked": false
+  },
+  "Strongsville": {
+    "qid": null,
+    "locked": false
+  },
+  "Stuart": {
+    "qid": null,
+    "locked": false
+  },
+  "Studio City": {
+    "qid": null,
+    "locked": false
+  },
+  "Sturbridge": {
+    "qid": "Q122544033",
+    "locked": false
+  },
+  "Suffolk": {
+    "qid": null,
+    "locked": false
+  },
+  "Summit": {
+    "qid": "Q7637751",
+    "locked": false
+  },
+  "Swansea": {
+    "qid": "Q986654",
+    "locked": false
+  },
+  "Sykesville": {
+    "qid": null,
+    "locked": false
+  },
+  "Sylacauga": {
+    "qid": null,
+    "locked": false
+  },
+  "Syracuse": {
+    "qid": "Q20590637",
+    "locked": false
+  },
+  "Tacoma": {
+    "qid": "Q199797",
+    "locked": false
+  },
+  "Taylors": {
+    "qid": "Q3886500",
+    "locked": false
+  },
+  "Tempe": {
+    "qid": "Q51685",
+    "locked": false
+  },
+  "Thousand Oaks": {
+    "qid": "Q208447",
+    "locked": false
+  },
+  "Tinley Park": {
+    "qid": null,
+    "locked": false
+  },
+  "Titusville": {
+    "qid": "Q6147593",
+    "locked": false
+  },
+  "Toledo": {
+    "qid": "Q1776774",
+    "locked": false
+  },
+  "Tracy": {
+    "qid": null,
+    "locked": false
+  },
+  "Trenton": {
+    "qid": "Q2739754",
+    "locked": false
+  },
+  "Troy": {
+    "qid": "Q2738238",
+    "locked": false
+  },
+  "Tulsa": {
+    "qid": "Q44989",
+    "locked": false
+  },
+  "Tyngsboro": {
+    "qid": "Q2577621",
+    "locked": false
+  },
+  "Union": {
+    "qid": null,
+    "locked": false
+  },
+  "Upland": {
+    "qid": "Q368045",
+    "locked": false
+  },
+  "Upper Sandusky": {
+    "qid": null,
+    "locked": false
+  },
+  "Urbana": {
+    "qid": null,
+    "locked": false
+  },
+  "Utica": {
+    "qid": "Q23681561",
+    "locked": false
+  },
+  "Vail": {
+    "qid": null,
+    "locked": false
+  },
+  "Vallejo": {
+    "qid": "Q208445",
+    "locked": false
+  },
+  "Vancouver": {
+    "qid": "Q234053",
+    "locked": false
+  },
+  "Venice": {
+    "qid": "Q585026",
+    "locked": false
+  },
+  "Ventura": {
+    "qid": "Q490434",
+    "locked": false
+  },
+  "Vernon Hills": {
+    "qid": null,
+    "locked": false
+  },
+  "Vernon Rockville": {
+    "qid": null,
+    "locked": false
+  },
+  "Verona": {
+    "qid": "Q1087483",
+    "locked": false
+  },
+  "Voorhees": {
+    "qid": null,
+    "locked": false
+  },
+  "Wake Forest": {
+    "qid": null,
+    "locked": false
+  },
+  "Wallingford": {
+    "qid": "Q988100",
+    "locked": false
+  },
+  "Wapakoneta": {
+    "qid": null,
+    "locked": false
+  },
+  "Wareham": {
+    "qid": "Q387419",
+    "locked": false
+  },
+  "Washington": {
+    "qid": "Q939412",
+    "locked": false
+  },
+  "Waterbury": {
+    "qid": "Q16873126",
+    "locked": false
+  },
+  "Waterville": {
+    "qid": "Q2474186",
+    "locked": false
+  },
+  "Waukesha": {
+    "qid": null,
+    "locked": false
+  },
+  "Wausau": {
+    "qid": "Q122568652",
+    "locked": false
+  },
+  "Waverly": {
+    "qid": null,
+    "locked": false
+  },
+  "Wayne": {
+    "qid": null,
+    "locked": false
+  },
+  "Weehawken": {
+    "qid": null,
+    "locked": false
+  },
+  "Weirton": {
+    "qid": "Q122539489",
+    "locked": false
+  },
+  "Wellington": {
+    "qid": "Q1026685",
+    "locked": false
+  },
+  "West Chester": {
+    "qid": null,
+    "locked": false
+  },
+  "West Deptford": {
+    "qid": null,
+    "locked": false
+  },
+  "West Haven": {
+    "qid": "Q100252003",
+    "locked": false
+  },
+  "West Linn": {
+    "qid": null,
+    "locked": false
+  },
+  "West Palm Beach": {
+    "qid": "Q122593607",
+    "locked": false
+  },
+  "West Warwick": {
+    "qid": null,
+    "locked": false
+  },
+  "Westbury": {
+    "qid": "Q385934",
+    "locked": false
+  },
+  "Westminster": {
+    "qid": "Q948129",
+    "locked": false
+  },
+  "Westwood": {
+    "qid": "Q7989847",
+    "locked": false
+  },
+  "Wexford": {
+    "qid": "Q209126",
+    "locked": false
+  },
+  "Wharton": {
+    "qid": "Q1088847",
+    "locked": false
+  },
+  "Wheeling": {
+    "qid": null,
+    "locked": false
+  },
+  "Whippany": {
+    "qid": null,
+    "locked": false
+  },
+  "White Lake": {
+    "qid": null,
+    "locked": false
+  },
+  "White Plains": {
+    "qid": "Q49370797",
+    "locked": false
+  },
+  "Whitehall": {
+    "qid": "Q3461864",
+    "locked": false
+  },
+  "Whitehouse Station": {
+    "qid": null,
+    "locked": false
+  },
+  "Whitestone": {
+    "qid": null,
+    "locked": false
+  },
+  "Wichita": {
+    "qid": "Q128349",
+    "locked": false
+  },
+  "Wilkes Barre": {
+    "qid": null,
+    "locked": false
+  },
+  "Williams": {
+    "qid": "Q546338",
+    "locked": false
+  },
+  "Williamsburg": {
+    "qid": "Q8021145",
+    "locked": false
+  },
+  "Williamstown": {
+    "qid": "Q2581297",
+    "locked": false
+  },
+  "Williston": {
+    "qid": "Q3643589",
+    "locked": false
+  },
+  "Willoughby": {
+    "qid": null,
+    "locked": false
+  },
+  "Willow Grove": {
+    "qid": "Q8022319",
+    "locked": false
+  },
+  "Wilmington": {
+    "qid": "Q576212",
+    "locked": false
+  },
+  "Wilson": {
+    "qid": null,
+    "locked": false
+  },
+  "Windsor Mill": {
+    "qid": "Q122543225",
+    "locked": false
+  },
+  "Winston Salem": {
+    "qid": "Q49227",
+    "locked": false
+  },
+  "Woodbury": {
+    "qid": "Q3569822",
+    "locked": false
+  },
+  "Woodridge": {
+    "qid": "Q115666834",
+    "locked": false
+  },
+  "Wyckoff": {
+    "qid": "Q122594539",
+    "locked": false
+  },
+  "Wyoming": {
+    "qid": null,
+    "locked": false
+  },
+  "Yarmouth": {
+    "qid": "Q864688",
+    "locked": false
+  },
+  "York": {
+    "qid": "Q994000",
+    "locked": false
+  },
+  "Yucaipa": {
+    "qid": null,
+    "locked": false
+  }
+}
