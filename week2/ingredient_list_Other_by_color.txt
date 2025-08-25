@@ -1,0 +1,367 @@
+
+=== Color 00 (#1f77b4) ===
+- [alfredo sauce] alfredo sauce
+- [buffalo wing sauce] buffalo wing sauce
+- [buffalo wing sauce] buttermilk ranch buffalo sauce
+- [buffalo wing sauce] wing sauce
+- [corn chips] corn chips
+- [garlic butter sauce] garlic butter
+- [garlic butter sauce] garlic butter sauce
+- [lemon] lemon
+- [mustard oil] mustard oil
+- [powdered sugar] powdered sugar
+- [smoked gouda] gouda
+- [smoked gouda] smoked gouda
+- [tarragon] tarragon
+- [whole wheat crust] gluten free crust
+- [whole wheat crust] whole wheat crust
+
+=== Color 01 (#aec7e8) ===
+- [almond] almond
+- [bulgogi] bulgogi
+- [corn shell] corn shell
+- [corn shell] flour shell
+- [corn shell] taco shell crust
+- [garlic olive oil] garlic oil
+- [garlic olive oil] garlic olive oil
+- [lemon creme fraiche] lemon creme fraiche
+- [lemon creme fraiche] lemon juice
+- [naan bread] naan bread
+- [prime rib] prime rib
+- [smoked salmon] smoked salmon
+- [thyme] rosemary
+- [thyme] thyme
+- [yeast] yeast
+- [yeast] yeast dough
+
+=== Color 02 (#ff7f0e) ===
+- [anchovies] anchovies
+- [bun] bun
+- [creamy garlic sauce] creamy garlic sauce
+- [garlic white sauce] garlic white sauce
+- [garlic white sauce] italian spices
+- [garlic white sauce] white garlic sauce
+- [lemongrass] lemongrass
+- [nutella] nutella
+- [pumpkin] pumpkin
+- [sofritto] sofrito
+- [sofritto] sofritto
+- [tobiko caviar] tobiko caviar
+- [tobiko caviar] tobiko crunch
+- [zucchini] cilantro
+- [zucchini] herbs
+- [zucchini] vegetables
+- [zucchini] zucchini
+
+=== Color 03 (#ffbb78) ===
+- [artichoke hearts] artichoke hearts
+- [burrata] burrata
+- [croutons] croutons
+- [grape] grape
+- [linguica] linguica
+- [octopus] octopus
+- [rapini] rapini
+- [soppressata] soppressata
+- [tofu] tofu
+- [zucchini blossom] zucchini blossom
+
+=== Color 04 (#2ca02c) ===
+- [artichokes] artichoke heart
+- [artichokes] artichokes
+- [cajun spices] cajun seasoning
+- [cajun spices] cajun spices
+- [crust] crust
+- [crust] dough
+- [crust] pizza dough
+- [crust] topping
+- [green onion] broccoli rabe
+- [green onion] broccolini
+- [green onion] green olive
+- [green onion] green onion
+- [green onion] kalamata olives
+- [green onion] leek
+- [green onion] pine nuts
+- [lobster] lobster
+- [olive tapenade] olive tapenade
+- [red sauce] cream sauce
+- [red sauce] red sauce
+- [sopressata] sopressata
+- [truffle cream] truffle
+- [truffle cream] truffle cream
+
+=== Color 05 (#98df8a) ===
+- [arugula] arugula
+- [arugula] eggplant
+- [caper] caper
+- [cucumber] cucumber
+- [green onions] green onions
+- [mango] mango
+- [one topping] one topping
+- [one topping] two toppings
+- [reggiano] reggiano
+- [soubise sauce] soubise sauce
+- [truffle oil] truffle oil
+
+=== Color 06 (#d62728) ===
+- [asiago] anchovy
+- [asiago] asiago
+- [asiago] calamari
+- [asiago] capicola
+- [asiago] fontina
+- [asiago] garlic sauce
+- [asiago] parmigiano
+- [asiago] parsley
+- [asiago] white sauce
+- [capers] capers
+- [capers] mascarpone
+- [delicata squash] acorn squash
+- [delicata squash] butternut squash
+- [delicata squash] delicata squash
+- [delicata squash] squash
+- [delicata squash] yellow squash
+- [guacamole] guacamole
+- [marsala sauce] marsala sauce
+- [onion] caramelized onion
+- [onion] onion
+- [onion] onions
+- [onion] red onion
+- [ribeye] ribeye
+- [sour cream] sour cream
+- [tuna] aji amarillo
+- [tuna] tuna
+
+=== Color 07 (#ff9896) ===
+- [asparagus] asparagus
+- [caribbean spices] caribbean spices
+- [dill] dill
+- [dill] salmon
+- [guanciale] guanciale
+- [guanciale] vinaigrette
+- [marshmallow] chocolate
+- [marshmallow] marshmallow
+- [pancetta] pancetta
+- [pancetta] roasted garlic
+- [romaine lettuce] grilled chicken
+- [romaine lettuce] romaine
+- [romaine lettuce] romaine lettuce
+- [soy onion spread] soy onion spread
+- [soy onion spread] teriyaki sauce
+- [tzatziki sauce] tzatziki sauce
+
+=== Color 08 (#9467bd) ===
+- [balsamic] balsamic
+- [balsamic] balsamic drizzle
+- [balsamic] balsamic reduction
+- [balsamic] balsamic vinaigrette
+- [carrots] carrot
+- [carrots] carrots
+- [dough gluten free] dough gluten free
+- [dough gluten free] dough gluten free base
+- [hazelnuts] hazelnut
+- [hazelnuts] hazelnuts
+- [mashed potato] mashed potato
+- [parsnip] parsnip
+- [sage] sage
+- [soy sauce] soy sauce
+- [various toppings] toppings
+- [various toppings] various toppings
+
+=== Color 09 (#c5b0d5) ===
+- [balsamic glaze] balsamic glaze
+- [balsamic glaze] balsamic vinegar
+- [balsamic glaze] italian seasoning
+- [cashew] cashew
+- [cashew] cashews
+- [egg] egg
+- [hollandaise] hollandaise
+- [mayonnaise] mayonnaise
+- [pasta] pasta
+- [pasta] ziti pasta
+- [salt] salt
+- [spam] spam
+- [veal] veal
+
+=== Color 10 (#8c564b) ===
+- [bean sprouts] bean sprouts
+- [celery] celery
+- [eggs] eggs
+- [eggs] scrambled eggs
+- [hot dog] hot dog
+- [microgreens] microgreens
+- [pasta sauce] pasta dough or pizza dough
+- [pasta sauce] pasta sauce
+- [sauce] barbecue sauce
+- [sauce] bbq chicken
+- [sauce] bbq sauce
+- [sauce] beef
+- [sauce] cheddar
+- [sauce] ground beef
+- [sauce] hot sauce
+- [sauce] lettuce
+- [sauce] pizza crust
+- [sauce] pizza sauce
+- [sauce] pork
+- [sauce] provolone
+- [sauce] pulled pork
+- [sauce] ranch sauce
+- [sauce] sauce
+- [sauce] steak
+- [special sauce] special sauce
+- [vegan proteins] vegan protein
+- [vegan proteins] vegan proteins
+- [vegan proteins] vegan vegetables
+
+=== Color 11 (#c49c94) ===
+- [beans] bean
+- [beans] beans
+- [beans] black beans
+- [beans] refried beans
+- [chicken breast] chicken breast
+- [enchilada sauce] enchilada sauce
+- [hot giardiniera] hot giardiniera
+- [milk chocolate] chocolate chips
+- [milk chocolate] milk chocolate
+- [milk chocolate] white chocolate
+- [peanuts] peanut sauce
+- [peanuts] peanuts
+- [sauerkraut] corned beef
+- [sauerkraut] sauerkraut
+- [spices] spices
+- [spices] spicy sauce
+- [vegetarian] vegetarian
+- [vegetarian] vegetarian toppings
+
+=== Color 12 (#e377c2) ===
+- [berry] berry
+- [chicken wings] chicken wings
+- [escarole] escarole
+- [hummus] hummus
+- [mini greek salad] mini greek salad
+- [peas] pea pod
+- [peas] peas
+- [scallops] scallion
+- [scallops] scallions
+- [scallops] scallop
+- [scallops] scallops
+- [spicy pizza sauce] mexican spices
+- [spicy pizza sauce] spicy pizza sauce
+- [veggie burger crumbles] veggie burger crumbles
+
+=== Color 13 (#f7b6d2) ===
+- [black olive] black olive
+- [black olive] black olives
+- [black olive] olive
+- [black olive] olives
+- [chile] chile
+- [chile] green chile
+- [chile] smoked chile sauce
+- [falafel] falafel
+- [icing] icing
+- [mint] mint
+- [penne pasta] penne pasta
+- [seafood] seafood
+- [spinach] artichoke
+- [spinach] basil
+- [spinach] broccoli
+- [spinach] chicken
+- [spinach] garlic
+- [spinach] olive oil
+- [spinach] oregano
+- [spinach] spinach
+- [vodka sauce] cream
+- [vodka sauce] vodka sauce
+
+=== Color 14 (#7f7f7f) ===
+- [blood orange reduction] blood orange reduction
+- [chipotle sauce] chipotle sauce
+- [fennel] fennel
+- [jerk sauce] jerk sauce
+- [miso] miso
+- [pickled ginger] pickled ginger
+- [seasonal vegetables] brussels sprouts
+- [seasonal vegetables] seasonal vegetables
+- [sunflower seed crust] sunflower seed crust
+- [wasabi cream sauce] spicy tuna
+- [wasabi cream sauce] wasabi cream sauce
+
+=== Color 15 (#c7c7c7) ===
+- [boursin] boursin
+- [chives] chive
+- [chives] chives
+- [flatbread] flatbread
+- [kalamata olive] green olives
+- [kalamata olive] kalamata olive
+- [mixed vegetables] assorted vegetables
+- [mixed vegetables] grilled vegetables
+- [mixed vegetables] mixed vegetables
+- [mixed vegetables] oven roasted vegetables
+- [mixed vegetables] various vegetables
+- [mixed vegetables] vegetable
+- [pickles] pickle
+- [pickles] pickles
+- [seasoning] seasoning
+- [seasoning] seasonings
+- [sweet corn] sweet corn
+- [water] water
+
+=== Color 16 (#bcbd22) ===
+- [brandy cream sauce] brandy cream sauce
+- [cinnamon] cinnamon
+- [cinnamon] sugar
+- [flour] flour
+- [kale] kale
+- [mizuna] mizuna
+- [pie crust] cookie crust
+- [pie crust] pie crust
+- [shallots] shallots
+- [sweet crust] sweet crust
+- [sweet crust] sweet dough
+- [sweet crust] sweet toppings
+- [wheat crust] wheat crust
+
+=== Color 17 (#dbdb8d) ===
+- [bread] avocado
+- [bread] bread
+- [bread] butter
+- [bread] corn
+- [bread] pita bread
+- [clam] clam
+- [clam] clams
+- [clam] crab
+- [fontinella] fontinella
+- [korean style sauce] korean style sauce
+- [mortadella] mortadella
+- [pork tenderloin] pork tenderloin
+- [short rib] short rib
+- [taco seasoned beef] seasoned beef
+- [taco seasoned beef] taco sauce
+- [taco seasoned beef] taco seasoned beef
+- [taco seasoned beef] taco seasoning
+- [white cheddar] white cheddar
+
+=== Color 18 (#17becf) ===
+- [breaded chicken] breaded chicken
+- [coconut cream] coconut cream
+- [french fries] french fries
+- [lavash bread] lavash bread
+- [mussels] mussels
+- [potato] potato
+- [potato] potatoes
+- [potato] sweet potato
+- [shrimp] shrimp
+- [tallegio] tallegio
+- [white truffle] white truffle
+- [white truffle] white truffle oil
+
+=== Color 19 (#9edae5) ===
+- [buffalo chicken] buffalo chicken
+- [buffalo chicken] buffalo sauce
+- [buffalo chicken] ranch
+- [coriander] coriander
+- [fried egg] fried egg
+- [leeks] leeks
+- [mustard] mustard
+- [potato gnocchi] potato gnocchi
+- [sirloin] sirloin
+- [tamale] tamale
+- [white wine] white wine

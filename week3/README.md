@@ -69,3 +69,21 @@ I only posted changed queries in the `after_improvement/` directory. These are "
     owl:sameAs 1.25 .
 ...
 ```
+
+---
+
+# Actual Task: SPARQL and Reasoning
+
+* Subtask SPARQL.1 Perform reasoning with the created ontology and the generated data. Save the extended graph in turtle format (.ttl) (10%).
+
+Write SPARQL queries, according to the requirements in the following subtasks, and execute them over the created ontology and the generated data.
+
+* Subtask SPARQL.2 Return all the details of the restaurants that sell pizzas without tomato (i.e., pizza bianca). Return the results as a CSV file (20%).
+
+* Subtask SPARQL.3 Return the average prize of a Margherita pizza (20%).
+
+* Subtask SPARQL.4 Return number of restaurants by city, sorted by state and number of restaurants (20%).
+
+* Subtask SPARQL.5 Return the list of restaurants with missing postcode (20%).
+
+Subtask SPARQL.6 Correctness of the queries and code, and documentation of the created SPARQL queries in the report (10%).

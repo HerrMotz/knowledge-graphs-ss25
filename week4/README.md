@@ -71,3 +71,19 @@ from deeponto.complete.bertsubs import BERTSubsInterPipeline, DEFAULT_CONFIG_FIL
 ```
 
 so that it exports the configuration file.
+
+--- 
+
+# Actual Task: Ontology Alignment
+
+Perform a basic alignment between the pizza.owl ontology and your created ontology. This alignment is important to perform SPARQL queries using the vocabulary of the pizza.owl ontology instead of the created ontology.
+
+Link for the Pizza Ontology: https://moodle.uni-jena.de/pluginfile.php/1974943/mod_wiki/attachments/2070//pizza-ontology%20%281%29.zip?forcedownload=1
+
+* Subtask OA.1 Compute equivalences between the entities of the input ontologies. Save the equivalences as triples in turtle format (.ttl). Tip: use owl:equivalentClass and owl:equivalentProperty as predicates of the equivalence triples (50%).
+
+* Subtask OA.2 Repeat Subtask QA.1 using other two matching systems (e.g. AML and LogMap) . (20%)
+
+Subtask OA.3 To evaluate the different matching systems, first generate matchings using: 1) your solution from OA.1 2) e.g. AML 3) e.g. LogMap for two provided ontologies: a) a model ontology (download https://drive.google.com/drive/folders/1WlINYleyUdV-rQst8qqBefiixwv9yGvR - pizza-restaurants-model-ontology) and b) the Pizza ontology Then: Calculate precision and recall using a given set of reference mappings https://moodle.uni-jena.de/pluginfile.php/1974943/mod_wiki/attachments/2070//reference-mappings-pizza%20%282%29.ttl?forcedownload=1] (10%).
+
+Subtask OA.3 Correctness of the code and discussion of the used alignment techniques (20%).

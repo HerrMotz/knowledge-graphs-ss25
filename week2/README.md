@@ -79,3 +79,17 @@ python3 integrate_tabular_data_with_ontology.py # creates pizza_data.ttl
 + The LLM extraction step can be improved with more prompt engineering
 + The LLM cleaning step can be improved with classical NLP methods, e.g. the word
   stems or singulars could be used as normalised names or for matching a Wikidata item
+
+--- 
+
+# Actual Task: Tabular Data
+
+Transform Pizza_data into RDF triples using OntotextRefine and/or your favorite programming language. Please document your code (e.g., by exporting the workflow from Ontotext Refine). Save the RDF data into turtle format (.ttl) in your gitlab and upload it to your GraphDB instance.
+
+Subtask RDF.1 Discuss in the report the different transformation choices and how entity resolution was treated (30%). As we saw in the module, there is not a unique way to transform the elements in a table into elements of a knowledge graph (i.e., classes, object properties, data properties or instances). For example the column “menu item” contains the name of the pizza but it may also include additional information about toppings and type of pizza. Tip1: You will need to apply some basic text processing and entity recognition based on the ontology vocabulary (e.g. using Ontotext Refines capabilities or by writing some code). Tip2: After processing the data, one may also need to extend the ontology with new elements.
+
+(*)Subtask RDF.2 Create RDF triples (30%). Use the created ontology to guide the transformation e.g., to link the data to the ontology (e.g., via rdf:type) and to use the defined ontology properties (e.g., has_topping) and concepts (Margherita_Pizza).
+
+(*)Subtask RDF.3 For the cells in the columns city, country and state; instead of creating new URIs (e.g., new individuals) for the information in the table cells, reuse an entity URI from DBPedia, Wikidata or Google’s Knowledge Graph (http:// dbpedia.org/resource/Los_Angeles). Tip: communicate with their respective look-up services. (Again using Ontotext Refine or by programming something (for this, you may want to check the City Uni lab on this topic at https://github.com/turing-knowledge-graphs/teaching/blob/main/city/2023-2024/IN3067-INM713_Lab_Session5_CSV2KG_with_solutions.pdf (25%).
+
+Subtask RDF.4 Correctness of the code and code documentation (15%).

@@ -42,3 +42,20 @@ The output files will be located in the directory `/week5/`.
 | similarities1_2000.txt (generated)                                          | The embeddings with a sample size of 2000 for configuration 1.                                                             |
 | similarities2_2000.txt (generated)                                          | The embeddings with a sample size of 2000 for configuration 2.                                                             |
 
+---
+
+# Actual Task: Embeddings
+
+This task consists in creating embeddings capturing the rich semantics of the created ontology and generated data. We will use the tool OWL2Vec*. These embeddings can be used in a subsequent Machine Learning model that requires as input the encoding of the ontology entities. In this coursework we are computing clusters of the ontology entities.
+
+(*) Subtask Vector.1 Run OWL2Vec* with the created ontology and generated data. Test two different configurations. Save the generated vectors in both binary and textual format (40%). Tip: It is easier if given to OWL2Vec* a single file. To do so just load both files (ontology and the generated data) into a single RDFlib Graph or Jena RDF model and save it into OWL format. Owlready seems to cope with Turtle format, but use OWL format in case it gives problems. Tip2: To make this more efficient, instead of using all your data, you can restrict to a few hundred rows.
+
+Subtask Vector.2 Select 6 pairs of entities (for any of the tested configurations) and discuss the similarity of their vectors (e.g., compare the vectors of the concept pizza:Margherita and the word “pizza”). Try to select 3 pairs for which you expect a close similarity and 3 pairs for which you expect dissimilarity. Discuss the results within the report.
+
+• Subtask Vector.2.1: Use the embeddings from Configuration 1 in Task Vector. 1. (25%).
+
+• Subtask Vector.2.2: Use the embeddings from Configuration 2 in Task Vector. 1. (25%).
+
+Subtask Vector.3 (optional; extra 50%). Solve Subtask OA.1 using similarity among ontology embeddings calculated with OWL2Vec*.
+
+Subtask Vector.4 Correctness and documentation of the codes (10%).
